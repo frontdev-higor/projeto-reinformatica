@@ -20,84 +20,84 @@
   </head>
   <body> <!--  --> 
 
-      <header>
+    <header>
 
-        <!-- Barra de Navegação -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-2 position-relative">
+      <!-- Barra de Navegação -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark position-relative">
 
-          <!-- Logo -->
-          <a class="navbar-brand logo-formatacao" href="index.html">RE Informática</a>
-          <!-- /Logo -->
+        <!-- Logo -->
+        <a class="navbar-brand logo-formatacao" href="index.html">RE Informática</a>
+        <!-- /Logo -->
 
-          <!-- Menu Hamburguer -->
-          <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" 
-          data-bs-target="#abrir-menu">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- /Menu Hamburguer -->
+        <!-- Menu Hamburguer -->
+        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" 
+        data-bs-target="#abrir-menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- /Menu Hamburguer -->
 
-            <!-- Opções Navegação -->
-            <div class="collapse navbar-collapse justify-content-center" id="abrir-menu">
+          <!-- Opções Navegação -->
+          <div class="collapse navbar-collapse justify-content-center" id="abrir-menu">
 
-              <!-- /navbar-nav -->
-              <ul class="navbar-nav navbar-center">
+            <!-- /navbar-nav -->
+            <ul class="navbar-nav navbar-center">
 
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Início</a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Início</a>
+              </li>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="servico.html">Serviços</a>
-                </li>
-                
-                <li class="nav-item dropdown">
-                  <a href="" class="nav-link dropdown-toggle" role="button"
-                  data-bs-toggle="dropdown">Compras</a>
-
-
-                    <!-- Menu Dropdown -->
-                    <ul class="dropdown-menu">
-
-                      <li>
-                        <a class="dropdown-item active" href="tipo-computador.html">Computadores</a>
-                      </li>
-
-                      <li>
-                        <a class="dropdown-item" href="tipo-monitor.html">Monitores</a>
-                      </li>
-
-                      <li>
-                        <a class="dropdown-item" href="tipo-componente.html">Componentes</a>
-                      </li>
-
-                      <li>
-                        <a class="dropdown-item" href="tipo-outro.html">Outros</a>
-                      </li>
-
-                    </ul>
-                    <!-- /Menu Dropdown -->
+              <li class="nav-item">
+                <a class="nav-link" href="servico.html">Serviços</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" role="button"
+                data-bs-toggle="dropdown">Compras</a>
 
 
-                </li>
+                  <!-- Menu Dropdown -->
+                  <ul class="dropdown-menu">
 
-                <li class="nav-item">
-                  <a class="nav-link" href="contato.html">Contato</a>
-                </li>
+                    <li>
+                      <a class="dropdown-item active" href="tipo-computador.html">Computadores</a>
+                    </li>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="sobre.html">Sobre</a>
-                </li>
+                    <li>
+                      <a class="dropdown-item" href="tipo-monitor.html">Monitores</a>
+                    </li>
 
-              </ul>
-              <!-- /navbar-nav -->
+                    <li>
+                      <a class="dropdown-item" href="tipo-componente.html">Componentes</a>
+                    </li>
 
-            </div>
-            <!-- /Opções Navegação -->
+                    <li>
+                      <a class="dropdown-item" href="tipo-outro.html">Outros</a>
+                    </li>
 
-        </nav>
-        <!-- /Barra de Navegação -->
+                  </ul>
+                  <!-- /Menu Dropdown -->
 
-      </header> <!--  -->
+
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="sobre.html">Sobre</a>
+              </li>
+
+            </ul>
+            <!-- /navbar-nav -->
+
+          </div>
+          <!-- /Opções Navegação -->
+
+      </nav>
+      <!-- /Barra de Navegação -->
+
+    </header> <!--  -->
 
 
 
@@ -106,566 +106,617 @@
         <!-- Container -->
         <div class="container">
 
-          <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#all" type="button" 
-              >All-In-One
+          <!-- Tabs para telas médias/grandes -->
+          <ul class="nav nav-tabs justify-content-center d-none d-md-flex" id="myTab" role="tablist">
+            <li class="nav-item">
+              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#all">
+                All-in-one
               </button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#mini" type="button" 
-              >Desktop Mini
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#mini">
+                Desktop Mini
               </button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#slim" type="button" 
-              >Desktop Slim
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#slim">
+                Desktop Slim
               </button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#note" type="button" 
-              >Notebook
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#note">
+                Notebook
               </button>
             </li>
           </ul>
 
-            <!-- Conteúdo das abas -->
-            <div class="tab-content" id="myTabContent">
+          <!-- Dropdown para mobile -->
+          <div class="dropdown d-md-none text-center">
+            <button
+              id="dropdownTabButton"
+              type="button"
+              class="btn btn-outline-dark dropdown-toggle w-50 arredondar-botao"
+              data-bs-toggle="dropdown"
+              data-bs-display="static">
+                Computadores
+            </button>
 
-              
-              <!-- All-In-One -->
-              <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+            <ul class="dropdown-menu dropdown-tabs-mobile start-50 translate-middle-x mt-1">
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#all">
+                  All-in-one
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#mini">
+                  Desktop Mini
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#slim">
+                  Desktop Slim
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#note">
+                  Notebook
+                </button>
+              </li>
+            </ul>
+          </div>
 
-                <div>
+          <!-- Conteúdo das abas -->
+          <div class="tab-content" id="myTabContent">
 
+            
+            <!-- All-In-One -->
+            <div class="tab-pane fade botao-hover show active" id="all" role="tabpanel"aria-labelledby="all-tab">
+
+              <!-- Lenovo -->
+              <div class="container">
                   <p class="titulo-computador">Lenovo</p>
-                  
-                </div>
-
-                <div class="coluna-tipos d-flex justify-content-center">
-
-                  <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                    <li class="nav-item text-center fw-bold">
-                      i5
-                    </li>
-                    <li class="nav-item">
-                      <a href="itens.html" class="nav-link">i5-4590u 8 Ram 128 SSD</a>
-                    </li>
-                  </ul>
-
-                </div>
-                
-              </div>
-              <!-- /All-In-One -->
-
-
-              <!-- Desktop Mini -->
-              <div class="tab-pane fade" id="mini" role="tabpanel" aria-labelledby="mini-tab">
-              
-                <div class="container">
-
-                  <div>
-
-                    <p class="titulo-computador">Dell</p>
-                    
-                  </div>
-
-                  <div class="coluna-tipos d-flex justify-content-center">
-
-                    <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                      <li class="nav-item text-center fw-bold">
-                        i3
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i3-6100t 8 Ram 128 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i3-7100t 8 Ram 128 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i3-8100t 8 Ram 128 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i3-9100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="l" class="nav-link">i3-10100t 8 Ram 256 Nvme</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i3-12100t 8 Ram 256 Nvme</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i3-14100t 8 Ram 256 Nvme</a>
-                      </li>
-                    </ul>
-
-                    <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                      <li class="nav-item text-center fw-bold">
-                        i5
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-6100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-7100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-8100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-9100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-10100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-12100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-13100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-14600t 8 Ram 256 SSD</a>
-                      </li>
-                    </ul>
-
-                    <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                      <li class="nav-item text-center fw-bold">
-                        i7
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i7-7100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i7-8100t 8 Ram 256 SSD</a>
-                      </li>
-                    </ul>
-
-                  </div>
-
-                </div>
-
-                <div class="container">
-
-                  <div>
-
-                    <p class="titulo-computador">Lenovo</p>
-                    
-                  </div>
-
-                  <div class="coluna-tipos d-flex justify-content-center">
-
-                    <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                      <li class="nav-item text-center fw-bold">
-                        i3
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i3-6100t 8 Ram 128 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i3-7100t 8 Ram 128 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i3-8100t 8 Ram 128 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i3-9100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i3-10100t 8 Ram 256 Nvme</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i3-12100t 8 Ram 256 Nvme</a>
-                      </li>
-                    </ul>
-
-                    <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                      <li class="nav-item text-center fw-bold">
-                        i5
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-6100t 8 Ram 128 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-7100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-8100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-9100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-10100t 8 Ram 256 Nvme</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i5-12100t 8 Ram 256 Nvme</a>
-                      </li>
-                    </ul>
-
-                    <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                      <li class="nav-item text-center fw-bold">
-                        i7
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i7-6100t 8 Ram 128 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i7-7100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i7-8100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i7-9100t 8 Ram 256 SSD</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i7-10100t 8 Ram 256 Nvme</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="" class="nav-link">i7-12100t 8 Ram 256 Nvme</a>
-                      </li>
-                    </ul>
-                  
-                  </div>
-
-                </div>
-
-              </div>
-              <!-- /Desktop Mini -->
-
-
-              <!-- Desktop Slim -->
-              <div class="tab-pane fade" id="slim" role="tabpanel" aria-labelledby="slim-tab">
-
-                <div>
-
-                  <p class="titulo-computador">Dell</p>
-                  
-                </div>
-
-                <div class="coluna-tipos d-flex justify-content-center">
-
-                  <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                    <li class="nav-item text-center fw-bold">
-                      i3
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-3100 4 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-4100 4 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-6100 8 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-7100 8 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-8100 8 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-9100 8 Ram 240 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-10100 8 Ram 240 Nvme</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-12100 8 Ram 240 Nvme</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-14100 8 Ram 240 Nvme</a>
-                    </li>
-                  </ul>
-
-                  <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                    <li class="nav-item text-center fw-bold">
-                      i5
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-2100 4 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-3100 4 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-4100 8 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-6100 8 Ram 240 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-7100 8 Ram 240 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5 8100 8 Ram 240 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-9100 8 Ram 240 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-10100 8 Ram 240 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-12100 8 Ram 240 SSD</a>
-                    </li>
-                  </ul>
-
-                  <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                    <li class="nav-item text-center fw-bold">
-                      i7
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i7-3100 8 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i7-4100 8 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i7-6100 8 Ram 240 SSD</a>
-                    </li>
-                  </ul>
-                  
-                </div>
-
-                <div>
-
-                  <p class="titulo-computador">Lenovo</p>
-                  
-                </div>
-
-                <div class="coluna-tipos d-flex justify-content-center">
-
-                  <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                    <li class="nav-item text-center fw-bold">
-                      i3
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-3100 4 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-4100 4 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-6100 8 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-7100 8 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-8100 8 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-9100 8 Ram 240 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-10100 8 Ram 240 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i3-12100 8 Ram 240 SSD</a>
-                    </li>
-                  </ul>
-
-                  <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                    <li class="nav-item text-center fw-bold">
-                      i5
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-3100 4 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-4100 4 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-6100 8 Ram 240 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-7100 8 Ram 240 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5 8100 8 Ram 240 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-9100 8 Ram 240 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i5-10100 8 Ram 240 SSD</a>
-                    </li>
-                  </ul>
-
-                  <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                    <li class="nav-item text-center fw-bold">
-                      i7
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i7-4100 8 Ram 128 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i7-6100 8 Ram 120 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i7-7100 8 Ram 120 SSD</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="" class="nav-link">i7-8100 8 Ram 240 SSD</a>
-                    </li>
-                  </ul>
-                  
-                </div>
-
-              </div>
-              <!-- Desktop Slim -->
-
-
-              <!-- Notebook -->
-              <div class="tab-pane fade" id="note" role="tabpanel" aria-labelledby="note-tab"> <!--  -->
 
                 <!-- Row -->
-                <div class="row g-4">
+                <div class="row text-center g-3">
 
-                  <!-- Dell -->
-                  <div class="col-12 col-lg-6">
-
-                    <p class="titulo-computador">Dell</p>
-
-                    <div class="coluna-tipos d-flex justify-content-center">
-
-                      <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                        <li class="nav-item text-center fw-bold">
-                          i5
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 6200u 8 Ram 256 SSD</a> <!-- Latitude 3480 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 6300u 8 Ram 256 Nvme</a> <!-- Latitude e7470 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 8350u 8 Ram 256 Nvme</a> <!-- Latitude 5490 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 8365u 8 Ram 256 Nvme</a> <!-- Latitude 7300 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 8365u 8 Ram 256 Nvme</a> <!-- Latitude 7400 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 1021u 8 Ram 512 Nvme</a> <!-- Latitude 3410 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 1021u 8 Ram 256 Nvme</a> <!-- Latitude 5410 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 1135g7 16 Ram 256 Nvme</a> <!-- Latitude 3420 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 1145g7 8 Ram 512 Nvme</a> <!-- Latitude 5420 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 1165g7 16 Ram 256 Nvme</a> <!-- Latitude 3420 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 1245u 16 Ram 256 Nvme</a> <!-- Latitude 5430 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 1245u 16 Ram 512 Nvme</a> <!-- Latitude 5340 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 1345u 16 Ram 512 Nvme</a> <!-- Latitude 5440 -->
-                        </li>
-                      </ul>
-
-                      <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                        <li class="nav-item text-center fw-bold">
-                          i7
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i7 7500u 8 Ram 256 Nvme</a> <!-- Latitude 3480 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i7 7600u 8 Ram 256 Nvme</a> <!-- Latitude 7480 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i7 8665u 8 Ram 256 Nvme</a> <!-- Latitude 5400 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i7 1185g7 16 Ram 256 Nvme</a> <!-- Latitude 5420 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">Ultra7 165u 16 Ram 512 Nvme</a> <!-- Latitude 5450 -->
-                        </li>
-                      </ul>
-                      
-                    </div>
-
-                  </div>
-                  <!-- /Dell -->
-
-                  <!-- Lenovo -->
-                  <div class="col-12 col-lg-3">
-                    <p class="titulo-computador">Lenovo</p>
-
-                    <div class="coluna-tipos d-flex justify-content-center">
-
-                      <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                        <li class="nav-item text-center fw-bold">
-                          i5
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 4300u 8 Ram 256 Nvme</a> <!-- ThinkPad T440 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 6200u 8 Ram 256 SSD</a> <!-- Yoga -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 6300u 8 Ram 256 SSD</a> <!-- ThinkPad T470 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 8350u 8 Ram 256 Nvme</a> <!-- ThinkPad T480 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 8365u 8 Ram 256 Nvme</a> <!-- ThinkPad X1 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 1031u 8 Ram 256 Nvme</a> <!-- ThinkPad L13 -->
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i5 1245u 16 Ram 256 Nvme</a> <!-- ThinkPad T14 -->
-                        </li>
-                      </ul>
-                    
+                  <!-- i7 -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <p class="fw-bold">i5</p>
+                    <div class="d-grid gap-2">
+                      <a href="itens.html" class="btn btn-outline-dark">
+                        i5-4590t 8 Ram 120 SSD
+                      </a>
                     </div>
                   </div>
-                  <!-- /Lenovo -->
 
-                  <!-- HP -->
-                  <div class="col-12 col-lg-3">
-                    <p class="titulo-computador">HP</p>
-
-                      <div class="coluna-tipos d-flex justify-content-center">
-
-                      <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                        <li class="nav-item text-center fw-bold">
-                          i7
-                        </li>
-                        <li class="nav-item">
-                          <a href="" class="nav-link">i7 6600u 8 Ram 256 Nvme</a> <!-- EliteBook 840 G3 -->
-                        </li>
-                      </ul>
-                      
-                    </div>
-                  </div>
-                  <!-- /HP -->
-                  
                 </div>
                 <!-- /Row -->
 
               </div>
-              <!-- Notebook -->
+              <!-- Lenovo -->
+              
+            </div>
+            <!-- /All-In-One -->
+
+
+            <!-- Desktop Mini -->
+            <div class="tab-pane fade botao-hover" id="mini" role="tabpanel" 
+              aria-labelledby="mini-tab">
+
+              <!-- Dell -->
+              <div class="container">
+                <p class="titulo-computador">Dell</p>
+
+                <!-- Row -->
+                <div class="row text-center g-3">
+
+                  <!-- i3 -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <p class="fw-bold">i3</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-6100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-7100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-8100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-9100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-10100t 8 Ram 240 Nvme
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-12100t 8 Ram 240 Nvme
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-14100t 8 Ram 240 Nvme
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- i5 -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <p class="fw-bold">i5</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-6100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-7100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-8100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-9100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-10100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-12100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-13100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-14600t 8 Ram 240 SSD
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- i7 -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <p class="fw-bold">i7</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-7100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-8100t 8 Ram 240 SSD
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- /Row -->
+
+              </div>
+              <!-- /Dell -->
+
+              <!-- Lenovo -->
+              <div class="container">
+                <p class="titulo-computador">Lenovo</p>
+
+                <!-- Row -->
+                <div class="row text-center g-3">
+
+                  <!-- i3 -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <p class="fw-bold">i3</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-6100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-7100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-8100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-9100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-10100t 8 Ram 240 Nvme
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-12100t 8 Ram 240 Nvme
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- i5 -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <p class="fw-bold">i5</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-6100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-7100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-8100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-9100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-10100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-12100t 8 Ram 240 SSD
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- i7 -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <p class="fw-bold">i7</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-6100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-7100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-8100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-9100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-10100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-12100t 8 Ram 240 SSD
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- /Row -->
+
+              </div>
+              <!-- /Lenovo -->
 
             </div>
-            <!--/ Conteúdo das abas -->
+            <!-- /Desktop Mini -->
+
+
+            <!-- Desktop Slim -->
+            <div class="tab-pane fade botao-hover" id="slim" role="tabpanel" 
+              aria-labelledby="slim-tab">
+
+              <!-- Dell -->
+              <div class="container">
+                  <p class="titulo-computador">Dell</p>
+
+                <!-- Row -->
+                <div class="row text-center g-3">
+
+                  <!-- i3 -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <p class="fw-bold">i3</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-3100t 4 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-4100t 4 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-6100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-7100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-8100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-9100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-10100t 8 Ram 240 Nvme
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-12100t 8 Ram 240 Nvme
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-14100t 8 Ram 240 Nvme
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- i5 -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <p class="fw-bold">i5</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-2100t 4 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-3100t 4 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-4100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-6100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-7100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-8100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-9100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-10100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-12100t 8 Ram 240 SSD
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- i7 -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <p class="fw-bold">i7</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-3100t 4 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-4100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-6100t 8 Ram 240 SSD
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- Row -->
+
+              </div>
+              <!-- /Dell -->
+
+              <!-- Lenovo -->
+              <div class="container">
+                <p class="titulo-computador">Lenovo</p>
+
+                <!-- Row -->
+                <div class="row text-center g-3">
+
+                  <!-- i3 -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <p class="fw-bold">i3</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-3100t 4 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-4100t 4 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-6100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-7100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-8100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-9100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-10100t 8 Ram 240 Nvme
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-12100t 8 Ram 240 Nvme
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- i5 -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <p class="fw-bold">i5</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-3100t 4 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-4100t 4 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-6100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-7100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-8100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-9100t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i5-10100t 8 Ram 240 SSD
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- i7 -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <p class="fw-bold">i7</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-4100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-6100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-7100t 8 Ram 120 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i7-8100t 8 Ram 240 SSD
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- /Row -->
+
+              </div>
+              <!-- /Lenovo -->
+
+            </div>
+            <!-- /Desktop Slim -->
+
+
+            <!-- Notebook -->
+            <div class="tab-pane fade botao-hover" id="note" role="tabpanel" 
+              aria-labelledby="note-tab">
+
+              <!-- Row -->
+              <div class="row text-center g-4">
+
+                <!-- Dell -->
+                <div class="col-12 col-sm-6">
+                  <p class="titulo-computador">Dell</p>
+
+                  <div class="row">
+
+                    <!-- i5 -->
+                    <div class="col-8 col-sm-6 mx-auto">
+                      <p class="fw-bold">i5</p>
+                      <div class="d-grid gap-2">
+                        <a href="#" class="btn btn-outline-dark">
+                          i5-6200t 8 Ram 240 SSD
+                        </a>
+                        <a href="#" class="btn btn-outline-dark">
+                          i5-6300t 8 Ram 240 Nvme
+                        </a>
+                        <a href="#" class="btn btn-outline-dark">
+                          i5-8350t 8 Ram 240 Nvme
+                        </a>
+                        <a href="#" class="btn btn-outline-dark">
+                          i5-8365t 8 Ram 240 Nvme
+                        </a>
+                        <a href="#" class="btn btn-outline-dark">
+                          i5-8365t 8 Ram 240 Nvme
+                        </a>
+                        <a href="#" class="btn btn-outline-dark">
+                          i5-1021u 8 Ram 480 Nvme
+                        </a>
+                        <a href="#" class="btn btn-outline-dark">
+                          i5-1021u 8 Ram 240 Nvme
+                        </a>
+                        <a href="#" class="btn btn-outline-dark">
+                          i5-1135g7 16 Ram 240 Nvme
+                        </a>
+                        <a href="#" class="btn btn-outline-dark">
+                          i5-1145g7 16 Ram 480 Nvme
+                        </a>
+                        <a href="#" class="btn btn-outline-dark">
+                          i5-1165g7 16 Ram 240 Nvme
+                        </a>
+                        <a href="#" class="btn btn-outline-dark">
+                          i5-1245u 16 Ram 240 Nvme
+                        </a>
+                        <a href="#" class="btn btn-outline-dark">
+                          i5-1245u 16 Ram 480 Nvme
+                        </a>
+                        <a href="#" class="btn btn-outline-dark">
+                          i5-1345u 16 Ram 480 Nvme
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- i7 -->
+                    <div class="col-8 col-sm-6 mx-auto">
+                      <p class="fw-bold espaco-top">i7</p>
+                        <div class="d-grid gap-2">
+                          <a href="#" class="btn btn-outline-dark">
+                            i7-7500t 8 Ram 120 Nvme
+                          </a>
+                          <a href="#" class="btn btn-outline-dark">
+                            i7-7600t 8 Ram 120 Nvme
+                          </a>
+                          <a href="#" class="btn btn-outline-dark">
+                            i7-8665t 8 Ram 120 Nvme
+                          </a>
+                          <a href="#" class="btn btn-outline-dark">
+                            i7-1185g7 16 Ram 240 Nvme
+                          </a>
+                          <a href="#" class="btn btn-outline-dark">
+                            Ultra7 165u 16 Ram 480 Nvme
+                          </a>
+                        </div>
+                    </div>
+
+                  </div>
+                  <!-- /Row -->
+
+                </div>
+                <!-- /Dell -->
+
+                <!-- Lenovo -->
+                <div class="col-8 col-sm-3 mx-auto">
+                  <p class="titulo-computador">Lenovo</p>
+
+                    <p class="fw-bold">i5</p>
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-4300t 8 Ram 240 Nvme
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-6200t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-6300t 8 Ram 240 SSD
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-8350u 8 Ram 240 Nvme
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-8365u 8 Ram 240 Nvme
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-1031u 8 Ram 240 Nvme
+                      </a>
+                      <a href="#" class="btn btn-outline-dark">
+                        i3-1245u 8 Ram 240 Nvme
+                      </a>
+                    </div>
+
+                </div>
+                <!-- /Lenovo -->
+
+                <!-- HP -->
+                <div class="col-8 col-sm-3 mx-auto">
+                  <p class="titulo-computador">HP</p>
+
+                  <p class="fw-bold">i7</p>
+                  <div class="d-grid gap-2">
+                    <a href="#" class="btn btn-outline-dark">
+                      i7-6600t 8 Ram 240 Nvme
+                    </a>
+                  </div>
+
+                </div>
+                <!-- /HP -->
+
+              </div>
+              <!-- /Row -->
+
+            </div>
+            <!-- Notebook -->
+
+          </div>
+          <!--/ Conteúdo das abas -->
           
         </div>
         <!-- /Container -->
@@ -721,6 +772,62 @@
             }
           }
         });
+      </script>
+
+      <!-- Dropdown mobile funcional -->
+      <script>
+        document.querySelectorAll('.dropdown-tabs-mobile .dropdown-item')
+          .forEach(item => {
+            item.addEventListener('click', function () {
+              const target = this.getAttribute('data-bs-target');
+              const tabTrigger = document.querySelector(
+                `.nav-tabs [data-bs-target="${target}"]`
+              );
+
+              if (tabTrigger) {
+                const tab = new bootstrap.Tab(tabTrigger);
+                tab.show();
+              }
+            });
+          });
+      </script>
+
+      <!-- Dropdown mobile ativo -->
+      <script>
+        function syncDropdownWithTab(target) {
+          if (!target) return
+
+          const dropdownItems = document.querySelectorAll(
+            '.dropdown-tabs-mobile .dropdown-item'
+          )
+          const dropdownButton = document.getElementById('dropdownTabButton')
+
+          dropdownItems.forEach(item => {
+            item.classList.remove('active')
+
+            if (item.getAttribute('data-bs-target') === target) {
+              item.classList.add('active')
+              dropdownButton.textContent = item.textContent.trim()
+            }
+          })
+        }
+
+        // Ao trocar de aba
+        document.addEventListener('shown.bs.tab', function (event) {
+          syncDropdownWithTab(
+            event.target.getAttribute('data-bs-target')
+          )
+        })
+
+        // Ao carregar a página
+        document.addEventListener('DOMContentLoaded', function () {
+          const activeTab = document.querySelector('.nav-tabs .nav-link.active')
+          if (activeTab) {
+            syncDropdownWithTab(
+              activeTab.getAttribute('data-bs-target')
+            )
+          }
+        })
       </script>
 
   </body>

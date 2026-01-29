@@ -15,15 +15,15 @@
 
     <link rel="stylesheet" type="text/css" href="css/estilotipos.css">
     <link rel="icon" type="image/ico" href="imagens/reicon.png">
-    <title>Teste</title>
+    <title>Próximas Páginas</title>
 
   </head>
-  <body> <!--  -->
+  <body> <!--  --> 
 
     <header>
 
       <!-- Barra de Navegação -->
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-2 position-relative">
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark position-relative">
 
         <!-- Logo -->
         <a class="navbar-brand logo-formatacao" href="index.html">RE Informática</a>
@@ -59,7 +59,7 @@
                   <ul class="dropdown-menu">
 
                     <li>
-                      <a class="dropdown-item" href="tipo-computador.html">Computadores</a>
+                      <a class="dropdown-item active" href="tipo-computador.html">Computadores</a>
                     </li>
 
                     <li>
@@ -101,19 +101,23 @@
 
 
 
-      <!-- Container --> 
-      <main class="container">
+      <main class="conteudo-site">
 
-        
-        <div>
-          
-          
+        <!-- Container -->
+        <div class="container">
 
+          <!-- Conteúdo das abas -->
+          <div class="tab-content" id="myTabContent">
+
+            
+
+          </div>
+          <!--/ Conteúdo das abas -->
+          
         </div>
-        
+        <!-- /Container -->
 
       </main>
-      <!-- /Container -->
 
 
 
@@ -121,8 +125,8 @@
       <footer id="footer" class="bg-dark">
         <div class="rodape-formatacao">
           <p class="rodape-escrita-formatacao"> <!--  -->
-          <strong> &copy </strong>Todos os direitos reservados ao programador <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor </a>
-        </p>
+            <strong>&copy; </strong>Todos os direitos reservados ao programador <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor </a>
+          </p>
         </div>
       </footer>
       <!-- /Rodapé -->
@@ -143,6 +147,83 @@
             }
           }
         });
+      </script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const params = new URLSearchParams(window.location.search);
+          const tab = params.get("tab");
+
+          if (tab) {
+            const trigger = document.querySelector(
+              `[data-bs-target="#${tab}"]`
+            );
+
+            if (trigger) {
+              const bsTab = new bootstrap.Tab(trigger);
+              bsTab.show();
+
+              // garante que fique no topo
+              window.scrollTo({ top: 0, behavior: "instant" });
+            }
+          }
+        });
+      </script>
+
+      <!-- Dropdown mobile funcional -->
+      <script>
+        document.querySelectorAll('.dropdown-tabs-mobile .dropdown-item')
+          .forEach(item => {
+            item.addEventListener('click', function () {
+              const target = this.getAttribute('data-bs-target');
+              const tabTrigger = document.querySelector(
+                `.nav-tabs [data-bs-target="${target}"]`
+              );
+
+              if (tabTrigger) {
+                const tab = new bootstrap.Tab(tabTrigger);
+                tab.show();
+              }
+            });
+          });
+      </script>
+
+      <!-- Dropdown mobile ativo -->
+      <script>
+        function syncDropdownWithTab(target) {
+          if (!target) return
+
+          const dropdownItems = document.querySelectorAll(
+            '.dropdown-tabs-mobile .dropdown-item'
+          )
+          const dropdownButton = document.getElementById('dropdownTabButton')
+
+          dropdownItems.forEach(item => {
+            item.classList.remove('active')
+
+            if (item.getAttribute('data-bs-target') === target) {
+              item.classList.add('active')
+              dropdownButton.textContent = item.textContent.trim()
+            }
+          })
+        }
+
+        // Ao trocar de aba
+        document.addEventListener('shown.bs.tab', function (event) {
+          syncDropdownWithTab(
+            event.target.getAttribute('data-bs-target')
+          )
+        })
+
+        // Ao carregar a página
+        document.addEventListener('DOMContentLoaded', function () {
+          const activeTab = document.querySelector('.nav-tabs .nav-link.active')
+          if (activeTab) {
+            syncDropdownWithTab(
+              activeTab.getAttribute('data-bs-target')
+            )
+          }
+        })
       </script>
 
   </body>

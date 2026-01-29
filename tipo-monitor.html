@@ -23,7 +23,7 @@
       <header>
 
         <!-- Barra de Navegação -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-2 position-relative">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark position-relative">
 
           <!-- Logo -->
           <a class="navbar-brand logo-formatacao" href="index.html">RE Informática</a>
@@ -51,8 +51,8 @@
                 </li>
                 
                 <li class="nav-item dropdown">
-                  <a href="" class="nav-link dropdown-toggle" role="button"
-                  data-bs-toggle="dropdown">Compras</a>
+                  <a href="#" class="nav-link dropdown-toggle" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">Compras</a>
 
 
                     <!-- Menu Dropdown -->
@@ -103,180 +103,282 @@
 
       <main class="conteudo-site">
 
+        <!-- Container -->
         <div class="container">
 
-          <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#m19p" type="button" 
-              >19"Polegadas
+          <!-- Tabs para telas médias/grandes -->
+          <ul class="nav nav-tabs justify-content-center d-none d-md-flex" id="myTab" role="tablist">
+            <li class="nav-item">
+              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#m19p">
+                19"Polegadas
               </button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#m20p" type="button" 
-              >20"Polegadas
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#m20p">
+                20"Polegadas
               </button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#m21p" type="button" 
-              >21"Polegadas
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#m21p">
+                21"Polegadas
               </button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#m22p" type="button" 
-              >22"Polegadas
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#m22p">
+                22"Polegadas
               </button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#m23p" type="button" 
-              >23"Polegadas
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#m23p">
+                23"Polegadas
               </button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#m24p" type="button" 
-              >24"Polegadas
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#m24p">
+                24"Polegadas
               </button>
             </li>
           </ul>
+
+          <!-- Dropdown para mobile -->
+          <div class="dropdown d-md-none text-center">
+            <button
+              id="dropdownTabButton"
+              type="button"
+              class="btn btn-outline-dark dropdown-toggle w-50 arredondar-botao"
+              data-bs-toggle="dropdown"
+              data-bs-display="static">
+                Monitores
+            </button>
+
+            <ul class="dropdown-menu dropdown-tabs-mobile start-50 translate-middle-x mt-2">
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#m19p">
+                  19"Polegadas
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#m20p">
+                  20"Polegadas
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#m21p">
+                  21"Polegadas
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#m22p">
+                  22"Polegadas
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#m23p">
+                  23"Polegadas
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#m24p">
+                  24"Polegadas
+                </button>
+              </li>
+            </ul>
+          </div>
 
           <!-- Nunca iniciar classes, id's ou similares com números -->
 
           <!-- Conteúdo das abas -->
           <div class="tab-content" id="myTabContent">
 
-            <!-- 19"Polegadas -->
-            <div class="tab-pane fade show active" id="m19p" role="tabpanel" aria-labelledby="m19p-tab">
-
-              <div>
-
-                <p class="titulo-computador">Marca</p>
-                
-              </div>
-
-              <div class="coluna-tipos d-flex justify-content-center">
-
-                <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">Monitor 19" Teste</a>
-                  </li>
-                </ul>
-
-              </div>
             
-            </div>
-            <!-- /19"Polegadas -->
+            <!-- Monitor 19 Polegadas -->
+            <div class="tab-pane fade botao-hover show active" id="m19p" role="tabpanel" aria-labelledby="m19p-tab">
 
-            <!-- 20"Polegadas -->
-            <div class="tab-pane fade" id="m20p" role="tabpanel" aria-labelledby="m20p-tab">
+              <!-- container -->
+              <div class="container">
+                  <p class="titulo-computador">Monitor</p>
 
-              <div>
+                <!-- Row -->
+                <div class="row text-center g-3">
 
-                <p class="titulo-computador">Marca</p>
+                  <!-- produto -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        Monitor 19 Teste
+                      </a>
+                    </div>
+                  </div>
+                  <!-- /produto -->
+
+                </div>
+                <!-- /Row -->
+
+              </div>
+              <!-- /container -->
               
-              </div>
-
-              <div class="coluna-tipos d-flex justify-content-center">
-
-                <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">Monitor 20" Teste</a>
-                  </li>
-                </ul>
-
-              </div>
-            
             </div>
-            <!-- /20"Polegadas -->
+            <!-- /Monitor 19 Polegadas -->
 
-            <!-- 21"Polegadas -->
-            <div class="tab-pane fade" id="m21p" role="tabpanel" aria-labelledby="m21p-tab">
 
-              <div>
 
-                <p class="titulo-computador">Marca</p>
-                
+            <!-- Monitor 20 Polegadas -->
+            <div class="tab-pane fade botao-hover" id="m20p" role="tabpanel" aria-labelledby="m20p-tab">
+
+              <!-- container -->
+              <div class="container">
+                  <p class="titulo-computador">Monitor</p>
+
+                <!-- Row -->
+                <div class="row text-center g-3">
+
+                  <!-- produto -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        Monitor 20 Teste
+                      </a>
+                    </div>
+                  </div>
+                  <!-- /produto -->
+
+                </div>
+                <!-- /Row -->
+
               </div>
-
-              <div class="coluna-tipos d-flex justify-content-center">
-
-                <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">Monitor 21" Teste</a>
-                  </li>
-                </ul>
-
-              </div>
-            
+              <!-- /container -->
+              
             </div>
-            <!-- /21"Polegadas -->
+            <!-- /Monitor 20 Polegadas -->
 
-            <!-- 22"Polegadas -->
-            <div class="tab-pane fade" id="m22p" role="tabpanel" aria-labelledby="m22p-tab">
 
-              <div>
 
-                <p class="titulo-computador">Marca</p>
-                
+            <!-- Monitor 21 Polegadas -->
+            <div class="tab-pane fade botao-hover" id="m21p" role="tabpanel" aria-labelledby="m21p-tab">
+
+              <!-- container -->
+              <div class="container">
+                  <p class="titulo-computador">Monitor</p>
+
+                <!-- Row -->
+                <div class="row text-center g-3">
+
+                  <!-- produto -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        Monitor 21 Teste
+                      </a>
+                    </div>
+                  </div>
+                  <!-- /produto -->
+
+                </div>
+                <!-- /Row -->
+
               </div>
-
-              <div class="coluna-tipos d-flex justify-content-center">
-
-                <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">Monitor 22" Teste</a>
-                  </li>
-                </ul>
-
-              </div>
-            
+              <!-- /container -->
+              
             </div>
-            <!-- /22"Polegadas -->
+            <!-- /Monitor 21 Polegadas -->
 
-            <!-- 23"Polegadas -->
-            <div class="tab-pane fade" id="m23p" role="tabpanel" aria-labelledby="m23p-tab">
 
-              <div>
+            <!-- Monitor 22 Polegadas -->
+            <div class="tab-pane fade botao-hover" id="m22p" role="tabpanel" aria-labelledby="m22p-tab">
 
-                <p class="titulo-computador">Marca</p>
-                
+              <!-- container -->
+              <div class="container">
+                  <p class="titulo-computador">Monitor</p>
+
+                <!-- Row -->
+                <div class="row text-center g-3">
+
+                  <!-- produto -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        Monitor 22 Teste
+                      </a>
+                    </div>
+                  </div>
+                  <!-- /produto -->
+
+                </div>
+                <!-- /Row -->
+
               </div>
-
-              <div class="coluna-tipos d-flex justify-content-center">
-
-                <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">Monitor 23" Teste</a>
-                  </li>
-                </ul>
-
-              </div>
-            
+              <!-- /container -->
+              
             </div>
-            <!-- /23"Polegadas -->
+            <!-- /Monitor 22 Polegadas -->
 
-            <!-- 24"Polegadas -->
-            <div class="tab-pane fade" id="m24p" role="tabpanel" aria-labelledby="m24p-tab">
 
-              <div>
 
-                <p class="titulo-computador">Marca</p>
-                
+            <!-- Monitor 23 Polegadas -->
+            <div class="tab-pane fade botao-hover" id="m23p" role="tabpanel" aria-labelledby="m23p-tab">
+
+              <!-- container -->
+              <div class="container">
+                  <p class="titulo-computador">Monitor</p>
+
+                <!-- Row -->
+                <div class="row text-center g-3">
+
+                  <!-- produto -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        Monitor 23 Teste
+                      </a>
+                    </div>
+                  </div>
+                  <!-- /produto -->
+
+                </div>
+                <!-- /Row -->
+
               </div>
-
-              <div class="coluna-tipos d-flex justify-content-center">
-
-                <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">Monitor 24" Teste</a>
-                  </li>
-                </ul>
-
-              </div>
-            
+              <!-- /container -->
+              
             </div>
-            <!-- /24"Polegadas -->
-          
+            <!-- Monitor 23 Polegadas -->
+
+
+
+            <!-- Monitor 24 Polegadas -->
+            <div class="tab-pane fade botao-hover" id="m24p" role="tabpanel" aria-labelledby="m24p-tab">
+
+              <!-- container -->
+              <div class="container">
+                  <p class="titulo-computador">Monitor</p>
+
+                <!-- Row -->
+                <div class="row text-center g-3">
+
+                  <!-- produto -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        Monitor 24 Teste
+                      </a>
+                    </div>
+                  </div>
+                  <!-- /produto -->
+
+                </div>
+                <!-- /Row -->
+
+              </div>
+              <!-- /container -->
+              
+            </div>
+            <!-- /Monitor 24 Polegadas -->
+
+
+
           </div>
-          <!-- /Conteúdo das abas -->
+          <!--/ Conteúdo das abas -->
+
         
         </div>
         <!-- /Container -->
@@ -332,6 +434,62 @@
             }
           }
         });
+      </script>
+
+      <!-- Dropdown mobile funcional -->
+      <script>
+        document.querySelectorAll('.dropdown-tabs-mobile .dropdown-item')
+          .forEach(item => {
+            item.addEventListener('click', function () {
+              const target = this.getAttribute('data-bs-target');
+              const tabTrigger = document.querySelector(
+                `.nav-tabs [data-bs-target="${target}"]`
+              );
+
+              if (tabTrigger) {
+                const tab = new bootstrap.Tab(tabTrigger);
+                tab.show();
+              }
+            });
+          });
+      </script>
+
+      <!-- Dropdown mobile ativo -->
+      <script>
+        function syncDropdownWithTab(target) {
+          if (!target) return
+
+          const dropdownItems = document.querySelectorAll(
+            '.dropdown-tabs-mobile .dropdown-item'
+          )
+          const dropdownButton = document.getElementById('dropdownTabButton')
+
+          dropdownItems.forEach(item => {
+            item.classList.remove('active')
+
+            if (item.getAttribute('data-bs-target') === target) {
+              item.classList.add('active')
+              dropdownButton.textContent = item.textContent.trim()
+            }
+          })
+        }
+
+        // Ao trocar de aba
+        document.addEventListener('shown.bs.tab', function (event) {
+          syncDropdownWithTab(
+            event.target.getAttribute('data-bs-target')
+          )
+        })
+
+        // Ao carregar a página
+        document.addEventListener('DOMContentLoaded', function () {
+          const activeTab = document.querySelector('.nav-tabs .nav-link.active')
+          if (activeTab) {
+            syncDropdownWithTab(
+              activeTab.getAttribute('data-bs-target')
+            )
+          }
+        })
       </script>
 
   </body>

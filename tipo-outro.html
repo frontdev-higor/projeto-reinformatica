@@ -23,7 +23,7 @@
       <header>
 
         <!-- Barra de Navegação -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-2 position-relative">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark position-relative">
 
           <!-- Logo -->
           <a class="navbar-brand logo-formatacao" href="index.html">RE Informática</a>
@@ -100,194 +100,200 @@
       </header> <!--  -->
 
 
+
       <main class="conteudo-site">
 
+        <!-- Container -->
         <div class="container">
 
-          <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#impressora" type="button" 
-              >Impressora
+          <!-- Tabs para telas médias/grandes -->
+          <ul class="nav nav-tabs justify-content-center d-none d-md-flex" id="myTab" role="tablist">
+            <li class="nav-item">
+              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#impressora">
+                Impressora
               </button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#kit-tsm" type="button" 
-              >Kit Tela/Suporte/Mini
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#kit-tsm">
+                Kit Tela/Suporte/Mini
               </button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#placamae" type="button" 
-              >Placa Mãe
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#placamae">
+                Placa Mãe
               </button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#suporte" type="button" 
-              >Suporte
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#suporte">
+                Suporte
               </button>
             </li>
           </ul>
 
+          <!-- Dropdown para mobile -->
+          <div class="dropdown d-md-none text-center">
+            <button
+              id="dropdownTabButton"
+              type="button"
+              class="btn btn-outline-dark dropdown-toggle w-50 arredondar-botao"
+              data-bs-toggle="dropdown"
+              data-bs-display="static">
+                Tipos
+            </button>
+
+            <ul class="dropdown-menu dropdown-tabs-mobile start-50 translate-middle-x mt-2">
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#impressora">
+                  Impressora
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#kit-tsm">
+                  Kit Tela/Suporte/Mini
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#placamae">
+                  Placa Mãe
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#suporte">
+                  Suporte
+                </button>
+              </li>
+            </ul>
+          </div>
+
           <!-- Conteúdo das abas -->
           <div class="tab-content" id="myTabContent">
 
-            <!-- Armazenamento -->
-            <div class="tab-pane fade show active" id="impressora" role="tabpanel" aria-labelledby="impressora-tab">
+            
+            <!-- Impressora -->
+            <div class="tab-pane fade botao-hover show active" id="impressora" role="tabpanel" aria-labelledby="impressora-tab">
 
+              <!-- container -->
               <div class="container">
-
-                <div>
-
                   <p class="titulo-computador">Marca</p>
-                  
+
+                <!-- Row -->
+                <div class="row text-center g-3">
+
+                  <!-- produto -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        Impressora Teste
+                      </a>
+                    </div>
+                  </div>
+                  <!-- /produto -->
+
                 </div>
-
-                <div class="coluna-tipos d-flex justify-content-center">
-
-                  <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Teste</a>
-                    </li>
-                  </ul>
-
-                </div>
+                <!-- /Row -->
 
               </div>
-            
+              <!-- /container -->
+              
             </div>
-            <!-- /Armazenamento -->
+            <!-- /Impressora -->
 
-            <!-- Cabo -->
-            <div class="tab-pane fade" id="kit-tsm" role="tabpanel" aria-labelledby="kit-tsm-tab">
 
+
+            <!-- Kit Tela/Suporte/Mini -->
+            <div class="tab-pane fade botao-hover" id="kit-tsm" role="tabpanel" aria-labelledby="kit-tsm-tab">
+
+              <!-- container -->
               <div class="container">
-
-                <div>
-
-                <p class="titulo-computador">Marca</p>
-                
-                </div>
-
-                <div class="coluna-tipos d-flex justify-content-center">
-
-                  <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Teste</a>
-                    </li>
-                  </ul>
-
-                </div>
-
-              </div>
-            
-            </div>
-            <!-- /Cabo -->
-
-            <!-- Fonte -->
-            <div class="tab-pane fade" id="placamae" role="tabpanel" aria-labelledby="placamae-tab">
-
-              <div class="container">
-
-                <div>
-
                   <p class="titulo-computador">Marca</p>
-                  
+
+                <!-- Row -->
+                <div class="row text-center g-3">
+
+                  <!-- produto -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        Kit TSM Teste
+                      </a>
+                    </div>
+                  </div>
+                  <!-- /produto -->
+
                 </div>
-
-                <div class="coluna-tipos d-flex justify-content-center">
-
-                  <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Teste</a>
-                    </li>
-                  </ul>
-
-                </div>
+                <!-- /Row -->
 
               </div>
-            
+              <!-- /container -->
+              
             </div>
-            <!-- /Fonte -->
+            <!-- /Kit Tela/Suporte/Mini -->
 
-            <!-- Memoria -->
-            <div class="tab-pane fade" id="suporte" role="tabpanel" aria-labelledby="suporte-tab">
 
+
+            <!-- Placa Mãe -->
+            <div class="tab-pane fade botao-hover" id="placamae" role="tabpanel" aria-labelledby="placamae-tab">
+
+              <!-- container -->
               <div class="container">
-
-                <div>
-
                   <p class="titulo-computador">Marca</p>
-                  
+
+                <!-- Row -->
+                <div class="row text-center g-3">
+
+                  <!-- produto -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        Placa Mãe Teste
+                      </a>
+                    </div>
+                  </div>
+                  <!-- /produto -->
+
                 </div>
-
-                <div class="coluna-tipos d-flex justify-content-center">
-
-                  <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Teste</a>
-                    </li>
-                  </ul>
-
-                </div>
+                <!-- /Row -->
 
               </div>
-            
+              <!-- /container -->
+              
             </div>
-            <!-- /Memória -->
+            <!-- /Placa Mãe -->
 
-            <!-- Periférico -->
-            <div class="tab-pane fade" id="periferico" role="tabpanel" aria-labelledby="periferico-tab">
 
+            <!-- Suporte -->
+            <div class="tab-pane fade botao-hover" id="suporte" role="tabpanel" aria-labelledby="suporte-tab">
+
+              <!-- container -->
               <div class="container">
-
-                <div>
-
                   <p class="titulo-computador">Marca</p>
-                  
+
+                <!-- Row -->
+                <div class="row text-center g-3">
+
+                  <!-- produto -->
+                  <div class="col-8 col-sm-4 mx-auto">
+                    <div class="d-grid gap-2">
+                      <a href="#" class="btn btn-outline-dark">
+                        Suporte Teste
+                      </a>
+                    </div>
+                  </div>
+                  <!-- /produto -->
+
                 </div>
-
-                <div class="coluna-tipos d-flex justify-content-center">
-
-                  <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Periférico Teste</a>
-                    </li>
-                  </ul>
-
-                </div>
+                <!-- /Row -->
 
               </div>
-            
+              <!-- /container -->
+              
             </div>
-            <!-- /Periférico -->
+            <!-- /Suporte -->
 
-            <!-- Outro -->
-            <div class="tab-pane fade" id="outro" role="tabpanel" aria-labelledby="outro-tab">
 
-              <div class="container">
 
-                <div>
-
-                  <p class="titulo-computador">Marca</p>
-                  
-                </div>
-
-                <div class="coluna-tipos d-flex justify-content-center">
-
-                  <ul class="nav nav-pills flex-column espaco-link espaco-bottom-um">
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Outro Teste</a>
-                    </li>
-                  </ul>
-
-                </div>
-
-              </div>
-            
-            </div>
-            <!-- /Outro -->
-          
           </div>
-          <!-- /Conteúdo das abas -->
+          <!--/ Conteúdo das abas -->
         
         </div>
         
@@ -341,6 +347,62 @@
             }
           }
         });
+      </script>
+
+      <!-- Dropdown mobile funcional -->
+      <script>
+        document.querySelectorAll('.dropdown-tabs-mobile .dropdown-item')
+          .forEach(item => {
+            item.addEventListener('click', function () {
+              const target = this.getAttribute('data-bs-target');
+              const tabTrigger = document.querySelector(
+                `.nav-tabs [data-bs-target="${target}"]`
+              );
+
+              if (tabTrigger) {
+                const tab = new bootstrap.Tab(tabTrigger);
+                tab.show();
+              }
+            });
+          });
+      </script>
+
+      <!-- Dropdown mobile ativo -->
+      <script>
+        function syncDropdownWithTab(target) {
+          if (!target) return
+
+          const dropdownItems = document.querySelectorAll(
+            '.dropdown-tabs-mobile .dropdown-item'
+          )
+          const dropdownButton = document.getElementById('dropdownTabButton')
+
+          dropdownItems.forEach(item => {
+            item.classList.remove('active')
+
+            if (item.getAttribute('data-bs-target') === target) {
+              item.classList.add('active')
+              dropdownButton.textContent = item.textContent.trim()
+            }
+          })
+        }
+
+        // Ao trocar de aba
+        document.addEventListener('shown.bs.tab', function (event) {
+          syncDropdownWithTab(
+            event.target.getAttribute('data-bs-target')
+          )
+        })
+
+        // Ao carregar a página
+        document.addEventListener('DOMContentLoaded', function () {
+          const activeTab = document.querySelector('.nav-tabs .nav-link.active')
+          if (activeTab) {
+            syncDropdownWithTab(
+              activeTab.getAttribute('data-bs-target')
+            )
+          }
+        })
       </script>
 
   </body>
