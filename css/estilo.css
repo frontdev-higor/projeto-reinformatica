@@ -695,6 +695,14 @@ ul {
 			font-size: 16px;
 		}
 
+		.nav-text .nav-link {
+			font-size: 1.05em;
+		}
+
+		.nav-text .dropdown-item {
+			font-size: 1.05em;
+		}
+
 		.texto-imagem-cima {
 			font-size: 1.5em;
 			color: rgba(255, 255, 255, 1);
@@ -871,6 +879,14 @@ ul {
 			font-size: 14px;
 		}
 
+		.nav-text .nav-link {
+			font-size: 1em;
+		}
+
+		.nav-text .dropdown-item {
+			font-size: 1em;
+		}
+
 		.texto-imagem-cima {
 			font-size: 1.2em;
 		}
@@ -1041,6 +1057,14 @@ ul {
 			margin: 0 2px;
 			padding: 6px 10px;
 			font-size: 13px;
+		}
+
+		.nav-text .nav-link {
+			font-size: 0.9em;
+		}
+
+		.nav-text .dropdown-item {
+			font-size: 0.9em;
 		}
 
 		.texto-imagem-cima {

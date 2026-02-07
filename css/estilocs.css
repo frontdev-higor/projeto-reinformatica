@@ -240,6 +240,7 @@ header .navbar {
 
 .titulo-item {
 	font-weight: bold;
+	font-size: 2em;
 	/*border: 1px solid #e6e6e6;*/
 	border-left: none;
 	border-right: none;
@@ -406,6 +407,30 @@ body.page-sobre .conteudo-central {
 		    transform: translateX(-50%);
 		}
 
+		.nav-text .nav-link {
+			font-size: 1.05em;
+		}
+
+		.nav-text .dropdown-item {
+			font-size: 1.05em;
+		}
+
+		.titulo-item {
+	  	font-size: 2em;
+	  }
+
+	  .texto-item-um {
+	  	font-size: 1.3em;
+	  }
+
+	  .texto-item {
+	  	font-size: 1.3em;
+	  }
+
+	  .menos-espaco {
+	  	font-size: 1.1em;
+	  }
+
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -435,6 +460,30 @@ body.page-sobre .conteudo-central {
 		    left: 50%;
 		    transform: translateX(-50%);
 		}
+
+		.nav-text .nav-link {
+			font-size: 1em;
+		}
+
+		.nav-text .dropdown-item {
+			font-size: 1em;
+		}
+
+		.titulo-item {
+	  	font-size: 1.9em;
+	  }
+
+	  .texto-item-um {
+	  	font-size: 1.25em;
+	  }
+
+	  .texto-item {
+	  	font-size: 1.25em;
+	  }
+
+	  .menos-espaco {
+	  	font-size: 1.05em;
+	  }
 
 }
 
@@ -470,9 +519,33 @@ body.page-sobre .conteudo-central {
 		    transform: translateX(-50%);
 		}
 
+		.nav-text .nav-link {
+			font-size: 0.9em;
+		}
+
+		.nav-text .dropdown-item {
+			font-size: 0.9em;
+		}
+
 		.overlay-bg {
 			backdrop-filter: blur(4px) saturate(115%);
 		}
+
+		.titulo-item {
+	  	font-size: 1.8em;
+	  }
+
+	  .texto-item-um {
+	  	font-size: 1.2em;
+	  }
+
+	  .texto-item {
+	  	font-size: 1.2em;
+	  }
+
+	  .menos-espaco {
+	  	font-size: 1em;
+	  }
 
 }
 
@@ -517,6 +590,22 @@ body.page-sobre .conteudo-central {
 
 	  .conteudo-central {
 	    padding: 18px;
+	  }
+
+	  .titulo-item {
+	  	font-size: 1.6em;
+	  }
+
+	  .texto-item-um {
+	  	font-size: 1.1em;
+	  }
+
+	  .texto-item {
+	  	font-size: 1.1em;
+	  }
+
+	  .menos-espaco {
+	  	font-size: 0.9em;
 	  }
 
 }
@@ -571,6 +660,22 @@ body.page-sobre .conteudo-central {
 
 	  .conteudo-central {
 	    padding: 10px;
+	  }
+
+	  .titulo-item {
+	  	font-size: 1.6em;
+	  }
+
+	  .texto-item-um {
+	  	font-size: 1.1em;
+	  }
+
+	  .texto-item {
+	  	font-size: 1.1em;
+	  }
+
+	  .menos-espaco {
+	  	font-size: 0.9em;
 	  }
 
 }
