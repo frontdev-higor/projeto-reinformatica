@@ -1336,7 +1336,7 @@ section {
 
 		.navbar .dropdown-menu {
 			position: static;
-			width: 60%;
+			width: 100%;
 			margin: 0;
 			transform: none;
 			text-align: center;
@@ -1485,7 +1485,7 @@ section {
 
 		.navbar .dropdown-menu {
 			position: static;
-			width: 60%;
+			width: 100%;
 			margin: 0;
 			transform: none;
 			text-align: center;

@@ -532,19 +532,20 @@ body.page-sobre .conteudo-central {
 		}
 
 		.titulo-item {
-	  	font-size: 1.8em;
+	  	font-size: 1.3em;
+	  	margin-bottom: -10px;
 	  }
 
 	  .texto-item-um {
-	  	font-size: 1.2em;
+	  	font-size: 0.9em;
 	  }
 
 	  .texto-item {
-	  	font-size: 1.2em;
+	  	font-size: 0.9em;
 	  }
 
 	  .menos-espaco {
-	  	font-size: 1em;
+	  	font-size: 0.9em;
 	  }
 
 }
@@ -554,7 +555,7 @@ body.page-sobre .conteudo-central {
 
 		.navbar .dropdown-menu {
 			position: static;
-			width: 60%;
+			width: 100%;
 			margin: 0;
 			transform: none;
 			text-align: center;
@@ -593,15 +594,16 @@ body.page-sobre .conteudo-central {
 	  }
 
 	  .titulo-item {
-	  	font-size: 1.6em;
+	  	font-size: 1.3em;
+	  	margin-bottom: -12px;
 	  }
 
 	  .texto-item-um {
-	  	font-size: 1.1em;
+	  	font-size: 0.9em;
 	  }
 
 	  .texto-item {
-	  	font-size: 1.1em;
+	  	font-size: 0.9em;
 	  }
 
 	  .menos-espaco {
@@ -615,7 +617,7 @@ body.page-sobre .conteudo-central {
 
 		.navbar .dropdown-menu {
 			position: static;
-			width: 60%;
+			width: 100%;
 			margin: 0;
 			transform: none;
 			text-align: center;
@@ -663,11 +665,12 @@ body.page-sobre .conteudo-central {
 	  }
 
 	  .titulo-item {
-	  	font-size: 1.6em;
+	  	font-size: 1.5em;
+	  	margin-bottom: -8px;
 	  }
 
 	  .texto-item-um {
-	  	font-size: 1.1em;
+	  	font-size: 1em;
 	  }
 
 	  .texto-item {
