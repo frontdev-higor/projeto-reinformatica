@@ -59,19 +59,19 @@
                     <ul class="dropdown-menu nav-text">
 
                       <li>
-                        <a class="dropdown-item active" href="tipo-computador.html">Computadores</a>
+                        <a class="btn btn-tipos dropdown-item active" href="tipo-computador.html">Computadores</a>
                       </li>
 
                       <li>
-                        <a class="dropdown-item" href="tipo-monitor.html">Monitores</a>
+                        <a class="btn btn-tipos dropdown-item" href="tipo-monitor.html">Monitores</a>
                       </li>
 
                       <li>
-                        <a class="dropdown-item" href="tipo-componente.html">Componentes</a>
+                        <a class="btn btn-tipos dropdown-item" href="tipo-componente.html">Componentes</a>
                       </li>
 
                       <li>
-                        <a class="dropdown-item" href="tipo-outro.html">Outros</a>
+                        <a class="btn btn-tipos dropdown-item" href="tipo-outro.html">Outros</a>
                       </li>
 
                     </ul>
@@ -170,9 +170,10 @@
 
               <div>
                 <h2 class="titulo-item">Lenovo</h2>
-                <p class="texto-item-um">i5 4590 8 Ram 128 SSD</p>
-                <p class="texto-item">3 USB's, VGA e Display Port</p>
-                <h2 class="texto-item-dois">R$ 1.000,00</h2>
+                <p class="texto-item-um">ThinkPad T470</p>
+                <p class="texto-item-dois">i5 4590 8 Ram 128 SSD</p>
+                <p class="texto-item-tres">3 USB's, VGA e Display Port</p>
+                <h2 class="texto-preco">R$ 1.000,00</h2>
                 <a class="botao-link" href="contato.html">Quero comprar</a>
               </div>
 
@@ -189,13 +190,14 @@
 
           <div class="d-flex flex-column justify-content-center botao-hover">
 
-            <div class="mobile-sm-border">
-              <h2 class="titulo-item">Lenovo</h2>
-              <p class="texto-item">i5 4590 8 Ram 128 SSD</p>
-              <p class="texto-item">3 USB's, VGA e Display Port</p>
-              <h2 class="texto-item-dois">R$ 1.000,00</h2>
-              <a class="botao-link" href="contato.html">Quero comprar</a>
+            <div class="item-card">
+              <p class="titulo-item">All-In-One Lenovo</p>
+              <p class="texto-item-um">ThinkCentre E73Z</p>
+              <p class="texto-item-dois">i5 4590 8 Ram 128 SSD</p>
+              <p class="texto-item-tres">3 USB's, VGA e Display Port</p>
+              <p class="texto-preco">R$ 1.000,00</p>
             </div>
+              <a class="btn botao-link btn-tipos" href="contato.html">Quero comprar</a>
 
           </div>
           
@@ -234,6 +236,15 @@
               new bootstrap.Tab(tabTrigger).show();
             }
           }
+        });
+      </script>
+
+      <!-- Remove o focus ativo das setas do carousel com fadeout -->
+      <script>
+        document.querySelectorAll('button').forEach(btn => {
+          btn.addEventListener('click', () => {
+            setTimeout(() => btn.blur(), 150);
+          });
         });
       </script>
 

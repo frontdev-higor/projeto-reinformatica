@@ -248,24 +248,17 @@ header .navbar {
 	color: #000;
 }
 
-.texto-item {
- 	font-size: 1.1em;
- 	padding-bottom: 15px;
- 	margin: 15px;
-}
-
 .texto-item-um {
- 	padding-top: 15px;
+ 	padding: 5px;
  	font-size: 1.1em;
- 	margin: 15px;
+ 	margin: 5px;
 }
 
 .texto-item-dois {
- 	font-weight: bold;
-	background-color: rgba(0, 0, 0, 0.1);
-	border-radius: 10px;
-	padding: 10px;
-}
+	padding: 5px;
+	font-size: 1.1em;
+ 	margin: 5px;
+}	
 
 .menos-espaco {
 	margin-top: -10px;
@@ -311,6 +304,14 @@ body.page-sobre .conteudo-central {
   padding: 25px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.btn-cs {
+	background-color: #fff;
+}
+
+.btn-cs:hover {
+	font-weight: bold;
 }
 
 .mapa-container {
@@ -423,12 +424,12 @@ body.page-sobre .conteudo-central {
 	  	font-size: 1.3em;
 	  }
 
-	  .texto-item {
+	  .texto-item-dois {
 	  	font-size: 1.3em;
 	  }
 
 	  .menos-espaco {
-	  	font-size: 1.1em;
+	  	font-size: 1.05em;
 	  }
 
 }
@@ -470,19 +471,19 @@ body.page-sobre .conteudo-central {
 		}
 
 		.titulo-item {
-	  	font-size: 1.9em;
+	  	font-size: 1.7em;
 	  }
 
 	  .texto-item-um {
-	  	font-size: 1.25em;
+	  	font-size: 1.15em;
 	  }
 
-	  .texto-item {
-	  	font-size: 1.25em;
+	  .texto-item-dois {
+	  	font-size: 1.15em;
 	  }
 
 	  .menos-espaco {
-	  	font-size: 1.05em;
+	  	font-size: 1em;
 	  }
 
 }
@@ -533,19 +534,21 @@ body.page-sobre .conteudo-central {
 
 		.titulo-item {
 	  	font-size: 1.3em;
-	  	margin-bottom: -10px;
+	  	padding: 0;
 	  }
 
 	  .texto-item-um {
 	  	font-size: 0.9em;
 	  }
 
-	  .texto-item {
+	  .texto-item-dois {
 	  	font-size: 0.9em;
+	  	margin-bottom: 6px;
+	  	margin-top: -12px;
 	  }
 
 	  .menos-espaco {
-	  	font-size: 0.9em;
+	  	font-size: 0.8em;
 	  }
 
 }
@@ -595,19 +598,21 @@ body.page-sobre .conteudo-central {
 
 	  .titulo-item {
 	  	font-size: 1.3em;
-	  	margin-bottom: -12px;
+	  	padding: 0;
 	  }
 
 	  .texto-item-um {
 	  	font-size: 0.9em;
 	  }
 
-	  .texto-item {
+	  .texto-item-dois {
 	  	font-size: 0.9em;
+	  	margin-bottom: 8px;
+	  	margin-top: -10px;
 	  }
 
 	  .menos-espaco {
-	  	font-size: 0.9em;
+	  	font-size: 0.8em;
 	  }
 
 }
@@ -666,15 +671,15 @@ body.page-sobre .conteudo-central {
 
 	  .titulo-item {
 	  	font-size: 1.5em;
-	  	margin-bottom: -8px;
 	  }
 
 	  .texto-item-um {
 	  	font-size: 1em;
 	  }
 
-	  .texto-item {
-	  	font-size: 1.1em;
+	  .texto-item-dois {
+	  	font-size: 1em;
+	  	margin-bottom: 10px;
 	  }
 
 	  .menos-espaco {

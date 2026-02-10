@@ -76,6 +76,23 @@ button:focus-visible {
 	box-shadow: none;
 }
 
+/* Remove o focus ativo das setas do carousel */
+button:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.btn:focus, 
+.btn:active:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.btn:focus-visible {
+	outline: 2px solid rgba(13, 110, 253, .5);
+}
+/* /Remove o focus ativo das setas do carousel */
+
 /***************************| Barra de Nevegação |******************************/
 
 .navbar-brand {
@@ -330,11 +347,11 @@ header .navbar {
 	font-size: 1.7em;
 	font-weight: bold;
 	text-align: center;
-	color: #000;
-	background: #fff;
+	color: #fff;
+	background: #000;
 	margin: 0px;
 	border-radius: 5px 5px 0 0;
-	border: 1px solid #000;
+	/*border: 1px solid #000;*/
 }
 
 .cor-seta {
@@ -698,7 +715,7 @@ ul {
 
 
 		.nav-tabs .nav-link {
-			margin: 0 3px;
+			margin: 0 2.5px;
 			padding: 6px 8px;
 			font-size: 16px;
 		}
@@ -746,6 +763,18 @@ ul {
 			background: #fff;
 			padding: 6px;
 			border-radius: 5px;
+		}
+
+		.carousel-control-prev,
+		.carousel-control-next {
+		    width: 70px;
+		}
+
+		.carousel-control-prev-icon,
+		.carousel-control-next-icon {
+			width: 50px;
+			height: 50px;
+
 		}
 
 		.carousel-indicators { /* Eixo Y do carousel-indicators */
@@ -928,6 +957,18 @@ ul {
 			border-radius: 0 0 5px 5px;
 		}
 
+		.carousel-control-prev,
+		.carousel-control-next {
+		    width: 60px;
+		}
+
+		.carousel-control-prev-icon,
+		.carousel-control-next-icon {
+			width: 40px;
+			height: 40px;
+
+		}
+
 		.carousel-indicators { /* Eixo Y do carousel-indicators */
 			bottom: -8px;
 		}
@@ -1062,7 +1103,7 @@ ul {
 
 
 		.nav-tabs .nav-link {
-			margin: 0 2px;
+			margin: 0 1.5px;
 			padding: 6px 10px;
 			font-size: 13px;
 		}
@@ -1111,13 +1152,13 @@ ul {
 
 		.carousel-control-prev,
 		.carousel-control-next {
-		    width: 65px;
+		    width: 55px;
 		}
 
 		.carousel-control-prev-icon,
 		.carousel-control-next-icon {
-			width: 50px;
-			height: 50px;
+			width: 35px;
+			height: 35px;
 
 		}
 
@@ -1299,13 +1340,13 @@ ul {
 
 		.carousel-control-prev,
 		.carousel-control-next {
-		    width: 50px;
+		    width: 45px;
 		}
 
 		.carousel-control-prev-icon,
 		.carousel-control-next-icon {
-			width: 45px;
-			height: 45px;
+			width: 30px;
+			height: 30px;
 
 		}
 
@@ -1486,8 +1527,8 @@ ul {
 
 		.carousel-control-prev-icon,
 		.carousel-control-next-icon {
-			width: 40px;
-			height: 40px;
+			width: 45px;
+			height: 45px;
 
 		}
 

@@ -199,8 +199,8 @@ header .navbar {
 /* Abas não ativas */
 .nav-tabs .nav-link {
 	color: #000;
-	background-color: transparent;
-	border: none;
+	background-color: #cfcfcf; /* transparent #cfcfcf */
+	border: none; /* none */
 	margin: 0 3px;
 	padding: 6px 10px;
 	border-radius: 6px;
@@ -422,6 +422,14 @@ header .navbar {
 	border-radius: 5px;
 }
 
+.btn-tipos {
+	background-color: #fff;
+}
+
+.btn-tipos:hover {
+	font-weight: bold;
+}
+
 /****************************| Terceira Coluna |********************************/
 
 .mapa-formatacao {
@@ -444,6 +452,14 @@ header .navbar {
 .texto-servico {
 	font-size: 1em;
 	text-align: justify;
+}
+
+.btn-cima {
+	padding: 5px;
+}
+
+.btn-baixo {
+
 }
 
 /********************************| Compras |************************************/
@@ -619,19 +635,31 @@ header .navbar {
 	color: #000;
 }
 
-.texto-item {
+.texto-item-um {
  	font-size: 1.1em;
 }
 
 .texto-item-dois {
+ 	font-size: 1.1em;
+}
+
+.texto-item-tres {
+ 	font-size: 1.1em;
+}
+
+
+.texto-preco {
  	font-weight: bold;
- 	border: 1px solid #e6e6e6;
+ 	margin: 0; /* Remove o margin-bottom padrão */
+ 	border-top: 1px solid #e6e6e6;
 	border-left: none;
 	border-right: none;
 }
 
 .botao-link {
-	display: inline-block;
+	display: block;
+	width: 65%;
+	margin: 10px auto 0;
 	border: 1px solid black;
 	background: #fff;
 	color: #000;
@@ -659,6 +687,12 @@ ul {
 
 .carousel-item {
 	transition: transform 1s ease-in-out;
+}
+
+.item-card {
+	border: 1px solid #e6e6e6;
+	border-left: none;
+	border-top: none;
 }
 
 /*********************************| Sobre |*************************************/
@@ -888,7 +922,7 @@ section {
 
 
 		.nav-tabs .nav-link { /* Controla o tamanho das abas de subtítulo */
-			margin: 0 3px;
+			margin: 0 2.5px;
 			padding: 6px 8px;
 			font-size: 16px;
 		}
@@ -936,27 +970,41 @@ section {
 			font-size: 2.5rem;
 			padding-top: 7px;
 			padding-bottom: 7px;
+			border-radius: 0 12px 0 0;
+			margin: 0px;
 		}
 
-		.texto-item {
+		.texto-item-um {
 			font-size: 1.4rem;
-			margin: 20px;
+			margin: 12px;
 		}
 
 		.texto-item-dois {
+			font-size: 1.4rem;
+			margin: 12px;
+		}
+
+		.texto-item-tres {
+			font-size: 1.4rem;
+			margin: 12px;
+		}
+
+		.texto-preco {
 			font-size: 2.2rem;
 			padding-top: 7px;
 			padding-bottom: 7px;
 		}
 
 		.botao-link {
-			margin-top: 11px;
+			margin-top: 16px;
 			padding: 12px;
 			font-size: 1.2rem;
 		}
 
-		.mobile-sm-border {
+		.item-card {
+			border-left: none;
 			border-right: 1px solid #e6e6e6;
+			border-radius: 0 14px 14px 0;
 		}
 
 
@@ -973,6 +1021,14 @@ section {
 			font-size: 1.3em;	
 		}
 
+		.btn-cima {
+			font-size: 1em;
+			padding: 5px;
+		}
+
+		.btn-baixo {
+			font-size: 1em;
+		}
 
 
 		.rodape-formatacao {
@@ -1047,7 +1103,7 @@ section {
 
 
 		.nav-tabs .nav-link { /* Controla o tamanho das abas de subtítulo */
-			margin: 0 3px;
+			margin: 0 2px;
 			padding: 6px 7px;
 			font-size: 15px;
 		}
@@ -1093,29 +1149,43 @@ section {
 
 		.titulo-item {
 			font-size: 2rem;
-			padding-top: 7px;
-			padding-bottom: 7px;
+			padding-top: 6px;
+			padding-bottom: 6px;
+			border-radius: 0 10px 0 0;
+			margin: 0px;
 		}
 
-		.texto-item {
+		.texto-item-um {
 			font-size: 1.2rem;
-			margin: 16px;
+			margin: 10px;
 		}
 
 		.texto-item-dois {
+			font-size: 1.2rem;
+			margin: 10px;
+		}
+
+		.texto-item-tres {
+			font-size: 1.2rem;
+			margin: 10px;
+		}
+
+		.texto-preco {
 			font-size: 1.8rem;
-			padding-top: 7px;
-			padding-bottom: 7px;
+			padding-top: 6px;
+			padding-bottom: 6px;
 		}
 
 		.botao-link {
-			margin-top: 8px;
+			margin-top: 12px;
 			padding: 10px;
 			font-size: 1.1rem;
 		}
 
-		.mobile-sm-border {
+		.item-card {
+			border-left: none;
 			border-right: 1px solid #e6e6e6;
+			border-radius: 0 10px 10px 0;
 		}
 
 
@@ -1130,6 +1200,15 @@ section {
 
 		.texto-servico {
 			font-size: 1.1em;	
+		}
+
+		.btn-cima {
+			font-size: 0.9em;
+			padding: 5px;
+		}
+
+		.btn-baixo {
+			font-size: 0.95em;
 		}
 
 
@@ -1208,7 +1287,7 @@ section {
 
 
 		.nav-tabs .nav-link { /* Controla o tamanho das abas de subtítulo */
-			margin: 0 1px;
+			margin: 0 1.5px;
 			padding: 6px 10px;
 			font-size: 14px;
 		}
@@ -1258,29 +1337,44 @@ section {
 
 		.titulo-item {
 			font-size: 1.6rem;
-			padding-top: 5px;
-			padding-bottom: 5px;
+			padding-top: 4px;
+			padding-bottom: 4px;
+			border-radius: 0 8.5px 0 0;
+			margin: 0px;
 		}
 
-		.texto-item {
+		.texto-item-um {
 			font-size: 0.9rem;
-			margin: 12px;
+			margin: 6px;
 		}
 
 		.texto-item-dois {
+			font-size: 0.9rem;
+			margin: 6px;
+		}
+
+		.texto-item-tres {
+			font-size: 0.9rem;
+			margin: 6px;
+		}
+
+		.texto-preco {
 			font-size: 1.5rem;
-			padding-top: 5px;
-			padding-bottom: 5px;
+			padding-top: 4px;
+			padding-bottom: 4px;
 		}
 
 		.botao-link {
-			margin-top: 4px;
+			margin-top: 8px;
 			padding: 9px;
 			font-size: 0.8rem;
+			
 		}
 
-		.mobile-sm-border {
+		.item-card {
+			border-left: none;
 			border-right: 1px solid #e6e6e6;
+			border-radius: 0 8.5px 8.5px 0;
 		}
 
 
@@ -1295,6 +1389,15 @@ section {
 
 		.texto-servico {
 			font-size: 1em;	
+		}
+
+		.btn-cima {
+			font-size: 0.8em;
+
+		}
+
+		.btn-baixo {
+			font-size: 0.9em;
 		}
 
 
@@ -1410,30 +1513,44 @@ section {
 
 
 		.titulo-item {
-			font-size: 1.5rem;
-			padding-top: 7px;
-			padding-bottom: 7px;
+			font-size: 1.2rem;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			border-radius: 0 7px 0 0;
+			margin: 0px;
 		}
 
-		.texto-item {
+		.texto-item-um {
 			font-size: 0.9rem;
-			margin: 13px;
+			margin: 5px; /* Controla o espaçamento entre classes */
 		}
 
 		.texto-item-dois {
+			font-size: 0.9rem;
+			margin: 5px;
+		}
+
+		.texto-item-tres {
+			font-size: 0.9rem;
+			margin: 5px;
+		}
+
+		.texto-preco {
 			font-size: 1.3rem;
-			padding-top: 7px;
-			padding-bottom: 7px;
+			padding-top: 3px;
+			padding-bottom: 3px;
 		}
 
 		.botao-link {
-			margin-top: 2px;
+			margin-top: 6px;
 			padding: 8px;
 			font-size: 0.8rem;
 		}
 
-		.mobile-sm-border {
+		.item-card {
+			border-left: none;
 			border-right: 1px solid #e6e6e6;
+			border-radius: 0 7px 7px 0;
 		}
 
 
@@ -1559,23 +1676,32 @@ section {
 
 		.titulo-item {
 			font-size: 1.7rem;
-			padding-top: 10px;
-			padding-bottom: 10px;
+			padding-top: 5px;
+			padding-bottom: 5px;
 		}
 
-		.texto-item {
+		.texto-item-um {
 			font-size: 1rem;
-			margin: 12px;
+			margin: 5px;
 		}
 
 		.texto-item-dois {
+			font-size: 1rem;
+			margin: 5px;
+		}
+
+		.texto-item-tres {
+			font-size: 1rem;
+		}
+
+		.texto-preco {
 			font-size: 1.5rem;
-			padding-top: 10px;
-			padding-bottom: 10px;
+			padding-top: 5px;
+			padding-bottom: 5px;
 		}
 
 		.botao-link {
-			margin-top: 5px;
+			margin-top: 10px;
 			padding: 8px;
 			font-size: 0.9rem;
 		}
@@ -1585,9 +1711,10 @@ section {
 			border-left: 1px solid #e6e6e6;
 		}
 
-		.mobile-sm-border {
+		.item-card {
 			border-left: 1px solid #e6e6e6;
 			border-right: 1px solid #e6e6e6;
+			border-radius: 0 0 10px 10px;
 		}
 
 

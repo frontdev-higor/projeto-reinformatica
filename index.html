@@ -59,19 +59,19 @@
                   <ul class="dropdown-menu">
 
                     <li>
-                      <a class="dropdown-item" href="tipo-computador.html">Computadores</a>
+                      <a class="btn btn-index dropdown-item" href="tipo-computador.html">Computadores</a>
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="tipo-monitor.html">Monitores</a>
+                      <a class="btn btn-index dropdown-item" href="tipo-monitor.html">Monitores</a>
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="tipo-componente.html">Componentes</a>
+                      <a class="btn btn-index dropdown-item" href="tipo-componente.html">Componentes</a>
                     </li>
 
                     <li>
-                      <a class="dropdown-item" href="tipo-outro.html">Outros</a>
+                      <a class="btn btn-index dropdown-item" href="tipo-outro.html">Outros</a>
                     </li>
 
                   </ul>
@@ -326,22 +326,22 @@
 
               <ul class="dropdown-menu dropdown-tabs-mobile start-50 translate-middle-x mt-0">
                 <li>
-                  <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#mais-vendidos">
+                  <button class="btn btn-index dropdown-item" data-bs-toggle="tab" data-bs-target="#mais-vendidos">
                     Mais vendidos
                   </button>
                 </li>
                 <li>
-                  <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#custo-beneficio">
+                  <button class="btn btn-index dropdown-item" data-bs-toggle="tab" data-bs-target="#custo-beneficio">
                     Custo-Benefício
                   </button>
                 </li>
                 <li>
-                  <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#trabalho">
+                  <button class="btn btn-index dropdown-item" data-bs-toggle="tab" data-bs-target="#trabalho">
                     Trabalho
                   </button>
                 </li>
                 <li>
-                  <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#estudos">
+                  <button class="btn btn-index dropdown-item" data-bs-toggle="tab" data-bs-target="#estudos">
                     Estudos
                   </button>
                 </li>
@@ -952,6 +952,15 @@
             )
           }
         })
+      </script>
+
+      <!-- Remove o focus ativo das setas do carousel com fadeout -->
+      <script>
+        document.querySelectorAll('button').forEach(btn => {
+          btn.addEventListener('click', () => {
+            setTimeout(() => btn.blur(), 150);
+          });
+        });
       </script>
 
   </body>
