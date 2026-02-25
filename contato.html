@@ -18,19 +18,20 @@
     <title>Contato</title>
 
   </head>
-  <body class="page-contato"> <!--  -->
+
+  <body class="page-contato"> <!-- dark-mode -->
 
     <header>
 
       <!-- Barra de Navegação -->
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark position-relative">
+      <nav class="navbar navbar-expand-md navbar-color">
 
         <!-- Logo -->
         <a class="navbar-brand logo-formatacao" href="index.html">RE Informática</a>
         <!-- /Logo -->
 
         <!-- Menu Hamburguer -->
-        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" 
+        <button class="navbar-toggler navbar-dark me-2" type="button" data-bs-toggle="collapse" 
         data-bs-target="#abrir-menu">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -51,7 +52,7 @@
               </li>
               
               <li class="nav-item dropdown">
-                <a href="" class="nav-link dropdown-toggle" role="button"
+                <a href="#" class="nav-link dropdown-toggle" role="button"
                 data-bs-toggle="dropdown">Compras</a>
 
 
@@ -59,19 +60,19 @@
                   <ul class="dropdown-menu">
 
                     <li>
-                      <a class="btn btn-cs dropdown-item" href="tipo-computador.html">Computadores</a>
+                      <a class="dropdown-item" href="tipo-computador.html">Computadores</a>
                     </li>
 
                     <li>
-                      <a class="btn btn-cs dropdown-item" href="tipo-monitor.html">Monitores</a>
+                      <a class="dropdown-item" href="tipo-monitor.html">Monitores</a>
                     </li>
 
                     <li> 
-                      <a class="btn btn-cs dropdown-item" href="tipo-componente.html">Componentes</a>
+                      <a class="dropdown-item" href="tipo-componente.html">Componentes</a>
                     </li>
 
                     <li>
-                      <a class="btn btn-cs dropdown-item" href="tipo-outro.html">Outros</a>
+                      <a class="dropdown-item" href="tipo-outro.html">Outros</a>
                     </li>
 
                   </ul>
@@ -88,8 +89,18 @@
                 <a class="nav-link" href="sobre.html">Sobre</a>
               </li>
 
+              <li class="nav-item d-md-none justify-content-center text-center">
+                <a href="#" id="themeToggleMobile" class="nav-link d-inline-block">
+                  🌙 Modo Escuro
+                </a>
+              </li>
+
             </ul>
             <!-- /navbar-nav -->
+
+            <button id="themeToggle" class="btn btn-darkmode d-none d-md-flex">
+              <span id="themeIcon">🌙</span>
+            </button>
 
           </div>
           <!-- /Opções Navegação -->
@@ -101,44 +112,54 @@
 
 
 
-    <!-- Container -->
+    <!-- Main -->
     <main class="contato-bg d-flex align-items-center">
 
      <div class="overlay-bg"></div>
 
-     <!-- Container Fluido -->
-     <div class="container-fluid contato-links position-relative">
+     <!-- Container -->
+     <div class="container position-relative contato-links">
 
       <!-- Row -->
-      <div class="row justify-content-center align-items-center"> <!-- colocar w-100 no lugar do align-items-center para testar -->
+      <div class="row justify-content-center">
 
         <!-- Bloco -->
-        <div class="col-8 col-sm-6 col-md-5 col-lg-4 col-xl-4 col-xxl-3 mx-auto bottom-item"> <!-- mx-auto -->
+        <div class="col-10 col-sm-7 col-md-6 col-lg-5 col-xl-4 mx-auto bottom-item">
 
+          <!-- Conteúdo Central -->
           <div class="conteudo-central">
 
             <h2 class="titulo-item">Contato</h2>
 
-            <p class="texto-item-um fw-bold">Telefones:</p>
+            <p class="subtitulo fw-bold">Telefones</p>
 
-            <ul class="menos-espaco">
-              <li><a class="" href="">(62) 9 8534-5850 (Robson)</a></li>
-              <li><a class="" href="">(62) 9 8522-0656 (José Vitor)</a></li>
+            <ul class="link-contato">
+              <li>
+                <a class="" href="">(62) 9 8534-5850 (Robson)</a>
+              </li>
+              <li>
+                <a class="" href="">(62) 9 8522-0656 (José Vitor)</a>
+              </li>
             </ul>
 
-            <p class="texto-item-um fw-bold">Instagram:</p>
+            <p class="subtitulo fw-bold">Instagram</p>
 
-            <ul class="menos-espaco">
-              <li><a href="">r_e_informatica</a></li>
+            <ul class="link-contato">
+              <li>
+                <a href="">r_e_informatica</a>
+              </li>
             </ul>
 
-            <p class="texto-item-um fw-bold">E-mail:</p>
+            <p class="subtitulo fw-bold">E-mail</p>
 
-            <ul class="menos-espaco">
-              <li><a href="">reinformaticagoia@gmail.com</a></li>
+            <ul class="link-contato">
+              <li>
+                <a href="">reinformaticagoia@gmail.com</a>
+              </li>
             </ul>
 
           </div>
+          <!-- /Conteúdo Central -->
           
         </div>
         <!-- /Bloco -->
@@ -147,16 +168,16 @@
       <!-- /Row -->
        
      </div>
-     <!-- /Container Fluido -->
+     <!-- /Container -->
 
     </main>
-    <!-- /Container -->
+    <!-- /Main -->
 
 
 
     <!-- Rodapé -->
-    <footer id="footer" class="bg-dark">
-      <div class="rodape-formatacao">
+    <footer id="footer" class="">
+      <div class="rodape-formatacao footer-color">
         <p class="rodape-escrita-formatacao"> <!--  -->
           <strong> &copy </strong>Todos os direitos reservados ao programador <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor </a>
         </p>
@@ -168,19 +189,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const hash = window.location.hash;
-        if (hash) {
-          const tabTrigger = document.querySelector(
-            `[data-bs-toggle="tab"][data-bs-target="${hash}"]`
-          );
-          if (tabTrigger) {
-            new bootstrap.Tab(tabTrigger).show();
+    <!-- Dark Mode, Troca de Icone e Botão/Nome entre mobile e pc -->
+      <script>
+        const toggleDesktop = document.getElementById("themeToggle");
+        const toggleMobile = document.getElementById("themeToggleMobile");
+        const icon = document.getElementById("themeIcon");
+
+        function updateUI() {
+          const isDark = document.body.classList.contains("dark-mode");
+
+          // Atualiza ícone desktop
+          if (icon) {
+            icon.textContent = isDark ? "☀️" : "🌙";
+          }
+
+          // Atualiza texto mobile
+          if (toggleMobile) {
+            toggleMobile.textContent = isDark 
+              ? "☀️ Modo Claro" 
+              : "🌙 Modo Escuro";
           }
         }
-      });
-    </script>
+
+        function toggleTheme() {
+          document.body.classList.toggle("dark-mode");
+
+          if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+
+          updateUI();
+        }
+
+        // Carrega estado salvo
+        if (localStorage.getItem("theme") === "dark") {
+          document.body.classList.add("dark-mode");
+        }
+
+        updateUI();
+
+        if (toggleDesktop) toggleDesktop.addEventListener("click", toggleTheme);
+        if (toggleMobile) toggleMobile.addEventListener("click", toggleTheme);
+      </script>
 
   </body>
 </html>

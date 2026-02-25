@@ -1,33 +1,26 @@
 
-/*********************************| Tudo |**************************************/
+/* ================================= TUDO ================================= */
 
 html {
 	height: 100%;
-/* Mantém o footer colado em baixo */
+	overflow-y: scroll;
 }
 
 body {
+/* Mantém o footer colado em baixo */
+	font-family: sans-serif;
 	min-height: 100vh;
 	margin: 0;
 	display: flex;
 	flex-direction: column;
 /* /Mantém o footer colado em baixo */
-	background: #e6e6e6 /* #e6e6e6 | #fff | #000 */
-}
-
-body {
-	display: flex;
-	flex-direction: column;
-}
-
-html {
-	/*  */
-	overflow-y: scroll;
+	background: var(--bg-page);
+	/*transition: background 0.35s ease, color 0.35s ease;*/
 }
 
 /* Mantém o footer colado em baixo */
 main {
-	flex: 1; /* 1 1 0 */
+	flex: 1;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -35,7 +28,6 @@ main {
 footer {
 	margin-top: auto;
 }
-/* /Mantém o footer colado em baixo */
 
 ul {
 	list-style: none;
@@ -58,12 +50,6 @@ a {
 	text-decoration: none;
 }
 
-.conteudo-site a:active:not(:hover),
-.conteudo-site a:focus:not(:hover),
-.conteudo-site a:focus-visible:not(:hover) {
-	color: currentColor;
-}
-
 a,
 button,
 img {
@@ -72,7 +58,7 @@ img {
 }
 
 a:focus-visible {
-	outline: 2px solid #6d9887;
+	outline: 2px solid var(--bg-theme-two);
 	outline-offset: 2px;
 }
 
@@ -87,7 +73,28 @@ button:focus-visible {
 	box-shadow: none;
 }
 
-/***************************| Barra de Nevegação |******************************/
+.btn-darkmode {
+	background-color: var(--bg-darkmode-btn);
+	position: fixed;
+	top: 7px;
+	right: 7px;
+	z-index: 1050;
+	border-radius: 50%;
+	width: 44px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*transition: transform 0.2s ease, background-color 0.2s ease;*/
+	border: 1px solid white;
+}
+
+.btn-darkmode:hover {
+	background-color: var(--btn-bg-darkmode-hover);
+	/*transition: scale(1.08);*/
+}
+
+/* ========================== BARRA DE NAVEGAÇÃO ========================== */
 
 .navbar-brand {
 	margin-left: 16px; /* Mexer aqui caso necessário */
@@ -106,79 +113,97 @@ header .navbar {
 	z-index: 1050;
 }
 
+/***********************************************/
+
+/* Também afeta o dropdown da segunda coluna */
 .dropdown-menu {
 	border-radius: 5px;
 	overflow: hidden;
-	border: 1px solid #000;
 	padding: 0;
-	color: #000;
 	text-align: center;
-	/*user-select: none;*/
+
+	border: 1px solid #000;
+	color: #000;
 }
 
+/* Também afeta o dropdown da segunda coluna */
+.dropdown-item {
+	padding: 8px 12px;
+	border-radius: 0;
+	user-select: none;
+	-webkit-user-drag: none;
+	/*transition: background-color 0.15s ease, color 0.15 ease;*/
+
+	color: #000;
+}
+
+/* Também afeta o dropdown da segunda coluna */
 .dropdown-menu li:first-child .dropdown-item {
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
 }
 
+/* Também afeta o dropdown da segunda coluna */
 .dropdown-menu li:last-child .dropdown-item {
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
 }
 
-.dropdown-item {
-	color: #000;
-	padding: 8px 12px;
-	border-radius: 0;
-	user-select: none;
-	-webkit-user-drag: none;
-	transition: background-color 0.15s ease, color 0.15 ease;
+/******************************************/
+
+/* Menu Inicio, Serviços... */
+
+.navbar .nav-link {
+	color: var(--text-muted);
 }
 
-/*
-.dropdown-item:active:not(:hover){
-	background-color: #494c4e;
-	color: #fff;
-}*/
-
-.dropdown-item:active {
-	background-color: #494c4e !important;
-	color: #fff;
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+	color: var(--text-btn-hover-nav);
 }
 
-.dropdown-item:hover,
-.dropdown-item:focus,
-.dropdown-item:active
-.dropdown-item.active {
-	background-color: #494c4e;
-	color: #fff;
-	border-radius: 0;
+.navbar .nav-link:active,
+.navbar .nav-link.active {
+	color: var(--text-btn-active-nav);
 }
 
-.dropdown-item:focus {
-	background-color: var(--bs-dropdown-link-hover-bg);
+.nav-link.active {
+	pointer-events: none;
+	cursor: default;
 }
 
-.dropdown-item.active, .dropdown-item:active{
-	background-color: #000;
-	color: #fff;
+.logo-formatacao,
+.logo-formatacao:hover {
+  color: var(--text-re);
 }
 
+/******************************************/
+
+/* Menu Dropdown Compras */
+
+.navbar .dropdown-item {
+	background-color: var(--bg-dropdown);
+	color: var(--text-btn-nav);
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+	background-color: var(--btn-bg-nav);
+	color: var(--text-btn-hover-nav);
+	font-weight: bold;
+}
+
+.navbar .dropdown-item:active,
+.navbar .dropdown-item.active  {
+	background-color: var(--btn-bg-active-nav);
+	color: var(--text-btn-active-nav);
+}
+
+/***********************************************/
+
+/* Remove a seta de Compras */
 .dropdown-toggle::after {
 	display: none;
-}
-
-.nav-item.dropdown.show > .nav-link {
-	color: #6d9887;
-}
-
-.navbar .nav-link.active {
-	color: #fff
-	border-bottom: 2px solid #000;
-}
-
-.navbar .nav-link:hover {
-	color: #fff
 }
 
 .navbar-nav .nav-item.dropdown {
@@ -188,12 +213,18 @@ header .navbar {
 	align-items: center;
 }
 
-.nav-link.active {
-	pointer-events: none;
-	cursor: default;
+/* Maneira correta de aplicar o gradient */
+.navbar-color {
+	background-image: var(--gradient);
+	background-color: #2d3436;
 }
 
-/*****************************| Contato |*| Sobre |*****************************/
+/* Tira a cor escura ao clicar fora de compras com dropdown aberto */
+.navbar .dropdown-toggle.show {
+  color: var(--text-btn-hover-nav);
+}
+
+/* =========================== CONTATO / SOBRE =========================== */
 
 .contato-links, 
 .sobre-links {
@@ -206,10 +237,11 @@ header .navbar {
 	text-decoration: none;
 }
 
-.contato-links/*,
-.sobre-links*/ a:hover {
+.contato-links a:hover {
 	font-weight: bold;
 }
+
+/***********************************************/
 
 .background-cs {
 	/*translateX: 50%;*/
@@ -245,43 +277,64 @@ header .navbar {
 	border-left: none;
 	border-right: none;
 	padding: 10px;
-	color: #000;
+	color: var(--text-title);
+}
+
+.subtitulo {
+ 	padding: 5px;
+ 	font-size: 1.1em;
+ 	margin: 5px;
+ 	color: var(--text-subtitle);
 }
 
 .texto-item-um {
  	padding: 5px;
  	font-size: 1.1em;
  	margin: 5px;
+ 	color: var(--text-about);
 }
 
 .texto-item-dois {
 	padding: 5px;
 	font-size: 1.1em;
  	margin: 5px;
+ 	color: var(--text-about);
 }	
 
-.menos-espaco {
+.link-contato {
 	margin-top: -10px;
 	padding-left: 0;
 	text-align: center;
+	color: var(--text-link);
 }
 
-.menos-espaco li { /* Para garantir o alinhamento dos links */
+.link-contato li { /* Para garantir o alinhamento dos links */
 	padding-left: 0;
 }
 
-.menos-espaco li a { /* Mais harmonico visualmente */
+.link-contato li a { /* Mais harmonico visualmente */
 	display: inline-block;
+}
+
+.link-contato li a:hover {
+	color: var(--text-link-hover);
 }
 
 .contato-bg {
   position: relative;
   background-color: #000;
-  background: url("../imagens/lojare.jpeg")/*center / cover no-repeat*/;
+  background: url("../imagens/lojare-dia.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+}
+
+body.dark-mode .contato-bg {
+  background: url("../imagens/lojare-noite.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 body.page-contato .conteudo-central,
@@ -295,30 +348,21 @@ body.page-sobre .conteudo-central {
 	backdrop-filter: blur(6px) saturate(120%);
 	background: rgba(0, 0, 0, 0.25);
 	z-index: 1;
-	transition: backdrop-filter 0.3s ease;
+	/*transition: backdrop-filter 0.3s ease;*/
 }
 
 .conteudo-central {
-  background-color: #fff;
+  background-color: var(--bg-box);
   border-radius: 15px;
   padding: 25px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-.btn-cs {
-	background-color: #fff;
-}
-
-.btn-cs:hover {
-	font-weight: bold;
-}
-
 .mapa-container {
 	/*border: 2px solid #ddd;*/
 	display: inline-block;
 	border-radius: 12px;
-	/*padding: 6px;*/
 	background: #fff;
 	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
@@ -340,18 +384,23 @@ body.page-sobre .conteudo-central {
 	}
 }
 
-/*********************************| Footer |************************************/
+/* ================================ FOOTER ================================ */
 
 #footer {
 	display: grid;
-	border-top: 1px solid transparent;
+}
+
+.footer-color {
+	background: var(--gradient-three);
 }
 
 .rodape-formatacao {
+	position: relative;
 	padding: 5px;
 	text-align: center;
 	font-size: 1.1em;
-	color: #e6e6e6;
+	color: var(--text-footer);
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -368,19 +417,152 @@ body.page-sobre .conteudo-central {
 }
 
 .link-footer {
-	color: #0d6efd;
+	color: var(--link-footer);
 }
 
 .link-footer:hover,
 .link-footer:active,
 .link-footer:focus,
 .link-footer:focus-visible {
-	color: #0a58ca;
+	color: var(--link-hover);
 }
 
-/*******************************| Media Queries |*******************************/
+/* ============================== DARK MODE =============================== */
 
-/* Extra large devices (large desktops, 1200px and up) */
+/* ============================== MODO CLARO ============================== */
+
+:root {
+
+	/* ================= BODY ================= */
+
+	--bg-page: #d5e6df;
+	--gradient: linear-gradient(
+		270deg, 
+		#2d3436 68%,
+		#6d9887 150%
+	);
+	--gradient-three: linear-gradient(
+		90deg, 
+		#2d3436 70%,
+		#6d9887 150%
+	);
+
+	/* Botão Dark Mode */
+	--bg-darkmode-btn: #212529;
+	--btn-bg-darkmode-hover: #3a3a3a;
+
+	/* ================ NAVBAR ================ */
+
+	--text-muted: #858585;
+	--text-btn-nav: #121212;
+  --text-btn-hover-nav: #fff;
+  --text-btn-active-nav: #fff;
+  --text-re: #f5f7fa;
+
+  --btn-bg-nav: #212529;
+  --btn-bg-active-nav: #212529; /* Verificar funcionalidade Páginas de Compras */
+
+  --bg-dropdown: #f5f7fa;
+
+  /* =========== CONTATO / SOBRE =========== */
+
+  --bg-box: #f5f7fa;
+  --text-title: #121212;
+  --text-subtitle: #121212;
+  --text-about: #121212;
+  --text-link: #0d6efd;
+  --text-link-hover: #0a58ca;
+
+  /* ================ FOOTER ================ */
+
+  --text-footer: #f5f7fa;
+  --link-footer: #0d6efd;
+  --link-hover: #0a58ca;
+
+  /* ================ TESTE ================ */
+
+  --text-white: #fff;
+  --text-black: #000;
+  --text-red: #f00;
+  --text-green: #0f0;
+  --text-blue: #00f;
+  --text-yellow: #ff0;
+  --text-pink: #f0f;
+  --text-cyan: #0ff;
+
+
+}
+
+
+/* ============================== MODO ESCURO ============================== */
+
+
+.dark-mode {
+
+  /* ================= BODY ================= */
+
+  --bg-page: #121212;
+  --gradient: linear-gradient(
+		270deg, 
+		#0f2027 68%,
+		#5a8f7b 150%
+	);
+	--gradient-three: linear-gradient(
+		90deg, 
+		#0f2027 70%,
+		#5a8f7b 150%
+	);
+
+  /* Botão Dark Mode */
+  --bg-darkmode-btn: #f5f7fa;
+  --btn-bg-darkmode-hover: #EBE6E6;
+
+  /* ================ NAVBAR ================ */
+
+  --text-muted: #b0b0b0;
+  --text-btn-nav: #f5f7fa;
+  --text-btn-hover-nav: #f5f7fa;
+  --text-btn-active-nav: #f5f7fa;
+  --text-re: #f5f7fa;
+
+  --btn-bg-nav: #2c2c2c;
+  --btn-bg-active-nav: #3a3a3a; /* Verificar funcionalidade Páginas de Compras */
+
+  --bg-dropdown: #121212;
+
+  /* =========== CONTATO / SOBRE =========== */
+
+  --bg-box: #121212;
+  --text-title: #f5f7fa;
+  --text-subtitle: #f5f7fa;
+  --text-about: #f5f7fa;
+  --text-link: #4da3ff;
+  --text-link-hover: #7ab8ff;
+
+  /* ================ FOOTER ================ */
+
+  --text-footer: #e0e0e0;
+  --link-footer: #4da3ff;
+  --link-hover: #7ab8ff;
+
+  /* ================ TESTE ================ */
+
+  --text-white: #fff;
+  --text-black: #000;
+  --text-red: #f00;
+  --text-green: #0f0;
+  --text-blue: #00f;
+  --text-yellow: #ff0;
+  --text-pink: #f0f;
+  --text-cyan: #0ff;
+
+
+}
+
+
+/* ============================ MEDIA QUERIES ============================= */
+
+/*********** Extra large devices (large desktops, 1200px and up) ************/
 @media (min-width: 1200px) {
 
 		.titulo-tipo {
@@ -416,8 +598,16 @@ body.page-sobre .conteudo-central {
 			font-size: 1.05em;
 		}
 
+		.conteudo-central {
+	    padding: 25px;
+	  }
+
 		.titulo-item {
 	  	font-size: 2em;
+	  }
+
+	  .subtitulo {
+	  	font-size: 1.3em;
 	  }
 
 	  .texto-item-um {
@@ -426,15 +616,16 @@ body.page-sobre .conteudo-central {
 
 	  .texto-item-dois {
 	  	font-size: 1.3em;
+	  	padding-bottom: 15px;
 	  }
 
-	  .menos-espaco {
+	  .link-contato {
 	  	font-size: 1.05em;
 	  }
 
 }
 
-/* Large devices (desktops, 992px and up) */
+/****************** Large devices (desktops, 992px and up) ******************/
 @media (min-width: 992px) and (max-width: 1199.98px) {
 
 		.titulo-tipo {
@@ -470,8 +661,16 @@ body.page-sobre .conteudo-central {
 			font-size: 1em;
 		}
 
+		.conteudo-central {
+	    padding: 20px;
+	  }
+
 		.titulo-item {
 	  	font-size: 1.7em;
+	  }
+
+	  .subtitulo {
+	  	font-size: 1.15em;
 	  }
 
 	  .texto-item-um {
@@ -480,15 +679,23 @@ body.page-sobre .conteudo-central {
 
 	  .texto-item-dois {
 	  	font-size: 1.15em;
+	  	padding-bottom: 12px;
 	  }
 
-	  .menos-espaco {
+	  .link-contato {
 	  	font-size: 1em;
 	  }
 
+	  .btn-darkmode {
+			top: 7px;
+			right: 7px;
+			width: 42px;
+			height: 42px;
+		}
+
 }
 
-/* Medium devices (tablets, 768 and up) */
+/******************* Medium devices (tablets, 768 and up) *******************/
 @media (min-width: 768px) and (max-width: 991.98px) {
 
 		.titulo-tipo {
@@ -528,6 +735,10 @@ body.page-sobre .conteudo-central {
 			font-size: 0.9em;
 		}
 
+		.conteudo-central {
+	    padding: 16px;
+	  }
+
 		.overlay-bg {
 			backdrop-filter: blur(4px) saturate(115%);
 		}
@@ -537,6 +748,10 @@ body.page-sobre .conteudo-central {
 	  	padding: 0;
 	  }
 
+	  .subtitulo {
+	  	font-size: 0.9em;
+	  }
+
 	  .texto-item-um {
 	  	font-size: 0.9em;
 	  }
@@ -544,16 +759,24 @@ body.page-sobre .conteudo-central {
 	  .texto-item-dois {
 	  	font-size: 0.9em;
 	  	margin-bottom: 6px;
-	  	margin-top: -12px;
+	  	margin-top: -2px;
+	  	padding-bottom: 10px;
 	  }
 
-	  .menos-espaco {
+	  .link-contato {
 	  	font-size: 0.8em;
 	  }
 
+	  .btn-darkmode {
+			top: 7px;
+			right: 7px;
+			width: 41px;
+			height: 41px;
+		}
+
 }
 
-/* Small devices (landscape phones, 576px and up) */
+/************** Small devices (landscape phones, 576px and up) **************/
 @media (min-width: 576px) and (max-width: 767.98px) {
 
 		.navbar .dropdown-menu {
@@ -593,12 +816,16 @@ body.page-sobre .conteudo-central {
 	  }
 
 	  .conteudo-central {
-	    padding: 18px;
+	    padding: 14px;
 	  }
 
 	  .titulo-item {
 	  	font-size: 1.3em;
 	  	padding: 0;
+	  }
+
+	  .subtitulo {
+	  	font-size: 0.9em;
 	  }
 
 	  .texto-item-um {
@@ -608,16 +835,24 @@ body.page-sobre .conteudo-central {
 	  .texto-item-dois {
 	  	font-size: 0.9em;
 	  	margin-bottom: 8px;
-	  	margin-top: -10px;
+	  	padding-bottom: 10px;
+	  	margin-top: -5px;
 	  }
 
-	  .menos-espaco {
+	  .link-contato {
 	  	font-size: 0.8em;
 	  }
 
+	  .btn-darkmode {
+			position: static;
+			width: 100%;
+			border-radius: 8px;
+			margin-top: 10px;
+		}
+
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
+/********** Extra small devices (portrait phones, less than 576px) **********/
 @media (max-width: 575.98px) {
 
 		.navbar .dropdown-menu {
@@ -649,7 +884,7 @@ body.page-sobre .conteudo-central {
 		}
 
 		.overlay-bg {
-			backdrop-filter: blur(2x) saturate(110%);
+			backdrop-filter: blur(2px) saturate(110%);
 		}
 
 	  html {
@@ -673,16 +908,24 @@ body.page-sobre .conteudo-central {
 	  	font-size: 1.5em;
 	  }
 
+	  .subtitulo {
+	  	font-size: 1em;
+	  	padding-bottom: 5px;
+	  }
+
 	  .texto-item-um {
 	  	font-size: 1em;
+	  	padding-bottom: 5px;
 	  }
 
 	  .texto-item-dois {
 	  	font-size: 1em;
 	  	margin-bottom: 10px;
+	  	padding-top: 0;
+	  	padding-bottom: 10px;
 	  }
 
-	  .menos-espaco {
+	  .link-contato {
 	  	font-size: 0.9em;
 	  }
 

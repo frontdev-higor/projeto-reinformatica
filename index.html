@@ -7,6 +7,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Amigável aos motores de busca do Google -->
+    <meta name="description" content="Venda e manutenção de computadores em Goiânia">
+
     <!-- Bootstrap CSS Atualizado -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -18,19 +21,19 @@
     <title>RE Informática</title>
 
   </head>
-  <body> <!--  -->
+  <body class=""> <!-- dark-mode -->
 
     <header>
 
       <!-- Barra de Navegação -->
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark position-relative">
+      <nav class="navbar navbar-expand-md position-relative navbar-color">
 
         <!-- Logo -->
-        <a class="navbar-brand logo-formatacao" href="index.html">RE Informática</a>
+        <a href="index.html" class="navbar-brand logo-formatacao">RE Informática</a>
         <!-- /Logo -->
 
         <!-- Menu Hamburguer -->
-        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" 
+        <button class="navbar-toggler navbar-dark me-2" type="button" data-bs-toggle="collapse" 
         data-bs-target="#abrir-menu">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -51,27 +54,26 @@
               </li>
               
               <li class="nav-item dropdown">
-                <a href="" class="nav-link dropdown-toggle" role="button"
-                data-bs-toggle="dropdown">Compras</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" role="button">Compras</a>
 
 
                   <!-- Menu Dropdown -->
                   <ul class="dropdown-menu">
 
                     <li>
-                      <a class="btn btn-index dropdown-item" href="tipo-computador.html">Computadores</a>
+                      <a class="dropdown-item btn-index" href="tipo-computador.html">Computadores</a>
                     </li>
 
                     <li>
-                      <a class="btn btn-index dropdown-item" href="tipo-monitor.html">Monitores</a>
+                      <a class="dropdown-item btn-index" href="tipo-monitor.html">Monitores</a>
                     </li>
 
                     <li>
-                      <a class="btn btn-index dropdown-item" href="tipo-componente.html">Componentes</a>
+                      <a class="dropdown-item btn-index" href="tipo-componente.html">Componentes</a>
                     </li>
 
                     <li>
-                      <a class="btn btn-index dropdown-item" href="tipo-outro.html">Outros</a>
+                      <a class="dropdown-item btn-index" href="tipo-outro.html">Outros</a>
                     </li>
 
                   </ul>
@@ -88,8 +90,18 @@
                 <a class="nav-link" href="sobre.html">Sobre</a>
               </li>
 
+              <li class="nav-item d-md-none w-100 text-center">
+                <a href="#" id="themeToggleMobile" class="nav-link d-inline-block">
+                  🌙 Modo Escuro
+                </a>
+              </li>
+
             </ul>
             <!-- /navbar-nav -->
+
+            <button id="themeToggle" class="btn btn-darkmode d-none d-md-flex">
+              <span id="themeIcon">🌙</span>
+            </button>
 
           </div>
           <!-- /Opções Navegação -->
@@ -107,20 +119,12 @@
       <!-- Row -->
       <div class="row celular-centralizado">
 
-
-
       <!-- Coluna-1 -->
         <!-- Grid -->
         <div class="col-10 col-sm-4 col-lg-3 order-2 order-sm-1">
 
           <!-- Primeira Coluna -->
-          <div class="formatacao-container-primeiro text-none">
-
-            <!-- Titulo Coluna
-            <div>
-              <h3 class="coluna-titulo">Acesso rápido</h3>
-            </div>
-            /Titulo Coluna -->
+          <div class="formatacao-container-primeiro text-decoration-none">
 
             <!-- Primeira Parte Coluna -->
             <div class="primeiro-formatacao">
@@ -136,22 +140,16 @@
                         <span>All-In-One</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="tipo-computador.html?tab=mini">
                         <span>Desktop Mini</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="tipo-computador.html?tab=slim">
                         <span>Desktop Slim</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="tipo-computador.html?tab=note">
                         <span>Notebook</span>
@@ -176,36 +174,26 @@
                         <span>19"Polegadas</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="tipo-monitor.html?tab=m20p">
                         <span>20"Polegadas</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="tipo-monitor.html?tab=m21p">
                         <span>21"Polegadas</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="tipo-monitor.html?tab=m22p">
                         <span>22"Polegadas</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="tipo-monitor.html?tab=m23p">
                         <span>23"Polegadas</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="tipo-monitor.html?tab=m24p">
                         <span>24"Polegadas</span>
@@ -230,36 +218,26 @@
                         <span>Armazenamento</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="tipo-componente.html?tab=cabo">
                         <span>Cabo</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="tipo-componente.html?tab=fonte">
                         <span>Fonte</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="tipo-componente.html?tab=memoria">
                         <span>Memória</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="tipo-componente.html?tab=periferico">
                         <span>Periférico</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="tipo-componente.html?tab=outro">
                         <span>Outro</span>
@@ -284,460 +262,446 @@
         <!-- Grid -->
         <div class="col-10 col-sm-8 col-lg-6 order-1 order-sm-2">
 
-          <!-- Área coluna -->
-          <div>
+          <h3 class="coluna-titulo-centro rounded-3 mt-2">Encontre o computador perfeito!</h3>
 
-            <h3 class="coluna-titulo-centro border-radius-titulo mt-2">Encontre o computador perfeito!</h3>
+          <!-- Tabs para telas médias/grandes -->
+          <ul class="nav nav-tabs justify-content-center d-none d-md-flex pt-2" id="myTab" role="tablist">
+            <li class="nav-item">
+              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#mais-vendidos">
+                Mais vendidos
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#custo-beneficio">
+                Custo-Benefício
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#trabalho">
+                Trabalho
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#estudos">
+                Estudos
+              </button>
+            </li>
+          </ul>
 
-            <!-- Tabs para telas médias/grandes -->
-            <ul class="nav nav-tabs justify-content-center d-none d-md-flex pt-2" id="myTab" role="tablist">
-              <li class="nav-item">
-                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#mais-vendidos">
+          <!-- Dropdown para mobile -->
+          <div class="dropdown d-md-none text-center pt-2">
+            <button
+              id="dropdownTabButton"
+              type="button"
+              class="btn dropdown-toggle w-100 arredondar-botao"
+              data-bs-toggle="dropdown"
+              data-bs-display="static">
+                Categorias
+            </button>
+
+            <ul class="dropdown-menu dropdown-tabs-mobile start-50 translate-middle-x mt-0">
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#mais-vendidos">
                   Mais vendidos
                 </button>
               </li>
-              <li class="nav-item">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#custo-beneficio">
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#custo-beneficio">
                   Custo-Benefício
                 </button>
               </li>
-              <li class="nav-item">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#trabalho">
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#trabalho">
                   Trabalho
                 </button>
               </li>
-              <li class="nav-item">
-                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#estudos">
+              <li>
+                <button class="dropdown-item" data-bs-toggle="tab" data-bs-target="#estudos">
                   Estudos
                 </button>
               </li>
             </ul>
+          </div>
 
-            <!-- Dropdown para mobile -->
-            <div class="dropdown d-md-none text-center pt-2">
-              <button
-                id="dropdownTabButton"
-                type="button"
-                class="btn btn-outline-dark btn-index dropdown-toggle w-100 arredondar-botao"
-                data-bs-toggle="dropdown"
-                data-bs-display="static">
-                  Categorias
-              </button>
-
-              <ul class="dropdown-menu dropdown-tabs-mobile start-50 translate-middle-x mt-0">
-                <li>
-                  <button class="btn btn-index dropdown-item" data-bs-toggle="tab" data-bs-target="#mais-vendidos">
-                    Mais vendidos
-                  </button>
-                </li>
-                <li>
-                  <button class="btn btn-index dropdown-item" data-bs-toggle="tab" data-bs-target="#custo-beneficio">
-                    Custo-Benefício
-                  </button>
-                </li>
-                <li>
-                  <button class="btn btn-index dropdown-item" data-bs-toggle="tab" data-bs-target="#trabalho">
-                    Trabalho
-                  </button>
-                </li>
-                <li>
-                  <button class="btn btn-index dropdown-item" data-bs-toggle="tab" data-bs-target="#estudos">
-                    Estudos
-                  </button>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Tab-Content -->
-            <div class="tab-content">
-
-<!-- **********************************************************************
-     **********************************************************************
-     **********************************************************************
-     **********************************************************************
-     ********************************************************************** -->
-
-              <!-- Mais Vendidos -->
-              <div class="tab-pane fade show active" id="mais-vendidos">
-
-                <!-- carousel slide -->
-                <div id="carousel-mais-vendidos" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
-                <!--Indicadores -->
-                <div class="carousel-indicators">
-
-                  <button type="button" data-bs-target="#carousel-mais-vendidos" data-bs-slide-to="0" class="active"></button>
-                  <button type="button" data-bs-target="#carousel-mais-vendidos" data-bs-slide-to="1"></button>
-                  <button type="button" data-bs-target="#carousel-mais-vendidos" data-bs-slide-to="2"></button>
-
-                </div>
-                <!-- /Indicadores -->
-
-                  <!-- carousel-inner -->
-                  <div class="carousel-inner border-radius">
-
-                    <!-- carousel-item -->
-                    <div class="carousel-item active">
-                      <a href="itens.html">
-                        <img src="imagens/all-in-one.jpg" class="img-fluid">
-
-                        <div class="caption-top">
-                          <p class="texto-imagem-cima font-weight-bold">All-In-One i5 4570</p>
-                        </div>
-
-                        <div class="caption-bottom">
-                          <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.200,00</strong> por <strong class="preco-novo">R$ 850,00</strong></p>
-                        </div>
-
-                      </a>
-                    </div>
-                    <!-- /carousel-item -->
-
-                    <!-- carousel-item -->
-                    <div class="carousel-item">
-                      <a href="#">
-                        <img src="imagens/monitor.jpg" class="img-fluid">
-
-                        <div class="caption-top">
-                          <p class="texto-imagem-cima font-weight-bold">Odyssey CRG50</p>
-                        </div>
-
-                        <div class="caption-bottom">
-                          <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.000,00</strong> por <strong class="preco-novo">R$ 700,00</strong></p>
-                        </div>
-
-                      </a>
-                    </div>
-                    <!-- /carousel-item -->
-
-                    <!-- carousel-item -->
-                    <div class="carousel-item">
-                      <a href="#">
-                        <img src="imagens/desktop.jpg" class="img-fluid">
-
-                        <div class="caption-top">
-                          <p class="texto-imagem-cima font-weight-bold">DELL OptiPlex 3050</p>
-                        </div>
-
-                        <div class="caption-bottom">
-                          <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.600,00</strong> por <strong class="preco-novo">R$ 1.300,00</strong></p>
-                        </div>
-
-                      </a>
-                    </div>
-                    <!-- /carousel-item -->
-
-                    <!-- Controles -->
-                    <div class="seta-hover">
-                      <a href="#carousel-mais-vendidos" class="carousel-control-prev" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon cor-seta"></span>
-                      </a>
-
-                      <a href="#carousel-mais-vendidos" class="carousel-control-next" data-bs-slide="next">
-                        <span class="carousel-control-next-icon cor-seta"></span>
-                      </a>
-                    </div>
-                    <!-- Controles -->
-
-                  </div>
-                  <!-- /carousel-inner -->
-                
-                </div>
-                <!--/slide  -->
-
-              </div>
-              <!-- /Mais Vendidos -->
+          <!-- Tab-Content -->
+          <div class="tab-content">
 
 <!-- ********************************************************************** -->
 
-              <!-- Custo-Benefício -->
-              <div class="tab-pane fade" id="custo-beneficio">
+            <!-- Mais Vendidos -->
+            <div class="tab-pane fade show active" id="mais-vendidos">
 
-                <!-- carousel slide -->
-                <div id="carousel-custo-beneficio" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <!-- carousel slide -->
+              <div id="carousel-mais-vendidos" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-                <!--Indicadores -->
-                <div class="carousel-indicators">
+              <!--Indicadores -->
+              <div class="carousel-indicators">
 
-                  <button type="button" data-bs-target="#carousel-custo-beneficio" data-bs-slide-to="0" class="active"></button>
-                  <button type="button" data-bs-target="#carousel-custo-beneficio" data-bs-slide-to="1"></button>
-                  <button type="button" data-bs-target="#carousel-custo-beneficio" data-bs-slide-to="2"></button>
-
-                </div>
-                <!-- /Indicadores -->
-
-                  <!-- carousel-inner -->
-                  <div class="carousel-inner border-radius">
-
-                    <!-- carousel-item -->
-                    <div class="carousel-item active">
-                      <a href="itens.html">
-                        <img src="imagens/all-in-one.jpg" class="img-fluid">
-
-                        <div class="caption-top">
-                          <p class="texto-imagem-cima font-weight-bold">All-In-One i5 4570</p>
-                        </div>
-
-                        <div class="caption-bottom">
-                          <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.200,00</strong> por <strong class="preco-novo">R$ 850,00</strong></p>
-                        </div>
-
-                      </a>
-                    </div>
-                    <!-- /carousel-item -->
-
-                    <!-- carousel-item -->
-                    <div class="carousel-item">
-                      <a href="#">
-                        <img src="imagens/monitor.jpg" class="img-fluid">
-
-                        <div class="caption-top">
-                          <p class="texto-imagem-cima font-weight-bold">Odyssey CRG50</p>
-                        </div>
-
-                        <div class="caption-bottom">
-                          <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.000,00</strong> por <strong class="preco-novo">R$ 700,00</strong></p>
-                        </div>
-
-                      </a>
-                    </div>
-                    <!-- /carousel-item -->
-
-                    <!-- carousel-item -->
-                    <div class="carousel-item">
-                      <a href="#">
-                        <img src="imagens/desktop.jpg" class="img-fluid">
-
-                        <div class="caption-top">
-                          <p class="texto-imagem-cima font-weight-bold">DELL OptiPlex 3050</p>
-                        </div>
-
-                        <div class="caption-bottom">
-                          <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.600,00</strong> por <strong class="preco-novo">R$ 1.300,00</strong></p>
-                        </div>
-
-                      </a>
-                    </div>
-                    <!-- /carousel-item -->
-
-                    <!-- Controles -->
-                    <div class="seta-hover">
-                      <a href="#carousel-custo-beneficio" class="carousel-control-prev" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon cor-seta"></span>
-                      </a>
-
-                      <a href="#carousel-custo-beneficio" class="carousel-control-next" data-bs-slide="next">
-                        <span class="carousel-control-next-icon cor-seta"></span>
-                      </a>
-                    </div>
-                    <!-- Controles -->
-
-                  </div>
-                  <!-- /carousel-inner -->
-
-                </div>
-                <!--/slide  -->
+                <button type="button" data-bs-target="#carousel-mais-vendidos" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carousel-mais-vendidos" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-mais-vendidos" data-bs-slide-to="2"></button>
 
               </div>
-              <!-- Custo-Benefício -->
+              <!-- /Indicadores -->
 
-<!-- ********************************************************************** -->
+                <!-- carousel-inner -->
+                <div class="carousel-inner border-radius">
 
-              <!-- Trabalho -->
-              <div class="tab-pane fade" id="trabalho">
+                  <!-- carousel-item -->
+                  <div class="carousel-item active">
+                    <a href="itens.html">
+                      <img src="imagens/all-in-one.jpg" class="img-fluid" alt="All-In-One i5 4570">
 
-                <!-- carousel slide -->
-                <div id="carousel-trabalho" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                      <div class="caption-top">
+                        <p class="texto-imagem-cima font-weight-bold">All-In-One i5 4570</p>
+                      </div>
 
-                <!--Indicadores -->
-                <div class="carousel-indicators">
+                      <div class="caption-bottom">
+                        <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.200,00</strong> por <strong class="preco-novo">R$ 850,00</strong></p>
+                      </div>
 
-                  <button type="button" data-bs-target="#carousel-trabalho" data-bs-slide-to="0" class="active"></button>
-                  <button type="button" data-bs-target="#carousel-trabalho" data-bs-slide-to="1"></button>
-                  <button type="button" data-bs-target="#carousel-trabalho" data-bs-slide-to="2"></button>
-
-                </div>
-                <!-- /Indicadores -->
-
-                  <!-- carousel-inner -->
-                  <div class="carousel-inner border-radius">
-
-                    <!-- carousel-item -->
-                    <div class="carousel-item active">
-                      <a href="itens.html">
-                        <img src="imagens/all-in-one.jpg" class="img-fluid">
-
-                        <div class="caption-top">
-                          <p class="texto-imagem-cima font-weight-bold">All-In-One i5 4570</p>
-                        </div>
-
-                        <div class="caption-bottom">
-                          <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.200,00</strong> por <strong class="preco-novo">R$ 850,00</strong></p>
-                        </div>
-
-                      </a>
-                    </div>
-                    <!-- /carousel-item -->
-
-                    <!-- carousel-item -->
-                    <div class="carousel-item">
-                      <a href="#">
-                        <img src="imagens/monitor.jpg" class="img-fluid">
-
-                        <div class="caption-top">
-                          <p class="texto-imagem-cima font-weight-bold">Odyssey CRG50</p>
-                        </div>
-
-                        <div class="caption-bottom">
-                          <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.000,00</strong> por <strong class="preco-novo">R$ 700,00</strong></p>
-                        </div>
-
-                      </a>
-                    </div>
-                    <!-- /carousel-item -->
-
-                    <!-- carousel-item -->
-                    <div class="carousel-item">
-                      <a href="#">
-                        <img src="imagens/desktop.jpg" class="img-fluid">
-
-                        <div class="caption-top">
-                          <p class="texto-imagem-cima font-weight-bold">DELL OptiPlex 3050</p>
-                        </div>
-
-                        <div class="caption-bottom">
-                          <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.600,00</strong> por <strong class="preco-novo">R$ 1.300,00</strong></p>
-                        </div>
-
-                      </a>
-                    </div>
-                    <!-- /carousel-item -->
-
-                    <!-- Controles -->
-                    <div class="seta-hover">
-                      <a href="#carousel-trabalho" class="carousel-control-prev" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon cor-seta"></span>
-                      </a>
-
-                      <a href="#carousel-trabalho" class="carousel-control-next" data-bs-slide="next">
-                        <span class="carousel-control-next-icon cor-seta"></span>
-                      </a>
-                    </div>
-                    <!-- Controles -->
-
+                    </a>
                   </div>
-                  <!-- /carousel-inner -->
+                  <!-- /carousel-item -->
 
-                </div>
-                <!--/slide  -->
+                  <!-- carousel-item -->
+                  <div class="carousel-item">
+                    <a href="#">
+                      <img src="imagens/monitor.jpg" class="img-fluid" alt="Odyssey CRG50">
 
-              </div>
-              <!-- /Trabalho -->
+                      <div class="caption-top">
+                        <p class="texto-imagem-cima font-weight-bold">Odyssey CRG50</p>
+                      </div>
 
-<!-- ********************************************************************** -->
+                      <div class="caption-bottom">
+                        <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.000,00</strong> por <strong class="preco-novo">R$ 700,00</strong></p>
+                      </div>
 
-              <!-- Estudos -->
-              <div class="tab-pane fade" id="estudos">
-
-                <!-- carousel slide -->
-                <div id="carousel-estudos" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
-                <!--Indicadores -->
-                <div class="carousel-indicators">
-
-                  <button type="button" data-bs-target="#carousel-estudos" data-bs-slide-to="0" class="active"></button>
-                  <button type="button" data-bs-target="#carousel-estudos" data-bs-slide-to="1"></button>
-                  <button type="button" data-bs-target="#carousel-estudos" data-bs-slide-to="2"></button>
-
-                </div>
-                <!-- /Indicadores -->
-
-                  <!-- carousel-inner -->
-                  <div class="carousel-inner border-radius">
-
-                    <!-- carousel-item -->
-                    <div class="carousel-item active">
-                      <a href="itens.html">
-                        <img src="imagens/all-in-one.jpg" class="img-fluid">
-
-                        <div class="caption-top">
-                          <p class="texto-imagem-cima font-weight-bold">All-In-One i5 4570</p>
-                        </div>
-
-                        <div class="caption-bottom">
-                          <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.200,00</strong> por <strong class="preco-novo">R$ 850,00</strong></p>
-                        </div>
-
-                      </a>
-                    </div>
-                    <!-- /carousel-item -->
-
-                    <!-- carousel-item -->
-                    <div class="carousel-item">
-                      <a href="#">
-                        <img src="imagens/monitor.jpg" class="img-fluid">
-
-                        <div class="caption-top">
-                          <p class="texto-imagem-cima font-weight-bold">Odyssey CRG50</p>
-                        </div>
-
-                        <div class="caption-bottom">
-                          <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.000,00</strong> por <strong class="preco-novo">R$ 700,00</strong></p>
-                        </div>
-
-                      </a>
-                    </div>
-                    <!-- /carousel-item -->
-
-                    <!-- carousel-item -->
-                    <div class="carousel-item">
-                      <a href="#">
-                        <img src="imagens/desktop.jpg" class="img-fluid">
-
-                        <div class="caption-top">
-                          <p class="texto-imagem-cima font-weight-bold">DELL OptiPlex 3050</p>
-                        </div>
-
-                        <div class="caption-bottom">
-                          <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.600,00</strong> por <strong class="preco-novo">R$ 1.300,00</strong></p>
-                        </div>
-
-                      </a>
-                    </div>
-                    <!-- /carousel-item -->
-
-                    <!-- Controles -->
-                    <div class="seta-hover">
-                      <a href="#carousel-estudos" class="carousel-control-prev" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon cor-seta"></span>
-                      </a>
-
-                      <a href="#carousel-estudos" class="carousel-control-next" data-bs-slide="next">
-                        <span class="carousel-control-next-icon cor-seta"></span>
-                      </a>
-                    </div>
-                    <!-- Controles -->
-
+                    </a>
                   </div>
-                  <!-- /carousel-inner -->
+                  <!-- /carousel-item -->
+
+                  <!-- carousel-item -->
+                  <div class="carousel-item">
+                    <a href="#">
+                      <img src="imagens/desktop.jpg" class="img-fluid" alt="DELL OptiPlex 3050">
+
+                      <div class="caption-top">
+                        <p class="texto-imagem-cima font-weight-bold">DELL OptiPlex 3050</p>
+                      </div>
+
+                      <div class="caption-bottom">
+                        <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.600,00</strong> por <strong class="preco-novo">R$ 1.300,00</strong></p>
+                      </div>
+
+                    </a>
+                  </div>
+                  <!-- /carousel-item -->
+
+                  <!-- Controles -->
+                  <div class="seta-hover">
+                    <a href="#carousel-mais-vendidos" class="carousel-control-prev" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon cor-seta"></span>
+                    </a>
+
+                    <a href="#carousel-mais-vendidos" class="carousel-control-next" data-bs-slide="next">
+                      <span class="carousel-control-next-icon cor-seta"></span>
+                    </a>
+                  </div>
+                  <!-- Controles -->
 
                 </div>
-                <!--/slide  -->
-
+                <!-- /carousel-inner -->
+              
               </div>
-              <!-- /Estudos -->
-
-<!-- **********************************************************************
-     **********************************************************************
-     **********************************************************************
-     **********************************************************************
-     ********************************************************************** -->
+              <!--/slide  -->
 
             </div>
-            <!-- /Tab-Content -->
+            <!-- /Mais Vendidos -->
+
+<!-- ********************************************************************** -->
+
+            <!-- Custo-Benefício -->
+            <div class="tab-pane fade" id="custo-beneficio">
+
+              <!-- carousel slide -->
+              <div id="carousel-custo-beneficio" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+              <!--Indicadores -->
+              <div class="carousel-indicators">
+
+                <button type="button" data-bs-target="#carousel-custo-beneficio" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carousel-custo-beneficio" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-custo-beneficio" data-bs-slide-to="2"></button>
+
+              </div>
+              <!-- /Indicadores -->
+
+                <!-- carousel-inner -->
+                <div class="carousel-inner border-radius">
+
+                  <!-- carousel-item -->
+                  <div class="carousel-item active">
+                    <a href="itens.html">
+                      <img src="imagens/all-in-one.jpg" class="img-fluid" alt="All-in-One i5 4570">
+
+                      <div class="caption-top">
+                        <p class="texto-imagem-cima font-weight-bold">All-In-One i5 4570</p>
+                      </div>
+
+                      <div class="caption-bottom">
+                        <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.200,00</strong> por <strong class="preco-novo">R$ 850,00</strong></p>
+                      </div>
+
+                    </a>
+                  </div>
+                  <!-- /carousel-item -->
+
+                  <!-- carousel-item -->
+                  <div class="carousel-item">
+                    <a href="#">
+                      <img src="imagens/monitor.jpg" class="img-fluid" alt="Odyssey CRG50">
+
+                      <div class="caption-top">
+                        <p class="texto-imagem-cima font-weight-bold">Odyssey CRG50</p>
+                      </div>
+
+                      <div class="caption-bottom">
+                        <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.000,00</strong> por <strong class="preco-novo">R$ 700,00</strong></p>
+                      </div>
+
+                    </a>
+                  </div>
+                  <!-- /carousel-item -->
+
+                  <!-- carousel-item -->
+                  <div class="carousel-item">
+                    <a href="#">
+                      <img src="imagens/desktop.jpg" class="img-fluid" alt="OptiPlex 3050">
+
+                      <div class="caption-top">
+                        <p class="texto-imagem-cima font-weight-bold">DELL OptiPlex 3050</p>
+                      </div>
+
+                      <div class="caption-bottom">
+                        <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.600,00</strong> por <strong class="preco-novo">R$ 1.300,00</strong></p>
+                      </div>
+
+                    </a>
+                  </div>
+                  <!-- /carousel-item -->
+
+                  <!-- Controles -->
+                  <div class="seta-hover">
+                    <a href="#carousel-custo-beneficio" class="carousel-control-prev" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon cor-seta"></span>
+                    </a>
+
+                    <a href="#carousel-custo-beneficio" class="carousel-control-next" data-bs-slide="next">
+                      <span class="carousel-control-next-icon cor-seta"></span>
+                    </a>
+                  </div>
+                  <!-- Controles -->
+
+                </div>
+                <!-- /carousel-inner -->
+
+              </div>
+              <!--/slide  -->
+
+            </div>
+            <!-- Custo-Benefício -->
+
+<!-- ********************************************************************** -->
+
+            <!-- Trabalho -->
+            <div class="tab-pane fade" id="trabalho">
+
+              <!-- carousel slide -->
+              <div id="carousel-trabalho" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+              <!--Indicadores -->
+              <div class="carousel-indicators">
+
+                <button type="button" data-bs-target="#carousel-trabalho" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carousel-trabalho" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-trabalho" data-bs-slide-to="2"></button>
+
+              </div>
+              <!-- /Indicadores -->
+
+                <!-- carousel-inner -->
+                <div class="carousel-inner border-radius">
+
+                  <!-- carousel-item -->
+                  <div class="carousel-item active">
+                    <a href="itens.html">
+                      <img src="imagens/all-in-one.jpg" class="img-fluid" alt="All-in-One i5 4570">
+
+                      <div class="caption-top">
+                        <p class="texto-imagem-cima font-weight-bold">All-In-One i5 4570</p>
+                      </div>
+
+                      <div class="caption-bottom">
+                        <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.200,00</strong> por <strong class="preco-novo">R$ 850,00</strong></p>
+                      </div>
+
+                    </a>
+                  </div>
+                  <!-- /carousel-item -->
+
+                  <!-- carousel-item -->
+                  <div class="carousel-item">
+                    <a href="#">
+                      <img src="imagens/monitor.jpg" class="img-fluid" alt="Odyssey CRG50">
+
+                      <div class="caption-top">
+                        <p class="texto-imagem-cima font-weight-bold">Odyssey CRG50</p>
+                      </div>
+
+                      <div class="caption-bottom">
+                        <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.000,00</strong> por <strong class="preco-novo">R$ 700,00</strong></p>
+                      </div>
+
+                    </a>
+                  </div>
+                  <!-- /carousel-item -->
+
+                  <!-- carousel-item -->
+                  <div class="carousel-item">
+                    <a href="#">
+                      <img src="imagens/desktop.jpg" class="img-fluid" alt="DELL OptiPlex 3050">
+
+                      <div class="caption-top">
+                        <p class="texto-imagem-cima font-weight-bold">DELL OptiPlex 3050</p>
+                      </div>
+
+                      <div class="caption-bottom">
+                        <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.600,00</strong> por <strong class="preco-novo">R$ 1.300,00</strong></p>
+                      </div>
+
+                    </a>
+                  </div>
+                  <!-- /carousel-item -->
+
+                  <!-- Controles -->
+                  <div class="seta-hover">
+                    <a href="#carousel-trabalho" class="carousel-control-prev" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon cor-seta"></span>
+                    </a>
+
+                    <a href="#carousel-trabalho" class="carousel-control-next" data-bs-slide="next">
+                      <span class="carousel-control-next-icon cor-seta"></span>
+                    </a>
+                  </div>
+                  <!-- Controles -->
+
+                </div>
+                <!-- /carousel-inner -->
+
+              </div>
+              <!--/slide  -->
+
+            </div>
+            <!-- /Trabalho -->
+
+<!-- ********************************************************************** -->
+
+            <!-- Estudos -->
+            <div class="tab-pane fade" id="estudos">
+
+              <!-- carousel slide -->
+              <div id="carousel-estudos" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+              <!--Indicadores -->
+              <div class="carousel-indicators">
+
+                <button type="button" data-bs-target="#carousel-estudos" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carousel-estudos" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-estudos" data-bs-slide-to="2"></button>
+
+              </div>
+              <!-- /Indicadores -->
+
+                <!-- carousel-inner -->
+                <div class="carousel-inner border-radius">
+
+                  <!-- carousel-item -->
+                  <div class="carousel-item active">
+                    <a href="itens.html">
+                      <img src="imagens/all-in-one.jpg" class="img-fluid" alt="All-in-One i5 4570">
+
+                      <div class="caption-top">
+                        <p class="texto-imagem-cima font-weight-bold">All-In-One i5 4570</p>
+                      </div>
+
+                      <div class="caption-bottom">
+                        <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.200,00</strong> por <strong class="preco-novo">R$ 850,00</strong></p>
+                      </div>
+
+                    </a>
+                  </div>
+                  <!-- /carousel-item -->
+
+                  <!-- carousel-item -->
+                  <div class="carousel-item">
+                    <a href="#">
+                      <img src="imagens/monitor.jpg" class="img-fluid" alt="Odyssey CRG50">
+
+                      <div class="caption-top">
+                        <p class="texto-imagem-cima font-weight-bold">Odyssey CRG50</p>
+                      </div>
+
+                      <div class="caption-bottom">
+                        <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.000,00</strong> por <strong class="preco-novo">R$ 700,00</strong></p>
+                      </div>
+
+                    </a>
+                  </div>
+                  <!-- /carousel-item -->
+
+                  <!-- carousel-item -->
+                  <div class="carousel-item">
+                    <a href="#">
+                      <img src="imagens/desktop.jpg" class="img-fluid"  alt="DELL OptiPlex 3050">
+
+                      <div class="caption-top">
+                        <p class="texto-imagem-cima font-weight-bold">DELL OptiPlex 3050</p>
+                      </div>
+
+                      <div class="caption-bottom">
+                        <p class="texto-imagem-baixo">De <strong class="preco-atual">R$ 1.600,00</strong> por <strong class="preco-novo">R$ 1.300,00</strong></p>
+                      </div>
+
+                    </a>
+                  </div>
+                  <!-- /carousel-item -->
+
+                  <!-- Controles -->
+                  <div class="seta-hover">
+                    <a href="#carousel-estudos" class="carousel-control-prev" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon cor-seta"></span>
+                    </a>
+
+                    <a href="#carousel-estudos" class="carousel-control-next" data-bs-slide="next">
+                      <span class="carousel-control-next-icon cor-seta"></span>
+                    </a>
+                  </div>
+                  <!-- Controles -->
+
+                </div>
+                <!-- /carousel-inner -->
+
+              </div>
+              <!--/slide  -->
+
+            </div>
+            <!-- /Estudos -->
+
+<!-- ********************************************************************** -->
 
           </div>
-          <!-- /Área coluna -->
+          <!-- /Tab-Content -->
 
         </div>
         <!-- /Grid -->
@@ -751,13 +715,7 @@
         <div class="col-10 col-sm-4 col-lg-3 order-3">
 
           <!-- Terceira Coluna -->
-          <div class="text-none formatacao-container-terceiro">
-
-            <!-- Titulo Coluna
-            <div>
-              <h3 class="coluna-titulo-dois">Acesso rápido</h3>
-            </div>
-           /Titulo Coluna -->
+          <div class="formatacao-container-terceiro text-decoration-none">
 
             <!-- Primeira Parte Coluna -->
             <div class="primeiro-formatacao">
@@ -807,29 +765,21 @@
                         <span>Defeito</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="servico.html#lentidao-nav" data-text="Lentidão">
                         <span>Lentidão</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="servico.html#melhoria-nav" data-text="Melhoria">
                         <span>Melhoria</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="servico.html#montagem-nav" data-text="Montagem">
                         <span>Montagem</span>
                       </a>
                     </li>
-                  </ul>
-                  <ul>
                     <li>
                       <a href="servico.html#teste-nav" data-text="Teste">
                         <span>Teste</span>
@@ -843,13 +793,13 @@
             <!-- Terceira Parte Coluna -->
             <div class="primeiro-formatacao">
               <h3 class="coluna-subtitulo">Localização</h3>
-                <div class="coluna-formatacao">
-                  <div class="mapa-container">
-                    <iframe class="mapa-formatacao" src=
-                    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d955.4453311586418!2d-49.33536033037844!3d-16.68782271438293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef5d0aad4cf7b%3A0x2bff083e14170e9d!2sRE%20INFORMATICA!5e0!3m2!1spt-BR!2sbr!4v1751842311821!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                  </iframe>
-                  </div>
+              <div class="coluna-formatacao">
+                <div class="mapa-container">
+                  <iframe class="mapa-formatacao" src=
+                  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d955.4453311586418!2d-49.33536033037844!3d-16.68782271438293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef5d0aad4cf7b%3A0x2bff083e14170e9d!2sRE%20INFORMATICA!5e0!3m2!1spt-BR!2sbr!4v1751842311821!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
                 </div>
+              </div>
             </div>
             <!-- /Terceira Parte Coluna -->
             
@@ -871,8 +821,8 @@
 
 
     <!-- Rodapé -->
-    <footer id="footer" class="bg-dark">
-      <div class="rodape-formatacao">
+    <footer id="footer" class="">
+      <div class="rodape-formatacao footer-color">
         <p class="rodape-escrita-formatacao"> <!--  -->
           <strong> &copy </strong>Todos os direitos reservados ao programador <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor </a>
         </p>
@@ -884,19 +834,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const hash = window.location.hash;
-        if (hash) {
-          const tabTrigger = document.querySelector(
-            `[data-bs-toggle="tab"][data-bs-target="${hash}"]`
-          );
-          if (tabTrigger) {
-            new bootstrap.Tab(tabTrigger).show();
+    <!-- Entra na Aba específica da Página -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          let tabId = null;
+
+          // Prioriza hash
+          if (window.location.hash) {
+            tabId = window.location.hash;
+          } else {
+            const params = new URLSearchParams(window.location.search);
+            const tabParam = params.get("tab");
+            if (tabParam) {
+              tabId = "#" + tabParam;
+            }
           }
-        }
-      });
-    </script>
+
+          if (tabId) {
+            const trigger = document.querySelector(
+              `[data-bs-toggle="tab"][data-bs-target="${tabId}"]`
+            );
+
+            if (trigger) {
+              new bootstrap.Tab(trigger).show();
+              window.scrollTo({ top: 0, behavior: "instant" });
+            }
+          }
+        });
+      </script>
 
     <!-- Dropdown mobile funcional -->
       <script>
@@ -954,11 +919,56 @@
         })
       </script>
 
-      <!-- Remove o focus ativo das setas do carousel com fadeout -->
+      <!-- Dark Mode, Troca de Icone e Botão/Nome entre mobile e pc -->
       <script>
-        document.querySelectorAll('button').forEach(btn => {
-          btn.addEventListener('click', () => {
-            setTimeout(() => btn.blur(), 150);
+        const toggleDesktop = document.getElementById("themeToggle");
+        const toggleMobile = document.getElementById("themeToggleMobile");
+        const icon = document.getElementById("themeIcon");
+
+        function updateUI() {
+          const isDark = document.body.classList.contains("dark-mode");
+
+          // Atualiza ícone desktop
+          if (icon) {
+            icon.textContent = isDark ? "☀️" : "🌙";
+          }
+
+          // Atualiza texto mobile
+          if (toggleMobile) {
+            toggleMobile.textContent = isDark 
+              ? "☀️ Modo Claro" 
+              : "🌙 Modo Escuro";
+          }
+        }
+
+        function toggleTheme() {
+          document.body.classList.toggle("dark-mode");
+
+          if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+
+          updateUI();
+        }
+
+        // Carrega estado salvo
+        if (localStorage.getItem("theme") === "dark") {
+          document.body.classList.add("dark-mode");
+        }
+
+        updateUI();
+
+        if (toggleDesktop) toggleDesktop.addEventListener("click", toggleTheme);
+        if (toggleMobile) toggleMobile.addEventListener("click", toggleTheme);
+      </script>
+
+      <!-- Evita a cor preta ao clicar fora de um botão com menu dropdown -->
+      <script>
+        document.querySelectorAll('.dropdown-toggle').forEach(el => {
+          el.addEventListener('click', e => {
+            e.preventDefault();
           });
         });
       </script>

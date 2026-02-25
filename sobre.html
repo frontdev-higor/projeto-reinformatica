@@ -13,24 +13,25 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="css/estilocs.css">
+    <link rel="stylesheet" href="css/estilocs.css">
     <link rel="icon" type="image/ico" href="imagens/reicon.png">
     <title>Sobre</title>
 
   </head>
-  <body class="page-sobre"> <!--  -->
+
+  <body class="page-sobre"> <!-- dark-mode -->
 
     <header>
 
       <!-- Barra de Navegação -->
-      <nav class="navbar navbar-expand-md navbar-dark bg-dark position-relative">
+      <nav class="navbar navbar-expand-md navbar-color">
 
         <!-- Logo -->
         <a class="navbar-brand logo-formatacao" href="index.html">RE Informática</a>
         <!-- /Logo -->
 
         <!-- Menu Hamburguer -->
-        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" 
+        <button class="navbar-toggler navbar-dark me-2" type="button" data-bs-toggle="collapse" 
         data-bs-target="#abrir-menu">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -56,22 +57,22 @@
 
 
                   <!-- Menu Dropdown -->
-                  <ul class="dropdown-menu nav-text">
+                  <ul class="dropdown-menu">
 
                     <li>
-                      <a class="btn btn-cs dropdown-item" href="tipo-computador.html">Computadores</a>
+                      <a class="dropdown-item" href="tipo-computador.html">Computadores</a>
                     </li>
 
                     <li>
-                      <a class="btn btn-cs dropdown-item" href="tipo-monitor.html">Monitores</a>
+                      <a class="dropdown-item" href="tipo-monitor.html">Monitores</a>
                     </li>
 
                     <li>
-                      <a class="btn btn-cs dropdown-item" href="tipo-componente.html">Componentes</a>
+                      <a class="dropdown-item" href="tipo-componente.html">Componentes</a>
                     </li>
 
                     <li>
-                      <a class="btn btn-cs dropdown-item" href="tipo-outro.html">Outros</a>
+                      <a class="dropdown-item" href="tipo-outro.html">Outros</a>
                     </li>
 
                   </ul>
@@ -88,8 +89,18 @@
                 <a class="nav-link active" href="sobre.html">Sobre</a>
               </li>
 
+              <li class="nav-item d-md-none justify-content-center text-center">
+                <a href="#" id="themeToggleMobile" class="nav-link d-inline-block">
+                  🌙 Modo Escuro
+                </a>
+              </li>
+
             </ul>
             <!-- /navbar-nav -->
+
+            <button id="themeToggle" class="btn btn-darkmode d-none d-md-flex">
+              <span id="themeIcon">🌙</span>
+            </button>
 
           </div>
           <!-- /Opções Navegação -->
@@ -101,40 +112,48 @@
 
 
 
-    <!-- Container -->
-    <main class="contato-bg d-flex align-items-center">
+    <!-- Main -->
+    <main class="contato-bg d-flex align-items-center bg-loja">
 
      <div class="overlay-bg"></div>
 
-     <!-- Container Fluido -->
-     <div class="container-fluid sobre-links">
+     <!-- Container -->
+     <div class="container position-relative sobre-links">
 
       <!-- Row -->
-      <div class="row justify-content-center align-items-center">
+      <div class="row justify-content-center">
 
         <!-- Bloco -->
-        <div class="col-10 col-sm-9 col-md-8 col-lg-7 col-xl-6 col-xxl-4 mx-auto bottom-item">
+        <div class="col-10 col-sm-9 col-md-8 col-lg-7 col-xl-6 col-xxl-5 mx-auto bottom-item">
 
+          <!-- Conteúdo Central -->
           <div class="conteudo-central">
 
             <h2 class="titulo-item">Sobre</h2>
 
             <div class="texto-formatado">
 
-              <p class="texto-item-um">Nós somos a RE Informática! Vendemos Computadores, Monitores, Componentes, fazemos os serviços de Manutenção, Formatação, Limpeza e Troca de Peças de Computadores, Impressões, Xerox, Escaneamentos, Venda de Materiais e muito mais!</p>
+              <p class="texto-item-um">
+                Nós somos a RE Informática! Vendemos Computadores, Monitores, Componentes, fazemos os serviços de Manutenção, Formatação, Limpeza e Troca de Peças de Computadores, Impressões, Xerox, Escaneamentos, Venda de Materiais e muito mais!
+              </p>
 
-              <p class="texto-item-dois">Estamos localizados na <a href="https://www.google.com/maps/place/RE+INFORMATICA/@-16.6878188,-49.3372915,17z/data=!3m1!4b1!4m6!3m5!1s0x935ef5d0aad4cf7b:0x2bff083e14170e9d!8m2!3d-16.687824!4d-49.3347166!16s%2Fg%2F11x70zfp7r?entry=ttu&g_ep=EgoyMDI1MDcwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Rua Cura Dars, Qd. 16, Lt. 09, Bairro Goiá, Goiânia - GO</a>, venha fazer negócio conosco, estamos anciosos para te receber pessoalmente!</p>
+              <p class="texto-item-dois">Estamos localizados na 
+                <a href="https://www.google.com/maps/place/RE+INFORMATICA/@-16.6878188,-49.3372915,17z/data=!3m1!4b1!4m6!3m5!1s0x935ef5d0aad4cf7b:0x2bff083e14170e9d!8m2!3d-16.687824!4d-49.3347166!16s%2Fg%2F11x70zfp7r?entry=ttu&g_ep=EgoyMDI1MDcwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                Rua Cura Dars, Qd. 16, Lt. 09, Bairro Goiá, Goiânia - GO
+                </a>, venha fazer negócio conosco, estamos anciosos para te receber pessoalmente!
+              </p>
 
             </div>
 
             <div class="d-flex justify-content-center espaco-bottom">
               <div class="mapa-container">
-                <iframe class="img-fluid col-8 mapa-formatacao" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d955.4453311586418!2d-49.33536033037844!3d-16.68782271438293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef5d0aad4cf7b%3A0x2bff083e14170e9d!2sRE%20INFORMATICA!5e0!3m2!1spt-BR!2sbr!4v1751842311821!5m2!1spt-BR!2sbr"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                <iframe class="img-fluid mapa-formatacao" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d955.4453311586418!2d-49.33536033037844!3d-16.68782271438293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef5d0aad4cf7b%3A0x2bff083e14170e9d!2sRE%20INFORMATICA!5e0!3m2!1spt-BR!2sbr!4v1751842311821!5m2!1spt-BR!2sbr"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
               </div>
             </div>
 
           </div>
+          <!-- /Conteúdo Central -->
           
         </div>
         <!-- /Bloco -->
@@ -143,16 +162,16 @@
       <!-- /Row -->
        
      </div>
-     <!-- /Container Fluido -->
+     <!-- /Container -->
 
     </main>
-    <!-- /Container -->
+    <!-- /Main -->
 
 
 
   <!-- Rodapé -->
-    <footer id="footer" class="bg-dark">
-      <div class="rodape-formatacao">
+    <footer id="footer" class="">
+      <div class="rodape-formatacao footer-color">
         <p class="rodape-escrita-formatacao"> <!--  -->
           <strong> &copy </strong>Todos os direitos reservados ao programador <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor </a>
         </p>
@@ -164,19 +183,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
     </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const hash = window.location.hash;
-        if (hash) {
-          const tabTrigger = document.querySelector(
-            `[data-bs-toggle="tab"][data-bs-target="${hash}"]`
-          );
-          if (tabTrigger) {
-            new bootstrap.Tab(tabTrigger).show();
+    <!-- Dark Mode, Troca de Icone e Botão/Nome entre mobile e pc -->
+      <script>
+        const toggleDesktop = document.getElementById("themeToggle");
+        const toggleMobile = document.getElementById("themeToggleMobile");
+        const icon = document.getElementById("themeIcon");
+
+        function updateUI() {
+          const isDark = document.body.classList.contains("dark-mode");
+
+          // Atualiza ícone desktop
+          if (icon) {
+            icon.textContent = isDark ? "☀️" : "🌙";
+          }
+
+          // Atualiza texto mobile
+          if (toggleMobile) {
+            toggleMobile.textContent = isDark 
+              ? "☀️ Modo Claro" 
+              : "🌙 Modo Escuro";
           }
         }
-      });
-    </script>
+
+        function toggleTheme() {
+          document.body.classList.toggle("dark-mode");
+
+          if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+
+          updateUI();
+        }
+
+        // Carrega estado salvo
+        if (localStorage.getItem("theme") === "dark") {
+          document.body.classList.add("dark-mode");
+        }
+
+        updateUI();
+
+        if (toggleDesktop) toggleDesktop.addEventListener("click", toggleTheme);
+        if (toggleMobile) toggleMobile.addEventListener("click", toggleTheme);
+      </script>
 
   </body>
 </html>

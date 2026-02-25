@@ -29,14 +29,14 @@
         <!-- /Subir -->
 
         <!-- Barra de Navegação -->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-2 position-relative">
+        <nav class="navbar navbar-expand-md mb-2 position-relative navbar-color">
 
           <!-- Logo -->
           <a class="navbar-brand logo-formatacao" href="index.html">RE Informática</a>
           <!-- /Logo -->
 
           <!-- Menu Hamburguer -->
-          <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" 
+          <button class="navbar-toggler navbar-dark me-2" type="button" data-bs-toggle="collapse" 
           data-bs-target="#abrir-menu">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -65,19 +65,19 @@
                     <ul class="dropdown-menu">
 
                       <li>
-                        <a class="btn btn-tipos dropdown-item" href="tipo-computador.html">Computadores</a>
+                        <a class="dropdown-item" href="tipo-computador.html">Computadores</a>
                       </li>
 
                       <li>
-                        <a class="btn btn-tipos dropdown-item" href="tipo-monitor.html">Monitores</a>
+                        <a class="dropdown-item" href="tipo-monitor.html">Monitores</a>
                       </li>
 
                       <li>
-                        <a class="btn btn-tipos dropdown-item" href="tipo-componente.html">Componentes</a>
+                        <a class="dropdown-item" href="tipo-componente.html">Componentes</a>
                       </li>
 
                       <li>
-                        <a class="btn btn-tipos dropdown-item" href="tipo-outro.html">Outros</a>
+                        <a class="dropdown-item" href="tipo-outro.html">Outros</a>
                       </li>
 
                     </ul>
@@ -94,21 +94,21 @@
                   <a class="nav-link" href="sobre.html">Sobre</a>
                 </li>
 
-                <li class="nav-item d-md-none">
-                  <a class="nav-link text-center fw-bold" href="#fim-da-pagina">
-                    Descer ↓
+                <li class="nav-item d-md-none justify-content-center text-center">
+                  <a href="#" id="themeToggleMobile" class="nav-link d-inline-block">
+                    🌙 Modo Escuro
                   </a>
                 </li>
 
               </ul>
               <!-- /navbar-nav -->
 
+              <button id="themeToggle" class="btn btn-darkmode d-none d-md-flex">
+                <span id="themeIcon">🌙</span>
+              </button>
+
             </div>
             <!-- /Opções Navegação -->
-
-          <!-- Descer -->
-          <a href="#fim-da-pagina" class="btn btn-cima btn-outline-light d-none d-md-inline-block ms-auto me-3">Descer ↓</a>
-          <!-- /Descer -->
 
         </nav>
         <!-- /Barra de Navegação -->
@@ -132,7 +132,7 @@
         <!-- Seção Defeito -->
         <section id="defeito-nav">
           <h2 class="titulo-servico">Defeito</h2>
-          <p class="subtitulo-servico">Conteúdo detalhado dos Computadores com Defeito. Travamentos, falhas, desligamentos.</p>
+          <p class="subtitulo-servico">Computador com defeito claro, não liga, tela escura, mal funcionamento.</p>
             <div class="texto-servico">
               <p>Conteúdo</p>
               <p>Conteúdo</p>
@@ -156,7 +156,7 @@
         <!--Seção Lentidão -->
         <section id="lentidao-nav">
           <h2 class="titulo-servico">Lentidão</h2>
-          <p class="subtitulo-servico">Conteúdo detalhado do All-In-One aqui. Imagens, especificações, etc.</p>
+          <p class="subtitulo-servico">Verificação de componentes que causam lentidão e possível troca dos mesmos.</p>
             <div class="texto-servico">
               <p>Conteúdo</p>
               <p>Conteúdo</p>
@@ -180,7 +180,7 @@
         <!-- Seção Melhoria -->
         <section id="melhoria-nav">
           <h2 class="titulo-servico">Melhoria</h2>
-          <p class="subtitulo-servico">Informações completas sobre Mini PCs. Descrição, modelos, comparativos.</p>
+          <p class="subtitulo-servico">Componentes que podem ser alterados em benefício do computador.</p>
             <div class="texto-servico">
               <p>Conteúdo</p>
               <p>Conteúdo</p>
@@ -204,7 +204,7 @@
         <!-- Seção Montagem -->
         <section id="montagem-nav">
           <h2 class="titulo-servico">Montagem</h2>
-          <p class="subtitulo-servico">Explicações sobre a linha Slim. Vantagens, indicações, fotos.</p>
+          <p class="subtitulo-servico">Montagem de computadores, Placa-mãe, Memória de Armazenamento, Ram, Processador.</p>
             <div class="texto-servico">
               <p>Conteúdo</p>
               <p>Conteúdo</p>
@@ -228,7 +228,7 @@
         <!-- Seção Teste -->
         <section id="teste-nav">
           <h2 class="titulo-servico">Teste</h2>
-          <p class="subtitulo-servico">Informações para contato, formulário ou WhatsApp.</p>
+          <p class="subtitulo-servico">Teste realizado em computadores, verificação de componentes internos.</p>
             <div class="texto-servico">
               <p>Conteúdo</p>
               <p>Conteúdo</p>
@@ -258,8 +258,9 @@
       </main>
 
       <!-- Rodapé -->
-      <footer id="footer" class="bg-dark position-relative"> <!-- footer text-light -->
-       <div class="rodape-formatacao">
+      <footer id="footer" class="position-relative"> <!-- footer text-light -->
+        
+       <div class="rodape-formatacao footer-color">
 
         <p class="rodape-escrita-formatacao">
           <strong>&copy;</strong> Todos os direitos reservados ao programador
@@ -267,11 +268,9 @@
         </p>
 
         <!-- Botão à direita -->
-        <a href="#topo-da-pagina" id="btnSubir" class="btn btn-baixo btn-dark btn-subir">Subir ↑</a>
+        <a href="#topo-da-pagina" id="btnSubir" class="btn btn-dark btn-baixo btn-subir">Subir ↑</a>
         
       </div>
-
-      <div id="fim-da-pagina"></div>
 
       </footer>
       <!-- /Rodapé -->
@@ -281,40 +280,32 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
       </script>
       
+      <!-- Entra na Aba específica da Página -->
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          const hash = window.location.hash;
-          if (hash) {
-            const tabTrigger = document.querySelector(`[data-bs-toggle="tab"][href="${hash}"]`);
-            if (tabTrigger) {
-              new bootstrap.Tab(tabTrigger).show();
-              // opcional: rola até a seção
-              window.location.hash = hash;
+          let tabId = null;
+
+          // Prioriza hash
+          if (window.location.hash) {
+            tabId = window.location.hash;
+          } else {
+            const params = new URLSearchParams(window.location.search);
+            const tabParam = params.get("tab");
+            if (tabParam) {
+              tabId = "#" + tabParam;
             }
           }
-        });
-      </script>
 
-      <!-- Scroll dos links da Sidebar -->
-      <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const navbar = document.querySelector(".navbar");
-            const body = document.body;
-
-            const observer = new IntersectionObserver(
-                ([entry]) => {
-                    if (entry.isIntersecting) {
-                        body.classList.add("navbar-visivel");
-                    } else {
-                        body.classList.remove("navbar-visivel");
-                    }
-                },
-                {
-                    threshold: 0
-                }
+          if (tabId) {
+            const trigger = document.querySelector(
+              `[data-bs-toggle="tab"][data-bs-target="${tabId}"]`
             );
 
-            observer.observe(navbar);
+            if (trigger) {
+              new bootstrap.Tab(trigger).show();
+              window.scrollTo({ top: 0, behavior: "instant" });
+            }
+          }
         });
       </script>
 
@@ -342,6 +333,51 @@
 
           observer.observe(footer);
         });
+      </script>
+
+       <!-- Dark Mode, Troca de Icone e Botão/Nome entre mobile e pc -->
+      <script>
+        const toggleDesktop = document.getElementById("themeToggle");
+        const toggleMobile = document.getElementById("themeToggleMobile");
+        const icon = document.getElementById("themeIcon");
+
+        function updateUI() {
+          const isDark = document.body.classList.contains("dark-mode");
+
+          // Atualiza ícone desktop
+          if (icon) {
+            icon.textContent = isDark ? "☀️" : "🌙";
+          }
+
+          // Atualiza texto mobile
+          if (toggleMobile) {
+            toggleMobile.textContent = isDark 
+              ? "☀️ Modo Claro" 
+              : "🌙 Modo Escuro";
+          }
+        }
+
+        function toggleTheme() {
+          document.body.classList.toggle("dark-mode");
+
+          if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+
+          updateUI();
+        }
+
+        // Carrega estado salvo
+        if (localStorage.getItem("theme") === "dark") {
+          document.body.classList.add("dark-mode");
+        }
+
+        updateUI();
+
+        if (toggleDesktop) toggleDesktop.addEventListener("click", toggleTheme);
+        if (toggleMobile) toggleMobile.addEventListener("click", toggleTheme);
       </script>
 
     </body>

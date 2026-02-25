@@ -1,24 +1,27 @@
 
-/*********************************| Tudo |**************************************/
+/* ================================= TUDO ================================= */
 
 html {
 	height: 100%;
 /* Mantém o footer colado em baixo */
+	overflow-y: scroll;
+	scroll-behavior: smooth;
 }
 
 body{
+	font-family: sans-serif;
 	margin: 0;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
 /* /Mantém o footer colado em baixo */
-	background: #e6e6e6 /* #e6e6e6 | #fff | #000 */
+	/*background: #e6e6e6 #e6e6e6 | #fff | #000 */
+	background: var(--bg-page);
 }
 
 html {
 	/*  */
-	overflow-y: scroll;
-	scroll-behavior: smooth;
+	
 }
 
 /* Mantém o footer colado em baixo */
@@ -36,21 +39,17 @@ footer {
 ul {
 	list-style: none;
 	text-align: center;
+	padding-left: 0;
+	margin-left: 0;
 }
 
 iframe, img {
-	height: 100%;
 	width: 100%;
+	height: auto;
 }
 
 a {
 	text-decoration: none;
-}
-
-.conteudo-site a:active:not(:hover),
-.conteudo-site a:focus:not(:hover),
-.conteudo-site a:focus-visible:not(:hover) {
-	color: currentColor;
 }
 
 a,
@@ -61,7 +60,7 @@ img {
 }
 
 a:focus-visible {
-	outline: 2px solid #6d9887;
+	outline: 2px solid var(--bg-theme-two);
 	outline-offset: 2px;
 }
 
@@ -76,31 +75,38 @@ button:focus-visible {
 	box-shadow: none;
 }
 
-/* Remove o focus ativo das setas do carousel */
-button:focus {
-	outline: none;
+/* Botão Dark Mode */
+.btn-darkmode {
+	background-color: var(--bg-darkmode-btn);
+	position: fixed;
+	top: 7px;
+	right: 7px;
+	z-index: 1050;
+	border-radius: 50%;
+	width: 44px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*transition: transform 0.2s ease, background-color 0.2s ease;*/
+	border: 1px solid white;
+}
+
+.btn-darkmode:hover {
+	background-color: var(--btn-bg-darkmode-hover);
+	/*transition: scale(1.08);*/
+}
+
+.btn:active,
+ button:active {
 	box-shadow: none;
+	transform: none;
 }
 
-.btn:focus, 
-.btn:active:focus {
-	outline: none;
-	box-shadow: none;
-}
-
-.btn:focus-visible {
-	outline: 2px solid rgba(13, 110, 253, .5);
-}
-/* /Remove o focus ativo das setas do carousel */
-
-/***************************| Barra de Nevegação |******************************/
+/* ========================== BARRA DE NAVEGAÇÃO ========================== */
 
 .navbar-brand {
 	margin-left: 16px; /* Mexer aqui caso necessário */
-}
-
-.navbar-nav {
-	margin: 0 auto;
 }
 
 .navbar {
@@ -112,162 +118,140 @@ header .navbar {
 	z-index: 1050;
 }
 
+/* Também afeta o dropdown da segunda coluna */
 .dropdown-menu {
-	border-radius: 5px;
+	border-radius: var(--radius-5px);
 	overflow: hidden;
-	border: 1px solid #000;
 	padding: 0;
-	color: #000;
 	text-align: center;
-	/*user-select: none;*/
+	user-select: none;
 }
 
+/* Também afeta o dropdown da segunda coluna */
+.dropdown-item {
+	padding: 8px 12px;
+	border-radius: 0;
+	user-select: none;
+	-webkit-user-drag: none;
+	/*transition: background-color 0.15s ease, color 0.15s ease;*/
+}
+
+/* Também afeta o dropdown da segunda coluna */
 .dropdown-menu li:first-child .dropdown-item {
 	border-top-left-radius: 4px;
 	border-top-right-radius: 4px;
 }
 
+/* Também afeta o dropdown da segunda coluna */
 .dropdown-menu li:last-child .dropdown-item {
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
 }
 
-.dropdown-item {
-	color: #000;
-	padding: 8px 12px;
-	border-radius: 0;
-	user-select: none;
-	-webkit-user-drag: none;
-	transition: background-color 0.15s ease, color 0.15 ease;
+/******************************************/
+
+/* Menu Inicio, Serviços... */
+
+.navbar .nav-link {
+	color: var(--text-muted);
 }
 
-/*
-.dropdown-item:active:not(:hover){
-	background-color: #494c4e;
-	color: #fff;
-}*/
-
-.dropdown-item:active {
-	background-color: #494c4e !important;
-	color: #fff;
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+	color: var(--text-btn-hover-nav);
 }
 
-.dropdown-item:hover,
-.dropdown-item:focus,
-.dropdown-item:active,
-.dropdown-item.active {
-	background-color: #494c4e;
-	color: #fff;
-	border-radius: 0;
+.navbar .nav-link:active,
+.navbar .nav-link.active {
+	color: var(--text-btn-active-nav);
 }
 
-.dropdown-item:focus {
-	background-color: var(--bs-dropdown-link-hover-bg);
+.nav-link.active {
+	/*pointer-events: none;*/
+	cursor: default;
 }
 
-.dropdown-item.active, .dropdown-item:active{
-	background-color: #000;
-	color: #fff;
+.logo-formatacao,
+.logo-formatacao:hover {
+  color: var(--text-re);
 }
 
+.logo-formatacao {
+	font-size: 1.3em;
+}
+
+/******************************************/
+
+/* Menu Dropdown Compras */
+
+.navbar .dropdown-item {
+	background-color: var(--bg-dropdown);
+	color: var(--text-btn-nav);
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+	background-color: var(--btn-bg-nav);
+	color: var(--text-btn-hover-nav);
+	font-weight: bold;
+}
+
+.navbar .dropdown-item:active,
+.navbar .dropdown-item.active  {
+	background-color: var(--btn-bg-active-nav);
+	color: var(--text-btn-active-nav);
+}
+
+/******************************************/
+
+/* Remove a seta de Compras */
 .dropdown-toggle::after {
 	display: none;
 }
 
-.nav-item.dropdown.show > .nav-link {
-	color: #6d9887;
+/* Maneira correta de aplicar o gradient */
+.navbar-color {
+	background-image: var(--gradient);
+	background-color: #2d3436;
 }
 
-.navbar .nav-link.active {
-	color: #fff;
+/* Tira a cor escura ao clicar fora de compras com dropdown aberto */
+.navbar .dropdown-toggle.show {
+  color: var(--text-btn-hover-nav);
 }
 
-.navbar .nav-link:hover {
-	color: #fff;
-}
-
-.navbar-nav .nav-item.dropdown {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.nav-link.active {
-	pointer-events: none;
-	cursor: default;
-}
-
-/*****************************| Sub-Menu Compras |*****************************/
-
-.nav-tabs {
-	border-bottom: none;
-	margin-bottom: 0;
-	position: relative;
-	z-index: 2;
-}
-
-/* Abas não ativas */
-.nav-tabs .nav-link {
-	color: #000;
-	background-color: #cfcfcf; /* transparent #cfcfcf */
-	border: none; /* none */
-	margin: 0 3px;
-	padding: 6px 10px;
-	border-radius: 6px;
-	transition: all 0.2 ease;
-	/*margin-bottom: 10px;*/
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-	border-bottom: none;
-}
-
-.nav-tabs .nav-link:hover {
-	color: #fff;
-	background-color: #494c4e;
-}
-
-.nav-tabs .nav-link.active {
-	color: #000;
-	background-color: #fff; /* #212529 */
-	border-radius: 0.375rem;
-	text-shadow: 0 0 0.5px currentColor;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
-/****************************| Primeira Coluna |********************************/
+/* =========================== PRIMEIRA COLUNA =========================== */
 
 .coluna-formatacao {
 	font-size: 1.2em;
-	background: #fff;
+	background: var(--bg-coluna);
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	border-radius: 5px;
+	border-radius: var(--radius-5px);
 }
 
 .coluna-formatacao ul {
-	background: #fff;
+	background: var(--bg-coluna);
 	margin: 0;
 	padding: 0; /* Controla a distancia entre os botões */
-	border-radius: 10px;
+	border-radius: var(--radius-10px);
 }
 
 .coluna-formatacao a {
 	display: block;
 	padding: 6px 0px;
-	color: #000;
+	color: var(--text-btn);
 	text-decoration: none;
 	border-radius: 8px;
 	box-shadow: 0 0 0 transparent;
-	transition: background 0.2s ease, transform 0.2s ease;
+	/*transition: background 0.2s ease, transform 0.2s ease;*/
 }
 
 .coluna-formatacao ul a:hover {
-	background-color: #e6e6e6;
+	background-color: var(--btn-bg-hover);
 	font-weight: bold;
-	color: #000;
+	color: var(--text-btn);
 }
 
 .coluna-formatacao li {
@@ -291,74 +275,124 @@ header .navbar {
 	border-bottom-right-radius: 5px;
 }
 
-/* /Deixa os entornos dos botões mais profissionais */
+.coluna-formatacao li {
+	width: 100%;
+}
+
+.coluna-formatacao a,
+.coluna-formatacao a span {
+	white-space: normal;
+}
+
+.coluna-formatacao ul li a {
+	white-space: normal;
+	word-break: break-word;
+	overflow-wrap: anywhere;
+}
+
+.coluna-formatacao a {
+	width: 100%;
+	padding: 10px 5px;
+  overflow: hidden;
+	text-align: center;
+	font-weight: 400;
+
+	user-select: none;
+	display: -webkit-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.coluna-formatacao a:hover,
+.coluna-formatacao a.active {
+	font-weight: 700;
+	background-color: rgba(0, 0, 0, 0.06);
+}
+
+.coluna-formatacao a:hover,
+.coluna-formatacao a:active,
+.coluna-formatacao a:focus,
+.coluna-formatacao a.active {
+	color: var(--text-btn);
+	background-color: var(--coluna-btn-interaction-bg);
+	font-weight: 700;
+	outline: none;
+}
+
+.coluna-formatacao a::selection {
+	background: transparent;
+	color: var(--text-btn);
+}
+
+.coluna-formatacao a:active {
+	filter: none;
+	opacity: 1;
+}
+
+/******************************************/
+
+.formatacao-container-primeiro { /* Classe Controlada nas Media Queries */
+	padding: 5px;
+	background: var(--bg-coluna);
+	border-radius: var(--radius-5px);
+}
+
+.formatacao-container-terceiro { /* Classe Controlada nas Media Queries */
+	padding: 5px;
+	background: var(--bg-coluna);
+	border-radius: var(--radius-5px);
+}
 
 .primeiro-formatacao { /* Cor das colunas  */
-	background: linear-gradient(180deg, #2d3436, #636e72); 
+	background: var(--gradient-two);
 	padding: 5px 5px;
 	margin: 5px 5px;
-	border-radius: 5px;
+	border-radius: var(--radius-5px);
 }
 
-.formatacao-container-primeiro { /* Cor do container das colunas */
-	background: #fff;
-	padding: 5px;
-	border-radius: 5px;
-}
+/******************************************/
 
-.formatacao-container-terceiro { /* Cor do container das colunas */
-	background: #fff;
-	padding: 5px;
-	border-radius: 5px;
-}
-
-.coluna-titulo {
-	/*border: 1px solid black;*/
-	font-size: 1.3em;
-	text-align: center;
-	color: #000;
-	background: #fff;
-}
+/* Computadores, Monitores... */
 
 .coluna-subtitulo {
-	/*border: 1px solid white;*/
 	font-size: 1.3em;
 	text-align: center;
-	color: #fff;
-	background: #000;
-	border-radius: 5px;
+	color: var(--text-subtitulo-coluna);
+	background: var(--gradient);
+	border-radius: var(--radius-5px);
 }
+
+/******************************************/
 
 .navegacao-formatacao {
 	font-size: 1em;
 }
 
-.logo-formatacao {
-	font-size: 1.3em;
+.coluna-formatacao ul {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 
-.text-none a {
-	text-decoration: none;
-}
-
-/****************************| Segunda Coluna |*********************************/
+/* ============================ SEGUNDA COLUNA ============================ */
 
 .coluna-titulo-centro { /* Encontre o computador perfeito! */
 	font-size: 1.7em;
 	font-weight: bold;
 	text-align: center;
-	color: #fff;
-	background: #000;
+	color: var(--text-title);
+	background: var(--gradient);
 	margin: 0px;
 	border-radius: 5px 5px 0 0;
-	/*border: 1px solid #000;*/
 }
 
-.cor-seta {
-	filter: invert(100%);
-}
+/******************************************/
 
-.carousel-indicators {
+.carousel-indicators { /* <   > */
 	bottom: 5px;
 	padding: 8px 14px;
 	background: rgba(0, 0, 0, 0.5);
@@ -372,33 +406,25 @@ header .navbar {
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
-	background-color: #fff;
+	background-color: var(--bg-indicators);
 	border: none;
 	margin: 0 6px;
 	opacity: 1;
-	/*transition: background-color 0.3s, transform 0.2s;*/
 }
 
 .carousel-indicators button.active {
-	background-color: #fff;
+	background-color: var(--bg-indicators);
 	transform: scale(1.25);
 }
 
 .carousel-indicators button:hover {
-	background-color: rgba(255, 255, 255, 1);
+	background-color: var(--bg-indicators);
+	/*transition: background-color 0.3s, transform 0.2s;*/
 }
 
 .carousel-indicators button:hover:not(active) {
-	background-color: #fff;
+	background-color: var(--bg-indicators);
 	opacity: 1;
-}
-
-.carousel-item {
-	/*transition: opacity .0.5s ease-in-out;*/
-}
-
-.carousel-inner {
-	background-color: #000;
 }
 
 .carousel-caption {
@@ -412,9 +438,15 @@ header .navbar {
 	text-align: center;
 }
 
-.caption-top {
+.cor-seta {
+	filter: invert(100%);
+}
+
+/******************************************/
+
+.caption-top { /* Subtítulo */
 	position: absolute;
-	top: 10px;
+	top: 100px;
 	left: 50%;
 	transform: translateX(-50%);
 	width: 100%;
@@ -422,7 +454,7 @@ header .navbar {
 	pointer-events: none;
 }
 
-.caption-bottom {
+.caption-bottom { /* Preço */
 	position: absolute;
 	margin-bottom: 0;
 	bottom: 70px; /* espaço para os indicadores */
@@ -433,104 +465,159 @@ header .navbar {
 	pointer-events: none; 
 }
 
-.texto-imagem-cima {
+.texto-imagem-cima { /* Subtítulo */
 	display: inline-block;
 	padding: 6px 18px;
 	font-size: 1.3em;
 	font-weight: bold;
-	color: rgba(255, 255, 255, 1);
-	background: rgba(0, 0, 0, 0.8);
-	color: #fff;
-	border-radius: 5px;
+	color: var(--text-subtitulo-preco);
+	background: var(--bg-subtitulo-preco);
+	border-radius: var(--radius-5px);
 }
 
-.texto-imagem-baixo {
+.texto-imagem-baixo { /* Preço */
 	display: inline-block;
 	padding: 10px 14px;
 	font-size: 1.2em;
-	color: rgba(255, 255, 255, 1);
-	background: rgba(0, 0, 0, 0.75);
-	color: #fff;
-	border-radius: 5px;
+	color: var(--text-subtitulo-preco);
+	background: var(--bg-subtitulo-preco);
+	border-radius: var(--radius-5px);
 }
 
-.texto-indicadores {
-	padding: 0px;
-	/*background: rgba(109, 152, 135, 0.7);*/
-}
-
-/* ************* Essa parte controla a hit-box dos botões < > *******************
-
-.carousel-control-prev,
-.carousel-control-next {
-	top: 50%;
-	transform: translateY(-50%);
-	height: 60px;
-	width: 40px;
-	border-radius: 5px;
-	margin: 20px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-	width: 20px;
-	height: 20px;
-}
-
-****************** ****************** ****************** *************** *******/
-
-.preco-atual {
+.preco-atual { /* Preço */
 	padding: 4px;
 	color: #FF4000;
 	text-decoration: line-through;
-	background: rgba(0, 0, 0, 0.8);
-	border: 1px solid rgba(255, 64, 0, 1);
-	border-radius: 5px;
+	background: var(--bg-subtitulo-preco);
+	border: 1px solid rgba(255, 64, 0, 1); /* Vermelho claro */
+	border-radius: var(--radius-5px);
 }
 
-.preco-novo {
+.preco-novo { /* Preço */
 	padding: 4px;
 	color: #00FF00;
-	background: rgba(0, 0, 0, 0.8);
-	border: 1px solid rgba(147, 250, 165, 1);
-	border-radius: 5px;
+	background: var(--bg-subtitulo-preco);
+	border: 1px solid rgba(147, 250, 165, 1); /* Verde */
+	border-radius: var(--radius-5px);
 }
+
+/******************************************/
 
 .border-radius {
-	border-radius: 5px;
+	border-radius: var(--radius-5px);
 }
 
-.border-radius-titulo {
-	border-radius: 5px;
+/******************************************/
+
+/* Botão Mais Vendidos */
+
+#dropdownTabButton {
+  background-color: var(--btn-bg-drop);
+  color: var(--text-btn-bg);
 }
 
-.btn-index {
-	background-color: #fff;
+#dropdownTabButton:hover {
+  background-color: var(--btn-hover-drop);
+  color: var(--text-hover-drop);
+  font-weight: bold;
 }
 
-.btn-index:hover {
-	font-weight: bold;
+#dropdownTabButton:active,
+#dropdownTabButton.show {
+  background-color: var(--btn-bg-active-drop);
+  color: var(--text-btn-active-drop);
+  font-weight: bold;
 }
 
-/****************************| Terceira Coluna |********************************/
+/******************************************/
+
+/* Dropdown do botão Mais Vendidos */
+
+.dropdown-tabs-mobile {
+	width: 100%;
+	max-width: 320px;
+	margin-top: 50px;
+	border-radius: 12px;
+	overflow: hidden;
+	border: 1px solid #121212;
+	/* border: none; Remove border adicional */
+}
+
+.dropdown-tabs-mobile .dropdown-item {
+	background-color: var(--bg-coluna);
+	color: var(--text-btn-drop);
+	text-align: center;
+}
+
+.dropdown-tabs-mobile .dropdown-item:hover,
+.dropdown-tabs-mobile .dropdown-item:focus {
+	background-color: var(--btn-bg-hover-drop);
+	color: var(--text-btn-hover-drop);
+}
+
+.dropdown-tabs-mobile .dropdown-item:active,
+.dropdown-tabs-mobile .dropdown-item.active {
+	background-color: var(--btn-bg-active-drop);
+	color: var(--text-btn-active-drop);
+}
+
+/******************************************/
+
+/* Aba Mais Vendidos, Custo-Benefício... */
+
+.nav-tabs {
+	border-bottom: none;
+	margin-bottom: 0;
+	position: relative;
+	z-index: 2;
+}
+
+/* Abas não ativas */
+.nav-tabs .nav-link {
+	color: var(--tab-text);
+	background-color: var(--tab-bg);
+	border: none;
+	margin: 0 3px;
+	padding: 6px 10px;
+	border-radius: 6px;
+	/*transition: all 0.2 ease;*/
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom: none;
+}
+
+.nav-tabs .nav-link:hover {
+	color: var(--tab-text-hover);
+	background-color: var(--tab-bg-hover);
+}
+
+.nav-tabs .nav-link.active {
+	color: var(--tab-text);
+	border-radius: 0.375rem;
+	text-shadow: 0 0 0.5px currentColor;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+/* =========================== TERCEIRA COLUNA =========================== */
 
 .mapa-formatacao {
 	display: block;
-	border-radius: 5px;
+	border-radius: var(--radius-5px);
 	border: 0;
 }
 
 .mapa-container {
-	border-radius: 5px;
-	background: #fff;
+	border-radius: var(--radius-5px);
+	background: var(--bg-coluna);
 }
 
-/********************************| Compras |************************************/
+/* =============================== COMPRAS =============================== */
 
 #body-centralizado {
 	display: grid;
 	place-items: center;
-	height: 100vh;
+	min-height: 100vh;
 	margin: 0;
 }
 
@@ -546,42 +633,22 @@ header .navbar {
 	font-weight: bold;
 }
 
-.dropdown-tabs-mobile {
-	width: 75%;
-	max-width: 320px;
-	border-radius: 12px;
-	margin-top: 50px;
-}
-
-.dropdown-tabs-mobile .dropdown-item {
-	text-align: center;
-}
-
-.dropdown-tabs-mobile .dropdown-item.active {
-	background-color: #212529;
-	color: #fff;
-}
-
 .arredondar-botao {
 	border-radius: 10px 10px 0 0;
-	border: 1px solid black;
 }
 
-/**********************************| Itens |************************************/
+/* ================================ ITENS ================================ */
 
-ul {
-	padding-left: 0 !important;
-	margin-left: 0 !important;
-	text-align: center;
-	list-style: none;
-	list-style-position: inside;
-}
 
-/*********************************| Footer |************************************/
+
+/* ================================ FOOTER ================================ */
 
 #footer {
 	display: grid;
-	border-top: 1px solid transparent;
+}
+
+.footer-color {
+	background: var(--gradient-three);
 }
 
 .rodape-formatacao {
@@ -589,7 +656,7 @@ ul {
 	padding: 5px;
 	text-align: center;
 	font-size: 1.1em;
-	color: #e6e6e6;
+	color: var(--text-footer);
 }
 
 .rodape-formatacao a {
@@ -603,26 +670,223 @@ ul {
 }
 
 .link-footer {
-	color: #0d6efd;
+	color: var(--link-footer);
 }
 
 .link-footer:hover,
 .link-footer:active,
 .link-footer:focus,
 .link-footer:focus-visible {
-	color: #0a58ca;
+	color: var(--link-hover);
 }
 
-/*******************************| Media Queries |*******************************/
+/* ============================== DARK MODE =============================== */
 
-/* Extra large devices (large desktops, 1200px and up) */
+/* ============================== MODO CLARO ============================== */
+
+:root {
+
+	/* ================= BODY ================= */
+
+	--bg-page: #d5e6df;
+	--gradient: linear-gradient(
+		270deg, 
+		#2d3436 68%,
+		#6d9887 150%
+	);
+	--gradient-two: linear-gradient(
+		90deg, 
+		#6d9887 75%,
+		#2d3436 150%
+	);
+	--gradient-three: linear-gradient(
+		90deg, 
+		#2d3436 70%,
+		#6d9887 150%
+	);
+
+	/* Botão Dark Mode */
+	--bg-darkmode-btn: #212529;
+	--btn-bg-darkmode-hover: #3a3a3a;
+
+	/* ================ NAVBAR ================ */
+
+	--text-muted: #858585;
+	--text-btn-nav: #121212;
+  --text-btn-hover-nav: #fff;
+  --text-btn-active-nav: #fff;
+  --text-re: #f5f7fa;
+
+  --btn-bg-nav: #212529;
+  --btn-bg-active-nav: #212529; /* Verificar funcionalidade Páginas de Compras */
+
+  --bg-dropdown: #f5f7fa;
+
+  /* =========== PRIMEIRA COLUNA =========== */
+
+  --bg-coluna: #f5f7fa;
+	--text-subtitulo-coluna: #f5f7fa;
+
+	--text-btn: #121212;
+	--btn-bg-hover: #d5d5d5;
+
+	--coluna-btn-interaction-bg: rgba(0, 0, 0, 0.06);
+
+  /* ============ SEGUNDA COLUNA ============ */
+
+  --text-title: #f5f7fa;
+
+  /*Botão Mais Vendidos*/
+  --btn-bg-drop: #f5f7fa;
+  --btn-hover-drop: #212529;
+  --btn-bg-hover-drop: #d5d5d5;
+  --btn-bg-active-drop: #212529;
+
+  --text-btn-bg: #121212;
+  --text-btn-drop: #121212;
+  --text-hover-drop: #f5f7fa;
+  --text-btn-hover-drop: #121212;
+  --text-btn-active-drop: #f5f7fa;
+
+  --text-subtitulo-preco: #f5f7fa;
+  --bg-subtitulo-preco: rgba(0, 0, 0, 0.8);
+
+  --bg-indicators: #f5f7fa;
+
+  /* ================= TABS ================= */
+
+  --tab-text: #121212;
+  --tab-bg: #cfcfcf;
+  --tab-text-hover: #121212;
+  --tab-bg-hover: #f5f7fa;
+
+  /* ================ FOOTER ================ */
+
+  --text-footer: #f5f7fa;
+  --link-footer: #0d6efd;
+  --link-hover: #0a58ca;
+
+  /* ================ TESTE ================ */
+
+  --text-white: #fff;
+  --text-black: #000;
+  --text-red: #f00;
+  --text-green: #0f0;
+  --text-blue: #00f;
+  --text-yellow: #ff0;
+  --text-pink: #f0f;
+  --text-cyan: #0ff;
+
+  /* ================= TUDO ================= */
+
+	--radius-5px: 5px;
+	--radius-10px: 10px;
+
+}
+
+/* ============================== MODO ESCURO ============================== */
+
+.dark-mode {
+
+  /* ================= BODY ================= */
+
+  --bg-page: #121212;
+  --gradient: linear-gradient(
+		270deg, 
+		#0f2027 68%,
+		#5a8f7b 150%
+	);
+	--gradient-two: linear-gradient(
+		90deg, 
+		#5a8f7b 75%,
+		#0f2027 150%
+	);
+	--gradient-three: linear-gradient(
+		90deg, 
+		#0f2027 70%,
+		#5a8f7b 150%
+	);
+
+  /* Botão Dark Mode */
+  --bg-darkmode-btn: #f5f7fa;
+  --btn-bg-darkmode-hover: #EBE6E6;
+
+  /* ================ NAVBAR ================ */
+
+  --text-muted: #b0b0b0;
+  --text-btn-nav: #f5f7fa;
+  --text-btn-hover-nav: #f5f7fa;
+  --text-btn-active-nav: #f5f7fa;
+  --text-re: #f5f7fa;
+
+  --btn-bg-nav: #2c2c2c;
+  --btn-bg-active-nav: #3a3a3a; /* Verificar funcionalidade Páginas de Compras */
+
+  --bg-dropdown: #121212;
+
+  /* =========== PRIMEIRA COLUNA =========== */
+
+  --bg-coluna: #1e1e1e;
+  --text-subtitulo-coluna: #f5f7fa;
+
+  --text-btn: #e0e0e0;
+  --btn-bg-hover: #2c2c2c;
+
+  --coluna-btn-interaction-bg: rgba(255, 255, 255, 0.08);
+
+  /* ============ SEGUNDA COLUNA ============ */
+
+  --text-title: #f5f7fa;
+
+  /* Botão Mais Vendidos */
+  --btn-bg-drop: #3a3a3a;
+  --btn-hover-drop: #f5f7fa;
+  --btn-bg-hover-drop: #2c2c2c;
+  --btn-bg-active-drop: #f5f7fa;
+
+  --text-btn-bg: #f5f7fa;
+  --text-btn-drop: #f5f7fa;
+  --text-hover-drop: #121212;
+  --text-btn-hover-drop: #f5f7fa;
+  --text-btn-active-drop: #121212;
+
+  --text-subtitulo-preco: #f5f7fa;
+  --bg-subtitulo-preco: rgba(0, 0, 0, 0.75);
+
+  --bg-indicators: rgba(255, 255, 255, 0.2);
+
+  /* ================= TABS ================= */
+
+  --tab-text: #121212;
+  --tab-bg: #cfcfcf;
+  --tab-text-hover: #121212;
+  --tab-bg-hover: #f5f7fa;
+
+  /* ================ FOOTER ================ */
+
+  --text-footer: #e0e0e0;
+  --link-footer: #4da3ff;
+  --link-hover: #7ab8ff;
+
+  /* ================ TESTE ================ */
+
+  --text-white: #fff;
+  --text-black: #000;
+  --text-red: #f00;
+  --text-green: #0f0;
+  --text-blue: #00f;
+  --text-yellow: #ff0;
+  --text-pink: #f0f;
+  --text-cyan: #0ff;
+
+}
+
+/* ============================ MEDIA QUERIES ============================= */
+
+
+/*********** Extra large devices (large desktops, 1200px and up) ************/
+
 @media (min-width: 1200px) {
-
-		.navbar-center {
-		    position: absolute;
-		    left: 50%;
-		    transform: translateX(-50%);
-		}
 
 		.primeiro-formatacao {
 			padding: 5px 5px;
@@ -635,49 +899,9 @@ ul {
 			padding: 0;
 		}
 
-		.coluna-formatacao ul {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-		}
-
-		.coluna-formatacao li {
-			width: 100%;
-		}
-
-		.coluna-formatacao a {
-			display: -webkit-box;
-			-webkit-line-clamp: 2;
-			-webkit-box-orient: vertical;
-			overflow: hidden;
-			width: 100%;
-			padding: 10px 5px;
-
-			text-align: center;
-			font-weight: 400;
-			transition: font-weight 0.2s ease, background-color 0.2s ease;
-		}
-
 		.coluna-formatacao a span {
 			display: block;
 			text-align: center;
-		}
-
-		.coluna-formatacao a:hover,
-		.coluna-formatacao a.active {
-			font-weight: 700;
-			background-color: rgba(0, 0, 0, 0.06);
-		}
-
-		.coluna-formatacao a,
-		.coluna-formatacao a span {
-			white-space: normal;
-		}
-
-		.coluna-formatacao ul li a {
-			white-space: normal;
-			word-break: break-word;
-			overflow-wrap: anywhere;
 		}
 
 		.coluna-titulo {
@@ -711,9 +935,6 @@ ul {
 		}
 
 
-
-
-
 		.nav-tabs .nav-link {
 			margin: 0 2.5px;
 			padding: 6px 8px;
@@ -730,15 +951,15 @@ ul {
 
 		.texto-imagem-cima {
 			font-size: 1.5em;
-			color: rgba(255, 255, 255, 1);
-			background: rgba(0, 0, 0, 0.8);
+			color: var(--text-subtitulo-preco);
+			background: var(--bg-subtitulo-preco);
 		}
 
 		.texto-imagem-baixo {
 			padding: 8px;
 			font-size: 1.3em;
-			color: rgba(255, 255, 255, 1);
-			background: rgba(0, 0, 0, 0.8);
+			color: var(--text-subtitulo-preco);
+			background: var(--bg-subtitulo-preco);
 		}
 
 		.caption-top { /* Eixo Y do texto-imagem-baixo */
@@ -750,31 +971,27 @@ ul {
 		}
 
 		.formatacao-container-primeiro { /* Cor do container das colunas */
-			background: #fff;
 			padding: 6px;
-			border-radius: 5px;
 		}
 
 		.border-radius {
-			border-radius: 5px;
+			border-radius: var(--radius-5px);
 		}
 
 		.formatacao-container-terceiro { /* Cor do container das colunas */
-			background: #fff;
 			padding: 6px;
-			border-radius: 5px;
 		}
+
 
 		.carousel-control-prev,
 		.carousel-control-next {
-		    width: 70px;
+		    width: 85px;
 		}
 
 		.carousel-control-prev-icon,
 		.carousel-control-next-icon {
-			width: 50px;
-			height: 50px;
-
+			width: 45px;
+			height: 45px;
 		}
 
 		.carousel-indicators { /* Eixo Y do carousel-indicators */
@@ -787,8 +1004,9 @@ ul {
 			margin: -3px 10px;
 		}
 
-
-
+		.seta-hover a:hover {
+			background-color: rgba(109, 152, 135, 0.05);
+		}
 
 
 		.rodape-formatacao {
@@ -804,20 +1022,11 @@ ul {
 			font-size: 1.3em;
 		}
 
-		.seta-hover a:hover {
-			background-color: rgba(109, 152, 135, 0.05);
-		}
-
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+/****************** Large devices (desktops, 992px and up) ******************/
 
-		.navbar-center {
-		    position: absolute;
-		    left: 50%;
-		    transform: translateX(-50%);
-		}
+@media (min-width: 992px) and (max-width: 1199.98px) {
 
 		.primeiro-formatacao {
 			padding: 4px 4px;
@@ -831,49 +1040,9 @@ ul {
 			padding: 0;
 		}
 
-		.coluna-formatacao ul {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-		}
-
-		.coluna-formatacao li {
-			width: 100%;
-		}
-
-		.coluna-formatacao a {
-			display: -webkit-box;
-			-webkit-line-clamp: 2;
-			-webkit-box-orient: vertical;
-			overflow: hidden;
-			width: 100%;
-			padding: 10px 5px;
-
-			text-align: center;
-			font-weight: 400;
-			transition: font-weight 0.2s ease, background-color 0.2s ease;
-		}
-
 		.coluna-formatacao a span {
 			display: block;
 			text-align: center;
-		}
-
-		.coluna-formatacao a:hover,
-		.coluna-formatacao a.active {
-			font-weight: 700;
-			background-color: rgba(0, 0, 0, 0.06);
-		}
-
-		.coluna-formatacao a,
-		.coluna-formatacao a span {
-			white-space: normal;
-		}
-
-		.coluna-formatacao ul li a {
-			white-space: normal;
-			word-break: break-word;
-			overflow-wrap: anywhere;
 		}
 
 		.coluna-titulo {
@@ -905,9 +1074,6 @@ ul {
 			margin-bottom: 10px;
 			padding: 5px;
 		}
-
-
-
 
 
 		.nav-tabs .nav-link {
@@ -942,31 +1108,27 @@ ul {
 		}
 
 		.formatacao-container-primeiro { /* Cor do container das colunas */
-			background: #fff;
 			padding: 5px;
-			border-radius: 5px;
 		}
 
 		.border-radius {
-			border-radius: 5px;
+			border-radius: var(--radius-5px);
 		}
 
 		.formatacao-container-terceiro { /* Cor do container das colunas */
-			background: #fff;
 			padding: 5px;
-			border-radius: 0 0 5px 5px;
 		}
+
 
 		.carousel-control-prev,
 		.carousel-control-next {
-		    width: 60px;
+		    width: 65px;
 		}
 
 		.carousel-control-prev-icon,
 		.carousel-control-next-icon {
-			width: 40px;
-			height: 40px;
-
+			width: 35px;
+			height: 35px;
 		}
 
 		.carousel-indicators { /* Eixo Y do carousel-indicators */
@@ -979,8 +1141,9 @@ ul {
 			margin: -6px 7px;
 		}
 
-
-
+		.seta-hover a:hover {
+			background-color: rgba(109, 152, 135, 0.075);
+		}
 
 
 		.rodape-formatacao {
@@ -996,20 +1159,18 @@ ul {
 			font-size: 1.25em;
 		}
 
-		.seta-hover a:hover {
-			background-color: rgba(109, 152, 135, 0.075);
+		.darkmode {
+			top: 7px;
+			right: 7px;
+			width: 42px;
+			height: 42px;
 		}
 
 }
 
-/* Medium devices (tablets, 768 and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+/******************* Medium devices (tablets, 768 and up) *******************/
 
-		.navbar-center {
-		    position: absolute;
-		    left: 50%;
-		    transform: translateX(-50%);
-		}
+@media (min-width: 768px) and (max-width: 991.98px) {
 
 		.primeiro-formatacao {
 			padding: 3px 3px;
@@ -1027,49 +1188,9 @@ ul {
 			padding: 0;
 		}
 
-		.coluna-formatacao ul {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-		}
-
-		.coluna-formatacao li {
-			width: 100%;
-		}
-
-		.coluna-formatacao a {
-			display: -webkit-box;
-			-webkit-line-clamp: 2;
-			-webkit-box-orient: vertical;
-			overflow: hidden;
-			width: 100%;
-			padding: 10px 5px;
-
-			text-align: center;
-			font-weight: 400;
-			transition: font-weight 0.2s ease, background-color 0.2s ease;
-		}
-
 		.coluna-formatacao a span {
 			display: block;
 			text-align: center;
-		}
-
-		.coluna-formatacao a:hover,
-		.coluna-formatacao a.active {
-			font-weight: 700;
-			background-color: rgba(0, 0, 0, 0.06);
-		}
-
-		.coluna-formatacao a,
-		.coluna-formatacao a span {
-			white-space: normal;
-		}
-
-		.coluna-formatacao ul li a {
-			white-space: normal;
-			word-break: break-word;
-			overflow-wrap: anywhere;
 		}
 
 		.coluna-titulo {
@@ -1099,7 +1220,6 @@ ul {
 			margin-bottom: 10px;
 			padding: 5px;
 		}
-
 
 
 		.nav-tabs .nav-link {
@@ -1134,40 +1254,39 @@ ul {
 		}
 
 		.formatacao-container-primeiro { /* Cor do container das colunas */
-			background: #fff;
 			padding: 3px 3px 1px 3px;
 			border-radius: 5px 5px 0 0;
 			margin-bottom: -6px;
 		}
 
 		.border-radius {
-			border-radius: 5px;
+			border-radius: var(--radius-5px);
 		}
 
 		.formatacao-container-terceiro { /* Cor do container das colunas */
-			background: #fff;
 			padding: 1px 3px 3px 3px;
 			border-radius: 0 0 5px 5px;
 		}
 
+
+		.carousel-indicators {
+			display: none;
+		}
+
 		.carousel-control-prev,
 		.carousel-control-next {
-		    width: 55px;
+		    width: 70px;
 		}
 
 		.carousel-control-prev-icon,
 		.carousel-control-next-icon {
 			width: 35px;
 			height: 35px;
-
 		}
 
-		.carousel-indicators {
-			display: none;
+		.seta-hover a:hover {
+			background-color: rgba(109, 152, 135, 0.065);
 		}
-
-
-
 
 
 		.rodape-formatacao {
@@ -1183,13 +1302,17 @@ ul {
 			font-size: 1.2em;
 		}
 
-		.seta-hover a:hover {
-			background-color: rgba(109, 152, 135, 0.1);
+		.btn-darkmode {
+			top: 7px;
+			right: 7px;
+			width: 41px;
+			height: 41px;
 		}
 
 }
 
-/* Small devices (landscape phones, 576px and up) */
+/************** Small devices (landscape phones, 576px and up) **************/
+
 @media (min-width: 576px) and (max-width: 767.98px) {
 
 		.navbar .dropdown-menu {
@@ -1207,58 +1330,16 @@ ul {
 		}
 
 
-
 		.coluna-formatacao {
 			font-size: 0.75em;
 			margin: 7px; /* Alterar Margens de todos os Breakpoints */
 			padding: 0;
 		}
 
-		.coluna-formatacao ul {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-		}
-
-		.coluna-formatacao li {
-			width: 100%;
-		}
-
-		.coluna-formatacao a {
-			display: -webkit-box;
-			-webkit-line-clamp: 2;
-			-webkit-box-orient: vertical;
-			overflow: hidden;
-			width: 100%;
-			padding: 10px 5px;
-
-			text-align: center;
-			font-weight: 400;
-			transition: font-weight 0.2s ease, background-color 0.2s ease;
-		}
-
 		.coluna-formatacao a span {
 			display: block;
 			text-align: center;
 		}
-
-		.coluna-formatacao a:hover,
-		.coluna-formatacao a.active {
-			font-weight: 700;
-			background-color: rgba(0, 0, 0, 0.06);
-		}
-
-		.coluna-formatacao a,
-		.coluna-formatacao a span {
-			white-space: normal;
-		}
-
-		.coluna-formatacao ul li a {
-			white-space: normal;
-			word-break: break-word;
-			overflow-wrap: anywhere;
-		}
-
 
 
 		.coluna-titulo {
@@ -1282,7 +1363,7 @@ ul {
 			font-size: 1.2em;
 			margin: 0px;
 			padding: 10px;
-			border-radius: 10px;
+			border-radius: var(--radius-10px);
 		}
 
 		.titulo-tipo {
@@ -1290,10 +1371,6 @@ ul {
 			margin-bottom: 10px;
 			padding: 5px;
 		}
-
-
-
-
 
 
 		.texto-imagem-cima {
@@ -1321,41 +1398,40 @@ ul {
 		}
 
 		.formatacao-container-primeiro { /* Cor do container das colunas */
-			background: #fff;
 			padding: 5px 5px 1px 5px;
 			border-radius: 5px 5px 0 0;
 			margin-bottom: -5px;
 		}
 
 		.border-radius {
-			border-radius: 10px;
+			border-radius: var(--radius-10px);
 		}
 
 		.formatacao-container-terceiro { /* Cor do container das colunas */
-			background: #fff;
 			padding: 1px 5px 5px 5px;
 			border-radius: 0 0 5px 5px;
 			/*margin-top: -5px;*/
 		}
 
+
+		.carousel-indicators {
+			display: none;
+		}
+
 		.carousel-control-prev,
 		.carousel-control-next {
-		    width: 45px;
+		    width: 55px;
 		}
 
 		.carousel-control-prev-icon,
 		.carousel-control-next-icon {
 			width: 30px;
 			height: 30px;
-
 		}
 
-		.carousel-indicators {
-			display: none;
+		.seta-hover a:hover {
+			background-color: rgba(109, 152, 135, 0.075);
 		}
-
-
-
 
 
 		.rodape-formatacao {
@@ -1367,13 +1443,17 @@ ul {
 			font-size: 1.15em;
 		}
 
-		.seta-hover a:hover {
-			background-color: rgba(109, 152, 135, 0.125);
+		.btn-darkmode {
+			position: static;
+			width: 100%;
+			border-radius: 8px;
+			margin-top: 10px;
 		}
 
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
+/********** Extra small devices (portrait phones, less than 576px) **********/
+
 @media (max-width: 575.98px) {
 
 		.navbar .dropdown-menu {
@@ -1396,58 +1476,16 @@ ul {
 		}
 
 
-
 		.coluna-formatacao {
 			font-size: 1.1em;
 			margin: 7px; /* Alterar Margens de todos os Breakpoints */
 			padding: 0;
 		}
 
-		.coluna-formatacao ul {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-		}
-
-		.coluna-formatacao li {
-			width: 100%;
-		}
-
-		.coluna-formatacao a {
-			display: -webkit-box;
-			-webkit-line-clamp: 2;
-			-webkit-box-orient: vertical;
-			overflow: hidden;
-			width: 100%;
-			padding: 10px 5px;
-
-			text-align: center;
-			font-weight: 400;
-			transition: font-weight 0.2s ease, background-color 0.2s ease;
-		}
-
 		.coluna-formatacao a span {
 			display: block;
 			text-align: center;
 		}
-
-		.coluna-formatacao a:hover,
-		.coluna-formatacao a.active {
-			font-weight: 700;
-			background-color: rgba(0, 0, 0, 0.06);
-		}
-
-		.coluna-formatacao a,
-		.coluna-formatacao a span {
-			white-space: normal;
-		}
-
-		.coluna-formatacao ul li a {
-			white-space: normal;
-			word-break: break-word;
-			overflow-wrap: anywhere;
-		}
-
 
 
 		.coluna-titulo {
@@ -1476,9 +1514,6 @@ ul {
 		}
 
 
-
-
-
 		.texto-imagem-cima {
 			font-size: 1em;
 			padding: 5px 16px;
@@ -1504,9 +1539,10 @@ ul {
 		}
 
 		.formatacao-container-primeiro { /* Cor do container das colunas */
-			background: #fff;
 			padding: 5px;
 			border-radius: 0px;
+			padding-bottom: 1px;
+			margin-bottom: -5px;
 		}
 
 		.border-radius {
@@ -1514,30 +1550,31 @@ ul {
 		}
 
 		.formatacao-container-terceiro { /* Cor do container das colunas */
-			background: #fff;
 			padding: 5px;
 			border-radius: 0 0 5px 5px;
-			margin-top: -10px;
+			padding-top: 0;
+			margin-top: -1px;
+		}
+
+
+		.carousel-indicators {
+			display: none;
 		}
 
 		.carousel-control-prev,
 		.carousel-control-next {
-		    width: 50px;
+		    width: 60px;
 		}
 
 		.carousel-control-prev-icon,
 		.carousel-control-next-icon {
 			width: 45px;
 			height: 45px;
-
 		}
 
-		.carousel-indicators {
-			display: none;
+		.seta-hover a:hover {
+			background-color: rgba(109, 152, 135, 0.075);
 		}
-
-
-
 
 
 		.rodape-formatacao {
@@ -1549,8 +1586,34 @@ ul {
 			font-size: 1.15em;
 		}
 
-		.seta-hover a:hover {
-			background-color: rgba(109, 152, 135, 0.15);
+		.btn-darkmode {
+			position: static;
+			width: 100%;
+			border-radius: 8px;
+			/*margin-top: 10px;*/
+		}
+
+}
+
+/* col-md, col-lg e col-xl */
+@media (min-width: 768px) {
+
+		.navbar-center {
+	    position: absolute;
+	    left: 50%;
+	    transform: translateX(-50%);
+		}
+
+}
+
+/* col-xs e col-sm */
+@media (max-width: 768px) {
+
+	.navbar-nav .nav-item.dropdown {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 
 }
