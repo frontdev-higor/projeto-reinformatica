@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="css/estilotipos.css">
-    <link rel="icon" type="image/ico" href="imagens/reicon.png">
+    <link rel="icon" type="image/ico" href="imagens/todo-o-site/relogo.webp">
     <title>Próximas Páginas</title>
 
   </head>
@@ -132,93 +132,13 @@
       <!-- /Rodapé -->
 
       <!-- Scripts -->
+      <!-- Deve carregar antes do js obrigatóriamente -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
       </script>
 
-      <!-- Entra na Aba específica da Página -->
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          let tabId = null;
-
-          // Prioriza hash
-          if (window.location.hash) {
-            tabId = window.location.hash;
-          } else {
-            const params = new URLSearchParams(window.location.search);
-            const tabParam = params.get("tab");
-            if (tabParam) {
-              tabId = "#" + tabParam;
-            }
-          }
-
-          if (tabId) {
-            const trigger = document.querySelector(
-              `[data-bs-toggle="tab"][data-bs-target="${tabId}"]`
-            );
-
-            if (trigger) {
-              new bootstrap.Tab(trigger).show();
-              window.scrollTo({ top: 0, behavior: "instant" });
-            }
-          }
-        });
-      </script>
-
-      <!-- Dropdown mobile funcional -->
-      <script>
-        document.querySelectorAll('.dropdown-tabs-mobile .dropdown-item')
-          .forEach(item => {
-            item.addEventListener('click', function () {
-              const target = this.getAttribute('data-bs-target');
-              const tabTrigger = document.querySelector(
-                `.nav-tabs [data-bs-target="${target}"]`
-              );
-
-              if (tabTrigger) {
-                const tab = new bootstrap.Tab(tabTrigger);
-                tab.show();
-              }
-            });
-          });
-      </script>
-
-      <!-- Dropdown mobile ativo -->
-      <script>
-        function syncDropdownWithTab(target) {
-          if (!target) return
-
-          const dropdownItems = document.querySelectorAll(
-            '.dropdown-tabs-mobile .dropdown-item'
-          )
-          const dropdownButton = document.getElementById('dropdownTabButton')
-
-          dropdownItems.forEach(item => {
-            item.classList.remove('active')
-
-            if (item.getAttribute('data-bs-target') === target) {
-              item.classList.add('active')
-              dropdownButton.textContent = item.textContent.trim()
-            }
-          })
-        }
-
-        // Ao trocar de aba
-        document.addEventListener('shown.bs.tab', function (event) {
-          syncDropdownWithTab(
-            event.target.getAttribute('data-bs-target')
-          )
-        })
-
-        // Ao carregar a página
-        document.addEventListener('DOMContentLoaded', function () {
-          const activeTab = document.querySelector('.nav-tabs .nav-link.active')
-          if (activeTab) {
-            syncDropdownWithTab(
-              activeTab.getAttribute('data-bs-target')
-            )
-          }
-        })
-      </script>
+      <!-- Carregamento dos .js -->
+      <script src="js/main.js"></script>
+      <script src="js/proximas-paginas.js"></script>
 
   </body>
 </html>

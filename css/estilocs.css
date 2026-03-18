@@ -7,15 +7,12 @@ html {
 }
 
 body {
-/* Mantém o footer colado em baixo */
 	font-family: sans-serif;
-	min-height: 100vh;
+	min-height: 100%; /* Mantém o footer colado em baixo */
 	margin: 0;
 	display: flex;
 	flex-direction: column;
-/* /Mantém o footer colado em baixo */
 	background: var(--bg-page);
-	/*transition: background 0.35s ease, color 0.35s ease;*/
 }
 
 /* Mantém o footer colado em baixo */
@@ -173,8 +170,13 @@ header .navbar {
 }
 
 .logo-formatacao,
-.logo-formatacao:hover {
+.logo-formatacao:link,
+.logo-formatacao:visited,
+.logo-formatacao:hover,
+.logo-formatacao:active,
+.logo-formatacao:focus {
   color: var(--text-re);
+  text-decoration: none;
 }
 
 /******************************************/
@@ -323,7 +325,7 @@ header .navbar {
 .contato-bg {
   position: relative;
   background-color: #000;
-  background: url("../imagens/lojare-dia.jpg");
+  background: url("../imagens/todo-o-site/lojare-dia.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -331,7 +333,7 @@ header .navbar {
 }
 
 body.dark-mode .contato-bg {
-  background: url("../imagens/lojare-noite.jpg");
+  background: url("../imagens/todo-o-site/lojare-noite.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
