@@ -1,6 +1,6 @@
 
 /* =============================== */
-/* 
+/* Inicio JavaScript Itens
 /* =============================== */
 
 const params = new URLSearchParams(window.location.search);
@@ -18,12 +18,30 @@ const categorias = [
     "periferico",
     "outro",
     "impressora",
-    "kit"
+    "kit",
+    "teste"
   ];
 
+/* Coloca as categorias em grupos e as deixa ativas no menu dropdown */
+const mapaMenu = {
+    allinone: "menu-computador",
+    mini: "menu-computador",
+    slim: "menu-computador",
+    notebook: "menu-computador",
+
+    monitor: "menu-monitor",
+
+    armazenamento: "menu-componente",
+    cabo: "menu-componente",
+    fonte: "menu-componente",
+    periferico: "menu-componente",
+    outro: "menu-componente",
+    
+    impressora: "menu-outro",
+    kit: "menu-outro"
+  };
+
 const produtos = {
-
-
 
   /* ==========================================================================
    * All-In-One (ID'S: 0 ~ 99)
@@ -267,7 +285,7 @@ const produtos = {
       titulo: "Desktop Dell Mini",
       modelo: "OptiPlex 3080",
       specs1: "i3 10100t 8 Ram 256 Nvme",
-      specs2: "6 Usb's, VGA, HDMI e DisplayPort",
+      specs2: "VGA, HDMI e DisplayPort",
       preco: "R$ 1.500,00",
       imagens: [
         "imagens/mini/dell/i3-10100t/i3-10100t-frente.webp",
@@ -297,7 +315,7 @@ const produtos = {
       titulo: "Desktop Dell Mini",
       modelo: "OptiPlex 3000",
       specs1: "i3 12100t 8 Ram 256 Nvme",
-      specs2: "6 Usb's, VGA, HDMI e DisplayPort",
+      specs2: "VGA, HDMI e DisplayPort",
       preco: "R$ 1.800,00",
       imagens: [
         "imagens/mini/dell/i3-12100t/i3-12100t-frente.webp",
@@ -312,7 +330,7 @@ const produtos = {
       titulo: "Desktop Dell Mini",
       modelo: "OptiPlex 3000",
       specs1: "i5 12500t 8 Ram 256 Nvme",
-      specs2: "6 Usb's, VGA, HDMI e DisplayPort",
+      specs2: "VGA, HDMI e DisplayPort",
       preco: "R$ 2.500,00",
       imagens: [
         "imagens/mini/dell/i3-12100t/i3-12100t-frente.webp",
@@ -327,7 +345,7 @@ const produtos = {
       titulo: "Desktop Dell Mini",
       modelo: "OptiPlex",
       specs1: "i3 13100t 8 Ram 256 Nvme",
-      specs2: "6 Usb's, VGA, HDMI e DisplayPort",
+      specs2: "VGA, HDMI e DisplayPort",
       preco: "R$ X.X00,00",
       imagens: [
         "imagens/mini/dell/i7-13700t/i7-13700t-frente.webp",
@@ -342,7 +360,7 @@ const produtos = {
       titulo: "Desktop Dell Mini",
       modelo: "OptiPlex",
       specs1: "i5 13500t 8 Ram 256 Nvme",
-      specs2: "6 Usb's, VGA, HDMI e DisplayPort",
+      specs2: "VGA, HDMI e DisplayPort",
       preco: "R$ 2.800,00",
       imagens: [
         "imagens/mini/dell/i7-13700t/i7-13700t-frente.webp",
@@ -357,22 +375,7 @@ const produtos = {
       titulo: "Desktop Dell Mini",
       modelo: "OptiPlex",
       specs1: "i7 13700t 16 Ram 256 Nvme",
-      specs2: "6 Usb's, VGA, HDMI e DisplayPort",
-      preco: "R$ X.X00,00",
-      imagens: [
-        "imagens/mini/dell/i7-13700t/i7-13700t-frente.webp",
-        "imagens/mini/dell/i7-13700t/i7-13700t-perfil.webp",
-        "imagens/mini/dell/i7-13700t/i7-13700t-fundo.webp"
-        ]
-    },
-
-    {
-      id: 116, /* [i7-13700t] */
-      categoria: "mini",
-      titulo: "Desktop Dell Mini",
-      modelo: "OptiPlex",
-      specs1: "i7 13700t 16 Ram 256 Nvme",
-      specs2: "6 Usb's, VGA, HDMI e DisplayPort",
+      specs2: "VGA, HDMI e DisplayPort",
       preco: "R$ X.X00,00",
       imagens: [
         "imagens/mini/dell/i7-13700t/i7-13700t-frente.webp",
@@ -421,7 +424,7 @@ const produtos = {
       titulo: "Desktop Lenovo Mini",
       modelo: "ThinkCentre",
       specs1: "i7 4565t 8 Ram 128 SSD",
-      specs2: "5 Usb's, VGA, HDMI e DisplayPort",
+      specs2: "VGA, HDMI e DisplayPort",
       preco: "R$ X.X00,00",
       imagens: [
         "imagens/mini/lenovo/i7-4565t/i7-4565t-frente.webp",
@@ -481,7 +484,7 @@ const produtos = {
       titulo: "Desktop Lenovo Mini",
       modelo: "ThinkCentre",
       specs1: "i5 8500t 8 Ram 256 SSD",
-      specs2: "5 Usb's, HDMI, VGA e DisplayPort",
+      specs2: "HDMI, VGA e DisplayPort",
       preco: "R$ 1.500,00",
       imagens: [
         "imagens/mini/lenovo/i3-9100t/i3-9100t-frente.webp",
@@ -496,7 +499,7 @@ const produtos = {
       titulo: "Desktop Lenovo Mini",
       modelo: "ThinkCentre",
       specs1: "i3 9100t 8 Ram 256 SSD",
-      specs2: "5 Usb's, HDMI, VGA e DisplayPort",
+      specs2: "HDMI, VGA e DisplayPort",
       preco: "R$ 1.300,00",
       imagens: [
         "imagens/mini/lenovo/i3-9100t/i3-9100t-frente.webp",
@@ -511,7 +514,7 @@ const produtos = {
       titulo: "Desktop Lenovo Mini",
       modelo: "ThinkCentre",
       specs1: "i3 10100t 8 Ram 256 SSD",
-      specs2: "5 Usb's, VGA, HDMI e DisplayPort",
+      specs2: "VGA, HDMI e DisplayPort",
       preco: "R$ 1.400,00",
       imagens: [
         "imagens/mini/lenovo/i3-10100t/i3-10100t-frente.webp",
@@ -526,7 +529,7 @@ const produtos = {
       titulo: "Desktop Lenovo Mini",
       modelo: "ThinkCentre",
       specs1: "i5 10100t 8 Ram 256 SSD",
-      specs2: "5 Usb's, VGA, HDMI e DisplayPort",
+      specs2: "VGA, HDMI e DisplayPort",
       preco: "R$ 1.900,00",
       imagens: [
         "imagens/mini/lenovo/i5-10100t/i5-10100t-frente.webp",
@@ -541,7 +544,7 @@ const produtos = {
       titulo: "Desktop Lenovo Mini",
       modelo: "ThinkCentre",
       specs1: "i5 12500t 8 Ram 256 SSD",
-      specs2: "6 Usb's, HDMI, VGA e DisplayPort",
+      specs2: "HDMI, VGA e DisplayPort",
       preco: "R$ 2.400,00",
       imagens: [
         "imagens/mini/lenovo/i5-12500t/i5-12500t-frente.webp",
@@ -556,7 +559,7 @@ const produtos = {
       titulo: "Desktop Lenovo Mini",
       modelo: "ThinkCentre",
       specs1: "i7 12700t 8 Ram 256 SSD",
-      specs2: "6 Usb's, HDMI, VGA e DisplayPort",
+      specs2: "HDMI, VGA e DisplayPort",
       preco: "R$ X.X00,00",
       imagens: [
         "imagens/mini/lenovo/i5-12500t/i5-12500t-frente.webp",
@@ -571,8 +574,8 @@ const produtos = {
       titulo: "Desktop Lenovo Mini",
       modelo: "ThinkCentre",
       specs1: "i5 13500t 8 Ram 256 SSD",
-      specs2: "6 Usb's, HDMI, VGA e DisplayPort",
-      preco: "R$ X.X00,00",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 2.700,00",
       imagens: [
         "imagens/mini/lenovo/i5-12500t/i5-12500t-frente.webp",
         "imagens/mini/lenovo/i5-12500t/i5-12500t-perfil.webp",
@@ -590,8 +593,8 @@ const produtos = {
       titulo: "Desktop Positivo Mini",
       modelo: "Positivo",
       specs1: "i3 6100t 8 Ram 128 SSD",
-      specs2: "8 Usb's, VGA, HDMI e DisplayPort",
-      preco: "R$ 800,00",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 900,00",
       imagens: [
         "imagens/mini/positivo/i5-7600t/i5-7600t-frente.webp",
         "imagens/mini/positivo/i5-7600t/i5-7600t-perfil.webp",
@@ -605,8 +608,8 @@ const produtos = {
       titulo: "Desktop Positivo Mini",
       modelo: "Positivo",
       specs1: "i5 6600t 8 Ram 128 SSD",
-      specs2: "8 Usb's, VGA, HDMI e DisplayPort",
-      preco: "R$ 1.000,00",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 1.100,00",
       imagens: [
         "imagens/mini/positivo/i5-7600t/i5-7600t-frente.webp",
         "imagens/mini/positivo/i5-7600t/i5-7600t-perfil.webp",
@@ -620,8 +623,8 @@ const produtos = {
       titulo: "Desktop Positivo Mini",
       modelo: "Positivo",
       specs1: "i3 7100t 8 Ram 128 SSD",
-      specs2: "8 Usb's, VGA, HDMI e DisplayPort",
-      preco: "R$ X.X00,00",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 1.100,00",
       imagens: [
         "imagens/mini/positivo/i5-7600t/i5-7600t-frente.webp",
         "imagens/mini/positivo/i5-7600t/i5-7600t-perfil.webp",
@@ -635,8 +638,8 @@ const produtos = {
       titulo: "Desktop Positivo Mini",
       modelo: "Positivo",
       specs1: "i5 7600t 8 Ram 256 SSD",
-      specs2: "8 Usb's, VGA, HDMI e DisplayPort",
-      preco: "R$ X.X00,00",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 1.200,00",
       imagens: [
         "imagens/mini/positivo/i5-7600t/i5-7600t-frente.webp",
         "imagens/mini/positivo/i5-7600t/i5-7600t-perfil.webp",
@@ -650,8 +653,8 @@ const produtos = {
       titulo: "Desktop Positivo Mini",
       modelo: "Positivo",
       specs1: "i3 8100t 8 Ram 256 SSD",
-      specs2: "6 Usb's, VGA, HDMI e 2 DisplayPort's",
-      preco: "R$ X.X00,00",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 1.200,00",
       imagens: [
         "imagens/mini/positivo/i5-8500t/i5-8500t-frente.webp",
         "imagens/mini/positivo/i5-8500t/i5-8500t-perfil.webp",
@@ -665,8 +668,8 @@ const produtos = {
       titulo: "Desktop Positivo Mini",
       modelo: "Positivo",
       specs1: "i5 8500t 8 Ram 256 SSD",
-      specs2: "6 Usb's, VGA, HDMI e 2 DisplayPort's",
-      preco: "R$ 1.400,00",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 1.500,00",
       imagens: [
         "imagens/mini/positivo/i5-8500t/i5-8500t-frente.webp",
         "imagens/mini/positivo/i5-8500t/i5-8500t-perfil.webp",
@@ -680,8 +683,8 @@ const produtos = {
       titulo: "Desktop Positivo Mini",
       modelo: "Positivo",
       specs1: "i3 10100t 8 Ram 256 Nvme",
-      specs2: "6 Usb's, VGA, HDMI e 2 DisplayPort's",
-      preco: "R$ 1.300,00",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 1.400,00",
       imagens: [
         "imagens/mini/positivo/i5-13400t/i5-13400t-frente.webp",
         "imagens/mini/positivo/i5-13400t/i5-13400t-perfil.webp",
@@ -695,8 +698,8 @@ const produtos = {
       titulo: "Desktop Positivo Mini",
       modelo: "Positivo",
       specs1: "i5 10400t 8 Ram 256 Nvme",
-      specs2: "6 Usb's, VGA, HDMI e 2 DisplayPort's",
-      preco: "R$ 1.800,00",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 1.900,00",
       imagens: [
         "imagens/mini/positivo/i5-13400t/i5-13400t-frente.webp",
         "imagens/mini/positivo/i5-13400t/i5-13400t-perfil.webp",
@@ -710,8 +713,8 @@ const produtos = {
       titulo: "Desktop Positivo Mini",
       modelo: "Positivo",
       specs1: "i3 12100t 8 Ram 256 Nvme",
-      specs2: "6 Usb's, VGA, HDMI e 2 DisplayPort's",
-      preco: "R$ X.X00,00",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 1.700,00",
       imagens: [
         "imagens/mini/positivo/i5-13400t/i5-13400t-frente.webp",
         "imagens/mini/positivo/i5-13400t/i5-13400t-perfil.webp",
@@ -725,7 +728,7 @@ const produtos = {
       titulo: "Desktop Positivo Mini",
       modelo: "Positivo",
       specs1: "i3 13100t 8 Ram 256 Nvme",
-      specs2: "6 Usb's, VGA, HDMI e 2 DisplayPort's",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
       preco: "R$ X.X00,00",
       imagens: [
         "imagens/mini/positivo/i5-13400t/i5-13400t-frente.webp",
@@ -740,8 +743,8 @@ const produtos = {
       titulo: "Desktop Positivo Mini",
       modelo: "Positivo",
       specs1: "i5 13400t 8 Ram 128 Nvme",
-      specs2: "6 Usb's, VGA, HDMI e 2 DisplayPort's",
-      preco: "R$ X.X00,00",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 2.700,00",
       imagens: [
         "imagens/mini/positivo/i5-13400t/i5-13400t-frente.webp",
         "imagens/mini/positivo/i5-13400t/i5-13400t-perfil.webp",
@@ -790,7 +793,7 @@ const produtos = {
       modelo: "ProDesk",
       specs1: "i5 7500t 8 Ram 128 SSD",
       specs2: "6 Usb's, VGA e DisplayPort",
-      preco: "R$ X.X00,00",
+      preco: "R$ 1.200,00",
       imagens: [
         "imagens/mini/hp/i5-7500t/i5-7500t-frente.webp",
         "imagens/mini/hp/i5-7500t/i5-7500t-perfil.webp",
@@ -805,7 +808,7 @@ const produtos = {
       modelo: "ProDesk",
       specs1: "i5 8500t 8 Ram 256 Nvme",
       specs2: "6 Usb's, VGA e 2 DisplayPort's",
-      preco: "R$ 1.400,00",
+      preco: "R$ 1.500,00",
       imagens: [
         "imagens/mini/hp/i5-8500t/i5-8500t-frente.webp",
         "imagens/mini/hp/i5-8500t/i5-8500t-perfil.webp",
@@ -819,8 +822,8 @@ const produtos = {
       titulo: "Desktop HP Mini",
       modelo: "ProDesk",
       specs1: "i5 10500t 8 Ram 256 Nvme",
-      specs2: "6 Usb's, HDMI, VGA e DisplayPort",
-      preco: "R$ 1.800,00",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 1.900,00",
       imagens: [
         "imagens/mini/hp/i5-10500t/i5-10500t-frente.webp",
         "imagens/mini/hp/i5-10500t/i5-10500t-perfil.webp",
@@ -834,8 +837,8 @@ const produtos = {
       titulo: "Desktop HP Mini",
       modelo: "ProDesk",
       specs1: "i5 12500t 8 Ram 256 Nvme",
-      specs2: "6 Usb's, HDMI, VGA e DisplayPort",
-      preco: "R$ 2.300,00",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 2.400,00",
       imagens: [
         "imagens/mini/hp/i5-10500t/i5-10500t-frente.webp",
         "imagens/mini/hp/i5-10500t/i5-10500t-perfil.webp",
@@ -864,8 +867,8 @@ const produtos = {
       titulo: "Desktop HP Mini",
       modelo: "ProDesk",
       specs1: "i5 13500t 8 Ram 256 Nvme",
-      specs2: "6 Usb's, HDMI, VGA e DisplayPort",
-      preco: "R$ X.X00,00",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 2.700,00",
       imagens: [
         "imagens/mini/hp/i5-10500t/i5-10500t-frente.webp",
         "imagens/mini/hp/i5-10500t/i5-10500t-perfil.webp",
@@ -1161,7 +1164,7 @@ const produtos = {
       titulo: "Desktop Lenovo Slim",
       modelo: "ThinkCentre",
       specs1: "i7 6700 8 Ram 128 SSD",
-      specs2: "10 Usb's, VGA, Serial e 2 DisplayPort's",
+      specs2: "VGA, Serial e 2 DisplayPort's",
       preco: "R$ 1.400,00",
       imagens: [
         "imagens/slim/lenovo/i7-6700/i7-6700-frente.webp",
@@ -1189,7 +1192,7 @@ const produtos = {
       titulo: "Desktop Lenovo Slim",
       modelo: "V520S",
       specs1: "i5 7400 8 Ram 256 SSD",
-      specs2: "8 Usb's, VGA, HDMI e DisplayPort",
+      specs2: "VGA, HDMI e DisplayPort",
       preco: "R$ 1.200,00",
       imagens: [
         "imagens/slim/lenovo/i5-7400/i5-7400-frente.webp",
@@ -1232,7 +1235,7 @@ const produtos = {
       modelo: "ThinkCentre",
       specs1: "i7 8700 8 Ram 256 SSD",
       specs2: "8 Usb's, VGA e 2 DisplayPort's",
-      preco: "R$ X.X00,00",
+      preco: "R$ 1.700,00",
       imagens: [
         "imagens/slim/lenovo/i5-8500/i5-8500-frente.webp",
         "imagens/slim/lenovo/i5-8500/i5-8500-fundo.webp"
@@ -1245,7 +1248,7 @@ const produtos = {
       titulo: "Desktop Lenovo Slim",
       modelo: "ThinkCentre",
       specs1: "i3 12100 8 Ram 256 SSD",
-      specs2: "6 Usb's, HDMI, VGA e DisplayPort",
+      specs2: "HDMI, VGA e DisplayPort",
       preco: "R$ X.X00,00",
       imagens: [
         "imagens/slim/lenovo/i3-12100/i3-12100-frente.webp",
@@ -1259,7 +1262,7 @@ const produtos = {
       titulo: "Desktop Lenovo Slim",
       modelo: "ThinkCentre",
       specs1: "i3 13100 8 Ram 256 SSD",
-      specs2: "6 Usb's, HDMI, VGA e DisplayPort",
+      specs2: "HDMI, VGA e DisplayPort",
       preco: "R$ X.X00,00",
       imagens: [
         "imagens/slim/lenovo/i3-12100/i3-12100-frente.webp",
@@ -1277,7 +1280,7 @@ const produtos = {
       titulo: "Desktop Positivo Slim",
       modelo: "Positivo Master",
       specs1: "i5 7500 8 Ram 128 Nvme",
-      specs2: "12 Usb's, VGA, HDMI e DisplayPort",
+      specs2: "VGA, HDMI e DisplayPort",
       preco: "R$ 850,00",
       imagens: [
         "imagens/slim/positivo/i5-7500/i5-7500-frente.webp",
@@ -1732,9 +1735,9 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "Hard Disk",
       modelo: "Seagate",
-      specs1: "Usado, HD Comum",
+      specs1: "HD Sata 3.5\"",
       specs2: "250 GB",
-      preco: "R$ XX0,00",
+      preco: "R$ X0,00",
       imagens: [
         "imagens/armazenamento/hd/250gb/seagate-250.webp"
       ]
@@ -1745,9 +1748,9 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "Hard Disk",
       modelo: "WD",
-      specs1: "Usado, HD Comum",
+      specs1: "HD Sata 3.5\"",
       specs2: "250 GB",
-      preco: "R$ XX0,00",
+      preco: "R$ X0,00",
       imagens: [
         "imagens/armazenamento/hd/250gb/wd-250.webp"
       ]
@@ -1762,7 +1765,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "Hard Disk",
       modelo: "Dell",
-      specs1: "Usado, HD Comum",
+      specs1: "HD Sata 3.5\"",
       specs2: "500 GB",
       preco: "R$ 50,00",
       imagens: [
@@ -1775,7 +1778,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "Hard Disk",
       modelo: "Seagate",
-      specs1: "Usado, HD Comum",
+      specs1: "HD Sata 3.5\"",
       specs2: "500 GB",
       preco: "R$ 50,00",
       imagens: [
@@ -1788,7 +1791,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "Hard Disk",
       modelo: "WD",
-      specs1: "Usado, HD Comum",
+      specs1: "HD Sata 3.5\"",
       specs2: "500 GB",
       preco: "R$ 50,00",
       imagens: [
@@ -1801,7 +1804,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "Hard Disk",
       modelo: "Toshiba",
-      specs1: "Usado, Mini HD",
+      specs1: "HD Sata 2.5\"",
       specs2: "500 GB",
       preco: "R$ 50,00",
       imagens: [
@@ -1814,7 +1817,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "Hard Disk",
       modelo: "WD",
-      specs1: "Usado, Mini HD",
+      specs1: "HD Sata 2.5\"",
       specs2: "500 GB",
       preco: "R$ 50,00",
       imagens: [
@@ -1831,7 +1834,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "Hard Disk",
       modelo: "WD",
-      specs1: "Usado, HD Comum",
+      specs1: "HD Sata 3.5\"",
       specs2: "1 TB",
       preco: "R$ 150,00",
       imagens: [
@@ -1848,7 +1851,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "Hard Disk",
       modelo: "Dell",
-      specs1: "Usado, HD Comum",
+      specs1: "HD Sata 3.5\"",
       specs2: "4 TB",
       preco: "R$ XX0,00",
       imagens: [
@@ -1872,7 +1875,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "NVME",
       modelo: "PCI Express",
-      specs1: "Usado, NVME Comum",
+      specs1: "22mm x 80mm",
       specs2: "256 GB",
       preco: "R$ 429,00",
       imagens: [
@@ -1889,7 +1892,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "NVME",
       modelo: "Toshiba",
-      specs1: "Usado, NVME Comum",
+      specs1: "22mm x 80mm",
       specs2: "512 GB",
       preco: "R$ 629,00",
       imagens: [
@@ -1898,11 +1901,11 @@ const produtos = {
     },
 
     {
-      id: 911, /* Adata */
+      id: 911, /* Adata Pequeno */
       categoria: "armazenamento",
       titulo: "NVME",
       modelo: "Adata",
-      specs1: "Usado, Mini NVME",
+      specs1: "22mm x 30mm",
       specs2: "512 GB",
       preco: "R$ 629,00",
       imagens: [
@@ -1919,7 +1922,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "NVME",
       modelo: "Kingston",
-      specs1: "Usado, NVME Comum",
+      specs1: "22mm x 80mm",
       specs2: "1 TB",
       preco: "R$ XXX,00",
       imagens: [
@@ -1937,7 +1940,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "M.2 SATA",
       modelo: "M2 Sata",
-      specs1: "Usado, M2 Sata Comum",
+      specs1: "22mm x 80mm",
       specs2: "128 GB",
       preco: "R$ 239,00",
       imagens: [
@@ -1950,7 +1953,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "M.2 SATA",
       modelo: "Skhynix",
-      specs1: "Usado, Mini M2 Sata",
+      specs1: "22mm x 30mm",
       specs2: "128 GB",
       preco: "R$ 239,00",
       imagens: [
@@ -1967,7 +1970,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "M.2 SATA",
       modelo: "Lite-On",
-      specs1: "Usado, M2 Sata Comum",
+      specs1: "22mm x 80mm",
       specs2: "256 GB",
       preco: "R$ 429,00",
       imagens: [
@@ -1997,7 +2000,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "Solid State Drive",
       modelo: "KingFast",
-      specs1: "Usado, SSD Comum",
+      specs1: "SSD Sata III 2.5\"",
       specs2: "128 GB",
       preco: "R$ 190,00",
       imagens: [
@@ -2015,7 +2018,7 @@ const produtos = {
       categoria: "armazenamento",
       titulo: "Solid State Drive",
       modelo: "KingFast",
-      specs1: "Usado, SSD Comum",
+      specs1: "SSD Sata III 2.5\"",
       specs2: "240 GB",
       preco: "R$ 290,00",
       imagens: [
@@ -2053,9 +2056,9 @@ const produtos = {
       id: 960, /* DisplayPort */
       categoria: "cabo",
       titulo: "DisplayPort",
-      modelo: "Marca X",
-      specs1: "X metros",
-      specs2: "Novo",
+      modelo: "Original",
+      specs1: "150cm",
+      specs2: "",
       preco: "R$ XX,00",
       imagens: [
         "imagens/cabo/displayport/displayport.webp",
@@ -2071,9 +2074,9 @@ const produtos = {
       id: 961, /* DVI */
       categoria: "cabo",
       titulo: "DVI",
-      modelo: "Marca X",
-      specs1: "X metros",
-      specs2: "Novo",
+      modelo: "Original",
+      specs1: "200cm",
+      specs2: "",
       preco: "R$ XX,00",
       imagens: [
         "imagens/cabo/dvi/dvi.webp",
@@ -2089,9 +2092,9 @@ const produtos = {
       id: 962, /* Força */
       categoria: "cabo",
       titulo: "Força",
-      modelo: "Marca X",
-      specs1: "X metros",
-      specs2: "Novo",
+      modelo: "Original",
+      specs1: "150cm",
+      specs2: "",
       preco: "R$ 10,00",
       imagens: [
         "imagens/cabo/forca/forca.webp",
@@ -2107,9 +2110,9 @@ const produtos = {
       id: 963, /* HDMI */
       categoria: "cabo",
       titulo: "HDMI",
-      modelo: "Marca X",
-      specs1: "X metros",
-      specs2: "Novo",
+      modelo: "Original",
+      specs1: "150cm",
+      specs2: "",
       preco: "R$ XX,00",
       imagens: [
         "imagens/cabo/hdmi/hdmi.webp",
@@ -2125,9 +2128,9 @@ const produtos = {
       id: 964, /* VGA */
       categoria: "cabo",
       titulo: "VGA",
-      modelo: "Marca X",
-      specs1: "X metros",
-      specs2: "Novo",
+      modelo: "Original",
+      specs1: "150cm",
+      specs2: "",
       preco: "R$ 15,00",
       imagens: [
         "imagens/cabo/vga/vga.webp",
@@ -2158,9 +2161,9 @@ const produtos = {
       id: 970, /* Fonte PC */
       categoria: "fonte",
       titulo: "Fonte",
-      modelo: "Marca X",
-      specs1: "230 watts",
-      specs2: "Nova",
+      modelo: "VX Pro",
+      specs1: "Modelo VX 230SE",
+      specs2: "230 watts",
       preco: "R$ 70,00",
       imagens: [
         "imagens/fonte/fonte-pc/fonte.webp"
@@ -2174,10 +2177,10 @@ const produtos = {
     {
       id: 971, /* Lehmox Universal */
       categoria: "fonte",
-      titulo: "Fonte",
+      titulo: "Fonte Universal",
       modelo: "Lehmox",
-      specs1: "X watts",
-      specs2: "Nova",
+      specs1: "LEY-668",
+      specs2: "3.5A 12V",
       preco: "R$ 35,00",
       imagens: [
         "imagens/fonte/fonte-universal/lehmox-inclinada.webp",
@@ -2201,17 +2204,17 @@ const produtos = {
   perifericos: [
 
     /* ======================================================
-     * Novo (ID'S: 980 ~ 989)
-     * Mouse Novo (ID: 980)
+     * Mouse (ID'S: 980 ~ 989)
+     * Mouse Monocron Novo (ID: 980)
      */
 
     {
-      id: 980, /* Mouse Novo */
+      id: 980, /* Mouse Monocron Novo */
       categoria: "periferico",
       titulo: "Mouse",
       modelo: "Monocron",
       specs1: "Cabo USB",
-      specs2: "Novo",
+      specs2: "Paralelo, Novo",
       preco: "R$ 15,00",
       imagens: [
         "imagens/periferico/novo/mouse-novo.webp"
@@ -2219,16 +2222,34 @@ const produtos = {
     },
 
     /* =====================================
-     * Teclado Novo A (ID: 981)
+     * Mouse Lenovo Seminovo (ID: 981)
      */
 
     {
-      id: 981, /* Teclado Novo A */
+      id: 981, /* Mouse Lenovo Seminovo */
+      categoria: "periferico",
+      titulo: "Mouse",
+      modelo: "Lenovo",
+      specs1: "Cabo USB",
+      specs2: "Original, Seminovo",
+      preco: "R$ 25,00",
+      imagens: [
+        "imagens/periferico/usado/mouse-usado.webp"
+      ]
+    },
+
+    /* ======================================================
+     * Teclado (ID'S: 990 ~ 999)
+     * Teclado Bright Novo (ID: 990)
+     */
+
+    {
+      id: 990, /* Teclado Bright Novo */
       categoria: "periferico",
       titulo: "Teclado",
       modelo: "Bright",
       specs1: "Cabo USB",
-      specs2: "Novo",
+      specs2: "Paralelo, Novo",
       preco: "R$ 25,00",
       imagens: [
         "imagens/periferico/novo/teclado-novo-a.webp"
@@ -2236,16 +2257,16 @@ const produtos = {
     },
 
     /* =====================================
-     * Teclado Novo B (ID: 982)
+     * Teclado Monocron Novo (ID: 991)
      */
 
     {
-      id: 982, /* Teclado Novo B */
+      id: 991, /* Teclado Monocron Novo B */
       categoria: "periferico",
       titulo: "Teclado",
       modelo: "Monocron",
       specs1: "Cabo USB",
-      specs2: "Novo",
+      specs2: "Paralelo, Novo",
       preco: "R$ 25,00",
       imagens: [
         "imagens/periferico/novo/teclado-novo-b.webp"
@@ -2253,51 +2274,33 @@ const produtos = {
     },
 
     /* =====================================
-     * Teclado Novo C (ID: 983)
+     * Teclado FY Novo (ID: 992)
      */
 
     {
-      id: 983, /* Teclado Novo C */
+      id: 992, /* Teclado FY Novo */
       categoria: "periferico",
       titulo: "Teclado",
-      modelo: "Modelo X",
+      modelo: "Modelo FY",
       specs1: "Sem fio",
-      specs2: "Novo",
-      preco: "R$ XX,00",
+      specs2: "Paralelo, Novo",
+      preco: "R$ X0,00",
       imagens: [
         "imagens/periferico/novo/teclado-novo-c.webp"
       ]
     },
 
-    /* ======================================================
-     * Usado (ID'S: 990 ~ 999)
-     * Mouse Usado (ID: 990)
-     */
-
-    {
-      id: 990, /* Mouse Usado */
-      categoria: "periferico",
-      titulo: "Mouse",
-      modelo: "Lenovo",
-      specs1: "Cabo USB",
-      specs2: "Original, Usado",
-      preco: "R$ 25,00",
-      imagens: [
-        "imagens/periferico/usado/mouse-usado.webp"
-      ]
-    },
-
     /* =====================================
-     * Teclado Usado (ID: 991)
+     * Teclado Lenovo Seminovo (ID: 993)
      */
 
     {
-      id: 991, /* Teclado Usado */
+      id: 993, /* Teclado Lenovo Seminovo */
       categoria: "periferico",
       titulo: "Teclado",
       modelo: "Lenovo",
       specs1: "Cabo USB",
-      specs2: "Original, Usado",
+      specs2: "Original, Seminovo",
       preco: "R$ 35,00",
       imagens: [
         "imagens/periferico/usado/teclado-usado.webp"
@@ -2321,8 +2324,8 @@ const produtos = {
       categoria: "outro",
       titulo: "Cabo USB",
       modelo: "USB Cable",
-      specs1: "X centímetros",
-      specs2: "Novo",
+      specs1: "USB 2.0",
+      specs2: "Original, Novo",
       preco: "R$ 15,00",
       imagens: [
         "imagens/outro/cabo-usb.webp"
@@ -2337,9 +2340,9 @@ const produtos = {
       id: 1001, /* Case */
       categoria: "outro",
       titulo: "Case",
-      modelo: "Infokit",
-      specs1: "Com Cabo USB",
-      specs2: "Novo",
+      modelo: "Infokit ECASE-300",
+      specs1: "Sata III, USB 3.0",
+      specs2: "Original, Novo",
       preco: "R$ 50,00",
       imagens: [
         "imagens/outro/case.webp"
@@ -2356,7 +2359,7 @@ const produtos = {
       titulo: "Pasta Térmica",
       modelo: "D-mix",
       specs1: "PS-05",
-      specs2: "Novo",
+      specs2: "Original, Novo",
       preco: "R$ 25,00",
       imagens: [
         "imagens/outro/pasta-termica.webp"
@@ -2378,10 +2381,10 @@ const produtos = {
     {
       id: 1100, /* Epson Térmica */
       categoria: "impressora",
-      titulo: "Impressora Epson",
-      modelo: "Epson TM-T20",
+      titulo: "Impressora",
+      modelo: "Epson TM-T20 Térmica",
       specs1: "Modelo M352AX",
-      specs2: "Térmica, Serial e Rede",
+      specs2: "Serial e Rede",
       preco: "R$ 450,00",
       imagens: [
         "imagens/impressora/epson-termica/epson-frente.webp",
@@ -2456,14 +2459,14 @@ const produtos = {
       ]
     },
 
-        {
+    {
       id: 1121, /* Kit Lenovo */
       categoria: "kit",
       titulo: "Kit TSM Lenovo",
       modelo: "Monitor Positivo 19 Polegadas",
       specs1: "Desktop Lenovo Mini i5 7500t",
       specs2: "Suporte Lenovo",
-      preco: "R$ X.X00,00",
+      preco: "R$ 1.550,00",
       imagens: [
         "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-direita.webp",
         "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-fundo.webp",
@@ -2471,7 +2474,7 @@ const produtos = {
         "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-frente.webp",
         "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-inclinado.webp"
       ]
-    }
+    },
 
     /* =====================================
      * Outros (ID's: 1130 ~ 1149)
@@ -2479,10 +2482,27 @@ const produtos = {
 
     /* IDS RESERVADOS */
 
+    /* =====================================
+     * Teste (ID's: 2000 ~ 2010)
+     */
+
+    {
+      id: 2001, /* Teste */
+      categoria: "teste",
+      titulo: "Teste",
+      modelo: "Modelo Teste",
+      specs1: "spec1 teste",
+      specs2: "spec2 teste",
+      preco: "Teste",
+      imagens: [
+        "imagens/teste"
+      ]
+    }
 
   ]
 
 };
+
 
 /* ================================ */
 /*          Acha o produto          */
@@ -2502,6 +2522,35 @@ function buscarProduto(id){
 const produtoAtual = buscarProduto(id);
 
 
+/****************************************
+ * Ativa menu baseado na categoria real
+ ****************************************/
+
+document.querySelectorAll(".dropdown-item").forEach(el => {
+  el.classList.remove("active");
+});
+
+if (produtoAtual && produtoAtual.categorias) {
+  const menuId = mapaMenu[produtoAtual.categorias];
+  document.getElementById(menuId)?.classList.add("active");
+}
+
+/* Evitar erros silenciosos */
+if (produtoAtual && produtoAtual.categoria) {
+  const menuId = mapaMenu[produtoAtual.categoria];
+
+  if (menuId) {
+    const el = document.getElementById(menuId);
+    if (el) {
+      el.classList.add("active");
+    } else {
+      console.warn("ID não encontrado:", menuId);
+    }
+  } else {
+    console.warn("Categoria não mapeada:", produtoAtual.categoria);
+  }
+}
+
 
 /* ================================= */
 /*      Caso não ache o produto      */
@@ -2509,12 +2558,18 @@ const produtoAtual = buscarProduto(id);
 
 if (!produtoAtual) {
 
+  const carousel = document.querySelector(".bottom-item");
+  if (carousel) {
+    carousel.style.display = "none";
+  }
+
   const info = document.getElementById("produto-info");
 
   info.innerHTML = `
     <div class="text-center p-5">
-      <h2>Produto não encontrado</h2>
-      <a href="tipo-computador.html" class="btn btn-outline-dark mt-2">
+      <h2 class="text-white">Ops! Ocorreu um erro</h2>
+      <h5 class="text-white">Produto não encontrado</h5>
+      <a href="tipo-computador.html" class="btn btn-outline-light mt-2">
         Voltar
       </a>
     </div>
@@ -2532,7 +2587,7 @@ if (!produtoAtual) {
 const info = document.getElementById("produto-info");
 
 info.innerHTML = `
-<div class="d-flex flex-column justify-content-center botao-hover text-center">
+<div class="d-flex flex-column justify-content-center botao-hover-link text-center">
 
   <div class="item-card">
     <p class="titulo-item">${produtoAtual.titulo}</p>
@@ -2549,9 +2604,9 @@ info.innerHTML = `
 
 
 
-/* =============================== */
-/*       Carousel de imagens       */
-/* =============================== */
+/* ======================================= */
+/*   Igual ao carousel antigo de imagens   */
+/* ======================================= */
 
 function carregarImagens(imagens) {
 

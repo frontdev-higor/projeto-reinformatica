@@ -17,6 +17,12 @@
     <link rel="icon" type="image/ico" href="imagens/todo-o-site/relogo.webp">
     <title>Componentes</title>
 
+    <!-- Scripts com defer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/tipo-componente.js" defer></script>
+    <script src="js/menu-active.js" defer></script>
+
   </head>
   <body> <!-- dark-mode -->
 
@@ -59,19 +65,19 @@
                     <ul class="dropdown-menu">
 
                       <li>
-                        <a class="dropdown-item" href="tipo-computador.html">Computadores</a>
+                        <a id="menu-computador" class="dropdown-item" href="tipo-computador.html">Computadores</a>
                       </li>
 
                       <li>
-                        <a class="dropdown-item" href="tipo-monitor.html">Monitores</a>
+                        <a id="menu-monitor" class="dropdown-item" href="tipo-monitor.html">Monitores</a>
                       </li>
 
                       <li>
-                        <a class="dropdown-item active" href="tipo-componente.html">Componentes</a>
+                        <a id="menu-componente" class="dropdown-item" href="tipo-componente.html">Componentes</a>
                       </li>
 
                       <li>
-                        <a class="dropdown-item" href="tipo-outro.html">Outros</a>
+                        <a id="menu-outro" class="dropdown-item" href="tipo-outro.html">Outros</a>
                       </li>
 
                     </ul>
@@ -119,7 +125,7 @@
           <!-- Tabs para telas médias/grandes -->
           <ul class="nav nav-tabs justify-content-center d-none d-md-flex" id="myTab" role="tablist">
             <li class="nav-item">
-              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#armazenamento">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#armazenamento">
                 Armazenamento
               </button>
             </li>
@@ -133,13 +139,6 @@
                 Fonte
               </button>
             </li>
-            <!-- Desativado por hora
-            <li class="nav-item">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#memoria">
-                Memória
-              </button>
-            </li>
-            -->
             <li class="nav-item">
               <button class="nav-link" data-bs-toggle="tab" data-bs-target="#periferico">
                 Periférico
@@ -157,10 +156,10 @@
             <button
               id="dropdownTabButton"
               type="button"
-              class="btn dropdown-toggle w-50 arredondar-botao"
+              class="btn dropdown-toggle arredondar-botao"
               data-bs-toggle="dropdown"
               data-bs-display="static">
-                Componentes
+                Componente
             </button>
 
             <ul class="dropdown-menu dropdown-tabs-mobile start-50 translate-middle-x mt-2">
@@ -179,13 +178,6 @@
                   Fonte
                 </button>
               </li>
-              <!-- Desativado por hora
-              <li>
-                <button class="dropdown-item nav-link text-center" data-bs-toggle="tab" data-bs-target="#memoria">
-                  Memória
-                </button>
-              </li>
-              -->
               <li>
                 <button class="dropdown-item nav-link text-center" data-bs-toggle="tab" data-bs-target="#periferico">
                   Periférico
@@ -204,7 +196,7 @@
 
             
             <!-- Armazenamento -->
-            <div class="tab-pane fade botao-hover show active" id="armazenamento" role="tabpanel" aria-labelledby="armazenamento-tab">
+            <div class="tab-pane fade botao-hover" id="armazenamento" role="tabpanel" aria-labelledby="armazenamento-tab">
 
               <!-- Row -->
               <div class="row text-center">
@@ -510,44 +502,6 @@
             <!-- /Fonte -->
 
 
-            <!-- Memoria (Desativado por hora)
-            <div class="tab-pane fade botao-hover" id="memoria" role="tabpanel" aria-labelledby="memoria-tab">
-
-              Row
-              <div class="row text-center justify-content-center">
-
-                container
-                <div class="col-10
-                          container
-                          ">
-                  <p class="titulo-computador">Marca</p>
-
-                  Row
-                  <div class="row text-center g-3 titulo-processador">
-
-                    produto
-                    <div class="col-10 col-sm-4 mx-auto">
-                      <div class="d-grid gap-2">
-                        <a href="#" class="btn">
-                          Memória Teste
-                        </a>
-                      </div>
-                    </div>
-                    /produto
-
-                  </div>
-                  /Row
-
-                </div>
-                /container
-
-              </div>
-              /Row
-              
-            </div>
-            /Memoria -->
-
-
 
             <!-- Periférico -->
             <div class="tab-pane fade botao-hover" id="periferico" role="tabpanel" aria-labelledby="periferico-tab">
@@ -564,39 +518,39 @@
                   <!-- Row -->
                   <div class="row text-center g-3 titulo-processador">
 
-                    <!-- Novo -->
+                    <!-- Mouse -->
                     <div class="col-10 col-sm-6 col-md-5 col-xl-4 mx-auto">
-                      <p class="fw-bold">Novo</p>
+                      <p class="fw-bold">Mouse</p>
                       <div class="d-grid gap-2">
                         <a href="itens.html?id=980" class="btn">
-                          Mouse Novo
+                          Mouse Monocron
                         </a>
                         <a href="itens.html?id=981" class="btn">
-                          Teclado Novo A
-                        </a>
-                        <a href="itens.html?id=982" class="btn">
-                          Teclado Novo B
-                        </a>
-                        <a href="itens.html?id=983" class="btn">
-                          Teclado Novo C
+                          Mouse Lenovo
                         </a>
                       </div>
                     </div>
-                    <!-- /Novo -->
+                    <!-- /Mouse -->
 
-                    <!-- Usado -->
+                    <!-- Teclado -->
                     <div class="col-10 col-sm-6 col-md-5 col-xl-4 mx-auto">
-                      <p class="fw-bold">Usado</p>
+                      <p class="fw-bold">Teclado</p>
                       <div class="d-grid gap-2">
                         <a href="itens.html?id=990" class="btn">
-                          Mouse Usado
+                          Teclado Bright
                         </a>
                         <a href="itens.html?id=991" class="btn">
-                          Teclado Usado
+                          Teclado Monocron
+                        </a>
+                        <a href="itens.html?id=992" class="btn">
+                          Teclado FY
+                        </a>
+                        <a href="itens.html?id=993" class="btn">
+                          Teclado Lenovo
                         </a>
                       </div>
                     </div>
-                    <!-- /Usado -->
+                    <!-- /Teclado -->
 
                   </div>
                   <!-- /Row -->
@@ -671,19 +625,12 @@
       <footer id="footer" class="">
         <div class="rodape-formatacao footer-color">
           <p class="rodape-escrita-formatacao"> <!--  -->
-            <strong> &copy </strong>Todos os direitos reservados ao programador <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor </a>
+            <strong> &copy; </strong>Todos os direitos reservados.
+            Desenvolvido por <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor</a>
           </p>
         </div>
       </footer>
       <!-- /Rodapé -->
-
-      <!-- Scripts -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-      </script>
-
-      <!-- Carregamento dos .js -->
-      <script src="js/main.js"></script>
-      <script src="js/tipo-componente.js"></script>
 
   </body>
 </html>

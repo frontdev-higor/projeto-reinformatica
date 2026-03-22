@@ -1,43 +1,5 @@
 
 /**
- * Entra na Aba específica da Página
- */
-
-  // Prioriza hash
-  document.addEventListener("DOMContentLoaded", function () {
-  let tabId = null;
-
-    if (window.location.hash) {
-      tabId = window.location.hash;
-    } 
-    else {
-      const params = new URLSearchParams(window.location.search);
-      const tabParam = params.get("tab");
-
-      if (tabParam) {
-        tabId = "#" + tabParam;
-      } 
-      else {
-        // pega a última aba salva
-        tabId = localStorage.getItem("ultimaAbaComputador");
-      }
-    }
-
-    if (tabId) {
-      const trigger = document.querySelector(
-        `[data-bs-toggle="tab"][data-bs-target="${tabId}"]`
-      );
-
-      if (trigger) {
-        new bootstrap.Tab(trigger).show();
-        window.scrollTo(0,0);
-      }
-    }
-  });
-
-// ========================================================================= //
-
-/**
  * Dropdown mobile funcional
  */
 
@@ -50,8 +12,7 @@
         );
 
         if (tabTrigger) {
-          const tab = new bootstrap.Tab(tabTrigger);
-          tab.show();
+          new bootstrap.Tab(tabTrigger).show();
         }
       });
     });
@@ -61,43 +22,86 @@
 /**
  * Dropdown mobile ativo
  */
-    
+
   function syncDropdownWithTab(target) {
-    if (!target) return
+    if (!target) return;
 
     const dropdownItems = document.querySelectorAll(
       '.dropdown-tabs-mobile .dropdown-item'
-    )
-    const dropdownButton = document.getElementById('dropdownTabButton')
+    );
+    const dropdownButton = document.getElementById('dropdownTabButton');
 
     dropdownItems.forEach(item => {
-      item.classList.remove('active')
+      item.classList.remove('active');
 
       if (item.getAttribute('data-bs-target') === target) {
-        item.classList.add('active')
-        dropdownButton.textContent = item.textContent.trim()
+        item.classList.add('active');
+
+        if (dropdownButton) {
+          dropdownButton.textContent = item.textContent.trim();
+        }
       }
-    })
+    });
   }
 
-  // Ao trocar de aba
+// ========================================================================= //
+
+/**
+ * Ao trocar de aba
+ */
+
   document.addEventListener('shown.bs.tab', function (event) {
+    const target = event.target?.getAttribute('data-bs-target');
+    if (!target) return;
 
-    const target = event.target.getAttribute('data-bs-target')
+    localStorage.setItem('ultimaAbaComponente', target);
+    syncDropdownWithTab(target);
 
-    // salva a aba atual
-    localStorage.setItem('ultimaAbaComputador', target)
+    // 🔥 fallback seguro (mantém seu sistema estável)
+    setTimeout(() => {
+      syncDropdownWithTab(target);
+    }, 30);
+  });
 
-    syncDropdownWithTab(target)
+// ========================================================================= //
 
-  })
+/**
+ * Inicialização da página
+ */
+  
+  document.addEventListener("DOMContentLoaded", function () {
 
-  // Ao carregar a página
-  document.addEventListener('DOMContentLoaded', function () {
-    const activeTab = document.querySelector('.nav-tabs .nav-link.active')
-    if (activeTab) {
-      syncDropdownWithTab(
-        activeTab.getAttribute('data-bs-target')
-      )
+    const DEFAULT_TAB = "#armazenamento";
+
+    const params = new URLSearchParams(window.location.search);
+    const tabParam = params.get("tab");
+
+    let tabId = null;
+
+    // PRIORIDADE CORRETA
+    if (window.location.hash) {
+      tabId = window.location.hash;
+    } 
+    else if (tabParam) {
+      tabId = "#" + tabParam;
+    } 
+    else {
+      tabId = localStorage.getItem("ultimaAbaComponente") || DEFAULT_TAB;
     }
-  })
+
+    // 🔥 ATIVA A ABA (ESSENCIAL)
+    const trigger = document.querySelector(
+      `[data-bs-toggle="tab"][data-bs-target="${tabId}"]`
+    );
+
+    if (trigger) {
+      new bootstrap.Tab(trigger).show();
+
+      // sincroniza dropdown
+      syncDropdownWithTab(tabId);
+
+      // salva corretamente
+      localStorage.setItem("ultimaAbaComponente", tabId);
+    }
+
+  });

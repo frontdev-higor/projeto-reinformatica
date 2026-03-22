@@ -50,3 +50,10 @@
       e.preventDefault();
     });
   });
+
+// ========================================================================= //
+
+  // Evita o flash branco
+    window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });

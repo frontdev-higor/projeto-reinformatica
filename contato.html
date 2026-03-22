@@ -11,11 +11,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 
     <link rel="stylesheet" type="text/css" href="css/estilocs.css">
     <link rel="icon" type="image/ico" href="imagens/todo-o-site/relogo.webp">
     <title>Contato</title>
+
+    <!-- Scripts com defer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/contato.js" defer></script>
 
   </head>
 
@@ -113,7 +118,7 @@
 
 
     <!-- Main -->
-    <main class="contato-bg d-flex align-items-center">
+    <main class="contato-bg d-flex align-items-center justify-content-center">
 
      <div class="overlay-bg"></div>
 
@@ -124,37 +129,64 @@
       <div class="row justify-content-center">
 
         <!-- Bloco -->
-        <div class="col-10 col-sm-7 col-md-6 col-lg-5 col-xl-4 mx-auto bottom-item">
+        <div class="col-10 col-sm-7 col-md-6 col-lg-5 col-xl-4 bottom-item">
 
           <!-- Conteúdo Central -->
           <div class="conteudo-central">
 
             <h2 class="titulo-item">Contato</h2>
 
-            <p class="subtitulo fw-bold">Telefones</p>
+            <p class="subtitulo fw-bold">
+              <i class="fab fa-whatsapp text-success me-1"></i>
+                Telefones
+            </p>
 
             <ul class="link-contato">
               <li>
-                <a class="" href="">(62) 9 8534-5850 (Robson)</a>
+                <a class="" target="_blank" href="https://wa.me/5562985345850?text=Olá,%20tenho%20interesse%20em%20um%20produto%20do%20site">
+                  <i class="fab fa-whatsapp me-1"></i>
+                    (62) 9 8534-5850 (Robson)
+                </a>
               </li>
               <li>
-                <a class="" href="">(62) 9 8522-0656 (José Vitor)</a>
+                <a class="" target="_blank" href="https://wa.me/5562985220656?text=Olá,%20tenho%20interesse%20em%20um%20produto%20do%20site">
+                  <i class="fab fa-whatsapp me-1"></i>
+                    (62) 9 8522-0656 (José Vitor)
+                </a>
               </li>
             </ul>
 
-            <p class="subtitulo fw-bold">Instagram</p>
+            <p class="subtitulo fw-bold">
+              <i class="fab fa-instagram text-danger me-1"></i>
+                Instagram
+            </p>
 
             <ul class="link-contato">
               <li>
-                <a href="">r_e_informatica</a>
+                <a href="https://www.instagram.com/p/C5D8TuhOXOB/" target="_blank">
+                  <i class="fab fa-instagram me-1"></i>
+                    r_e_informatica
+                </a>
               </li>
             </ul>
 
-            <p class="subtitulo fw-bold">E-mail</p>
+            <p class="subtitulo fw-bold">
+              <i class="fas fa-envelope text-primary me-1"></i>
+                E-mail
+            </p>
 
             <ul class="link-contato">
               <li>
-                <a href="">reinformaticagoia@gmail.com</a>
+                <a href="https://mail.google.com/mail/?view=cm&to=reinformaticagoia@gmail.com&su=Interesse%20no%20produto&body=Olá,%20tenho%20interesse%20no%20produto%20que%20vi%20no%20site." target="_blank">
+                  <i class="fas fa-envelope me-1"></i>
+                    reinformaticagoia@gmail.com (gmail)
+                </a>
+              </li>
+              <li>
+                <a href="mailto:reinformaticagoia@gmail.com">
+                  <i class="fas fa-envelope me-1"></i>
+                    reinformaticagoia@gmail.com (outros)
+                </a>
               </li>
             </ul>
 
@@ -179,20 +211,12 @@
     <footer id="footer" class="">
       <div class="rodape-formatacao footer-color">
         <p class="rodape-escrita-formatacao"> <!--  -->
-          <strong> &copy </strong>Todos os direitos reservados ao programador <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor </a>
+          <strong> &copy; </strong>Todos os direitos reservados.
+          Desenvolvido por <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor</a>
         </p>
       </div>
     </footer>
     <!-- /Rodapé -->
-
-    <!-- Scripts -->
-    <!-- Deve carregar antes do js obrigatóriamente -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
-
-    <!-- Carregamento dos .js -->
-    <script src="js/main.js"></script>
-    <script src="js/contato.js"></script>
 
   </body>
 </html>

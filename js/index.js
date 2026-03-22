@@ -9,7 +9,7 @@
 
       {
         id: "itens.html?id=352",
-        nome: "ThinkCentre i7 6700",
+        nome: "ThinkCentre Slim i7 6700",
         antigo: "1.600,00",
         novo: "R$ 1.400,00",
         img: "imagens/slim/lenovo/i7-6700/i7-6700-frente.webp"
@@ -17,7 +17,7 @@
 
       {
         id: "itens.html?id=552",
-        nome: "ThinkPad T480 i5-8350u",
+        nome: "ThinkPad T480 i5 8350u",
         antigo: "1.800,00",
         novo: "1.600,00",
         img: "imagens/notebook/lenovo/i5-8350u/i5-8350u-frente.webp"
@@ -25,7 +25,7 @@
 
       {
         id: "itens.html?id=152",
-        nome: "Desktop Mini i5 6500t",
+        nome: "ThinkCentre Mini i5 6500t",
         antigo: "1.300,00",
         novo: "R$ 1.100,00",
         img: "imagens/mini/lenovo/i5-6500t/i5-6500t-frente.webp"
@@ -127,27 +127,38 @@
 
   function carregarCarousel(categoria) {
 
-    // Proteção contra categoria inexistente
-    if (!produtos[categoria]) return;
+    if (!produtos[categoria]) {
+      categoria = "mais-vendidos";
+    }
 
     const inner = document.querySelector("#carousel-dinamico .carousel-inner");
     const indicators = document.querySelector("#carousel-dinamico .carousel-indicators");
 
-    inner.innerHTML = "";
-    indicators.innerHTML = "";
+    if (!inner || !indicators) return;
+
+    // 🔥 pausa o carousel antes da troca
+    if (carouselInstance) {
+      carouselInstance.pause();
+    }
+
+    // 🔥 containers fora do DOM
+    const newInner = document.createElement("div");
+    const newIndicators = document.createElement("div");
 
     produtos[categoria].forEach((produto, index) => {
 
-      indicators.innerHTML += `
-        <button type="button" 
-          data-bs-target="#carousel-dinamico" 
-          data-bs-slide-to="${index}" 
-          class="${index === 0 ? 'active' : ''}">
-        </button>
-      `;
+      const indicator = document.createElement("button");
+      indicator.type = "button";
+      indicator.setAttribute("data-bs-target", "#carousel-dinamico");
+      indicator.setAttribute("data-bs-slide-to", index);
+      if (index === 0) indicator.classList.add("active");
 
-      inner.innerHTML += `
-      <div class="carousel-item ${index === 0 ? 'active' : ''}">
+      newIndicators.appendChild(indicator);
+
+      const item = document.createElement("div");
+      item.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+
+      item.innerHTML = `
         <a href="${produto.id}">
           <img src="${produto.img}" class="img-fluid" alt="${produto.nome}">
           <div class="caption-top">
@@ -160,21 +171,49 @@
             </p>
           </div>
         </a>
-      </div>
-    `;
+      `;
+
+      newInner.appendChild(item);
     });
+
+    // 🔥 troca atômica
+    inner.replaceChildren(...newInner.childNodes);
+    indicators.replaceChildren(...newIndicators.childNodes);
+
+    // 🔥 força reflow controlado (ESSENCIAL)
+    inner.offsetHeight;
+
+    // 🔥 volta pro slide 0 sem animação
+    if (carouselInstance) {
+      carouselInstance.to(0);
+    }
   }
 
 // ========================================================================= //
 
-/**
- * Entra na Aba específica da Página
- */
-
-  // Prioriza hash
-  document.addEventListener("DOMContentLoaded", function () {
   let tabId = null;
+  let carouselInstance = null;
 
+  const mapaAbas = {
+    all: "mais-vendidos",
+    mini: "custo-beneficio",
+    slim: "trabalho",
+    note: "estudos"
+  };
+
+// ========================================================================= //
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    // 🔥 PRELOAD GLOBAL (roda 1 vez só)
+    Object.values(produtos).forEach(lista => {
+      lista.forEach(p => {
+        const img = new Image();
+        img.src = p.img;
+      });
+    });
+
+    // 🔹 1. Descobre qual aba abrir
     if (window.location.hash) {
       tabId = window.location.hash;
     } 
@@ -183,14 +222,35 @@
       const tabParam = params.get("tab");
 
       if (tabParam) {
-        tabId = "#" + tabParam;
+        const abaReal = mapaAbas[tabParam] || tabParam;
+        tabId = "#" + abaReal;
       } 
       else {
-        // pega a última aba salva
-        tabId = localStorage.getItem("ultimaAbaComputador");
+        const savedTab = localStorage.getItem("ultimaAbaIndex");
+
+        const abasValidas = [
+          "#mais-vendidos",
+          "#custo-beneficio",
+          "#trabalho",
+          "#estudos"
+        ];
+
+        if (abasValidas.includes(savedTab)) {
+          tabId = savedTab;
+        } else {
+          tabId = null;
+        }
       }
     }
 
+    // 🔹 2. Define categoria inicial
+    let categoria = "mais-vendidos";
+
+    if (tabId) {
+      categoria = tabId.replace('#', '');
+    }
+
+    // 🔹 3. Ativa aba (se existir)
     if (tabId) {
       const trigger = document.querySelector(
         `[data-bs-toggle="tab"][data-bs-target="${tabId}"]`
@@ -198,111 +258,83 @@
 
       if (trigger) {
         new bootstrap.Tab(trigger).show();
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
       }
     }
-  });
 
-// ========================================================================= //
-
-/**
- * Dropdown mobile funcional
- */
-
-    document.addEventListener("DOMContentLoaded", () => {
-
-    // Inicializa dropdown mobile
-    document.querySelectorAll('.dropdown-tabs-mobile .dropdown-item')
-    .forEach(item => {
-      item.addEventListener('click', function () {
-        const target = this.getAttribute('data-bs-target');
-        const tabTrigger = document.querySelector(
-          `.nav-tabs [data-bs-target="${target}"]`
-        );
-
-        if (tabTrigger) {
-          const tab = new bootstrap.Tab(tabTrigger);
-          tab.show();
-        }
-      });
-    });
-
-    // Detecta aba ativa
-    const activeTab = document.querySelector('.nav-tabs .nav-link.active');
-
-    // Sincroniza dropdown
-    if (activeTab) {
-      syncDropdownWithTab(
-        activeTab.getAttribute('data-bs-target')
-      );
-    }
-
-    // troca de aba → carregar novo carousel
-    document.addEventListener('shown.bs.tab', function (event) {
-
-      const categoria = event.target
-        .getAttribute('data-bs-target')
-        .replace('#', '');
-
-      carregarCarousel(categoria);
-
-    });
-
-    // Inicializa carousel
-    let categoria = "mais-vendidos";
-
-    if (activeTab) {
-      categoria = activeTab
-        .getAttribute('data-bs-target')
-        .replace('#', '');
-    }
-
+    // 🔥 SEMPRE roda
     carregarCarousel(categoria);
 
+    // Carousel agora atualiza visualmente
+    const carousel = document.querySelector('#carousel-dinamico');
+
+    if (carousel) {
+      carouselInstance = new bootstrap.Carousel(carousel);
+    }
+
+    document.querySelectorAll('.dropdown-tabs-mobile .dropdown-item')
+      .forEach(item => {
+        item.addEventListener('click', function () {
+
+          const target = this.getAttribute('data-bs-target');
+
+          const tabTrigger = document.querySelector(
+            `.nav-tabs [data-bs-target="${target}"]`
+          );
+
+          if (tabTrigger) {
+            new bootstrap.Tab(tabTrigger).show();
+          }
+
+        });
+      });
+
+    const activeTab = document.querySelector('.nav-tabs .nav-link.active');
+
+    if (activeTab) {
+      const target = activeTab.getAttribute('data-bs-target');
+      syncDropdownWithTab(target);
+    }
+
   });
 
-// ========================================================================= //
-
-/**
- * Dropdown mobile ativo
- */
-    
+  // Função de sincronização
   function syncDropdownWithTab(target) {
-    if (!target) return
+    if (!target) return;
 
     const dropdownItems = document.querySelectorAll(
       '.dropdown-tabs-mobile .dropdown-item'
-    )
-    const dropdownButton = document.getElementById('dropdownTabButton')
+    );
+
+    const dropdownButton = document.getElementById('dropdownTabButton');
 
     dropdownItems.forEach(item => {
-      item.classList.remove('active')
+      item.classList.remove('active');
 
       if (item.getAttribute('data-bs-target') === target) {
-        item.classList.add('active')
-        dropdownButton.textContent = item.textContent.trim()
+        item.classList.add('active');
+
+        if (dropdownButton) {
+          dropdownButton.textContent = item.textContent.trim();
+        }
       }
-    })
+    });
   }
 
-  // Ao trocar de aba
+// ========================================================================= //
+
+  // 🔥 Evento de troca de aba (CORE do carousel)
   document.addEventListener('shown.bs.tab', function (event) {
 
-    const target = event.target.getAttribute('data-bs-target')
+    const target = event.target?.getAttribute('data-bs-target');
+    if (!target) return;
 
-    // salva a aba atual
-    localStorage.setItem('ultimaAbaComputador', target)
+    localStorage.setItem('ultimaAbaIndex', target);
 
-    syncDropdownWithTab(target)
+    const categoria = target.replace('#', '');
+    carregarCarousel(categoria);
 
-  })
+    // 🔥 ESSENCIAL
+    syncDropdownWithTab(target);
 
-  // Ao carregar a página
-  document.addEventListener('DOMContentLoaded', function () {
-    const activeTab = document.querySelector('.nav-tabs .nav-link.active')
-    if (activeTab) {
-      syncDropdownWithTab(
-        activeTab.getAttribute('data-bs-target')
-      )
-    }
-  })
+  });

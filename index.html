@@ -20,6 +20,11 @@
     <link rel="icon" type="image/ico" href="imagens/todo-o-site/relogo.webp">
     <title>RE Informática</title>
 
+    <!-- Scripts com defer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/index.js" defer></script>
+
   </head>
   <body class=""> <!-- dark-mode -->
 
@@ -114,14 +119,15 @@
 
 
     <!-- Container -->
-    <main class="container conteudo-site">
+    <main class="container">
       
       <!-- Row -->
-      <div class="row celular-centralizado">
+      <div class="row celular-centralizado justify-content-sm-center justify-content-md-start">
 
       <!-- Coluna-1 -->
         <!-- Grid -->
-        <div class="col-10 col-sm-4 col-lg-3 order-2 order-sm-1">
+        <div class="col-10 col-sm-5 col-md-4 col-lg-3
+                    order-2 order-sm-2 order-md-1">
 
           <!-- Primeira Coluna -->
           <div class="formatacao-container-primeiro text-decoration-none">
@@ -170,37 +176,21 @@
                 <div class="coluna-formatacao">
                   <ul>
                     <li>
-                      <a href="tipo-monitor.html?tab=m19p">
-                        <span>19"Polegadas</span>
+                      <a href="itens.html?id=830">
+                        <span>18.5"Polegadas</span>
                       </a>
                     </li>
-                    <!-- Desativado por hora
                     <li>
-                      <a href="tipo-monitor.html?tab=m20p">
+                      <a href="itens.html?id=810">
                         <span>20"Polegadas</span>
                       </a>
                     </li>
-
-                    <li>
-                      <a href="tipo-monitor.html?tab=m21p">
-                        <span>21"Polegadas</span>
-                      </a>
-                    </li>
-                    <li>
-                    -->
-                      <a href="tipo-monitor.html?tab=m22p">
+                      <a href="itens.html?id=831">
                         <span>22"Polegadas</span>
                       </a>
                     </li>
                     <li>
-                    <!-- Desativado por hora
-                      <a href="tipo-monitor.html?tab=m23p">
-                        <span>23"Polegadas</span>
-                      </a>
-                    </li>
-                    -->
-                    <li>
-                      <a href="tipo-monitor.html?tab=m24p">
+                      <a href="itens.html?id=800">
                         <span>24"Polegadas</span>
                       </a>
                     </li>
@@ -233,13 +223,6 @@
                         <span>Fonte</span>
                       </a>
                     </li>
-                    <!-- Desativado por hora
-                    <li>
-                      <a href="tipo-componente.html?tab=memoria">
-                        <span>Memória</span>
-                      </a>
-                    </li>
-                    -->
                     <li>
                       <a href="tipo-componente.html?tab=periferico">
                         <span>Periférico</span>
@@ -265,9 +248,9 @@
 
 
       <!-- Coluna-2 -->
-
         <!-- Grid -->
-        <div class="col-10 col-sm-8 col-lg-6 order-1 order-sm-2">
+        <div class="col-10 col-sm-10 col-md-8 col-lg-6
+                    order-1 order-sm-1 order-md-2">
 
           <h3 class="coluna-titulo-centro rounded-3 mt-2">Encontre o computador perfeito!</h3>
 
@@ -334,7 +317,7 @@
           <div class="tab-content">
 
             <!-- Tab/Botão Menu Dropdown -->
-            <div class="tab-pane fade show active" id="mais-vendidos"></div>
+            <div class="tab-pane fade" id="mais-vendidos"></div>
             <div class="tab-pane fade" id="custo-beneficio"></div>
             <div class="tab-pane fade" id="trabalho"></div>
             <div class="tab-pane fade" id="estudos"></div>
@@ -370,7 +353,8 @@
 
       <!-- Coluna-3 -->
         <!-- Grid -->
-        <div class="col-10 col-sm-4 col-lg-3 order-3">
+        <div class="col-10 col-sm-5 col-md-4 col-lg-3
+                    order-3">
 
           <!-- Terceira Coluna -->
           <div class="formatacao-container-terceiro text-decoration-none">
@@ -394,18 +378,6 @@
                         <span>Kit TSM</span>
                       </a>
                     </li>
-                    <!--
-                    <li>
-                      <a href="tipo-outro.html?tab=placamae" data-text="Placa Mãe">
-                        <span>Placa Mãe</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tipo-outro.html?tab=suporte" data-text="Suporte">
-                        <span>Suporte</span>
-                      </a>
-                    </li>
-                    -->
                   </ul>
                 </div>
             </div>
@@ -484,20 +456,12 @@
     <footer id="footer" class="">
       <div class="rodape-formatacao footer-color">
         <p class="rodape-escrita-formatacao"> <!--  -->
-          <strong> &copy </strong>Todos os direitos reservados ao programador <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor </a>
+          <strong> &copy; </strong>Todos os direitos reservados.
+          Desenvolvido por <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor</a>
         </p>
       </div>
     </footer>
     <!-- /Rodapé -->
-
-    <!-- Scripts -->
-    <!-- Deve carregar antes do js obrigatóriamente -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
-
-    <!-- Carregamento dos .js -->
-    <script src="js/main.js"></script>
-    <script src="js/index.js"></script>
 
   </body>
 </html>

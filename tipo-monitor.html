@@ -17,6 +17,12 @@
     <link rel="icon" type="image/ico" href="imagens/todo-o-site/relogo.webp">
     <title>Monitores</title>
 
+    <!-- Scripts com defer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/tipo-monitor.js" defer></script>
+    <script src="js/menu-active.js" defer></script>
+
   </head>
   <body> <!-- dark-mode -->
 
@@ -59,19 +65,19 @@
                     <ul class="dropdown-menu">
 
                       <li>
-                        <a class="dropdown-item" href="tipo-computador.html">Computadores</a>
+                        <a id="menu-computador" class="dropdown-item" href="tipo-computador.html">Computadores</a>
                       </li>
 
                       <li>
-                        <a class="dropdown-item active" href="tipo-monitor.html">Monitores</a>
+                        <a id="menu-monitor" class="dropdown-item" href="tipo-monitor.html">Monitores</a>
                       </li>
 
                       <li>
-                        <a class="dropdown-item" href="tipo-componente.html">Componentes</a>
+                        <a id="menu-componente" class="dropdown-item" href="tipo-componente.html">Componentes</a>
                       </li>
 
                       <li>
-                        <a class="dropdown-item" href="tipo-outro.html">Outros</a>
+                        <a id="menu-outro" class="dropdown-item" href="tipo-outro.html">Outros</a>
                       </li>
 
                     </ul>
@@ -117,24 +123,26 @@
         <div class="container">
 
           <!-- Conteúdo das abas -->
-          <div class="btn-items" id="myTabContent">
+          <div class="tab-content btn-items" id="myTabContent">
 
             <!-- Monitores (ID'S: 800 ~ 849) -->
             <div class="botao-hover">
 
-              <p class="titulo-computador">Monitores</p>
+              <div class="row justify-content-center">
+                <p class="col-12 titulo-monitor">Monitores</p>
+              </div>
 
               <!-- Row -->
-              <div class="row text-center g-4 justify-content-center">
+              <div class="row text-center g-3 justify-content-center">
 
                 <!-- Dell (ID'S: 800 ~ 809) -->
-                <div class="col-10 col-sm-5 col-md-6 col-lg-6 col-xl-6">
-                  <p class="titulo-computador">Dell</p>
+                <div class="col-10 col-sm-5 col-md-6">
+                  <p class="marca-monitor">Dell</p>
 
-                  <div class="row">
+                  <div class="row titulo-processador">
 
                     <!-- Dell 24 Polegadas -->                    
-                    <div class="col-10 col-sm-12 col-md-10 col-xl-10 mx-auto">
+                    <div class="col-10 col-sm-12 col-md-10 mx-auto">
                       <div class="d-grid gap-2">
                         <a href="itens.html?id=800" class="btn">
                           Monitor 24 Polegadas
@@ -148,13 +156,13 @@
                 <!-- /Dell (ID'S: 800 ~ 809) -->
 
                 <!-- Lenovo (ID'S: 810 ~ 819) -->
-                <div class="col-10 col-sm-5 col-md-6 col-lg-6 col-xl-6">
-                  <p class="titulo-computador">Lenovo</p>
+                <div class="col-10 col-sm-5 col-md-6">
+                  <p class="marca-monitor">Lenovo</p>
 
-                  <div class="row">
+                  <div class="row titulo-processador">
 
                     <!-- Monitor 20 Polegadas -->
-                    <div class="col-10 col-sm-12 col-md-10 col-xl-10 mx-auto">
+                    <div class="col-10 col-sm-12 col-md-10 mx-auto">
                       <div class="d-grid gap-2">
                         <a href="itens.html?id=810" class="btn">
                           Monitor 20 Polegadas
@@ -167,20 +175,14 @@
                 </div>
                 <!-- /Lenovo (ID'S: 810 ~ 819) -->
 
-              </div>
-              <!-- /Row -->
-
-              <!-- Row -->
-              <div class="row text-center g-4 justify-content-center">
-
                 <!-- Positivo (ID'S: 820 ~ 829) -->
-                <div class="col-10 col-sm-5 col-md-6 col-lg-6 col-xl-6">
-                  <p class="titulo-computador">Positivo</p>
+                <div class="col-10 col-sm-5 col-md-6">
+                  <p class="marca-monitor">Positivo</p>
 
-                  <div class="row">
+                  <div class="row titulo-processador">
 
                     <!-- Positivo 19 Polegadas -->
-                    <div class="col-10 col-sm-12 col-md-10 col-xl-10 mx-auto">
+                    <div class="col-10 col-sm-12 col-md-10 mx-auto">
                       <div class="d-grid gap-2">
                         <a href="itens.html?id=830" class="btn">
                           Positivo 18.5 Polegadas
@@ -197,13 +199,13 @@
                 <!-- /Positivo (ID'S: 820 ~ 829) -->
 
                 <!-- Daten (ID'S: 830 ~ 839) -->
-                <div class="col-10 col-sm-5 col-md-6 col-lg-6 col-xl-6">
-                  <p class="titulo-computador">Daten</p>
+                <div class="col-10 col-sm-5 col-md-6">
+                  <p class="marca-monitor">Daten</p>
 
-                  <div class="row">
+                  <div class="row titulo-processador">
 
                     <!-- Daten 22 Polegadas -->                    
-                    <div class="col-10 col-sm-12 col-md-10 col-xl-10 mx-auto">
+                    <div class="col-10 col-sm-12 col-md-10 mx-auto">
                       <div class="d-grid gap-2">
                         <a href="itens.html?id=820" class="btn">
                           Monitor 22 Polegadas
@@ -236,19 +238,12 @@
       <footer id="footer" class="">
         <div class="rodape-formatacao footer-color">
           <p class="rodape-escrita-formatacao"> <!--  -->
-            <strong> &copy </strong>Todos os direitos reservados ao programador <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor </a>
+            <strong> &copy; </strong>Todos os direitos reservados.
+            Desenvolvido por <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor</a>
           </p>
         </div>
       </footer>
       <!-- /Rodapé -->
-
-      <!-- Scripts -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-      </script>
-
-      <!-- Carregamento dos .js -->
-      <script src="js/main.js"></script>
-      <script src="js/tipo-monitor.js"></script>
 
   </body>
 </html>
