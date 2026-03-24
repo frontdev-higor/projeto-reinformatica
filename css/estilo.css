@@ -101,6 +101,12 @@ button:focus-visible {
 	transform: none;
 }
 
+/* Evitar flash branco */
+.dark-mode body {
+  background: #121212;
+  color: #fff;
+}
+
 /* ========================== BARRA DE NAVEGAÇÃO ========================== */
 
 .navbar-brand {
@@ -748,7 +754,7 @@ header .navbar {
   --text-btn-nav-drop: #121212;
   --btn-bg-nav: #f5f7fa;
   --text-btn-hover-nav-drop: #f5f7fa;
-  --btn-bg-hover-nav: #212529;
+  --btn-bg-hover-nav: #383e45;
   --text-btn-active-nav-drop: #fff;
   --btn-bg-active-nav: #121212;
 
@@ -762,7 +768,7 @@ header .navbar {
 	--text-btn: #121212;
 	--btn-bg: #fff;
 	--btn-text-hover: #f5f7fa;
-	--btn-bg-hover: #212529;
+	--btn-bg-hover: #383e45;
 	--btn-text-active: #f5f7fa;
 	--btn-bg-active: #121212;
 
@@ -776,14 +782,14 @@ header .navbar {
   --text-btn-bg: #121212;
   --btn-bg-drop: #f5f7fa;
   --text-hover-drop: #f5f7fa;
-  --btn-hover-drop: #212529;
+  --btn-hover-drop: #383e45;
   --text-btn-active-drop: #f5f7fa;
   --btn-bg-active-drop: #121212;
 
   --text-btn-drop: #121212;
   --bg-btn-drop: #f5f7fa;
   --text-btn-hover-drop: #f5f7fa;
-  --btn-bg-hover-drop: #212529;
+  --btn-bg-hover-drop: #383e45;
   --text-active-drop: #f5f7fa;
   --bg-btn-active-drop: #121212;
 
@@ -866,8 +872,8 @@ header .navbar {
 
   --text-btn-nav-drop: #f5f7fa;
   --btn-bg-nav: #121212;
-  --text-btn-hover-nav-drop: #f5f7fa;
-  --btn-bg-hover-nav: #212527;
+  --text-btn-hover-nav-drop: #121212;
+  --btn-bg-hover-nav: #cfd2d4;
   --text-btn-active-nav-drop: #121212;
   --btn-bg-active-nav: #f5f7fa;
   
@@ -881,7 +887,7 @@ header .navbar {
   --text-btn: #e0e0e0;
   --btn-bg: #1a1a1a;
   --btn-text-hover: #121212;
-  --btn-bg-hover: #f5f7fa;
+  --btn-bg-hover: #cfd2d4;
   --btn-text-active: #212529;
 	--btn-bg-active: #fff;
 

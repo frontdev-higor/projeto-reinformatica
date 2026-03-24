@@ -2597,7 +2597,7 @@ info.innerHTML = `
     <p class="texto-preco">${produtoAtual.preco}</p>
   </div>
 
-  <a class="botao-link" href="contato.html">Quero comprar</a>
+  <a class="botao-link" href="contato.html">Quero negociar</a>
 
 </div>
 `;

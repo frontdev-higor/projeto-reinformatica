@@ -100,6 +100,12 @@ button:focus-visible {
 	/*transition: scale(1.08);*/
 }
 
+/* Evitar flash branco */
+.dark-mode body {
+  background: #121212;
+  color: #fff;
+}
+
 /* ========================== BARRA DE NAVEGAÇÃO ========================== */
 
 .navbar-brand {
@@ -329,7 +335,6 @@ header .navbar {
 
 .link-color a {
 	color: var(--text-link);
-	font-weight: bold;
 }
 
 .link-color a:hover {
@@ -478,7 +483,7 @@ body.page-sobre .conteudo-central {
   --text-btn-nav-drop: #121212;
   --btn-bg-nav: #f5f7fa;
   --text-btn-hover-nav-drop: #f5f7fa;
-  --btn-bg-hover-nav: #212529;
+  --btn-bg-hover-nav: #383e45;
   --text-btn-active-nav-drop: #fff;
   --btn-bg-active-nav: #121212;
 
@@ -547,8 +552,8 @@ body.page-sobre .conteudo-central {
 
   --text-btn-nav-drop: #f5f7fa;
   --btn-bg-nav: #121212;
-  --text-btn-hover-nav-drop: #f5f7fa;
-  --btn-bg-hover-nav: #212527;
+  --text-btn-hover-nav-drop: #121212;
+  --btn-bg-hover-nav: #cfd2d4;
   --text-btn-active-nav-drop: #121212;
   --btn-bg-active-nav: #f5f7fa;
 

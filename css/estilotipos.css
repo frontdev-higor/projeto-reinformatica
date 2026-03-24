@@ -100,6 +100,12 @@ button:focus-visible {
   /*transition: scale(1.08);*/
 }
 
+/* Evitar flash branco */
+.dark-mode body {
+  background: #121212;
+  color: #fff;
+}
+
 /* ========================== BARRA DE NAVEGAÇÃO ========================== */
 
 .navbar-brand {
@@ -747,7 +753,7 @@ section {
   --text-btn-nav-drop: #121212;
   --btn-bg-nav: #f5f7fa;
   --text-btn-hover-nav-drop: #f5f7fa;
-  --btn-bg-hover-nav: #212529;
+  --btn-bg-hover-nav: #383e45;
   --text-btn-active-nav-drop: #fff;
   --btn-bg-active-nav: #121212;
 
@@ -759,7 +765,7 @@ section {
   --text-btn-top: #121212;
   --bg-btn-top: #fff;
   --text-btn-top-hover: #f5f7fa;
-  --bg-btn-top-hover: #212529;
+  --bg-btn-top-hover: #383e45;
   --text-btn-top-active: #f5f7fa;
   --bg-btn-top-active: #121212;
 
@@ -767,7 +773,7 @@ section {
   --text-btn-dropdown: #121212;
   --bg-btn-dropdown: #f5f7fa;
   --text-btn-dropdown-hover: #f5f7fa;
-  --bg-btn-dropdown-hover: #212529;
+  --bg-btn-dropdown-hover: #383e45;
   --text-btn-dropdown-active: #f5f7fa;
   --bg-btn-dropdown-active: #121212;
 
@@ -775,7 +781,7 @@ section {
   --tab-text: #121212;
   --tab-bg: #fff;
   --tab-text-hover: #f5f7fa;
-  --tab-bg-hover: #212529;
+  --tab-bg-hover: #383e45;
   --tab-text-active: #f5f7fa;
   --tab-bg-active: #121212;
   --tab-border: #121212;
@@ -789,7 +795,7 @@ section {
   --text-btn: #121212;
   --bg-btn: #fff;
   --text-btn-hover: #f5f7fa;
-  --bg-btn-hover: #212529;
+  --bg-btn-hover: #383e45;
   --text-btn-active: #f5f7fa;
   --bg-btn-active: #121212;
   --btn-border: #121212;
@@ -873,8 +879,8 @@ section {
 
   --text-btn-nav-drop: #f5f7fa;
   --btn-bg-nav: #121212;
-  --text-btn-hover-nav-drop: #f5f7fa;
-  --btn-bg-hover-nav: #212529;
+  --text-btn-hover-nav-drop: #121212;
+  --btn-bg-hover-nav: #cfd2d4;
   --text-btn-active-nav-drop: #121212;
   --btn-bg-active-nav: #f5f7fa;
 
@@ -895,7 +901,7 @@ section {
   --text-btn-dropdown: #f5f7fa;
   --bg-btn-dropdown: #212529;
   --text-btn-dropdown-hover: #121212;
-  --bg-btn-dropdown-hover: #f5f7fa;
+  --bg-btn-dropdown-hover: #cfd2d4;
   --text-btn-dropdown-active: #121212; /* #121212 */
   --bg-btn-dropdown-active: #fff; /* #f5f7fa */
 
@@ -917,7 +923,7 @@ section {
   --text-btn: #f5f7fa;
   --bg-btn: #212529;
   --text-btn-hover: #121212;
-  --bg-btn-hover: #f5f7fa;
+  --bg-btn-hover: #cfd2d4;
   --text-btn-active: #f5f7fa; /* #121212 */
   --bg-btn-active: #3a3a3a; /* #f5f7fa */
   --btn-border: #f5f7fa;
