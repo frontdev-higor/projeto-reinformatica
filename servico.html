@@ -7,13 +7,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Evitar flash branco -->
-    <script>
-      if (localStorage.getItem("theme") === "dark") {
-        document.documentElement.classList.add("dark-mode");
-      }
-    </script>
-
     <!-- Bootstrap CSS Atualizado -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -30,9 +23,9 @@
     <script src="js/servico.js" defer></script>
 
   </head>
-  <body class="navbar-presente">
+  <body class="navbar-presente pagina-servico">
 
-    <div id="page-wrapper">
+    <div>
 
       <header>
 
@@ -41,7 +34,7 @@
         <!-- /Subir -->
 
         <!-- Barra de Navegação -->
-        <nav class="navbar navbar-expand-md mb-2 position-relative navbar-color">
+        <nav class="navbar navbar-expand-md position-relative navbar-color">
 
           <!-- Logo -->
           <a class="navbar-brand logo-formatacao" href="index.html">RE Informática</a>
@@ -127,124 +120,117 @@
 
       </header> <!--  -->
 
-      <!-- ==================== SIDEBAR ==================== -->
-      <nav id="sidebar">
-        <div class="sidebar-inner">
-          <a href="#topo-da-pagina">Defeito</a>
-          <a href="#formatacao-nav">Formatação</a>
-          <a href="#lentidao-nav">Lentidão</a>
-          <a href="#melhoria-nav">Melhoria</a>
-          <a href="#montagem-nav">Montagem</a>
-        </div>
-      </nav>
+      <!-- page-wrapper -->
+      <div id="page-wrapper">
 
-      <!-- ==================== CONTEÚDO ==================== -->
-      <main id="content">
+        <!-- ==================== SIDEBAR ==================== -->
+        <nav id="sidebar">
+          <div class="sidebar-inner">
+            <a href="#topo-da-pagina">Defeito</a>
+            <a href="#formatacao-nav">Formatação</a>
+            <a href="#lentidao-nav">Lentidão</a>
+            <a href="#melhoria-nav">Melhoria</a>
+            <a href="#montagem-nav">Montagem</a>
+          </div>
+        </nav>
 
-        <!-- Seção Defeito -->
-        <section id="defeito-nav">
-          <h2 class="titulo-servico">🔧 Defeito</h2>
-          <p class="subtitulo-servico">Seu computador está apresentando algum defeito?</p>
-            <div class="texto-servico">
-              <p>
-                Alguns problemas são bastante comuns, como: o computador liga, mas a tela permanece escura; mensagens estranhas aparecem ao iniciar; ou até mesmo a famosa tela azul que reinicia tudo de repente.
+        <!-- ==================== CONTEÚDO ==================== -->
+        <main id="content" class="main-bottom">
 
-                Esses defeitos são mais frequentes em computadores com mais tempo de uso e nós temos a solução para eles.
+          <!-- Seção Defeito -->
+          <section id="defeito-nav" class="service-card">
+            <h2 class="titulo-servico">🔧 Defeito</h2>
+            <p class="subtitulo-servico">Seu computador está apresentando algum defeito?</p>
+              <div class="texto-servico">
+                <p>
+                  Alguns problemas são bastante comuns, como: o computador liga, mas a tela permanece escura; mensagens estranhas aparecem ao iniciar; ou até mesmo a famosa tela azul que reinicia tudo de repente.
 
-                Recomendamos que traga seu computador e/ou monitor para realizarmos uma análise completa. Assim, conseguimos identificar o problema com precisão e indicar a melhor solução.
-              <br>
-                👉 A avaliação é gratuita.
-              </p>
-            </div>
-          <br>
-          <br>
-          <br>
-        </section>
+                  Esses defeitos são mais frequentes em computadores com mais tempo de uso e nós temos a solução para eles.
 
-        <!-- Seção Formatação -->
-        <section id="formatacao-nav">
-          <h2 class="titulo-servico">💾 Formatação</h2>
-          <p class="subtitulo-servico">Seu computador está precisando de formatação?</p>
-            <div class="texto-servico">
-              <p>
-                Com o tempo, é normal que o computador acumule arquivos desnecessários, conflitos de software e desgaste do sistema operacional. Isso pode resultar em lentidão, demora para abrir programas e perda de desempenho no dia a dia.
+                  Recomendamos que traga seu computador e/ou monitor para realizarmos uma análise completa. Assim, conseguimos identificar o problema com precisão e indicar a melhor solução.
+                <br>
+                  👉 A avaliação é gratuita.
+                </p>
+              </div>
+          </section>
 
-                A formatação pode ser a solução ideal para restaurar o desempenho do seu computador.
+          <!-- Seção Formatação -->
+          <section id="formatacao-nav" class="service-card">
+            <h2 class="titulo-servico">💾 Formatação</h2>
+            <p class="subtitulo-servico">Seu computador está precisando de formatação?</p>
+              <div class="texto-servico">
+                <p>
+                  Com o tempo, é normal que o computador acumule arquivos desnecessários, conflitos de software e desgaste do sistema operacional. Isso pode resultar em lentidão, demora para abrir programas e perda de desempenho no dia a dia.
 
-                ⚠️ Antes de realizar o procedimento, é importante lembrar que todos os dados serão apagados. Recomendamos fazer backup dos arquivos importantes, podemos auxiliar nesse processo caso necessário.
+                  A formatação pode ser a solução ideal para restaurar o desempenho do seu computador.
 
-                Traga seu computador para que possamos avaliá-lo. Antes de qualquer serviço, realizamos testes para confirmar se a formatação é realmente necessária.
-              <br>
-                👉 A avaliação é gratuita.
-              </p>
-            </div>
-          <br>
-          <br>
-          <br>
-        </section>
+                  ⚠️ Antes de realizar o procedimento, é importante lembrar que todos os dados serão apagados. Recomendamos fazer backup dos arquivos importantes, podemos auxiliar nesse processo caso necessário.
 
-        <!--Seção Lentidão -->
-        <section id="lentidao-nav">
-          <h2 class="titulo-servico">🐢 Lentidão</h2>
-          <p class="subtitulo-servico">Seu computador está lento?</p>
-            <div class="texto-servico">
-              <p>
-                Com o uso contínuo, é comum que computadores apresentem queda de desempenho. Um dos principais motivos costuma ser a unidade de armazenamento (HD, SSD, M.2 SATA ou NVMe), que pode estar com falhas, sujeira ou até mesmo cheia.
+                  Traga seu computador para que possamos avaliá-lo. Antes de qualquer serviço, realizamos testes para confirmar se a formatação é realmente necessária.
+                <br>
+                  👉 A avaliação é gratuita.
+                </p>
+              </div>
+          </section>
 
-                Esse tipo de problema é bastante comum e tem solução.
+          <!--Seção Lentidão -->
+          <section id="lentidao-nav" class="service-card">
+            <h2 class="titulo-servico">🐢 Lentidão</h2>
+            <p class="subtitulo-servico">Seu computador está lento?</p>
+              <div class="texto-servico">
+                <p>
+                  Com o uso contínuo, é comum que computadores apresentem queda de desempenho. Um dos principais motivos costuma ser a unidade de armazenamento (HD, SSD, M.2 SATA ou NVMe), que pode estar com falhas, sujeira ou até mesmo cheia.
 
-                Nós analisamos o seu equipamento e apresentamos as melhores opções para resolver a lentidão, sempre respeitando sua necessidade e orçamento.
+                  Esse tipo de problema é bastante comum e tem solução.
 
-                Traga seu computador para realizarmos os testes e identificar a causa do problema.
-              <br>
-                👉 A avaliação é gratuita.
-              </p>
-            </div>
-          <br>
-          <br>
-          <br>
-        </section>
+                  Nós analisamos o seu equipamento e apresentamos as melhores opções para resolver a lentidão, sempre respeitando sua necessidade e orçamento.
 
-        <!-- Seção Melhoria -->
-        <section id="melhoria-nav">
-          <h2 class="titulo-servico">⚙️ Melhoria (Upgrade)</h2>
-          <p class="subtitulo-servico">Seu computador precisa de mais desempenho?</p>
-            <div class="texto-servico">
-              <p>
-                Se você sente que seu computador já não acompanha suas necessidades, seja para abrir vários programas, navegar com mais abas ou rodar aplicações mais pesadas, talvez seja o momento de um upgrade.
+                  Traga seu computador para realizarmos os testes e identificar a causa do problema.
+                <br>
+                  👉 A avaliação é gratuita.
+                </p>
+              </div>
+          </section>
 
-                Podemos indicar as melhores melhorias para o seu caso, aumentando o desempenho e prolongando a vida útil do seu equipamento.
+          <!-- Seção Melhoria -->
+          <section id="melhoria-nav" class="service-card">
+            <h2 class="titulo-servico">⚙️ Melhoria (Upgrade)</h2>
+            <p class="subtitulo-servico">Seu computador precisa de mais desempenho?</p>
+              <div class="texto-servico">
+                <p>
+                  Se você sente que seu computador já não acompanha suas necessidades, seja para abrir vários programas, navegar com mais abas ou rodar aplicações mais pesadas, talvez seja o momento de um upgrade.
 
-                Traga seu computador para avaliarmos as possibilidades.
-              <br>
-                👉 A avaliação é gratuita.
-              </p>
-            </div>
-          <br>
-          <br>
-          <br>
-        </section>
+                  Podemos indicar as melhores melhorias para o seu caso, aumentando o desempenho e prolongando a vida útil do seu equipamento.
 
-        <!-- Seção Montagem -->
-        <section id="montagem-nav">
-          <h2 class="titulo-servico">🛠️ Montagem</h2>
-          <p class="subtitulo-servico">Quer montar um computador ideal para você?</p>
-            <div class="texto-servico">
-              <p>
-                Seja para trabalhar, estudar ou uso geral, podemos te ajudar a montar um computador sob medida, equilibrando desempenho, custo-benefício e durabilidade.
+                  Traga seu computador para avaliarmos as possibilidades.
+                <br>
+                  👉 A avaliação é gratuita.
+                </p>
+              </div>
+          </section>
 
-                Também realizamos upgrades em máquinas já existentes, adaptando com novas peças conforme sua necessidade.
+          <!-- Seção Montagem -->
+          <section id="montagem-nav" class="service-card">
+            <h2 class="titulo-servico">🛠️ Montagem</h2>
+            <p class="subtitulo-servico">Quer montar um computador ideal para você?</p>
+              <div class="texto-servico">
+                <p>
+                  Seja para trabalhar, estudar ou uso geral, podemos te ajudar a montar um computador sob medida, equilibrando desempenho, custo-benefício e durabilidade.
 
-                Traga seu equipamento (ou sua ideia) para analisarmos juntos e indicarmos a melhor solução.
-              <br>
-                👉 A avaliação é gratuita.
-              </p>
-            </div>
-          <br>
-          <br>
-        </section>
+                  Também realizamos upgrades em máquinas já existentes, adaptando com novas peças conforme sua necessidade.
 
-      </main>
+                  Traga seu equipamento (ou sua ideia) para analisarmos juntos e indicarmos a melhor solução.
+                <br>
+                  👉 A avaliação é gratuita.
+                </p>
+              </div>
+          </section>
+
+        </main>
+        <!-- /main -->
+
+      </div>
+      <!-- /page-wrapper -->
 
       <!-- Rodapé -->
       <footer id="footer" class="position-relative"> <!-- footer text-light -->
@@ -256,7 +242,9 @@
         </p>
 
         <!-- Botão à direita -->
-        <a href="#topo-da-pagina" id="btnSubir" class="btn btn-dark btn-baixo btn-subir">Subir ↑</a>
+        <div class="btn-cor">
+          <a href="#topo-da-pagina" id="btnSubir" class="btn-formatacao btn-baixo btn-subir">Subir ↑</a>
+        </div>
         
       </div>
 

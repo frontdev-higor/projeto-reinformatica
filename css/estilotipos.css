@@ -19,6 +19,18 @@ body {
   transition: opacity 0.3s ease;
 }
 
+.dark-mode body {
+  background: var(--bg-page);
+}
+
+.pagina-servico {
+  background: var(--bg-servico);
+}
+
+.darkmode .pagina-servico {
+  background: var(--bg-servico);
+}
+
 body.loaded {
   opacity: 1;
 }
@@ -33,8 +45,6 @@ main {
 
 footer {
   margin-top: 0;
-  /* Tentativa de ocupar os botões do mobile com o footer  */
-  padding-bottom: env(safe-area-inset-bottom);
 }
 /* /Mantém o footer colado em baixo */
 
@@ -100,11 +110,7 @@ button:focus-visible {
   /*transition: scale(1.08);*/
 }
 
-/* Evitar flash branco */
-.dark-mode body {
-  background: #121212;
-  color: #fff;
-}
+
 
 /* ========================== BARRA DE NAVEGAÇÃO ========================== */
 
@@ -260,6 +266,46 @@ header .navbar {
 	font-size: clamp(0.9em, calc(0.75em + 0.8vw), 1.3em);
 	text-align: justify;
   color: var(--text-service-content);
+}
+
+.service-card {
+  background-color: var(--service-card);
+  margin-bottom: 30px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-left: -10px;
+}
+
+.btn-subir {
+  position: fixed;
+  right: 24px;
+  bottom: 60px;
+  top: auto;
+  transform: none;
+}
+
+.btn-cor a {
+  color: var(--service-btn-text);
+  background-color: var(--service-btn-bg);
+}
+
+.btn-cor a:hover {
+  color: var(--service-btn-text-hover);
+  background-color: var(--service-btn-bg-hover);
+}
+
+.btn-cor a:active {
+  color: var(--service-btn-text-active);
+  background-color: var(--service-btn-bg-active);
+}
+
+.btn-formatacao {
+  padding: 6px 7px;
+  border-radius: 5px;
+}
+
+.main-bottom {
+  margin-bottom: 10px;
 }
 
 /* =============================== COMPRAS =============================== */
@@ -561,28 +607,21 @@ header .navbar {
 /* Variáveis */
 :root {
   --sidebar-w: 230px;
-  --navbar-h: 60px;
+  --navbar-h: 0px;
   --gap: 15px;
-}
-
-/* Conteúdo mais agradável */
-#content {
-  margin-left: calc(var(--sidebar-w) + var(--gap)); /* var(--sidebar-w) */
-  padding: 20px;
- /* background: #fff; /* fundo suave */
- /* border-left: 1px solid #ccc; */
 }
 
 /* ============================
    SIDEBAR 
 ===============================*/
 #sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: sticky;
+  top: var(--navbar-h);
   width: var(--sidebar-w);
-  height: 100vh;
+  min-height: calc(100vh - var(--navbar-h));
+  overflow-y: auto;
   background: var(--gradient);
+  left: 0;
   padding: 5px 10px;
   z-index: 1000;
 }
@@ -606,21 +645,19 @@ header .navbar {
 
 /* Conteúdo da sidebar (onde os botões realmente ficam) */
 #sidebar .sidebar-inner {
-	margin-top: 0;
-	height: 100%;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  justify-content: flex-start;
+	margin-top: 10px;
+	height: 100%;*/
 }
 
-/* Quando a navbar existir → empurra os botões para baixo */
-body.navbar-presente #sidebar .sidebar-inner {
-  margin-top: var(--navbar-h);
-
-  /* Recalcula o centro descontando a navbar */
-  height: calc(100% - var(--navbar-h));
+#page-wrapper {
+  display: flex;
+  gap: var(--gap);
+  align-items: flex-start;
 }
-
 
 /* ============================
    FOOTER AJUSTADO
@@ -638,12 +675,9 @@ body.navbar-presente #sidebar .sidebar-inner {
   z-index: 1100;
 }
 
-/* ===================================
-    NÃO SOBRAR ESPAÇO EM TELAS MÉDIAS
-======================================*/
-
 #content {
-  margin-left: calc(var(--sidebar-w) + var(--gap));
+  flex: 1;
+  padding: 20px;
 }
 
 /* ============================
@@ -709,15 +743,6 @@ section {
   color: var(--link-hover);
 }
 
-.btn-subir {
-  position: fixed;
-  right: 16px;
-  bottom: 60px;
-  top: auto;
-  transform: none;
-}
-
-
 /* ============================== DARK MODE =============================== */
 
 /* ============================== MODO CLARO ============================== */
@@ -727,13 +752,14 @@ section {
   /* ================= BODY ================= */
 
   --bg-page: #f5f7fa;
+  --bg-servico: #d5e6df;
   --gradient: linear-gradient(
     270deg, 
     #2d3436 68%,
     #6d9887 150%
   );
   --gradient-three: linear-gradient(
-    90deg, 
+    270deg, 
     #2d3436 70%,
     #6d9887 150%
   );
@@ -751,7 +777,7 @@ section {
   --text-re: #f5f7fa;
 
   --text-btn-nav-drop: #121212;
-  --btn-bg-nav: #f5f7fa;
+  --btn-bg-nav: #fff;
   --text-btn-hover-nav-drop: #f5f7fa;
   --btn-bg-hover-nav: #383e45;
   --text-btn-active-nav-drop: #fff;
@@ -805,6 +831,15 @@ section {
   --text-service-title: #121212;
   --text-service-subtitle: #121212;
   --text-service-content: #121212;
+  --service-card: #f5f7fa;
+
+  /* Botão Subir */
+  --service-btn-text: #f5f7fa;
+  --service-btn-bg: #383e45;
+  --service-btn-text-hover: #f5f7fa;
+  --service-btn-bg-hover: #212529;
+  --service-btn-text-active: #f5f7fa;
+  --service-btn-bg-active: #121212;
 
   /* ================ ITENS ================= */
 
@@ -816,7 +851,7 @@ section {
   --bg-items-btn: #fff;
   --text-items-btn-hover: #f5f7fa;
   --bg-items-btn-hover: #212529;
-  --text-items-btn-active: #f5f7fa;
+  --text-items-btn-active: #121212;
   --bg-items-btn-active: #121212;
 
   --img-border: #212529;
@@ -854,20 +889,21 @@ section {
   /* ================= BODY ================= */
 
   --bg-page: #121212;
+  --bg-servico: #121212;
   --gradient: linear-gradient(
     270deg, 
     #0f2027 68%,
     #5a8f7b 150%
   );
   --gradient-three: linear-gradient(
-    90deg, 
+    270deg, 
     #0f2027 70%,
     #5a8f7b 150%
   );
 
   /* Botão Dark Mode */
   --bg-darkmode-btn: #f5f7fa;
-  --btn-bg-darkmode-hover: #EBE6E6;
+  --btn-bg-darkmode-hover: #fff;
 
   /* ================ NAVBAR ================ */
 
@@ -878,7 +914,7 @@ section {
   --text-re: #f5f7fa;
 
   --text-btn-nav-drop: #f5f7fa;
-  --btn-bg-nav: #121212;
+  --btn-bg-nav: #212529;
   --text-btn-hover-nav-drop: #121212;
   --btn-bg-hover-nav: #cfd2d4;
   --text-btn-active-nav-drop: #121212;
@@ -894,16 +930,16 @@ section {
   --bg-btn-top: #212529;
   --text-btn-top-hover: #121212;
   --bg-btn-top-hover: #f5f7fa;
-  --text-btn-top-active: #121212; /* #212529 */
-  --bg-btn-top-active: #fff; /* #f5f7fa */
+  --text-btn-top-active: #121212;
+  --bg-btn-top-active: #fff;
 
   /* Dropdown Opções */
   --text-btn-dropdown: #f5f7fa;
   --bg-btn-dropdown: #212529;
   --text-btn-dropdown-hover: #121212;
   --bg-btn-dropdown-hover: #cfd2d4;
-  --text-btn-dropdown-active: #121212; /* #121212 */
-  --bg-btn-dropdown-active: #fff; /* #f5f7fa */
+  --text-btn-dropdown-active: #121212;
+  --bg-btn-dropdown-active: #fff;
 
   /* Abas */
   --tab-text: #f5f7fa;
@@ -924,8 +960,8 @@ section {
   --bg-btn: #212529;
   --text-btn-hover: #121212;
   --bg-btn-hover: #cfd2d4;
-  --text-btn-active: #f5f7fa; /* #121212 */
-  --bg-btn-active: #3a3a3a; /* #f5f7fa */
+  --text-btn-active: #f5f7fa;
+  --bg-btn-active: #3a3a3a;
   --btn-border: #f5f7fa;
 
   /* =============== SERVICO ================ */
@@ -933,6 +969,15 @@ section {
   --text-service-title: #f5f7fa;
   --text-service-subtitle: #f5f7fa;
   --text-service-content: #f5f7fa;
+  --service-card: #212529;
+
+  /* Botão Subir */
+  --service-btn-text: #212529;
+  --service-btn-bg: #cfd2d4;
+  --service-btn-text-hover: #212529;
+  --service-btn-bg-hover: #f5f7fa;
+  --service-btn-text-active: #212529;
+  --service-btn-bg-active: #fff;
 
   /* ================ ITENS ================= */
 
@@ -986,6 +1031,21 @@ section {
 	.nav-text .dropdown-item {
 		font-size: 1.05em;
 	}
+
+
+
+  .service-card {
+    background-color: var(--service-card);
+    border-radius: 10px;
+    margin-bottom: 38px;
+    margin-left: -8px;
+    margin-right: 4px;
+    padding: 30px;
+  }
+
+  .main-bottom {
+    margin-bottom: 9px;
+  }
 
 
 
@@ -1057,12 +1117,8 @@ section {
 
 
 	.btn-baixo {
-		font-size: 1em;
+		font-size: 1.05em;
 	}
-
-  #footer {
-    margin-top: 10px;
-  }
 
 
 	.rodape-formatacao {
@@ -1093,6 +1149,21 @@ section {
 	.nav-text .dropdown-item {
 		font-size: 1em;
 	}
+
+
+
+  .service-card {
+    background-color: var(--service-card);
+    border-radius: 10px;
+    margin-bottom: 33px;
+    margin-left: -8px;
+    margin-right: 4px;
+    padding: 25px;
+  }
+
+  .main-bottom {
+    margin-bottom: 12px;
+  }
 
 
 
@@ -1165,7 +1236,7 @@ section {
 
 
 	.btn-baixo {
-		font-size: 0.95em;
+		font-size: 1.03em;
 	}
 
 
@@ -1178,10 +1249,6 @@ section {
 	.logo-formatacao {
 		font-size: 1.25em;
 	}
-
-  #footer {
-    margin-top: 15px;
-  }
 
   .btn-darkmode {
     top: 7px;
@@ -1205,6 +1272,21 @@ section {
   .centralizar {
     min-height: 80vh;
     align-items: center;
+  }
+
+
+
+  .service-card {
+    background-color: var(--service-card);
+    border-radius: 10px;
+    margin-bottom: 28px;
+    margin-left: 6px;
+    margin-right: 4px;
+    padding: 25px;
+  }
+
+  .main-bottom {
+    margin-bottom: 17px;
   }
 
 
@@ -1287,7 +1369,7 @@ section {
 
 
 	.btn-baixo {
-		font-size: 0.9em;
+		font-size: 1em;
 	}
 
 
@@ -1300,10 +1382,6 @@ section {
 	.logo-formatacao {
 		font-size: 1.2em;
 	}
-
-  #footer {
-    margin-top: 20px;
-  }
 
   .btn-darkmode {
     top: 7px;
@@ -1329,6 +1407,21 @@ section {
 		transform: none;
 		text-align: center;
 	}
+
+
+
+  .service-card {
+    background-color: var(--service-card);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 6px;
+    margin-right: 4px;
+    padding: 25px;
+  }
+
+  .main-bottom {
+    margin-bottom: 23px;
+  }
 
 	
 
@@ -1404,10 +1497,6 @@ section {
 		font-size: 1.15em;
 	}
 
-  #footer {
-    margin-top: 30px;
-  }
-
   .btn-darkmode {
     position: static;
     width: 100%;
@@ -1432,6 +1521,21 @@ section {
 		transform: none;
 		text-align: center;
 	}
+
+
+
+  .service-card {
+    background-color: var(--service-card);
+    border-radius: 10px;
+    margin-bottom: 14px;
+    margin-left: 6px;
+    margin-right: 4px;
+    padding: 20px;
+  }
+
+  .main-bottom {
+    margin-bottom: 27px;
+  }
 
 
 
@@ -1515,10 +1619,6 @@ section {
 	.logo-formatacao {
 		font-size: 1.15em;
 	}
-
-  #footer {
-    margin-top: 35px;
-  }
 
   .btn-darkmode {
     position: static;

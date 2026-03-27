@@ -57,10 +57,10 @@ const produtos = {
       id: 0,
       categoria: "allinone",
       titulo: "All-In-One Dell",
-      modelo: "Optiplex 3011 AIO",
+      modelo: "OptiPlex 3011 AIO",
       specs1: "i5 3470s 8 Ram 256 SSD",
       specs2: "6 Usb's e Serial",
-      preco: "R$ X.X00,00",
+      preco: "R$ 1.000,00",
       imagens: [
         "imagens/all-in-one/dell/i5-3470s/i5-3470s-frente.webp",
         "imagens/all-in-one/dell/i5-3470s/i5-3470s-fundo.webp"
@@ -74,7 +74,7 @@ const produtos = {
       modelo: "Inspiron 23",
       specs1: "i5 4400s 8 Ram 128 SSD",
       specs2: "7 Usb's e 2 HDMI's",
-      preco: "R$ X.X00,00",
+      preco: "R$ 1.200,00",
       imagens: [
         "imagens/all-in-one/dell/i5-4400s/i5-4400s-frente.webp",
         "imagens/all-in-one/dell/i5-4400s/i5-4400s-fundo.webp"
@@ -88,7 +88,7 @@ const produtos = {
       modelo: "Inspiron 20",
       specs1: "i5 6200s 8 Ram 256 SSD",
       specs2: "4 Usb's e HDMI",
-      preco: "R$ X.X00,00",
+      preco: "R$ 1.600,00",
       imagens: [
         "imagens/all-in-one/dell/i5-6200s/i5-6200s-frente.webp",
         "imagens/all-in-one/dell/i5-6200s/i5-6200s-fundo.webp"
@@ -133,7 +133,7 @@ const produtos = {
       id: 100, /* [i3-6100t] */
       categoria: "mini",
       titulo: "Desktop Dell Mini",
-      modelo: "Optiplex 3040",
+      modelo: "OptiPlex 3040",
       specs1: "i3 6100t 8 Ram 128 SSD",
       specs2: "6 Usb's, HDMI e DisplayPort",
       preco: "R$ 1.000,00",
@@ -148,7 +148,7 @@ const produtos = {
       id: 101, /* [i5-6500t] */
       categoria: "mini",
       titulo: "Desktop Dell Mini",
-      modelo: "Optiplex 3040",
+      modelo: "OptiPlex 3040",
       specs1: "i5 6500t 8 Ram 256 SSD",
       specs2: "6 Usb's, HDMI e DisplayPort",
       preco: "R$ 1.200,00",
@@ -271,7 +271,7 @@ const produtos = {
       modelo: "OptiPlex 3070",
       specs1: "i7 9700t 8 Ram 256 Nvme",
       specs2: "6 Usb's, HDMI e DisplayPort",
-      preco: "R$ X.X00,00",
+      preco: "R$ 2.000,00",
       imagens: [
         "imagens/mini/dell/i5-9500t/i5-9500t-frente.webp",
         "imagens/mini/dell/i5-9500t/i5-9500t-perfil.webp",
@@ -298,7 +298,7 @@ const produtos = {
       id: 111, /* [i5-10500t] */
       categoria: "mini",
       titulo: "Desktop Dell Mini",
-      modelo: "Optiplex 3090",
+      modelo: "OptiPlex 3090",
       specs1: "i5 10500t 8 Ram 256 SSD",
       specs2: "5 Usb's, HDMI e 2 DisplayPort's",
       preco: "R$ 2.000,00",
@@ -346,7 +346,7 @@ const produtos = {
       modelo: "OptiPlex",
       specs1: "i3 13100t 8 Ram 256 Nvme",
       specs2: "VGA, HDMI e DisplayPort",
-      preco: "R$ X.X00,00",
+      preco: "R$ 2.300,00",
       imagens: [
         "imagens/mini/dell/i7-13700t/i7-13700t-frente.webp",
         "imagens/mini/dell/i7-13700t/i7-13700t-perfil.webp",
@@ -376,7 +376,7 @@ const produtos = {
       modelo: "OptiPlex",
       specs1: "i7 13700t 16 Ram 256 Nvme",
       specs2: "VGA, HDMI e DisplayPort",
-      preco: "R$ X.X00,00",
+      preco: "R$ 3.800,00",
       imagens: [
         "imagens/mini/dell/i7-13700t/i7-13700t-frente.webp",
         "imagens/mini/dell/i7-13700t/i7-13700t-perfil.webp",
@@ -425,7 +425,7 @@ const produtos = {
       modelo: "ThinkCentre",
       specs1: "i7 4565t 8 Ram 128 SSD",
       specs2: "VGA, HDMI e DisplayPort",
-      preco: "R$ X.X00,00",
+      preco: "R$ 1.000,00",
       imagens: [
         "imagens/mini/lenovo/i7-4565t/i7-4565t-frente.webp",
         "imagens/mini/lenovo/i7-4565t/i7-4565t-perfil.webp",
@@ -470,7 +470,7 @@ const produtos = {
       modelo: "ThinkCentre",
       specs1: "i7 6700t 8 Ram 128 SSD",
       specs2: "6 Usb's, VGA e 2 DisplayPort's",
-      preco: "R$ X.X00,00",
+      preco: "R$ 1.800,00",
       imagens: [
         "imagens/mini/lenovo/i3-6500t/i3-6500t-frente.webp",
         "imagens/mini/lenovo/i3-6500t/i3-6500t-perfil.webp",
@@ -560,7 +560,7 @@ const produtos = {
       modelo: "ThinkCentre",
       specs1: "i7 12700t 8 Ram 256 SSD",
       specs2: "HDMI, VGA e DisplayPort",
-      preco: "R$ X.X00,00",
+      preco: "R$ 3.300,00",
       imagens: [
         "imagens/mini/lenovo/i5-12500t/i5-12500t-frente.webp",
         "imagens/mini/lenovo/i5-12500t/i5-12500t-perfil.webp",
@@ -575,7 +575,7 @@ const produtos = {
       modelo: "ThinkCentre",
       specs1: "i5 13500t 8 Ram 256 SSD",
       specs2: "HDMI, VGA e DisplayPort",
-      preco: "R$ 2.700,00",
+      preco: "R$ 2.900,00",
       imagens: [
         "imagens/mini/lenovo/i5-12500t/i5-12500t-frente.webp",
         "imagens/mini/lenovo/i5-12500t/i5-12500t-perfil.webp",
@@ -639,7 +639,7 @@ const produtos = {
       modelo: "Positivo",
       specs1: "i5 7600t 8 Ram 256 SSD",
       specs2: "VGA, HDMI e DisplayPort",
-      preco: "R$ 1.200,00",
+      preco: "R$ 1.100,00",
       imagens: [
         "imagens/mini/positivo/i5-7600t/i5-7600t-frente.webp",
         "imagens/mini/positivo/i5-7600t/i5-7600t-perfil.webp",
@@ -714,7 +714,7 @@ const produtos = {
       modelo: "Positivo",
       specs1: "i3 12100t 8 Ram 256 Nvme",
       specs2: "VGA, HDMI e 2 DisplayPort's",
-      preco: "R$ 1.700,00",
+      preco: "R$ 2.100,00",
       imagens: [
         "imagens/mini/positivo/i5-13400t/i5-13400t-frente.webp",
         "imagens/mini/positivo/i5-13400t/i5-13400t-perfil.webp",
@@ -729,7 +729,7 @@ const produtos = {
       modelo: "Positivo",
       specs1: "i3 13100t 8 Ram 256 Nvme",
       specs2: "VGA, HDMI e 2 DisplayPort's",
-      preco: "R$ X.X00,00",
+      preco: "R$ 2.100,00",
       imagens: [
         "imagens/mini/positivo/i5-13400t/i5-13400t-frente.webp",
         "imagens/mini/positivo/i5-13400t/i5-13400t-perfil.webp",
@@ -744,7 +744,7 @@ const produtos = {
       modelo: "Positivo",
       specs1: "i5 13400t 8 Ram 128 Nvme",
       specs2: "VGA, HDMI e 2 DisplayPort's",
-      preco: "R$ 2.700,00",
+      preco: "R$ 3.000,00",
       imagens: [
         "imagens/mini/positivo/i5-13400t/i5-13400t-frente.webp",
         "imagens/mini/positivo/i5-13400t/i5-13400t-perfil.webp",
@@ -763,7 +763,7 @@ const produtos = {
       modelo: "Hewlett-Packard",
       specs1: "i5 4210u 8 Ram 128 SSD",
       specs2: "6 Usb's, VGA e DisplayPort",
-      preco: "R$ X.X00,00",
+      preco: "R$ 800,00",
       imagens: [
         "imagens/mini/hp/i5-4210u/i5-4210u-frente.webp",
         "imagens/mini/hp/i5-4210u/i5-4210u-perfil.webp",
@@ -778,7 +778,7 @@ const produtos = {
       modelo: "EliteDesk",
       specs1: "i7 4785t 8 Ram 1tb HD",
       specs2: "6 Usb's, VGA e 2 DisplayPort's",
-      preco: "R$ X.X00,00",
+      preco: "R$ 900,00",
       imagens: [
         "imagens/mini/hp/i7-4785t/i7-4785t-frente.webp",
         "imagens/mini/hp/i7-4785t/i7-4785t-perfil.webp",
@@ -793,7 +793,7 @@ const produtos = {
       modelo: "ProDesk",
       specs1: "i5 7500t 8 Ram 128 SSD",
       specs2: "6 Usb's, VGA e DisplayPort",
-      preco: "R$ 1.200,00",
+      preco: "R$ 1.300,00",
       imagens: [
         "imagens/mini/hp/i5-7500t/i5-7500t-frente.webp",
         "imagens/mini/hp/i5-7500t/i5-7500t-perfil.webp",
@@ -853,7 +853,7 @@ const produtos = {
       modelo: "ProDesk",
       specs1: "i7 12700t 16 Ram 256 Nvme",
       specs2: "5 Usb's, HDMI e 2 DisplayPort's",
-      preco: "R$ X.X00,00",
+      preco: "R$ 3.500,00",
       imagens: [
         "imagens/mini/hp/i7-12700t/i7-12700t-frente.webp",
         "imagens/mini/hp/i7-12700t/i7-12700t-perfil.webp",
@@ -868,7 +868,7 @@ const produtos = {
       modelo: "ProDesk",
       specs1: "i5 13500t 8 Ram 256 Nvme",
       specs2: "HDMI, VGA e DisplayPort",
-      preco: "R$ 2.700,00",
+      preco: "R$ 2.900,00",
       imagens: [
         "imagens/mini/hp/i5-10500t/i5-10500t-frente.webp",
         "imagens/mini/hp/i5-10500t/i5-10500t-perfil.webp",
@@ -1049,7 +1049,7 @@ const produtos = {
       modelo: "OptiPlex 7070",
       specs1: "i7 9700 8 Ram 256 SSD",
       specs2: "9 Usb's, Serial e 2 DisplayPort's",
-      preco: "R$ X.X00,00",
+      preco: "R$ 2.000,00",
       imagens: [
         "imagens/slim/dell/i7-9700/i7-9700-frente.webp",
         "imagens/slim/dell/i7-9700/i7-9700-fundo.webp"
@@ -1091,7 +1091,7 @@ const produtos = {
       modelo: "OptiPlex 3080",
       specs1: "i7 10700 8 Ram 256 SSD",
       specs2: "8 Usb's, 2 HDMI's e DisplayPort",
-      preco: "R$ X.X00,00",
+      preco: "R$ 2.500,00",
       imagens: [
         "imagens/slim/dell/i3-10100/i3-10100-frente.webp",
         "imagens/slim/dell/i3-10100/i3-10100-fundo.webp"
@@ -1119,7 +1119,7 @@ const produtos = {
       modelo: "OptiPlex",
       specs1: "i5 14500 16 Ram 512 Nvme",
       specs2: "9 Usb's, HDMI e 3 DisplayPort's",
-      preco: "R$ X.X00,00",
+      preco: "R$ 4.200,00",
       imagens: [
         "imagens/slim/dell/i5-14500/i5-14500-frente.webp",
         "imagens/slim/dell/i5-14500/i5-14500-fundo.webp"
@@ -1235,7 +1235,7 @@ const produtos = {
       modelo: "ThinkCentre",
       specs1: "i7 8700 8 Ram 256 SSD",
       specs2: "8 Usb's, VGA e 2 DisplayPort's",
-      preco: "R$ 1.700,00",
+      preco: "R$ 1.800,00",
       imagens: [
         "imagens/slim/lenovo/i5-8500/i5-8500-frente.webp",
         "imagens/slim/lenovo/i5-8500/i5-8500-fundo.webp"
@@ -1249,7 +1249,7 @@ const produtos = {
       modelo: "ThinkCentre",
       specs1: "i3 12100 8 Ram 256 SSD",
       specs2: "HDMI, VGA e DisplayPort",
-      preco: "R$ X.X00,00",
+      preco: "R$ 2.200,00",
       imagens: [
         "imagens/slim/lenovo/i3-12100/i3-12100-frente.webp",
         "imagens/slim/lenovo/i3-12100/i3-12100-fundo.webp"
@@ -1263,7 +1263,7 @@ const produtos = {
       modelo: "ThinkCentre",
       specs1: "i3 13100 8 Ram 256 SSD",
       specs2: "HDMI, VGA e DisplayPort",
-      preco: "R$ X.X00,00",
+      preco: "R$ 2.200,00",
       imagens: [
         "imagens/slim/lenovo/i3-12100/i3-12100-frente.webp",
         "imagens/slim/lenovo/i3-12100/i3-12100-fundo.webp"
@@ -1924,7 +1924,7 @@ const produtos = {
       modelo: "Kingston",
       specs1: "22mm x 80mm",
       specs2: "1 TB",
-      preco: "R$ XXX,00",
+      preco: "R$ 700,00",
       imagens: [
         "imagens/armazenamento/nvme/1tb/kingston-1tb.webp"
       ]
@@ -2059,7 +2059,7 @@ const produtos = {
       modelo: "Original",
       specs1: "150cm",
       specs2: "",
-      preco: "R$ XX,00",
+      preco: "R$ 30,00",
       imagens: [
         "imagens/cabo/displayport/displayport.webp",
         "imagens/cabo/displayport/displayport-entrada.webp"
@@ -2077,7 +2077,7 @@ const produtos = {
       modelo: "Original",
       specs1: "200cm",
       specs2: "",
-      preco: "R$ XX,00",
+      preco: "R$ 20,00",
       imagens: [
         "imagens/cabo/dvi/dvi.webp",
         "imagens/cabo/dvi/dvi-entrada.webp"
@@ -2113,7 +2113,7 @@ const produtos = {
       modelo: "Original",
       specs1: "150cm",
       specs2: "",
-      preco: "R$ XX,00",
+      preco: "R$ 30,00",
       imagens: [
         "imagens/cabo/hdmi/hdmi.webp",
         "imagens/cabo/hdmi/hdmi-entrada.webp"
