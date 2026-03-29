@@ -13,7 +13,7 @@
       "tipo-computador": "menu-computador",
       "tipo-monitor": "menu-monitor",
       "tipo-componente": "menu-componente",
-      "tipo-outro": "menu-outro"
+      "tipo-equipamento": "menu-equipamento"
     };
 
     // 🔹 ativa o menu correto

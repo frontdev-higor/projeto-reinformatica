@@ -449,7 +449,7 @@ header .navbar {
 }
 
 .carousel-item img { /* Desaproxima as imagens do carousel */
-	transform: scale(0.68);
+	transform: scale(0.70);
 	transform-origin: center;
 }
 
@@ -530,7 +530,15 @@ header .navbar {
 
 .preco-novo { /* Preço */
 	padding: 4px;
-	color: #00FF00;
+	color: #0f0;
+	background: var(--bg-subtitulo-preco);
+	border: 1px solid rgba(147, 250, 165, 1); /* Verde */
+	border-radius: var(--radius-5px);
+}
+
+.preco-comum { /* Preço */
+	padding: 6px;
+	color: #0f0;
 	background: var(--bg-subtitulo-preco);
 	border: 1px solid rgba(147, 250, 165, 1); /* Verde */
 	border-radius: var(--radius-5px);
@@ -870,7 +878,7 @@ header .navbar {
   --text-re: #f5f7fa;
 
   --text-btn-nav-drop: #f5f7fa;
-  --btn-bg-nav: #121212;
+  --btn-bg-nav: #212529;
   --text-btn-hover-nav-drop: #121212;
   --btn-bg-hover-nav: #cfd2d4;
   --text-btn-active-nav-drop: #121212;

@@ -10,24 +10,21 @@
       {
         id: "itens.html?id=352",
         nome: "ThinkCentre Slim i7 6700",
-        antigo: "1.600,00",
-        novo: "R$ 1.400,00",
+        comum: "1.400,00",
         img: "imagens/slim/lenovo/i7-6700/i7-6700-frente.webp"
       },
 
       {
         id: "itens.html?id=552",
         nome: "ThinkPad T480 i5 8350u",
-        antigo: "1.800,00",
-        novo: "1.600,00",
+        comum: "1.600,00",
         img: "imagens/notebook/lenovo/i5-8350u/i5-8350u-frente.webp"
       },
 
       {
         id: "itens.html?id=152",
         nome: "ThinkCentre Mini i5 6500t",
-        antigo: "1.300,00",
-        novo: "R$ 1.100,00",
+        comum: "1.100,00",
         img: "imagens/mini/lenovo/i5-6500t/i5-6500t-frente.webp"
       },
 
@@ -37,26 +34,30 @@
 
       {
         id: "itens.html?id=151",
-        nome: "Lenovo Mini i3 6500t",
-        antigo: "1.200,00",
-        novo: "R$ 900,00",
+        nome: "ThinkCentre Mini i3 6500t",
+        comum: "900,00",
         img: "imagens/mini/lenovo/i3-6500t/i3-6500t-frente.webp"
       },
 
       {
         id: "itens.html?id=551",
         nome: "ThinkPad T470 i5 6300u",
-        antigo: "1.400,00",
-        novo: "1.200,00",
+        comum: "1.200,00",
         img: "imagens/notebook/lenovo/i5-6300u/i5-6300u-frente.webp"
       },
 
       {
         id: "itens.html?id=400",
         nome: "Positivo Master i5 7500",
-        antigo: "1.100,00",
-        novo: "R$ 850,00",
+        comum: "850,00",
         img: "imagens/slim/positivo/i5-7500/i5-7500-frente.webp"
+      },
+
+      {
+        id: "itens.html?id=830",
+        nome: "Monitor Positivo 18.5\"",
+        comum: "200,00",
+        img: "imagens/monitor/positivo/positivo-22/positivo-22-frente.webp"
       }
 
     ],
@@ -64,27 +65,24 @@
     "trabalho": [
 
       {
-        id: "",
-        nome: "OptiPlex 3060 i5 8500",
-        antigo: "1.800,00",
-        novo: "1.600,00",
-        img: "imagens/slim/dell/i5-8500/i5-8500-frente.webp"
+        id: "itens.html?id=1120",
+        nome: "Kit Tela Suporte e Mini",
+        comum: "1.450,00",
+        img: "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-direita.webp"
       },
 
       {
-        id: "",
-        nome: "OptiPlex 3060 i5 8500",
-        antigo: "1.800,00",
-        novo: "1.600,00",
-        img: "imagens/slim/dell/i5-8500/i5-8500-frente.webp"
+        id: "itens.html?id=1100",
+        nome: "Impressora Térmica Epson",
+        comum: "450,00",
+        img: "imagens/impressora/epson-termica/epson-frente.webp"
       },
 
       {
-        id: "",
-        nome: "OptiPlex 3060 i5 8500",
-        antigo: "1.800,00",
-        novo: "1.600,00",
-        img: "imagens/slim/dell/i5-8500/i5-8500-frente.webp"
+        id: "itens.html?id=800",
+        nome: "Monitor Dell 24\"",
+        comum: "550,00",
+        img: "imagens/monitor/dell/dell-24/dell-24-frente.webp"
       }
 
     ],
@@ -92,30 +90,39 @@
     "estudos": [
 
       {
-        id: "",
-        nome: "OptiPlex 3060 i5 8500",
-        antigo: "1.800,00",
-        novo: "1.600,00",
-        img: "imagens/slim/dell/i5-8500/i5-8500-frente.webp"
+        id: "itens.html?id=831",
+        nome: "Monitor Positivo 22\"",
+        comum: "300,00",
+        img: "imagens/monitor/positivo/positivo-22/positivo-22-frente.webp"
       },
 
       {
-        id: "",
-        nome: "OptiPlex 3060 i5 8500",
-        antigo: "1.800,00",
-        novo: "1.600,00",
-        img: "imagens/slim/dell/i5-8500/i5-8500-frente.webp"
+        id: "itens.html?id=450",
+        nome: "Desktop Effect i5 6500",
+        comum: "750,00",
+        img: "imagens/slim/effect/i5-6500/i5-6500-frente.webp"
       },
 
       {
-        id: "",
-        nome: "OptiPlex 3060 i5 8500",
-        antigo: "1.800,00",
-        novo: "1.600,00",
-        img: "imagens/slim/dell/i5-8500/i5-8500-frente.webp"
+        id: "itens.html?id=500",
+        nome: "Latitude 3480 i5 6200u",
+        comum: "1.600,00",
+        img: "imagens/notebook/dell/i5-6200u/i5-6200u-frente.webp"
       }
 
     ]
+
+    /* Exemplo de item em promoção
+
+      {
+        id: "itens.html?id=151",
+        nome: "Lenovo Mini i3 6500t",
+        antigo: "1.200,00",
+        novo: "900,00",
+        img: "imagens/mini/lenovo/i3-6500t/i3-6500t-frente.webp"
+      },
+
+    */
 
 };
 
@@ -132,7 +139,8 @@
     }
 
     const inner = document.querySelector("#carousel-dinamico .carousel-inner");
-    const indicators = document.querySelector("#carousel-dinamico .carousel-indicators");
+    const indicators = document.querySelector
+    ("#carousel-dinamico .carousel-indicators");
 
     if (!inner || !indicators) return;
 
@@ -166,8 +174,13 @@
           </div>
           <div class="caption-bottom">
             <p class="texto-imagem-baixo">
-              De <strong class="preco-atual">R$ ${produto.antigo}</strong>
-              por <strong class="preco-novo">R$ ${produto.novo}</strong>
+              ${
+                produto.antigo && produto.novo
+                  ? `De <strong class="preco-atual">R$ ${produto.antigo}</strong>
+                     por <strong class="preco-novo">R$ ${produto.novo}</strong>`
+                  : `Por <strong class="preco-comum">R$ ${produto.comum}</strong>
+                     à vista`
+              }
             </p>
           </div>
         </a>

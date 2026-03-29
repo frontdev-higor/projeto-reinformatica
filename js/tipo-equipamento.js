@@ -54,7 +54,7 @@
     const target = event.target?.getAttribute('data-bs-target');
     if (!target) return;
 
-    localStorage.setItem('ultimaAbaOutro', target);
+    localStorage.setItem('ultimaAbaEquipamento', target);
     syncDropdownWithTab(target);
 
     // 🔥 fallback seguro (mantém seu sistema estável)
@@ -86,7 +86,7 @@
       tabId = "#" + tabParam;
     } 
     else {
-      tabId = localStorage.getItem("ultimaAbaOutro") || DEFAULT_TAB;
+      tabId = localStorage.getItem("ultimaAbaEquipamento") || DEFAULT_TAB;
     }
 
     // 🔥 ATIVA A ABA (ESSENCIAL)
@@ -101,7 +101,7 @@
       syncDropdownWithTab(tabId);
 
       // salva corretamente
-      localStorage.setItem("ultimaAbaOutro", tabId);
+      localStorage.setItem("ultimaAbaEquipamento", tabId);
     }
 
   });

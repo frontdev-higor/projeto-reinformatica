@@ -19,6 +19,8 @@ const categorias = [
     "outro",
     "impressora",
     "kit",
+    "servidor",
+    "nobreak",
     "teste"
   ];
 
@@ -37,8 +39,10 @@ const mapaMenu = {
     periferico: "menu-componente",
     outro: "menu-componente",
     
-    impressora: "menu-outro",
-    kit: "menu-outro"
+    impressora: "menu-equipamento",
+    kit: "menu-equipamento",
+    servidor: "menu-equipamento",
+    nobreak: "menu-equipamento"
   };
 
 const produtos = {
@@ -1364,6 +1368,21 @@ const produtos = {
     },
 
     {
+      id: 508, /* i5-1021u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5400",
+      specs1: "i5 1021u 8 Ram 256 Nvme",
+      specs2: "???",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/notebook/dell/i5-1021u/i5-1021u-frente.webp",
+        "imagens/notebook/dell/i5-1021u/i5-1021u-perfil.webp",
+        "imagens/notebook/dell/i5-1021u/i5-1021u-cima.webp"
+        ]
+    },
+
+    {
       id: 503, /* i7-1165g7 */
       categoria: "notebook",
       titulo: "Notebook Dell",
@@ -1386,6 +1405,21 @@ const produtos = {
       specs1: "i5 1245u 16 Ram 256 Nvme",
       specs2: "2 Usb's e HDMI",
       preco: "R$ 2.800,00",
+      imagens: [
+        "imagens/notebook/dell/i5-1245u/i5-1245u-frente.webp",
+        "imagens/notebook/dell/i5-1245u/i5-1245u-perfil.webp",
+        "imagens/notebook/dell/i5-1245u/i5-1245u-cima.webp"
+        ]
+    },
+
+    {
+      id: 509, /* i7-1265u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5430",
+      specs1: "i7 1265u 8 Ram 256 Nvme",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ X.X00,00",
       imagens: [
         "imagens/notebook/dell/i5-1245u/i5-1245u-frente.webp",
         "imagens/notebook/dell/i5-1245u/i5-1245u-perfil.webp",
@@ -2310,10 +2344,10 @@ const produtos = {
   ],
 
   /* ==========================================================================
-   * Outro (ID'S: 1000 ~ 1099)
+   * Equipamentos (ID'S: 1000 ~ 1099)
    */
 
-  outro: [
+  equipamento: [
 
     /* =====================================
      * Cabo USB (ID: 1000)
@@ -2321,14 +2355,14 @@ const produtos = {
 
     {
       id: 1000, /* Cabo USB */
-      categoria: "outro",
+      categoria: "equipamento",
       titulo: "Cabo USB",
       modelo: "USB Cable",
       specs1: "USB 2.0",
       specs2: "Original, Novo",
       preco: "R$ 15,00",
       imagens: [
-        "imagens/outro/cabo-usb.webp"
+        "imagens/equipamento/cabo-usb.webp"
       ]
     },
 
@@ -2338,14 +2372,14 @@ const produtos = {
 
     {
       id: 1001, /* Case */
-      categoria: "outro",
+      categoria: "equipamento",
       titulo: "Case",
       modelo: "Infokit ECASE-300",
       specs1: "Sata III, USB 3.0",
       specs2: "Original, Novo",
       preco: "R$ 50,00",
       imagens: [
-        "imagens/outro/case.webp"
+        "imagens/equipamento/case.webp"
       ]
     },
 
@@ -2355,16 +2389,43 @@ const produtos = {
 
     {
       id: 1002, /* Pasta Térmica */
-      categoria: "outro",
+      categoria: "equipamento",
       titulo: "Pasta Térmica",
       modelo: "D-mix",
       specs1: "PS-05",
       specs2: "Original, Novo",
       preco: "R$ 25,00",
       imagens: [
-        "imagens/outro/pasta-termica.webp"
+        "imagens/equipamento/pasta-termica.webp"
       ]
-    }
+    },
+
+    {
+      id: 1003, /* Pasta Térmica Grande */
+      categoria: "equipamento",
+      titulo: "Pasta Térmica (G)",
+      modelo: "Thermal Grease",
+      specs1: "GD900",
+      specs2: "Original, Novo",
+      preco: "R$ 60,00",
+      imagens: [
+        "imagens/equipamento/pasta-termica-g-cima.webp",
+        "imagens/equipamento/pasta-termica-g-tamanho.webp"
+      ]
+    },
+
+    {
+      id: 1004, /* Pen Drive Wifi */
+      categoria: "equipamento",
+      titulo: "Pen Drive Wifi",
+      modelo: "Dual Band USB Adapter",
+      specs1: "600 Mbps 2g/5g",
+      specs2: "Original, Novo",
+      preco: "R$ 60,00",
+      imagens: [
+        "imagens/equipamento/pendrive-wifi.webp"
+      ]
+    },
 
   ],
 
@@ -2477,10 +2538,40 @@ const produtos = {
     },
 
     /* =====================================
-     * Outros (ID's: 1130 ~ 1149)
+     * Servidor (ID's: 1130 ~ 1149)
      */
 
-    /* IDS RESERVADOS */
+    {
+      id: 1130, /* Servidor Dell */
+      categoria: "servidor",
+      titulo: "Servidor Dell",
+      modelo: "Xeon W 2133",
+      specs1: "NVIDIA Quadro P2000",
+      specs2: "8 Ram 512 SSD",
+      preco: "R$ X.X00,00",
+      imagens: [
+        "imagens/servidor/xeon/servidor-xeon-frente.webp",
+        "imagens/servidor/xeon/servidor-xeon-fundo.webp"
+      ]
+    },
+
+    /* =====================================
+     * Nobreak (ID's: 1150 ~ 1169)
+     */
+
+    {
+      id: 1150, /* Nobreak PhD Online */
+      categoria: "nobreak",
+      titulo: "No Break",
+      modelo: "PhD Online",
+      specs1: "3 KVA",
+      specs2: "???",
+      preco: "R$ X.X00,00",
+      imagens: [
+        "imagens/nobreak/phd-online/phd-online-frente.webp",
+        "imagens/nobreak/phd-online/phd-online-fundo.webp"
+      ]
+    },
 
     /* =====================================
      * Teste (ID's: 2000 ~ 2010)
@@ -2594,7 +2685,14 @@ info.innerHTML = `
     <p class="texto-item">${produtoAtual.modelo}</p>
     <p class="texto-item">${produtoAtual.specs1}</p>
     <p class="texto-item-dois">${produtoAtual.specs2}</p>
-    <p class="texto-preco">${produtoAtual.preco}</p>
+    <p class="texto-preco">
+      ${
+        produtoAtual.antigo && produtoAtual.novo
+          ? `De <span class="preco-antigo">${produtoAtual.antigo}</span>
+             por <span class="preco-novo">${produtoAtual.novo}</span>`
+          : `${produtoAtual.comum || produtoAtual.preco}`
+      }
+    </p>
   </div>
 
   <a class="botao-link" href="contato.html">Quero negociar</a>
