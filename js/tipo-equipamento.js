@@ -71,7 +71,7 @@
   
   document.addEventListener("DOMContentLoaded", function () {
 
-    const DEFAULT_TAB = "#impressora";
+    const DEFAULT_TAB = "#kit-tsm";
 
     const params = new URLSearchParams(window.location.search);
     const tabParam = params.get("tab");

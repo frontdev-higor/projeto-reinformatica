@@ -2004,8 +2004,8 @@ const produtos = {
     {
       id: 920, /* M2 */
       categoria: "armazenamento",
-      titulo: "M.2 SATA",
-      modelo: "M2 Sata",
+      titulo: "M.2 Sata",
+      modelo: "SSD Technology Corporation",
       specs1: "22mm x 80mm",
       specs2: "128 GB",
       preco: "R$ 239,00",
@@ -2017,7 +2017,7 @@ const produtos = {
     {
       id: 921, /* Skhynix */
       categoria: "armazenamento",
-      titulo: "M.2 SATA",
+      titulo: "M.2 Sata",
       modelo: "Skhynix",
       specs1: "22mm x 30mm",
       specs2: "128 GB",
@@ -2034,7 +2034,7 @@ const produtos = {
     {
       id: 925, /* Lite-On */
       categoria: "armazenamento",
-      titulo: "M.2 SATA",
+      titulo: "M.2 Sata",
       modelo: "Lite-On",
       specs1: "22mm x 80mm",
       specs2: "256 GB",
