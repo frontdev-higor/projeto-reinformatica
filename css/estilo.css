@@ -1037,11 +1037,11 @@ header .navbar {
 	}
 
 	.caption-top { /* Eixo Y do texto-imagem-cima */
-		top: 30px;
+		top: 20px;
 	}
 
 	.caption-bottom { /* Eixo Y do texto-imagem-baixo */
-		bottom: 15px; 
+		bottom: 5px; 
 	}
 
 	.formatacao-container-primeiro { /* Cor do container das colunas */
@@ -1058,6 +1058,11 @@ header .navbar {
 		border-radius: 10px;
 	}
 
+
+	.carousel-item img { /* Desaproxima as imagens do carousel */
+		transform: scale(0.71);
+		transform-origin: center;
+	}
 
 	.carousel-indicators {
 		display: none;
@@ -1184,7 +1189,7 @@ header .navbar {
 	}
 
 	.caption-bottom { /* Eixo Y do texto-imagem-baixo */
-		bottom: 6px; 
+		bottom: 5px; 
 	}
 
 	.formatacao-container-primeiro { /* Cor do container das colunas */
@@ -1201,6 +1206,11 @@ header .navbar {
 		border-radius: 7px;
 	}
 
+
+	.carousel-item img { /* Desaproxima as imagens do carousel */
+		transform: scale(0.69);
+		transform-origin: center;
+	}
 
 	.carousel-indicators {
 		display: none;
@@ -1336,7 +1346,7 @@ header .navbar {
 	}
 
 	.caption-bottom { /* Eixo Y do texto-imagem-baixo */
-		bottom: 7px; 
+		bottom: 4px; 
 	}
 
 	.formatacao-container-primeiro { /* Cor do container das colunas */
@@ -1354,6 +1364,11 @@ header .navbar {
 		border-radius: 0 0 8px 8px;
 	}
 
+
+	.carousel-item img { /* Desaproxima as imagens do carousel */
+		transform: scale(0.67);
+		transform-origin: center;
+	}
 
 	.carousel-indicators {
 		display: none;
@@ -1471,11 +1486,11 @@ header .navbar {
 	}
 
 	.caption-top { /* Eixo Y do texto-imagem-cima */
-		top: 13px;
+		top: 17px;
 	}
 
 	.caption-bottom { /* Eixo Y do texto-imagem-baixo */
-		bottom: 13px; 
+		bottom: 17px; 
 	}
 
 	.arredondar-botao {
@@ -1499,6 +1514,11 @@ header .navbar {
 		margin-top: 10px;
 	}
 
+
+	.carousel-item img { /* Desaproxima as imagens do carousel */
+		transform: scale(0.70);
+		transform-origin: center;
+	}
 
 	.carousel-indicators {
 		display: none;
@@ -1612,7 +1632,7 @@ header .navbar {
 	}
 
 	.caption-top { /* Eixo Y do texto-imagem-cima */
-		top: 16px;
+		top: 14px;
 	}
 
 	.caption-bottom { /* Eixo Y do texto-imagem-baixo */
@@ -1642,6 +1662,11 @@ header .navbar {
 		margin-top: -1px;
 	}
 
+
+	.carousel-item img { /* Desaproxima as imagens do carousel */
+		transform: scale(0.68);
+		transform-origin: center;
+	}
 
 	.carousel-indicators {
 		display: none;

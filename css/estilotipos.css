@@ -598,6 +598,35 @@ header .navbar {
   border-left: none;
 }
 
+/* ======================= PRODUTO NÃO ENCONTRADO ======================== */
+
+.titulo-nao-encontrado {
+  font-size: 2.5em;
+  color: var(--title-404);
+}
+
+.texto-nao-encontrado {
+  font-size: 1.5em;
+  color: var(--text-404);
+}
+
+.botao-nao-encontrado a {
+  color: var(--btn-text-404);
+  background-color: var(--btn-bg-404);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.botao-nao-encontrado a:hover {
+  color: var(--btn-text-404-hover);
+  background-color: var(--btn-bg-404-hover);
+}
+
+.botao-nao-encontrado a:active {
+  color: var(--btn-text-404-active);
+  background-color: var(--btn-bg-404-active);
+}
+
 /* =============================== SIDEBAR =============================== */
 
 /* ================================== *
@@ -851,21 +880,28 @@ section {
   --bg-items-btn: #fff;
   --text-items-btn-hover: #f5f7fa;
   --bg-items-btn-hover: #212529;
-  --text-items-btn-active: #121212;
+  --text-items-btn-active: #f5f7fa;
   --bg-items-btn-active: #121212;
 
   --img-border: #212529;
   --text-border: #212529;
+
+  /* ======== PRODUTO NÃO ENCONTRADO ======== */
+
+  --title-404: #121212;
+  --text-404: #121212;
+  --btn-text-404: #f5f7fa;
+  --btn-bg-404: #383e45;
+  --btn-text-404-hover: #f5f7fa;
+  --btn-bg-404-hover: #212529;
+  --btn-text-404-active: #f5f7fa;
+  --btn-bg-404-active: #121212;
 
   /* ================ FOOTER ================ */
 
   --text-footer: #f5f7fa;
   --link-footer: #0d6efd;
   --link-hover: #0a58ca;
-
-  /* ======== PRODUTO NÃO ENCONTRADO ======== */
-
-  
 
   /* ================ TESTE ================ */
 
@@ -987,11 +1023,24 @@ section {
 
   --text-items-btn: #f5f7fa;
   --bg-items-btn: #3a3a3a;
-  --text-items-btn-hover: #121212;
+  --text-items-btn-hover: #212529;
   --bg-items-btn-hover: #f5f7fa;
+  --text-items-btn-active: #212529;
+  --bg-items-btn-active: #fff;
 
   --img-border: #e6e6e6;
   --text-border: #e6e6e6;
+
+  /* ======== PRODUTO NÃO ENCONTRADO ======== */
+
+  --title-404: #f5f7fa;
+  --text-404: #f5f7fa;
+  --btn-text-404: #212529;
+  --btn-bg-404: #cfd2d4;
+  --btn-text-404-hover: #212529;
+  --btn-bg-404-hover: #f5f7fa;
+  --btn-text-404-active: #212529;
+  --btn-bg-404-active: #fff;
 
   /* ================ FOOTER ================ */
 
@@ -1104,6 +1153,22 @@ section {
 		padding: 12px;
 		font-size: 1.2rem;
 	}
+
+
+
+  .titulo-nao-encontrado {
+    font-size: 2em;
+  }
+
+  .texto-nao-encontrado {
+    font-size: 1.5em;
+  }
+
+  .botao-nao-encontrado a {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+  }
 
 
 
@@ -1222,6 +1287,22 @@ section {
 		padding: 10px;
 		font-size: 1.1rem;
 	}
+
+
+
+  .titulo-nao-encontrado {
+    font-size: 1.8em;
+  }
+
+  .texto-nao-encontrado {
+    font-size: 1.3em;
+  }
+
+  .botao-nao-encontrado a {
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
 
 
 
@@ -1358,6 +1439,22 @@ section {
 
 
 
+  .titulo-nao-encontrado {
+    font-size: 1.2em;
+  }
+
+  .texto-nao-encontrado {
+    font-size: 0.8em;
+  }
+
+  .botao-nao-encontrado a {
+    padding: 7px;
+    border-radius: 4px;
+    font-size: 0.8em;
+  }
+
+
+
   .item-slide {
     border-radius: 8.5px;
   }
@@ -1397,7 +1494,7 @@ section {
 @media (min-width: 576px) and (max-width: 767.98px) {
 
   #dropdownTabButton {
-    width: 66%;
+    width: 82%;
   }
 
 	.navbar .dropdown-menu {
@@ -1478,6 +1575,22 @@ section {
 
 
 
+  .titulo-nao-encontrado {
+    font-size: 1.1em;
+  }
+
+  .texto-nao-encontrado {
+    font-size: 0.9em;
+  }
+
+  .botao-nao-encontrado a {
+    padding: 7px;
+    border-radius: 4px;
+    font-size: 0.7em;
+  }
+
+
+
   .item-slide {
     border-radius: 7px;
   }
@@ -1511,7 +1624,7 @@ section {
 @media (max-width: 575.98px) {
 
   #dropdownTabButton {
-    width: 68%;
+    width: 82%;
   }
 
 	.navbar .dropdown-menu {
@@ -1568,6 +1681,7 @@ section {
 		font-size: 1.7rem;
 		padding-top: 5px;
 		padding-bottom: 5px;
+    border-top: none;
 	}
 
 	.texto-item {
@@ -1594,8 +1708,24 @@ section {
 
 
 
+  .titulo-nao-encontrado {
+    font-size: 1.8em;
+  }
+
+  .texto-nao-encontrado {
+    font-size: 1.2em;
+  }
+
+  .botao-nao-encontrado a {
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.8em;
+  }
+
+
+
 	.item-slide {
-		border-bottom: none;
+		/*border-bottom: none;*/
 		border-left: 1px solid var(--img-border);
     border-radius: 10px 10px 0 0;
 	}

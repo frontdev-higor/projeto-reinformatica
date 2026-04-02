@@ -314,6 +314,7 @@ header .navbar {
  	color: var(--text-about);
 }	
 
+/* Contato */
 .link-contato {
 	margin-top: -10px;
 	padding-left: 0;
@@ -333,12 +334,21 @@ header .navbar {
 	color: var(--text-link-hover);
 }
 
+.link-contato li a:active {
+	color: var(--text-link-active);
+}
+
+/* Sobre */
 .link-color a {
 	color: var(--text-link);
 }
 
 .link-color a:hover {
 	color: var(--text-link-hover);
+}
+
+.link-color a:active {
+	color: var(--text-link-active);
 }
 
 .contato-bg {
@@ -497,6 +507,7 @@ body.page-sobre .conteudo-central {
   --text-about: #121212;
   --text-link: #0d6efd;
   --text-link-hover: #0a58ca;
+  --text-link-active: #121212;
 
   /* ================ FOOTER ================ */
 
@@ -567,6 +578,7 @@ body.page-sobre .conteudo-central {
   --text-about: #fff;
   --text-link: #4da3ff;
   --text-link-hover: #7ab8ff;
+  --text-link-active: #f5f7fa;
 
   /* ================ FOOTER ================ */
 
@@ -631,7 +643,7 @@ body.page-sobre .conteudo-central {
   }
 
 	.titulo-item {
-  	font-size: 2em;
+  	font-size: 2.3em;
   }
 
   .subtitulo {
@@ -695,7 +707,7 @@ body.page-sobre .conteudo-central {
   }
 
 	.titulo-item {
-  	font-size: 1.7em;
+  	font-size: 2em;
   }
 
   .subtitulo {
@@ -774,7 +786,7 @@ body.page-sobre .conteudo-central {
 	}
 
 	.titulo-item {
-  	font-size: 1.3em;
+  	font-size: 1.6em;
   	padding: 0;
   }
 
@@ -851,7 +863,7 @@ body.page-sobre .conteudo-central {
   }
 
   .titulo-item {
-  	font-size: 1.3em;
+  	font-size: 1.6em;
   	padding: 0;
   }
 

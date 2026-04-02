@@ -10,7 +10,7 @@
       {
         id: "itens.html?id=352",
         nome: "ThinkCentre Slim i7 6700",
-        comum: "1.400,00",
+        comum: "1.500,00",
         img: "imagens/slim/lenovo/i7-6700/i7-6700-frente.webp"
       },
 
@@ -24,7 +24,7 @@
       {
         id: "itens.html?id=152",
         nome: "ThinkCentre Mini i5 6500t",
-        comum: "1.100,00",
+        comum: "1.200,00",
         img: "imagens/mini/lenovo/i5-6500t/i5-6500t-frente.webp"
       },
 
@@ -35,7 +35,7 @@
       {
         id: "itens.html?id=151",
         nome: "ThinkCentre Mini i3 6500t",
-        comum: "900,00",
+        comum: "1.000,00",
         img: "imagens/mini/lenovo/i3-6500t/i3-6500t-frente.webp"
       },
 
@@ -47,10 +47,10 @@
       },
 
       {
-        id: "itens.html?id=400",
-        nome: "Positivo Master i5 7500",
+        id: "itens.html?id=450",
+        nome: "Desktop Effect i5 6500",
         comum: "850,00",
-        img: "imagens/slim/positivo/i5-7500/i5-7500-frente.webp"
+        img: "imagens/slim/effect/i5-6500/i5-6500-frente.webp"
       },
 
       {
@@ -67,15 +67,15 @@
       {
         id: "itens.html?id=1120",
         nome: "Kit Tela Suporte e Mini",
-        comum: "1.450,00",
+        comum: "1.550,00",
         img: "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-direita.webp"
       },
 
       {
-        id: "itens.html?id=1100",
-        nome: "Impressora Térmica Epson",
-        comum: "450,00",
-        img: "imagens/impressora/epson-termica/epson-frente.webp"
+        id: "itens.html?id=1130",
+        nome: "Servidor Dell Precision 5820",
+        comum: "R$ 4.500,00",
+        img: "imagens/servidor/xeon/servidor-xeon-frente.webp"
       },
 
       {
@@ -97,10 +97,10 @@
       },
 
       {
-        id: "itens.html?id=450",
-        nome: "Desktop Effect i5 6500",
-        comum: "750,00",
-        img: "imagens/slim/effect/i5-6500/i5-6500-frente.webp"
+        id: "itens.html?id=400",
+        nome: "Positivo Master i5 7500",
+        comum: "950,00",
+        img: "imagens/slim/positivo/i5-7500/i5-7500-frente.webp"
       },
 
       {
