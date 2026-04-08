@@ -16,10 +16,10 @@ const categorias = [
     "cabo",
     "fonte",
     "periferico",
-    "outro",
+    "utilitario",
     "impressora",
     "kit",
-    "servidor",
+    "workstation",
     "nobreak",
     "teste"
   ];
@@ -37,11 +37,11 @@ const mapaMenu = {
     cabo: "menu-componente",
     fonte: "menu-componente",
     periferico: "menu-componente",
-    outro: "menu-componente",
+    utilitario: "menu-componente",
     
     impressora: "menu-equipamento",
     kit: "menu-equipamento",
-    servidor: "menu-equipamento",
+    workstation: "menu-equipamento",
     nobreak: "menu-equipamento"
   };
 
@@ -410,7 +410,7 @@ const produtos = {
       modelo: "Dell Technologies",
       specs1: "i5 14500t 8 Ram 256 NVMe",
       specs2: "5 Usb's, 2 HDMI's e DisplayPort",
-      preco: "R$ 3.200,00",
+      preco: "R$ 3.500,00",
       imagens: [
         "imagens/mini/dell/i3-14100t/i3-14100t-frente.webp",
         "imagens/mini/dell/i3-14100t/i3-14100t-perfil.webp",
@@ -598,7 +598,7 @@ const produtos = {
       modelo: "Positivo",
       specs1: "i3 6100t 8 Ram 128 SSD",
       specs2: "VGA, HDMI e DisplayPort",
-      preco: "R$ 900,00",
+      preco: "R$ 1.000,00",
       imagens: [
         "imagens/mini/positivo/i5-7600t/i5-7600t-frente.webp",
         "imagens/mini/positivo/i5-7600t/i5-7600t-perfil.webp",
@@ -613,7 +613,7 @@ const produtos = {
       modelo: "Positivo",
       specs1: "i5 6600t 8 Ram 128 SSD",
       specs2: "VGA, HDMI e DisplayPort",
-      preco: "R$ 1.100,00",
+      preco: "R$ 1.200,00",
       imagens: [
         "imagens/mini/positivo/i5-7600t/i5-7600t-frente.webp",
         "imagens/mini/positivo/i5-7600t/i5-7600t-perfil.webp",
@@ -643,7 +643,7 @@ const produtos = {
       modelo: "Positivo",
       specs1: "i5 7600t 8 Ram 256 SSD",
       specs2: "VGA, HDMI e DisplayPort",
-      preco: "R$ 1.100,00",
+      preco: "R$ 1.300,00",
       imagens: [
         "imagens/mini/positivo/i5-7600t/i5-7600t-frente.webp",
         "imagens/mini/positivo/i5-7600t/i5-7600t-perfil.webp",
@@ -688,7 +688,7 @@ const produtos = {
       modelo: "Positivo",
       specs1: "i3 10100t 8 Ram 256 NVMe",
       specs2: "VGA, HDMI e 2 DisplayPort's",
-      preco: "R$ 1.400,00",
+      preco: "R$ 1.500,00",
       imagens: [
         "imagens/mini/positivo/i5-13400t/i5-13400t-frente.webp",
         "imagens/mini/positivo/i5-13400t/i5-13400t-perfil.webp",
@@ -703,7 +703,7 @@ const produtos = {
       modelo: "Positivo",
       specs1: "i5 10400t 8 Ram 256 NVMe",
       specs2: "VGA, HDMI e 2 DisplayPort's",
-      preco: "R$ 1.900,00",
+      preco: "R$ 2.000,00",
       imagens: [
         "imagens/mini/positivo/i5-13400t/i5-13400t-frente.webp",
         "imagens/mini/positivo/i5-13400t/i5-13400t-perfil.webp",
@@ -733,7 +733,7 @@ const produtos = {
       modelo: "Positivo",
       specs1: "i3 13100t 8 Ram 256 NVMe",
       specs2: "VGA, HDMI e 2 DisplayPort's",
-      preco: "R$ 2.100,00",
+      preco: "R$ 2.200,00",
       imagens: [
         "imagens/mini/positivo/i5-13400t/i5-13400t-frente.webp",
         "imagens/mini/positivo/i5-13400t/i5-13400t-perfil.webp",
@@ -748,7 +748,7 @@ const produtos = {
       modelo: "Positivo",
       specs1: "i5 13400t 8 Ram 128 NVMe",
       specs2: "VGA, HDMI e 2 DisplayPort's",
-      preco: "R$ 3.000,00",
+      preco: "R$ 2.900,00",
       imagens: [
         "imagens/mini/positivo/i5-13400t/i5-13400t-frente.webp",
         "imagens/mini/positivo/i5-13400t/i5-13400t-perfil.webp",
@@ -827,7 +827,7 @@ const produtos = {
       modelo: "ProDesk",
       specs1: "i5 10500t 8 Ram 256 NVMe",
       specs2: "HDMI, VGA e DisplayPort",
-      preco: "R$ 1.900,00",
+      preco: "R$ 2.000,00",
       imagens: [
         "imagens/mini/hp/i5-10500t/i5-10500t-frente.webp",
         "imagens/mini/hp/i5-10500t/i5-10500t-perfil.webp",
@@ -842,7 +842,7 @@ const produtos = {
       modelo: "ProDesk",
       specs1: "i5 12500t 8 Ram 256 NVMe",
       specs2: "HDMI, VGA e DisplayPort",
-      preco: "R$ 2.400,00",
+      preco: "R$ 2.600,00",
       imagens: [
         "imagens/mini/hp/i5-10500t/i5-10500t-frente.webp",
         "imagens/mini/hp/i5-10500t/i5-10500t-perfil.webp",
@@ -857,7 +857,7 @@ const produtos = {
       modelo: "ProDesk",
       specs1: "i7 12700t 16 Ram 256 NVMe",
       specs2: "5 Usb's, HDMI e 2 DisplayPort's",
-      preco: "R$ 3.500,00",
+      preco: "R$ 3.300,00",
       imagens: [
         "imagens/mini/hp/i7-12700t/i7-12700t-frente.webp",
         "imagens/mini/hp/i7-12700t/i7-12700t-perfil.webp",
@@ -1160,7 +1160,7 @@ const produtos = {
       modelo: "ThinkCentre",
       specs1: "i3 6100 8 Ram 128 SSD",
       specs2: "6 Usb's, VGA e DisplayPort",
-      preco: "R$ 900,00",
+      preco: "R$ 1.000,00",
       imagens: [
         "imagens/slim/lenovo/i3-6100/i3-6100-frente.webp",
         "imagens/slim/lenovo/i3-6100/i3-6100-fundo.webp"
@@ -2282,7 +2282,7 @@ const produtos = {
    * Periféricos (ID'S: 980 ~ 999)
    */
 
-  perifericos: [
+  periferico: [
 
     /* ======================================================
      * Mouse (ID'S: 980 ~ 989)
@@ -2391,10 +2391,10 @@ const produtos = {
   ],
 
   /* ==========================================================================
-   * Equipamentos (ID'S: 1000 ~ 1099)
+   * Utilitários (ID'S: 1000 ~ 1099)
    */
 
-  equipamento: [
+  utilitario: [
 
     /* =====================================
      * Cabo USB (ID: 1000)
@@ -2402,7 +2402,7 @@ const produtos = {
 
     {
       id: 1000, /* Cabo USB */
-      categoria: "equipamento",
+      categoria: "utilitario",
       titulo: "Cabo P2",
       modelo: "USB Cable",
       specs1: "USB 2.0",
@@ -2419,7 +2419,7 @@ const produtos = {
 
     {
       id: 1001, /* Case */
-      categoria: "equipamento",
+      categoria: "utilitario",
       titulo: "Case",
       modelo: "Infokit ECASE-300",
       specs1: "Sata III, USB 3.0",
@@ -2436,7 +2436,7 @@ const produtos = {
 
     {
       id: 1002, /* Pasta Térmica */
-      categoria: "equipamento",
+      categoria: "utilitario",
       titulo: "Pasta Térmica",
       modelo: "D-mix",
       specs1: "PS-05",
@@ -2449,7 +2449,7 @@ const produtos = {
 
     {
       id: 1003, /* Pasta Térmica Grande */
-      categoria: "equipamento",
+      categoria: "utilitario",
       titulo: "Pasta Térmica (G)",
       modelo: "Thermal Grease",
       specs1: "GD900",
@@ -2463,7 +2463,7 @@ const produtos = {
 
     {
       id: 1004, /* Pen Drive Wifi */
-      categoria: "equipamento",
+      categoria: "utilitario",
       titulo: "Pen Drive Wifi",
       modelo: "Dual Band USB Adapter",
       specs1: "600 Mbps 2g/5g",
@@ -2505,7 +2505,7 @@ const produtos = {
   ],
 
   /* ==========================================================================
-   * Impressora (ID'S: 1110 ~ 1149)
+   * Equipamentos (ID'S: 1110 ~ 1149)
    */
 
   kit: [
@@ -2584,23 +2584,31 @@ const produtos = {
       ]
     },
 
+  ],
+
+  workstation: [
+
     /* =====================================
-     * Servidor (ID's: 1130 ~ 1149)
+     * Workstation (ID's: 1130 ~ 1149)
      */
 
     {
-      id: 1130, /* Servidor Dell */
-      categoria: "servidor",
-      titulo: "Servidor Dell",
+      id: 1130, /* Workstation Dell */
+      categoria: "workstation",
+      titulo: "Workstation Dell",
       modelo: "Precision 5820",
       specs1: "Xeon W-2133 8 Ram 512 SSD",
       specs2: "NVIDIA Quadro P2000",
       preco: "R$ 4.500,00",
       imagens: [
-        "imagens/servidor/xeon/servidor-xeon-frente.webp",
-        "imagens/servidor/xeon/servidor-xeon-fundo.webp"
+        "imagens/workstation/xeon/workstation-xeon-frente.webp",
+        "imagens/workstation/xeon/workstation-xeon-fundo.webp"
       ]
     },
+
+  ],
+
+  nobreak: [
 
     /* =====================================
      * No Break (ID's: 1150 ~ 1169)
@@ -2620,6 +2628,10 @@ const produtos = {
       ]
     },
 
+  ],
+
+  teste: [
+
     /* =====================================
      * Teste (ID's: 2000 ~ 2010)
      */
@@ -2638,6 +2650,7 @@ const produtos = {
     }
 
   ]
+
 
 };
 

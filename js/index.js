@@ -73,9 +73,9 @@
 
       {
         id: "itens.html?id=1130",
-        nome: "Servidor Dell Precision 5820",
+        nome: "Workstation Dell Precision 5820",
         comum: "R$ 4.500,00",
-        img: "imagens/servidor/xeon/servidor-xeon-frente.webp"
+        img: "imagens/workstation/xeon/workstation-xeon-frente.webp"
       },
 
       {

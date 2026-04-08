@@ -1,4 +1,0 @@
-Servidor Dell Xeon W 2133
-NVIDIA Quadro P2000
-8 Ram 512 SSD
-R$ X.X00,00

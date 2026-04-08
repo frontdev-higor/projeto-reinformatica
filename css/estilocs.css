@@ -390,6 +390,14 @@ body.page-sobre .conteudo-central {
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
+.easter-egg a,
+.easter-egg a:hover,
+.easter-egg a:active {
+	color: var(--easter-egg);
+	text-decoration: none;
+	cursor: default;
+}
+
 .mapa-container {
 	/*border: 2px solid #ddd;*/
 	display: inline-block;
@@ -508,6 +516,7 @@ body.page-sobre .conteudo-central {
   --text-link: #0d6efd;
   --text-link-hover: #0a58ca;
   --text-link-active: #121212;
+  --easter-egg: #121212;
 
   /* ================ FOOTER ================ */
 
@@ -579,6 +588,7 @@ body.page-sobre .conteudo-central {
   --text-link: #4da3ff;
   --text-link-hover: #7ab8ff;
   --text-link-active: #f5f7fa;
+  --easter-egg: #f5f7fa;
 
   /* ================ FOOTER ================ */
 
