@@ -2070,8 +2070,8 @@ const produtos = {
       specs2: "128 GB",
       preco: "R$ 190,00",
       imagens: [
-        "imagens/armazenamento/ssd/128gb/kingston-128.webp",
-        "imagens/armazenamento/ssd/128gb/kingston-cima.webp"
+        "imagens/armazenamento/ssd/128gb/kingfast-128.webp",
+        "imagens/armazenamento/ssd/128gb/kingfast-cima.webp"
       ]
     },
 
@@ -2088,8 +2088,8 @@ const produtos = {
       specs2: "240 GB",
       preco: "R$ 290,00",
       imagens: [
-        "imagens/armazenamento/ssd/256gb/kingston-256.webp",
-        "imagens/armazenamento/ssd/128gb/kingston-cima.webp"
+        "imagens/armazenamento/ssd/256gb/kingfast-256.webp",
+        "imagens/armazenamento/ssd/128gb/kingfast-cima.webp"
       ]
     }
 
