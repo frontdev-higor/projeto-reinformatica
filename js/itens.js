@@ -1945,7 +1945,7 @@ const produtos = {
       specs2: "256 GB",
       preco: "R$ 429,00",
       imagens: [
-        "imagens/armazenamento/NVMe/256gb/pci-256.webp"
+        "imagens/armazenamento/nvme/256gb/pci-256.webp"
       ]
     },
 
@@ -1962,7 +1962,7 @@ const produtos = {
       specs2: "512 GB",
       preco: "R$ 629,00",
       imagens: [
-        "imagens/armazenamento/NVMe/512gb/toshiba-512.webp"
+        "imagens/armazenamento/nvme/512gb/toshiba-512.webp"
       ]
     },
 
@@ -1975,7 +1975,7 @@ const produtos = {
       specs2: "512 GB",
       preco: "R$ 629,00",
       imagens: [
-        "imagens/armazenamento/NVMe/512gb/adata-512-p.webp"
+        "imagens/armazenamento/nvme/512gb/adata-512-p.webp"
       ]
     },
 
@@ -1992,7 +1992,7 @@ const produtos = {
       specs2: "1 TB",
       preco: "R$ 700,00",
       imagens: [
-        "imagens/armazenamento/NVMe/1tb/kingston-1tb.webp"
+        "imagens/armazenamento/nvme/1tb/kingston-1tb.webp"
       ]
     },
 
