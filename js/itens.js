@@ -1200,7 +1200,7 @@ const produtos = {
       categoria: "slim",
       titulo: "Desktop Dell Slim",
       modelo: "OptiPlex",
-      specs1: "i5 13500 X Ram XXX NVMe",
+      specs1: "i5 13500 8 Ram 256 NVMe",
       specs2: "9 Usb's, HDMI e 3 DisplayPort's",
       preco: "R$ 2.800,00",
       imagens: [
