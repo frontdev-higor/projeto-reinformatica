@@ -483,6 +483,21 @@ const produtos = {
     },
 
     {
+      id: 161, /* [i3-8100t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i3 8100t 8 Ram 128 SSD",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 1.200,00",
+      imagens: [
+        "imagens/mini/lenovo/i3-9100t/i3-9100t-frente.webp",
+        "imagens/mini/lenovo/i3-9100t/i3-9100t-perfil.webp",
+        "imagens/mini/lenovo/i3-9100t/i3-9100t-fundo.webp"
+        ]
+    },
+
+    {
       id: 154, /* [i5-8500t] */
       categoria: "mini",
       titulo: "Desktop Lenovo Mini",
@@ -539,6 +554,21 @@ const produtos = {
         "imagens/mini/lenovo/i5-10100t/i5-10100t-frente.webp",
         "imagens/mini/lenovo/i5-10100t/i5-10100t-perfil.webp",
         "imagens/mini/lenovo/i5-10100t/i5-10100t-fundo.webp"
+        ]
+    },
+
+    {
+      id: 162, /* [i3-1215u] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i3 1215u 8 Ram 256 NVMe",
+      specs2: "5 Usb's, HDMI e DisplayPort",
+      preco: "R$ 2.100,00",
+      imagens: [
+        "imagens/mini/lenovo/i3-1215u/i3-1215u-frente.webp",
+        "imagens/mini/lenovo/i3-1215u/i3-1215u-perfil.webp",
+        "imagens/mini/lenovo/i3-1215u/i3-1215u-fundo.webp"
         ]
     },
 
@@ -725,6 +755,22 @@ const produtos = {
         "imagens/mini/positivo/i5-13400t/i5-13400t-fundo.webp"
         ]
     },
+
+    {
+      id: 211, /* [i5-12400t] */
+      categoria: "mini",
+      titulo: "Desktop Positivo Mini",
+      modelo: "Positivo",
+      specs1: "i5 12400t 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/mini/positivo/i5-13400t/i5-13400t-frente.webp",
+        "imagens/mini/positivo/i5-13400t/i5-13400t-perfil.webp",
+        "imagens/mini/positivo/i5-13400t/i5-13400t-fundo.webp"
+        ]
+    },
+
 
     {
       id: 209, /* [i3-13100t] */
@@ -1136,6 +1182,34 @@ const produtos = {
     },
 
     {
+      id: 317, /* i5-12400 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "Vostro 3710",
+      specs1: "i5 12400 8 Ram 256 NVMe",
+      specs2: "8 Usb's, HDMI e DisplayPort",
+      preco: "R$ 2.600,00",
+      imagens: [
+        "imagens/slim/dell/i5-12400/i5-12400-frente.webp",
+        "imagens/slim/dell/i5-12400/i5-12400-fundo.webp"
+        ]
+    },
+
+    {
+      id: 318, /* i5-13500 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex",
+      specs1: "i5 13500 X Ram XXX NVMe",
+      specs2: "9 Usb's, HDMI e 3 DisplayPort's",
+      preco: "R$ 2.800,00",
+      imagens: [
+        "imagens/slim/dell/i5-14500/i5-14500-frente.webp",
+        "imagens/slim/dell/i5-14500/i5-14500-fundo.webp"
+        ]
+    },
+
+    {
       id: 316, /* i5-14500 */
       categoria: "slim",
       titulo: "Desktop Dell Slim",
@@ -1266,6 +1340,48 @@ const produtos = {
     },
 
     {
+      id: 361, /* i5-9400 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i5 9400 8 Ram 256 SSD",
+      specs2: "8 Usb's, VGA e 2 DisplayPort's",
+      preco: "R$ 1.700,00",
+      imagens: [
+        "imagens/slim/lenovo/i5-8500/i5-8500-frente.webp",
+        "imagens/slim/lenovo/i5-8500/i5-8500-fundo.webp"
+        ]
+    },
+
+    {
+      id: 360, /* i3-10100 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "Lenovo Technologies",
+      specs1: "i3 10100 8 Ram 256 SSD",
+      specs2: "VGA, DVI e HDMI",
+      preco: "R$ 1.500,00",
+      imagens: [
+        "imagens/slim/lenovo/i3-10100/i3-10100-frente.webp",
+        "imagens/slim/lenovo/i3-10100/i3-10100-fundo.webp"
+        ]
+    },
+
+    {
+      id: 362, /* i5-10500 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "Lenovo Technologies",
+      specs1: "i5 10500 8 Ram 256 SSD",
+      specs2: "VGA, DVI e HDMI",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/slim/lenovo/i3-10100/i3-10100-frente.webp",
+        "imagens/slim/lenovo/i3-10100/i3-10100-fundo.webp"
+        ]
+    },
+
+    {
       id: 358, /* i3-12100 */
       categoria: "slim",
       titulo: "Desktop Lenovo Slim",
@@ -1298,6 +1414,20 @@ const produtos = {
      */
 
     {
+      id: 401, /* i3-7100 */
+      categoria: "slim",
+      titulo: "Desktop Positivo Slim",
+      modelo: "Positivo Master",
+      specs1: "i3 7100 8 Ram 128 SSD",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 900,00",
+      imagens: [
+        "imagens/slim/positivo/i5-7500/i5-7500-frente.webp",
+        "imagens/slim/positivo/i5-7500/i5-7500-fundo.webp"
+        ]
+    },
+
+    {
       id: 400, /* i5-7500 */
       categoria: "slim",
       titulo: "Desktop Positivo Slim",
@@ -1314,6 +1444,20 @@ const produtos = {
     /* =====================================
      * Effect (ID'S: 450 ~ 499)
      */
+
+    {
+      id: 451, /* i3-6100 */
+      categoria: "slim",
+      titulo: "Desktop Effect Slim",
+      modelo: "Effect",
+      specs1: "i3 6100 8 Ram 128 SSD",
+      specs2: "8 Usb's, VGA e HDMI",
+      preco: "R$ 800,00",
+      imagens: [
+        "imagens/slim/effect/i5-6500/i5-6500-frente.webp",
+        "imagens/slim/effect/i5-6500/i5-6500-fundo.webp"
+        ]
+    },
 
     {
       id: 450, /* i5-6500 */
