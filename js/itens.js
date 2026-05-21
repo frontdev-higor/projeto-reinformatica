@@ -1174,7 +1174,7 @@ const produtos = {
       modelo: "RTX 3060 12 Vram",
       specs1: "i7 10700 16 Ram 512 NVMe",
       specs2: "9 Usb's, HDMI e DisplayPort",
-      preco: "R$ 5.500,00",
+      preco: "R$ 6.000,00",
       imagens: [
         "imagens/slim/dell/i7-10700-xps/i7-10700-xps-frente.webp",
         "imagens/slim/dell/i7-10700-xps/i7-10700-xps-fundo.webp"
@@ -1486,7 +1486,7 @@ const produtos = {
      */
 
     {
-      id: 500, /* i5-6200u */
+      id: 500, /* i5-6200u */ /* Registro Offline */
       categoria: "notebook",
       titulo: "Notebook Dell",
       modelo: "Latitude 3480",
@@ -1497,6 +1497,21 @@ const produtos = {
         "imagens/notebook/dell/i5-6200u/i5-6200u-frente.webp",
         "imagens/notebook/dell/i5-6200u/i5-6200u-perfil.webp",
         "imagens/notebook/dell/i5-6200u/i5-6200u-cima.webp"
+        ]
+    },
+
+    {
+      id: 510, /* i5-7300u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5480",
+      specs1: "i5 7300u 8 Ram 240 SSD",
+      specs2: "3 Usb's, VGA e HDMI",
+      preco: "R$ 1.400,00",
+      imagens: [
+        "imagens/notebook/dell/i5-7300u/i5-7300u-frente.webp",
+        "imagens/notebook/dell/i5-7300u/i5-7300u-perfil.webp",
+        "imagens/notebook/dell/i5-7300u/i5-7300u-cima.webp"
         ]
     },
 
@@ -1516,6 +1531,21 @@ const produtos = {
     },
 
     {
+      id: 511, /* i5-8265u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5400",
+      specs1: "i5 8265u 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 1.600,00",
+      imagens: [
+        "imagens/notebook/dell/i5-8265u/i5-8265u-frente.webp",
+        "imagens/notebook/dell/i5-8265u/i5-8265u-perfil.webp",
+        "imagens/notebook/dell/i5-8265u/i5-8265u-cima.webp"
+        ]
+    },
+
+    {
       id: 502, /* i7-8665u */
       categoria: "notebook",
       titulo: "Notebook Dell",
@@ -1531,17 +1561,62 @@ const produtos = {
     },
 
     {
-      id: 508, /* i5-1021u */
+      id: 508, /* i5-1021u */ /* Registro Offline */
       categoria: "notebook",
       titulo: "Notebook Dell",
       modelo: "Latitude 5400",
       specs1: "i5 1021u 8 Ram 256 NVMe",
-      specs2: "???",
+      specs2: "3 Usb's e HDMI",
       preco: "R$ 1.800,00",
       imagens: [
         "imagens/notebook/dell/i5-1021u/i5-1021u-frente.webp",
         "imagens/notebook/dell/i5-1021u/i5-1021u-perfil.webp",
         "imagens/notebook/dell/i5-1021u/i5-1021u-cima.webp"
+        ]
+    },
+
+    {
+      id: 512, /* i5-1031u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5410",
+      specs1: "i5 1031u 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/notebook/dell/i5-1031u/i5-1031u-frente.webp",
+        "imagens/notebook/dell/i5-1031u/i5-1031u-perfil.webp",
+        "imagens/notebook/dell/i5-1031u/i5-1031u-cima.webp"
+        ]
+    },
+
+    {
+      id: 514, /* i7-1051u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 3410",
+      specs1: "i7 1051u 8 Ram 240 SSD",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/notebook/dell/i7-1051u/i7-1051u-frente.webp",
+        "imagens/notebook/dell/i7-1051u/i7-1051u-perfil.webp",
+        "imagens/notebook/dell/i7-1051u/i7-1051u-cima.webp"
+        ]
+    },
+
+    {
+      id: 513, /* i5-1135g7 */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 3420",
+      specs1: "i5 1135g7 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/notebook/dell/i5-1135g7/i5-1135g7-frente.webp",
+        "imagens/notebook/dell/i5-1135g7/i5-1135g7-perfil.webp",
+        "imagens/notebook/dell/i5-1135g7/i5-1135g7-cima.webp"
         ]
     },
 
@@ -1640,13 +1715,28 @@ const produtos = {
      */
 
     {
+      id: 557, /* i5-3230m */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "ThinkPad E430",
+      specs1: "i5 3230m 8 Ram 240 SSD",
+      specs2: "4 Usb's, VGA e HDMI",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/notebook/lenovo/i5-3230m/i5-3230m-frente.webp",
+        "imagens/notebook/lenovo/i5-3230m/i5-3230m-perfil.webp",
+        "imagens/notebook/lenovo/i5-3230m/i5-3230m-cima.webp"
+        ]
+    },
+
+    {
       id: 550, /* i5-4300u */
       categoria: "notebook",
       titulo: "Notebook Lenovo",
       modelo: "ThinkPad T440",
       specs1: "i5 4300u 8 Ram 256 NVMe",
       specs2: "2 Usb's e VGA",
-      preco: "R$ 1.000,00",
+      preco: "R$ 1.100,00",
       imagens: [
         "imagens/notebook/lenovo/i5-4300u/i5-4300u-frente.webp",
         "imagens/notebook/lenovo/i5-4300u/i5-4300u-perfil.webp",
@@ -1685,6 +1775,21 @@ const produtos = {
     },
 
     {
+      id: 558, /* i5-1021u */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "ThinkPad E14",
+      specs1: "i5 1021u 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/notebook/lenovo/i5-1021u/i5-1021u-frente.webp",
+        "imagens/notebook/lenovo/i5-1021u/i5-1021u-perfil.webp",
+        "imagens/notebook/lenovo/i5-1021u/i5-1021u-cima.webp"
+        ]
+    },
+
+    {
       id: 553, /* i5-1135g7 */
       categoria: "notebook",
       titulo: "Notebook Lenovo",
@@ -1700,7 +1805,22 @@ const produtos = {
     },
 
     {
-      id: 554, /* i5-1245u */
+      id: 559, /* i5-1235u */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "IdeaPad 15IAU7",
+      specs1: "i5 1235u 8 Ram 512 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 2.900,00",
+      imagens: [
+        "imagens/notebook/lenovo/i5-1235u/i5-1235u-frente.webp",
+        "imagens/notebook/lenovo/i5-1235u/i5-1235u-perfil.webp",
+        "imagens/notebook/lenovo/i5-1235u/i5-1235u-cima.webp"
+        ]
+    },
+
+    {
+      id: 554, /* i5-1245u */ /* Registro Offline */
       categoria: "notebook",
       titulo: "Notebook Lenovo",
       modelo: "ThinkPad T14",
@@ -1715,7 +1835,7 @@ const produtos = {
     },
 
     {
-      id: 555, /* i5-13420h */
+      id: 555, /* i5-13420h */ /* Registro Offline */
       categoria: "notebook",
       titulo: "Notebook Lenovo",
       modelo: "IdeaPad 15IRH10",
@@ -1749,7 +1869,7 @@ const produtos = {
      */
     
     {
-      id: 600, /* i5-1235u */
+      id: 600, /* i5-1235u */ /* Registro Offline */
       categoria: "notebook",
       titulo: "Notebook HP",
       modelo: "250G9",
@@ -1764,7 +1884,7 @@ const produtos = {
     },
 
     {
-      id: 601, /* i7-6600u */
+      id: 601, /* i7-6600u */ /* Registro Offline */
       categoria: "notebook",
       titulo: "Notebook HP",
       modelo: "EliteBook 840 G3",
@@ -1802,7 +1922,7 @@ const produtos = {
      */
 
     {
-      id: 700, /* i5-1335u */
+      id: 700, /* i5-1335u */  /* Registro Offline */
       categoria: "notebook",
       titulo: "Notebook Acer",
       modelo: "TravelMate P2 14",
