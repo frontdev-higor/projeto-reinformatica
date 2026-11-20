@@ -1,9 +1,8 @@
-[README.md](https://github.com/user-attachments/files/35158635/README.md)
 # 🖥️ RE Informática e Suprimentos
 
 Site institucional e catálogo de produtos da **RE Informática e Suprimentos**, loja de venda e manutenção de computadores localizada em Goiânia-GO.
 
-🔗 **Site em produção:** [reinformaticaesuprimentos.com.br](https://reinformaticaesuprimentos.com.br)
+🔗 **Site:** [reinformaticaesuprimentos.com.br](https://reinformaticaesuprimentos.com.br)
 
 ## O que tem no site?
 
