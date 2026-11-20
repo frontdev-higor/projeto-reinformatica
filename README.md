@@ -37,6 +37,11 @@ Site institucional e catálogo de produtos da **RE Informática e Suprimentos**,
 └── imagens/                → Fotos dos produtos por categoria
 ```
 
+## Como usar
+
+1. Clone o repositório
+2. Abra o `index.html` no navegador
+
 ## Responsividade
 
 O site é responsivo e se adapta a dispositivos móveis, tablets e desktops utilizando o grid system do Bootstrap.
