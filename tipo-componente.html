@@ -1,0 +1,757 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS Atualizado -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/estilotipos.css">
+    <link rel="icon" type="image/ico" href="imagens/todo-o-site/relogo.webp">
+    <title>Componentes</title>
+
+    <!-- Scripts com defer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/tipo-componente.js" defer></script>
+    <script src="js/menu-active.js" defer></script>
+
+  </head>
+  <body> <!-- dark-mode -->
+
+      <header>
+
+        <!-- Barra de Navegação -->
+        <nav class="navbar navbar-expand-md position-relative navbar-color mb-1">
+
+          <!-- Logo -->
+          <a class="navbar-brand logo-formatacao" href="index.html">RE Informática</a>
+          <!-- /Logo -->
+
+          <!-- Menu Hamburguer -->
+          <button class="navbar-toggler navbar-dark me-2" type="button" data-bs-toggle="collapse" 
+          data-bs-target="#abrir-menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- /Menu Hamburguer -->
+
+            <!-- Opções Navegação -->
+            <div class="collapse navbar-collapse justify-content-center" id="abrir-menu">
+
+              <!-- /navbar-nav -->
+              <ul class="navbar-nav navbar-center nav-text">
+
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Início</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="servico.html">Serviços</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle active" role="button"
+                  data-bs-toggle="dropdown">Produtos</a>
+
+
+                    <!-- Menu Dropdown -->
+                    <ul class="dropdown-menu">
+
+                      <li>
+                        <a id="menu-computador" class="dropdown-item" href="tipo-computador.html">Computadores</a>
+                      </li>
+
+                      <li>
+                        <a id="menu-monitor" class="dropdown-item" href="tipo-monitor.html">Monitores</a>
+                      </li>
+
+                      <li>
+                        <a id="menu-componente" class="dropdown-item" href="tipo-componente.html">Componentes</a>
+                      </li>
+
+                      <li>
+                        <a id="menu-equipamento" class="dropdown-item" href="tipo-equipamento.html">Equipamentos</a>
+                      </li>
+
+                    </ul>
+                    <!-- /Menu Dropdown -->
+
+
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="contato.html">Contato</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="sobre.html">Sobre</a>
+                </li>
+
+                <li class="nav-item d-md-none justify-content-center text-center">
+                  <a href="#" id="themeToggleMobile" class="nav-link d-inline-block">
+                    🌙 Modo Escuro
+                  </a>
+                </li>
+
+              </ul>
+              <!-- /navbar-nav -->
+
+              <button id="themeToggle" class="btn btn-darkmode d-none d-md-flex">
+                <span id="themeIcon">🌙</span>
+              </button>
+
+            </div>
+            <!-- /Opções Navegação -->
+
+        </nav>
+        <!-- /Barra de Navegação -->
+
+      </header> <!--  -->
+
+
+
+      <main class="conteudo-site tamanho-botoes">
+
+        <!-- Container -->
+        <div class="container">
+
+          <!-- Tabs para telas médias/grandes -->
+          <ul class="nav nav-tabs justify-content-center d-none d-md-flex" id="myTab" role="tablist">
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#armazenamento">
+                Armazenamento
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cabo">
+                Cabo
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#fonte">
+                Fonte
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#periferico">
+                Periférico
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#utilitarios">
+                Utilitários
+              </button>
+            </li>
+          </ul>
+
+          <!-- Dropdown para mobile -->
+          <div class="dropdown d-md-none text-center">
+            <button
+              id="dropdownTabButton"
+              type="button"
+              class="btn dropdown-toggle arredondar-botao"
+              data-bs-toggle="dropdown"
+              data-bs-display="static">
+                Componente
+            </button>
+
+            <ul class="dropdown-menu dropdown-tabs-mobile start-50 translate-middle-x mt-2">
+              <li>
+                <button class="dropdown-item nav-link text-center" data-bs-toggle="tab" data-bs-target="#armazenamento">
+                  Armazenamento
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item nav-link text-center" data-bs-toggle="tab" data-bs-target="#cabo">
+                  Cabo
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item nav-link text-center" data-bs-toggle="tab" data-bs-target="#fonte">
+                  Fonte
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item nav-link text-center" data-bs-toggle="tab" data-bs-target="#periferico">
+                  Periférico
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item nav-link text-center" data-bs-toggle="tab" data-bs-target="#utilitarios">
+                  Utilitários
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Conteúdo das abas -->
+          <div class="tab-content btn-items" id="myTabContent">
+
+            
+            <!-- Armazenamento -->
+            <div class="tab-pane fade botao-hover" id="armazenamento" role="tabpanel" aria-labelledby="armazenamento-tab">
+
+              <!-- Row -->
+              <div class="row text-center">
+
+                <!-- HD -->
+                <div class="col-10 col-sm-10 col-md-12 col-lg-6
+                            container
+                            ">
+                    <p class="titulo-computador">HD</p>
+
+                  <!-- Row -->
+                  <div class="row text-center g-3 titulo-processador">
+
+                    <!-- 250 GB
+                    <div class="col-10 col-sm-6 col-md-5 col-lg-3 mx-auto">
+                      <p class="fw-bold">250 GB</p>
+                      <div class="d-grid gap-2">
+                        <a href="itens.html?id=850" class="btn">
+                          Seagate
+                        </a>
+                        <a href="itens.html?id=851" class="btn">
+                          WD
+                        </a>
+                      </div>
+                    </div>
+                    /250 GB -->
+
+                    <!-- 500 GB -->
+                    <div class="col-12 col-sm-6 col-md-5 col-lg-6 mx-auto">
+                      <p class="fw-bold">500 GB</p>
+                      <div class="d-grid gap-2">
+                        <a href="itens.html?id=870" class="btn">
+                          Dell
+                        </a>
+                        <a href="itens.html?id=871" class="btn">
+                          Seagate
+                        </a>
+                        <a href="itens.html?id=872" class="btn">
+                          WD
+                        </a>
+                        <a href="itens.html?id=873" class="btn">
+                          Toshiba
+                        </a>
+                        <a href="itens.html?id=874" class="btn">
+                          WD
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /500 GB -->
+
+                    <!-- 1 TB -->
+                    <div class="col-12 col-sm-6 col-md-5 col-lg-6 mx-auto">
+                      <p class="fw-bold">1 TB</p>
+                      <div class="d-grid gap-2">
+                        <a href="itens.html?id=880" class="btn">
+                          WD
+                        </a>
+                        <a href="itens.html?id=881" class="btn">
+                          Seagate
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /1 TB -->
+
+                    <!-- 4 TB
+                    <div class="col-10 col-sm-6 col-md-5 col-lg-3 mx-auto">
+                      <p class="fw-bold">4 TB</p>
+                      <div class="d-grid gap-2">
+                        <a href="itens.html?id=890" class="btn">
+                          Dell
+                        </a>
+                      </div>
+                    </div>
+                    /4 TB -->
+
+                  </div>
+                  <!-- /Row -->
+
+                </div>
+                <!-- /HD -->
+
+                <!-- NVME -->
+                <div class="col-10 col-sm-10 col-md-12 col-lg-6
+                            container
+                            ">
+                    <p class="titulo-computador">NVMe</p>
+
+                  <!-- Row -->
+                  <div class="row text-center g-3 titulo-processador">
+
+                    <!-- 256 GB -->
+                    <div class="col-12 col-sm-10 col-md-4 col-lg-4 mx-auto">
+                      <p class="fw-bold">256 GB</p>
+                      <div class="d-grid gap-2">
+                        <a href="itens.html?id=905" class="btn">
+                          PCI Express
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /256 GB -->
+
+                    <!-- 512 GB -->
+                    <div class="col-12 col-sm-10 col-md-4 col-lg-4 mx-auto">
+                      <p class="fw-bold">512 GB</p>
+                      <div class="d-grid gap-2">
+                        <a href="itens.html?id=910" class="btn">
+                          Toshiba
+                        </a>
+                        <a href="itens.html?id=911" class="btn">
+                          Adata
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /512 GB -->
+
+                    <!-- 1 TB -->
+                    <div class="col-12 col-sm-10 col-md-4 col-lg-4 mx-auto">
+                      <p class="fw-bold">1 TB</p>
+                      <div class="d-grid gap-2">
+                        <a href="itens.html?id=915" class="btn">
+                          Kingston
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /1 TB -->
+
+                  </div>
+                  <!-- /Row -->
+
+                </div>
+                <!-- /NVME -->
+
+                <!-- M2 Sata -->
+                <div class="col-10 col-sm-10 col-md-12 col-lg-6
+                            container
+                            ">
+                    <p class="titulo-computador">M.2 Sata</p>
+
+                  <!-- Row -->
+                  <div class="row text-center g-3 titulo-processador">
+
+                    <!-- 128 GB -->
+                    <div class="col-12 col-sm-6 col-md-5 col-lg-6 mx-auto">
+                      <p class="fw-bold">128 GB</p>
+                      <div class="d-grid gap-2">
+                        <a href="itens.html?id=920" class="btn">
+                          M.2 Sata
+                        </a>
+                        <a href="itens.html?id=921" class="btn">
+                          Skhynix
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /128 GB -->
+
+                    <!-- 256 GB -->
+                    <div class="col-12 col-sm-6 col-md-5 col-lg-6 mx-auto">
+                      <p class="fw-bold">256 GB</p>
+                      <div class="d-grid gap-2">
+                        <a href="itens.html?id=925" class="btn">
+                          LiteOn
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /256 GB -->
+
+                  </div>
+                  <!-- /Row -->
+
+                </div>
+                <!-- /M2 Sata -->
+
+                <!-- SSD -->
+                <div class="col-10 col-sm-10 col-md-12 col-lg-6
+                            container
+                            ">
+                    <p class="titulo-computador">SSD</p>
+
+                  <!-- Row -->
+                  <div class="row text-center g-3 titulo-processador">
+
+                    <!-- 128 GB -->
+                    <div class="col-12 col-sm-6 col-md-5 col-lg-6 mx-auto">
+                      <p class="fw-bold">128 GB</p>
+                      <div class="d-grid gap-2">
+                        <a href="itens.html?id=940" class="btn">
+                          KingFast
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /128 GB -->
+
+                    <!-- 240 GB -->
+                    <div class="col-12 col-sm-6 col-md-5 col-lg-6 mx-auto">
+                      <p class="fw-bold">240 GB</p>
+                      <div class="d-grid gap-2">
+                        <a href="itens.html?id=945" class="btn">
+                          KingFast
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /240 GB -->
+
+                  </div>
+                  <!-- /Row -->
+
+                </div>
+                <!-- /SSD -->
+
+              </div>
+              
+            </div>
+            <!-- /Armazenamento -->
+
+
+            <!-- Cabo -->
+            <div class="tab-pane fade botao-hover" id="cabo" role="tabpanel" aria-labelledby="cabo-tab">
+
+              <!-- Row -->
+              <div class="row text-center">
+
+                <!-- container -->
+                <div class="col-10 col-sm-10 col-md-12
+                            container
+                            ">
+                    <p class="titulo-computador">Cabo</p>
+
+                  <!-- Row -->
+                  <div class="row text-center g-3 titulo-processador">
+
+                    <!-- Row Cabo -->
+                    <div class="row text-center g-3 titulo-processador">
+
+                      <!-- Cabos -->
+                      <div class="col-12 col-sm-10 col-md-4 col-lg-3 col-xl-3
+                                  mx-auto
+                                  order-1">
+                        <div class="d-grid gap-2">
+                          <!-- 
+                          <a href="itens.html?id=960" class="btn">
+                            DisplayPort
+                          </a>
+                          -->
+                          <!-- 
+                          <a href="itens.html?id=961" class="btn">
+                            DVI
+                          </a>
+                          -->
+                          <a href="itens.html?id=962" class="btn">
+                            Força
+                          </a>
+                          <!-- 
+                          <a href="itens.html?id=963" class="btn">
+                            HDMI
+                          </a>
+                          -->
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-10 col-md-4 col-lg-3 col-xl-3 
+                                  mx-auto
+                                  order-3">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=964" class="btn">
+                            VGA
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-10 col-md-4 col-lg-3 col-xl-3 
+                                  mx-auto
+                                  order-2">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=965" class="btn">
+                            Força e Tripolar
+                          </a>
+                        </div>
+                      </div>
+                      <!-- /Cabos -->
+
+                    </div>
+                    <!-- /Row Cabo -->
+
+                  </div>
+                  <!-- /Row -->
+
+                </div>
+                <!-- /container -->
+
+              </div>
+              <!-- /Row -->
+              
+            </div>
+            <!-- /Cabo -->
+
+
+            <!-- Fonte -->
+            <div class="tab-pane fade botao-hover" id="fonte" role="tabpanel" aria-labelledby="fonte-tab">
+
+              <!-- Row -->
+              <div class="row text-center">
+
+                <!-- container -->
+                <div class="col-10 col-sm-10 col-md-12
+                            container
+                            ">
+                    <p class="titulo-computador">Fonte</p>
+
+                  <!-- Row -->
+                  <div class="row text-center g-3 titulo-processador">
+
+                    <!-- Row Fontes -->
+                    <div class="row text-center g-3 titulo-processador">
+
+                      <!-- Fontes -->
+                      <div class="col-12 col-sm-10 col-md-4 col-lg-4 col-xl-3 
+                                  mx-auto
+                                  ">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=970" class="btn">
+                            Fonte PC
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-10 col-md-4 col-lg-4 col-xl-3 
+                                  mx-auto
+                                  ">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=971" class="btn">
+                            Fonte Universal
+                          </a>
+                        </div>
+                      </div>
+                      <!-- /Fontes -->
+
+                    </div>
+                    <!-- /Row Fontes -->
+
+                  </div>
+                  <!-- /Row -->
+
+                </div>
+                <!-- /container -->
+
+              </div>
+              <!-- /Row -->
+              
+            </div>
+            <!-- /Fonte -->
+
+
+            <!-- Periférico -->
+            <div class="tab-pane fade botao-hover" id="periferico" role="tabpanel" aria-labelledby="periferico-tab">
+
+              <!-- Row -->
+              <div class="row text-center justify-content-center">
+
+                <!-- container -->
+                <div class="col-10 col-sm-10 col-md-12
+                            container
+                            ">
+                    <p class="titulo-computador">Periféricos</p>
+
+                  <!-- Row -->
+                  <div class="row text-center g-3 titulo-processador">
+
+                    <!-- Row Mouse -->
+                    <div class="row text-center g-3 titulo-processador
+                                col-md-6 col-xl-5">
+
+                      <!-- <p class="fw-bold">Mouse</p> -->
+
+                      <!-- Mouse -->
+                      <div class="col-12 col-sm-10 col-md-8 col-xl-6
+                                  mx-auto btn-margin
+                                  ">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=981" class="btn">
+                            Mouse Lenovo
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-10 col-md-8 col-xl-6
+                                  mx-auto
+                                  ">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=980" class="btn">
+                            Mouse Monocron
+                          </a>
+                        </div>
+                      </div>
+                      <!-- /Mouse -->
+
+                    </div>
+                    <!-- /Row Mouse -->
+
+                    <!-- Row Teclado -->
+                    <div class="row text-center g-3 titulo-processador
+                                col-md-6 col-xl-7">
+
+                      <!-- <p class="fw-bold">Teclado</p> -->
+
+                      <!-- Teclado -->
+                      <div class="col-12 col-sm-10 col-md-8 col-xl-4
+                                  mx-auto
+                                  ">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=990" class="btn">
+                            Teclado Bright
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-10 col-md-8 col-xl-4
+                                  mx-auto
+                                  ">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=991" class="btn">
+                            Teclado Monocron
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-10 col-md-8 col-xl-4
+                                  mx-auto
+                                  ">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=993" class="btn">
+                            Teclado Lenovo
+                          </a>
+                        </div>
+                      </div>
+                      <!-- /Teclado -->
+
+                    </div>
+                    <!-- /Row Teclado -->
+
+                  </div>
+                  <!-- /Row -->
+
+                </div>
+                <!-- /container -->
+
+              </div>
+              <!-- /Row -->
+              
+            </div>
+            <!-- /Periférico -->
+
+
+            <!-- Utilitários -->
+            <div class="tab-pane fade botao-hover" id="utilitarios" role="tabpanel" aria-labelledby="utilitarios-tab">
+
+              <!-- Row -->
+              <div class="row text-center">
+
+                <!-- container -->
+                <div class="col-10 col-sm-10 col-md-12
+                            container
+                            ">
+                    <p class="titulo-computador">Utilitários</p>
+
+                  <!-- Row -->
+                  <div class="row text-center g-3">
+
+                    <!-- Row 1 -->
+                    <div class="row text-center g-3 titulo-processador
+                              col-md-6 col-xl-5">
+
+                      <!-- Utilitários -->
+                      <div class="col-12 col-sm-10 col-md-8 col-xl-6 mx-auto btn-margin">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=1000" class="btn">
+                            Cabo P2
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-10 col-md-8 col-xl-6 mx-auto">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=1001" class="btn">
+                            Case
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
+                    <!-- /Row 1 -->
+
+                    <!-- Row 2 -->
+                    <div class="row text-center g-3 titulo-processador
+                              col-md-6 col-xl-7">
+
+                      <div class="col-12 col-sm-10 col-md-8 col-xl-4 mx-auto">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=1002" class="btn">
+                            Pasta Térmica
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-10 col-md-8 col-xl-4 mx-auto">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=1003" class="btn">
+                            Pasta Térmica (G)
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="col-12 col-sm-10 col-md-8 col-xl-4 mx-auto">
+                        <div class="d-grid gap-2">
+                          <a href="itens.html?id=1004" class="btn">
+                            Pen Drive Wifi
+                          </a>
+                        </div>
+                      </div>
+                      <!-- /Utilitários -->
+
+                    </div>
+                    <!-- /Row 2 -->
+                    
+                  </div>
+                  <!-- /Row -->
+
+                </div>
+                <!-- /container -->
+
+              </div>
+              <!-- /Row -->
+              
+            </div>
+            <!-- /Utilitários -->
+
+
+          </div>
+          <!--/ Conteúdo das abas -->
+        
+        </div>
+        <!-- /Container -->
+        
+      </main>
+
+
+
+      <!-- Rodapé -->
+      <footer id="footer" class="mt-4">
+        <div class="rodape-formatacao footer-color">
+          <p class="rodape-escrita-formatacao"> <!--  -->
+            <strong> &copy; </strong>Todos os direitos reservados • Desenvolvido por <a class="link-footer" href="https://www.linkedin.com/in/elias-higor-dev" target="_blank">Elias Higor</a>
+          </p>
+        </div>
+      </footer>
+      <!-- /Rodapé -->
+
+  </body>
+</html>

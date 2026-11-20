@@ -1,0 +1,3626 @@
+
+/* =============================== */
+/* Inicio JavaScript Itens
+/* =============================== */
+
+const params = new URLSearchParams(window.location.search);
+const id = Number(params.get("id"));
+
+const categorias = [
+  
+    "allinone",
+    "mini",
+    "slim",
+    "notebook",
+    "monitor",
+    "armazenamento",
+    "cabo",
+    "fonte",
+    "periferico",
+    "utilitario",
+    "impressora",
+    "kit",
+    "workstation",
+    "nobreak",
+    "teste"
+  ];
+
+/* Coloca as categorias em grupos e as deixa ativas no menu dropdown */
+const mapaMenu = {
+
+    allinone: "menu-computador",
+    mini: "menu-computador",
+    slim: "menu-computador",
+    notebook: "menu-computador",
+
+    monitor: "menu-monitor",
+
+    armazenamento: "menu-componente",
+    cabo: "menu-componente",
+    fonte: "menu-componente",
+    periferico: "menu-componente",
+    utilitario: "menu-componente",
+    
+    impressora: "menu-equipamento",
+    kit: "menu-equipamento",
+    workstation: "menu-equipamento",
+    nobreak: "menu-equipamento"
+
+  };
+
+const produtos = {
+
+  /* ==========================================================================
+   * All-In-One (ID'S: 0 ~ 99)
+   */
+
+    allinone: [
+
+    /**************************************
+     * Dell (ID'S: 0 ~ 49)
+     */
+
+    {
+      id: 0,
+      categoria: "allinone",
+      titulo: "All-In-One Dell",
+      modelo: "OptiPlex 3011 AIO",
+      specs1: "i5 3470s 8 Ram 256 SSD",
+      specs2: "6 Usb's e Serial",
+      preco: "R$ 1.100,00",
+      imagens: [
+        "imagens/all-in-one/dell/OptiPlex3011/OptiPlex3011-frente.webp",
+        "imagens/all-in-one/dell/OptiPlex3011/OptiPlex3011-fundo.webp"
+        ]
+    },
+
+    {
+      id: 1,
+      categoria: "allinone",
+      titulo: "All-In-One Dell",
+      modelo: "Inspiron 23",
+      specs1: "i5 4400s 8 Ram 128 SSD",
+      specs2: "7 Usb's e 2 HDMI's",
+      preco: "R$ 1.300,00",
+      imagens: [
+        "imagens/all-in-one/dell/Inspiron23/Inspiron23-frente.webp",
+        "imagens/all-in-one/dell/Inspiron23/Inspiron23-fundo.webp"
+        ]
+    },
+
+    {
+      id: 2,
+      categoria: "allinone",
+      titulo: "All-In-One Dell",
+      modelo: "Inspiron 20",
+      specs1: "i5 6200s 8 Ram 256 SSD",
+      specs2: "4 Usb's e HDMI",
+      preco: "R$ 1.700,00",
+      imagens: [
+        "imagens/all-in-one/dell/Inspiron20/Inspiron20-frente.webp",
+        "imagens/all-in-one/dell/Inspiron20/Inspiron20-fundo.webp"
+        ]
+    },
+
+    /**************************************
+     * Lenovo (ID'S: 50 ~ 99)
+     */
+
+    {
+      id: 50,
+      categoria: "allinone",
+      titulo: "All-In-One Lenovo",
+      modelo: "ThinkCentre E73Z",
+      specs1: "i5 4590s 8 Ram 128 SSD",
+      specs2: "6 Usb's, VGA e Serial",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/all-in-one/lenovo/ThinkCentreE73Z/ThinkCentreE73Z-frente.webp",
+        "imagens/all-in-one/lenovo/ThinkCentreE73Z/ThinkCentreE73Z-fundo.webp"
+        ]
+    }
+
+  ],
+
+
+
+  /* ==========================================================================
+     * Mini (ID'S: 100 ~ 299)
+     */
+
+
+    mini: [
+
+
+    /* =====================================
+     * Dell (ID'S: 100 ~ 149)
+     */
+
+    {
+      id: 100, /* [i3-6100t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3040",
+      specs1: "i3 6100t 8 Ram 128 SSD",
+      specs2: "6 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3040/OptiPlex3040-frente.webp",
+        "imagens/mini/dell/OptiPlex3040/OptiPlex3040-perfil.webp",
+        "imagens/mini/dell/OptiPlex3040/OptiPlex3040-fundo.webp"
+        ]
+    },
+
+    {
+      id: 120, /* [i5-4130t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3020",
+      specs1: "i5 4130t 8 Ram 128 SSD",
+      specs2: "6 Usb's, VGA e DisplayPort",
+      preco: "R$ 800,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3020/OptiPlex3020-frente.webp",
+        "imagens/mini/dell/OptiPlex3020/OptiPlex3020-perfil.webp",
+        "imagens/mini/dell/OptiPlex3020/OptiPlex3020-fundo.webp"
+        ]
+    },
+
+    {
+      id: 121, /* [i5-4590t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3020",
+      specs1: "i5 4590t 8 Ram 128 SSD",
+      specs2: "6 Usb's, VGA e DisplayPort",
+      preco: "R$ 800,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3020/OptiPlex3020-frente.webp",
+        "imagens/mini/dell/OptiPlex3020/OptiPlex3020-perfil.webp",
+        "imagens/mini/dell/OptiPlex3020/OptiPlex3020-fundo.webp"
+        ]
+    },
+
+    {
+      id: 101, /* [i5-6500t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3040",
+      specs1: "i5 6500t 8 Ram 256 SSD",
+      specs2: "6 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.300,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3040/OptiPlex3040-frente.webp",
+        "imagens/mini/dell/OptiPlex3040/OptiPlex3040-perfil.webp",
+        "imagens/mini/dell/OptiPlex3040/OptiPlex3040-fundo.webp"
+        ]
+    },
+
+    {
+      id: 102, /* [i3-7100t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3050",
+      specs1: "i3 7100t 8 Ram 128 SSD",
+      specs2: "5 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.200,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3050/OptiPlex3050-frente.webp",
+        "imagens/mini/dell/OptiPlex3050/OptiPlex3050-perfil.webp",
+        "imagens/mini/dell/OptiPlex3050/OptiPlex3050-fundo.webp"
+        ]
+    },
+
+    {
+      id: 103, /* [i5-7500t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3050",
+      specs1: "i5 7500t 8 Ram 256 SSD",
+      specs2: "5 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.600,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3050/OptiPlex3050-frente.webp",
+        "imagens/mini/dell/OptiPlex3050/OptiPlex3050-perfil.webp",
+        "imagens/mini/dell/OptiPlex3050/OptiPlex3050-fundo.webp"
+        ]
+    },
+
+    {
+      id: 104, /* [i7-7700t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3050",
+      specs1: "i7 7700t 8 Ram 256 SSD",
+      specs2: "5 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.700,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3050/OptiPlex3050-frente.webp",
+        "imagens/mini/dell/OptiPlex3050/OptiPlex3050-perfil.webp",
+        "imagens/mini/dell/OptiPlex3050/OptiPlex3050-fundo.webp"
+        ]
+    },
+
+    {
+      id: 105, /* [i3-8100t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3060",
+      specs1: "i3 8100t 8 Ram 128 SSD",
+      specs2: "6 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.300,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3060/OptiPlex3060-frente.webp",
+        "imagens/mini/dell/OptiPlex3060/OptiPlex3060-perfil.webp",
+        "imagens/mini/dell/OptiPlex3060/OptiPlex3060-fundo.webp"
+        ]
+    },
+
+    {
+      id: 106, /* [i5-8500t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3060",
+      specs1: "i5 8500t 8 Ram 256 NVMe",
+      specs2: "6 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3060/OptiPlex3060-frente.webp",
+        "imagens/mini/dell/OptiPlex3060/OptiPlex3060-perfil.webp",
+        "imagens/mini/dell/OptiPlex3060/OptiPlex3060-fundo.webp"
+        ]
+    },
+
+    {
+      id: 107, /* [i3-9100t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3070",
+      specs1: "i3 9100t 8 Ram 256 SSD",
+      specs2: "6 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.400,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3070/OptiPlex3070-frente.webp",
+        "imagens/mini/dell/OptiPlex3070/OptiPlex3070-perfil.webp",
+        "imagens/mini/dell/OptiPlex3070/OptiPlex3070-fundo.webp"
+        ]
+    },
+
+    {
+      id: 108, /* [i5-9500t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3070",
+      specs1: "i5 9500t 8 Ram 256 NVMe",
+      specs2: "6 Usb's, HDMI e DisplayPort",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3070/OptiPlex3070-frente.webp",
+        "imagens/mini/dell/OptiPlex3070/OptiPlex3070-perfil.webp",
+        "imagens/mini/dell/OptiPlex3070/OptiPlex3070-fundo.webp"
+        ]
+    },
+
+    {
+      id: 109, /* [i7-9700t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3070",
+      specs1: "i7 9700t 8 Ram 256 NVMe",
+      specs2: "6 Usb's, HDMI e DisplayPort",
+      preco: "R$ 2.200,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3070/OptiPlex3070-frente.webp",
+        "imagens/mini/dell/OptiPlex3070/OptiPlex3070-perfil.webp",
+        "imagens/mini/dell/OptiPlex3070/OptiPlex3070-fundo.webp"
+        ]
+    },
+
+    {
+      id: 110, /* [i3-10100t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3080",
+      specs1: "i3 10100t 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3080/OptiPlex3080-frente.webp",
+        "imagens/mini/dell/OptiPlex3080/OptiPlex3080-perfil.webp",
+        "imagens/mini/dell/OptiPlex3080/OptiPlex3080-fundo.webp"
+        ]
+    },
+
+    {
+      id: 111, /* [i5-10500t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3080",
+      specs1: "i5 10500t 8 Ram 256 SSD",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 2.200,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3080/OptiPlex3080-frente.webp",
+        "imagens/mini/dell/OptiPlex3080/OptiPlex3080-perfil.webp",
+        "imagens/mini/dell/OptiPlex3080/OptiPlex3080-fundo.webp"
+        ]
+    },
+
+    {
+      id: 112, /* [i3-12100t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3000",
+      specs1: "i3 12100t 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 2.200,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3000/OptiPlex3000-frente.webp",
+        "imagens/mini/dell/OptiPlex3000/OptiPlex3000-perfil.webp",
+        "imagens/mini/dell/OptiPlex3000/OptiPlex3000-fundo.webp"
+        ]
+    },
+
+    {
+      id: 113, /* [i5-12500t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 3000",
+      specs1: "i5 12500t 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 2.600,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex3000/OptiPlex3000-frente.webp",
+        "imagens/mini/dell/OptiPlex3000/OptiPlex3000-perfil.webp",
+        "imagens/mini/dell/OptiPlex3000/OptiPlex3000-fundo.webp"
+        ]
+    },
+
+    {
+      id: 119, /* [i7-12700t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex 7000",
+      specs1: "i7 12700t 8 Ram 256 NVMe",
+      specs2: "HDMI e 2 DisplayPort's",
+      preco: "R$ 3.500,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex7000/OptiPlex7000-frente.webp",
+        "imagens/mini/dell/OptiPlex7000/OptiPlex7000-perfil.webp",
+        "imagens/mini/dell/OptiPlex7000/OptiPlex7000-fundo.webp"
+        ]
+    },
+
+    {
+      id: 114, /* [i3-13100t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex",
+      specs1: "i3 13100t 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex2/OptiPlex2-frente.webp",
+        "imagens/mini/dell/OptiPlex2/OptiPlex2-perfil.webp",
+        "imagens/mini/dell/OptiPlex2/OptiPlex2-fundo.webp"
+        ]
+    },
+
+    {
+      id: 115, /* [i5-13500t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex",
+      specs1: "i5 13500t 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 3.000,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex2/OptiPlex2-frente.webp",
+        "imagens/mini/dell/OptiPlex2/OptiPlex2-perfil.webp",
+        "imagens/mini/dell/OptiPlex2/OptiPlex2-fundo.webp"
+        ]
+    },
+
+    {
+      id: 116, /* [i7-13700t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex",
+      specs1: "i7 13700t 16 Ram 256 NVMe",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 4.500,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex2/OptiPlex2-frente.webp",
+        "imagens/mini/dell/OptiPlex2/OptiPlex2-perfil.webp",
+        "imagens/mini/dell/OptiPlex2/OptiPlex2-fundo.webp"
+        ]
+    },
+
+    {
+      id: 117, /* [i3-14100t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "OptiPlex",
+      specs1: "i3 14100t 8 Ram 256 NVMe",
+      specs2: "5 Usb's, 2 HDMI's e DisplayPort",
+      preco: "R$ 2.800,00",
+      imagens: [
+        "imagens/mini/dell/DellTechnologies/DellTechnologies-frente.webp",
+        "imagens/mini/dell/DellTechnologies/DellTechnologies-perfil.webp",
+        "imagens/mini/dell/DellTechnologies/DellTechnologies-fundo.webp"
+        ]
+    },
+
+    {
+      id: 118, /* [i5-14500t] */
+      categoria: "mini",
+      titulo: "Desktop Dell Mini",
+      modelo: "Dell Technologies",
+      specs1: "i5 14500t 8 Ram 256 NVMe",
+      specs2: "5 Usb's, 2 HDMI's e DisplayPort",
+      preco: "R$ 4.000,00",
+      imagens: [
+        "imagens/mini/dell/OptiPlex/OptiPlex-frente.webp",
+        "imagens/mini/dell/OptiPlex/OptiPlex-perfil.webp",
+        "imagens/mini/dell/OptiPlex/OptiPlex-fundo.webp"
+        ]
+    },
+
+    /* =====================================
+     * Lenovo (ID'S: 150 ~ 199)
+     */
+      
+    {
+      id: 150, /* [i7-4565t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i7 4565t 8 Ram 128 SSD",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre3020/ThinkCentre3020-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre3020/ThinkCentre3020-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre3020/ThinkCentre3020-fundo.webp"
+        ]
+    },
+
+    {
+      id: 151, /* [i3-6100t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i3 6100t 8 Ram 128 SSD",
+      specs2: "6 Usb's, VGA e 2 DisplayPort's",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre3040/ThinkCentre3040-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre3040/ThinkCentre3040-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre3040/ThinkCentre3040-fundo.webp"
+        ]
+    },
+
+    {
+      id: 152, /* [i5-6500t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i5 6500t 8 Ram 256 SSD",
+      specs2: "6 Usb's, VGA e DisplayPort",
+      preco: "R$ 1.300,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre/ThinkCentre-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre/ThinkCentre-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre/ThinkCentre-fundo.webp"
+        ]
+    },
+
+    {
+      id: 153, /* [i7-6700t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i7 6700t 8 Ram 128 SSD",
+      specs2: "6 Usb's, VGA e 2 DisplayPort's",
+      preco: "R$ 1.500,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre3040/ThinkCentre3040-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre3040/ThinkCentre3040-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre3040/ThinkCentre3040-fundo.webp"
+        ]
+    },
+
+    {
+      id: 165, /* [i7-7700t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i7 7700t 8 Ram 256 NVMe",
+      specs2: "6 Usb's, VGA e 2 DisplayPort's",
+      preco: "R$ 1.600,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre/ThinkCentre-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre/ThinkCentre-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre/ThinkCentre-fundo.webp"
+        ]
+    },
+
+    {
+      id: 161, /* [i3-8100t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i3 8100t 8 Ram 128 SSD",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 1.200,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre3070/ThinkCentre3070-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre3070/ThinkCentre3070-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre3070/ThinkCentre3070-fundo.webp"
+        ]
+    },
+
+    {
+      id: 154, /* [i5-8500t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i5 8500t 8 Ram 256 SSD",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre3070/ThinkCentre3070-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre3070/ThinkCentre3070-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre3070/ThinkCentre3070-fundo.webp"
+        ]
+    },
+
+    {
+      id: 155, /* [i3-9100t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i3 9100t 8 Ram 256 SSD",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 1.300,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre3070/ThinkCentre3070-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre3070/ThinkCentre3070-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre3070/ThinkCentre3070-fundo.webp"
+        ]
+    },
+
+    {
+      id: 163, /* [i5-9500t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i5 9500t 8 Ram 256 SSD",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre3070/ThinkCentre3070-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre3070/ThinkCentre3070-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre3070/ThinkCentre3070-fundo.webp"
+        ]
+    },
+
+    {
+      id: 156, /* [i3-10100t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i3 10100t 8 Ram 256 SSD",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre3080/ThinkCentre3080-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre3080/ThinkCentre3080-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre3080/ThinkCentre3080-fundo.webp"
+        ]
+    },
+
+    {
+      id: 157, /* [i5-10500t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i5 10500t 8 Ram 256 SSD",
+      specs2: "HDMI e DisplayPort",
+      preco: "R$ 2.200,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre2/ThinkCentre2-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre2/ThinkCentre2-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre2/ThinkCentre2-fundo.webp"
+        ]
+    },
+
+    {
+      id: 162, /* [i3-1215u] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i3 1215u 8 Ram 256 NVMe",
+      specs2: "5 Usb's, HDMI e DisplayPort",
+      preco: "R$ 2.200,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre3100/ThinkCentre3100-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre3100/ThinkCentre3100-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre3100/ThinkCentre3100-fundo.webp"
+        ]
+    },
+
+    {
+      id: 158, /* [i5-12500t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i5 12500t 8 Ram 256 SSD",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 2.600,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre3/ThinkCentre3-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre3/ThinkCentre3-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre3/ThinkCentre3-fundo.webp"
+        ]
+    },
+
+    {
+      id: 159, /* [i7-12700t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i7 12700t 8 Ram 256 SSD",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 3.000,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre3/ThinkCentre3-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre3/ThinkCentre3-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre3/ThinkCentre3-fundo.webp"
+        ]
+    },
+
+    {
+      id: 160, /* [i5-13500t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i5 13500t 8 Ram 256 SSD",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 3.000,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre3/ThinkCentre3-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre3/ThinkCentre3-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre3/ThinkCentre3-fundo.webp"
+        ]
+    },
+
+    {
+      id: 164, /* [i5-14500t] */
+      categoria: "mini",
+      titulo: "Desktop Lenovo Mini",
+      modelo: "ThinkCentre",
+      specs1: "i5 14500t 8 Ram 256 NVMe",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 4.000,00",
+      imagens: [
+        "imagens/mini/lenovo/ThinkCentre3/ThinkCentre3-frente.webp",
+        "imagens/mini/lenovo/ThinkCentre3/ThinkCentre3-perfil.webp",
+        "imagens/mini/lenovo/ThinkCentre3/ThinkCentre3-fundo.webp"
+        ]
+    },
+
+    /* =====================================
+     * Positivo (ID'S: 200 ~ 249)
+     */
+
+    {
+      id: 200, /* [i3-6100t] */
+      categoria: "mini",
+      titulo: "Desktop Positivo Mini",
+      modelo: "Positivo",
+      specs1: "i3 6100t 8 Ram 128 SSD",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 800,00",
+      imagens: [
+        "imagens/mini/positivo/Positivo/Positivo-frente.webp",
+        "imagens/mini/positivo/Positivo/Positivo-perfil.webp",
+        "imagens/mini/positivo/Positivo/Positivo-fundo.webp"
+        ]
+    },
+
+    {
+      id: 201, /* [i5-6600t] */
+      categoria: "mini",
+      titulo: "Desktop Positivo Mini",
+      modelo: "Positivo",
+      specs1: "i5 6600t 8 Ram 128 SSD",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/mini/positivo/Positivo/Positivo-frente.webp",
+        "imagens/mini/positivo/Positivo/Positivo-perfil.webp",
+        "imagens/mini/positivo/Positivo/Positivo-fundo.webp"
+        ]
+    },
+
+    {
+      id: 202, /* [i3-7100t] */
+      categoria: "mini",
+      titulo: "Desktop Positivo Mini",
+      modelo: "Positivo",
+      specs1: "i3 7100t 8 Ram 128 SSD",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 900,00",
+      imagens: [
+        "imagens/mini/positivo/Positivo/Positivo-frente.webp",
+        "imagens/mini/positivo/Positivo/Positivo-perfil.webp",
+        "imagens/mini/positivo/Positivo/Positivo-fundo.webp"
+        ]
+    },
+
+    {
+      id: 203, /* [i5-7600t] */
+      categoria: "mini",
+      titulo: "Desktop Positivo Mini",
+      modelo: "Positivo",
+      specs1: "i5 7600t 8 Ram 256 SSD",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 1.100,00",
+      imagens: [
+        "imagens/mini/positivo/Positivo/Positivo-frente.webp",
+        "imagens/mini/positivo/Positivo/Positivo-perfil.webp",
+        "imagens/mini/positivo/Positivo/Positivo-fundo.webp"
+        ]
+    },
+
+    {
+      id: 204, /* [i3-8100t] */
+      categoria: "mini",
+      titulo: "Desktop Positivo Mini",
+      modelo: "Positivo",
+      specs1: "i3 8100t 8 Ram 256 SSD",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/mini/positivo/Positivo2/Positivo2-frente.webp",
+        "imagens/mini/positivo/Positivo2/Positivo2-perfil.webp",
+        "imagens/mini/positivo/Positivo2/Positivo2-fundo.webp"
+        ]
+    },
+
+    {
+      id: 205, /* [i5-8500t] */
+      categoria: "mini",
+      titulo: "Desktop Positivo Mini",
+      modelo: "Positivo",
+      specs1: "i5 8500t 8 Ram 256 SSD",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 1.200,00",
+      imagens: [
+        "imagens/mini/positivo/Positivo2/Positivo2-frente.webp",
+        "imagens/mini/positivo/Positivo2/Positivo2-perfil.webp",
+        "imagens/mini/positivo/Positivo2/Positivo2-fundo.webp"
+        ]
+    },
+
+    {
+      id: 206, /* [i3-10100t] */
+      categoria: "mini",
+      titulo: "Desktop Positivo Mini",
+      modelo: "Positivo",
+      specs1: "i3 10100t 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 1.600,00",
+      imagens: [
+        "imagens/mini/positivo/Positivo3/Positivo3-frente.webp",
+        "imagens/mini/positivo/Positivo3/Positivo3-perfil.webp",
+        "imagens/mini/positivo/Positivo3/Positivo3-fundo.webp"
+        ]
+    },
+
+    {
+      id: 207, /* [i5-10400t] */
+      categoria: "mini",
+      titulo: "Desktop Positivo Mini",
+      modelo: "Positivo",
+      specs1: "i5 10400t 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/mini/positivo/Positivo3/Positivo3-frente.webp",
+        "imagens/mini/positivo/Positivo3/Positivo3-perfil.webp",
+        "imagens/mini/positivo/Positivo3/Positivo3-fundo.webp"
+        ]
+    },
+
+    {
+      id: 208, /* [i3-12100t] */
+      categoria: "mini",
+      titulo: "Desktop Positivo Mini",
+      modelo: "Positivo",
+      specs1: "i3 12100t 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 1.900,00",
+      imagens: [
+        "imagens/mini/positivo/Positivo3/Positivo3-frente.webp",
+        "imagens/mini/positivo/Positivo3/Positivo3-perfil.webp",
+        "imagens/mini/positivo/Positivo3/Positivo3-fundo.webp"
+        ]
+    },
+
+    {
+      id: 211, /* [i5-12400t] */
+      categoria: "mini",
+      titulo: "Desktop Positivo Mini",
+      modelo: "Positivo",
+      specs1: "i5 12400t 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/mini/positivo/Positivo3/Positivo3-frente.webp",
+        "imagens/mini/positivo/Positivo3/Positivo3-perfil.webp",
+        "imagens/mini/positivo/Positivo3/Positivo3-fundo.webp"
+        ]
+    },
+
+    {
+      id: 209, /* [i3-13100t] */
+      categoria: "mini",
+      titulo: "Desktop Positivo Mini",
+      modelo: "Positivo",
+      specs1: "i3 13100t 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 2.100,00",
+      imagens: [
+        "imagens/mini/positivo/Positivo3/Positivo3-frente.webp",
+        "imagens/mini/positivo/Positivo3/Positivo3-perfil.webp",
+        "imagens/mini/positivo/Positivo3/Positivo3-fundo.webp"
+        ]
+    },
+
+    {
+      id: 210, /* [i5-13400t] */
+      categoria: "mini",
+      titulo: "Desktop Positivo Mini",
+      modelo: "Positivo",
+      specs1: "i5 13400t 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e 2 DisplayPort's",
+      preco: "R$ 2.800,00",
+      imagens: [
+        "imagens/mini/positivo/Positivo3/Positivo3-frente.webp",
+        "imagens/mini/positivo/Positivo3/Positivo3-perfil.webp",
+        "imagens/mini/positivo/Positivo3/Positivo3-fundo.webp"
+        ]
+    },
+
+    /* =====================================
+     * HP (ID'S: 250 ~ 274)
+     */
+
+    {
+      id: 250, /* [i5-4210t] */
+      categoria: "mini",
+      titulo: "Desktop HP Mini",
+      modelo: "Hewlett-Packard",
+      specs1: "i5 4210u 8 Ram 128 SSD",
+      specs2: "6 Usb's, VGA e DisplayPort",
+      preco: "R$ 800,00",
+      imagens: [
+        "imagens/mini/hp/HewlettPackard/HewlettPackard-frente.webp",
+        "imagens/mini/hp/HewlettPackard/HewlettPackard-perfil.webp",
+        "imagens/mini/hp/HewlettPackard/HewlettPackard-fundo.webp"
+        ]
+    },
+
+    {
+      id: 251, /* [i7-4785t] */
+      categoria: "mini",
+      titulo: "Desktop HP Mini",
+      modelo: "EliteDesk",
+      specs1: "i7 4785t 8 Ram 1tb HD",
+      specs2: "6 Usb's, VGA e 2 DisplayPort's",
+      preco: "R$ 900,00",
+      imagens: [
+        "imagens/mini/hp/EliteDesk/EliteDesk-frente.webp",
+        "imagens/mini/hp/EliteDesk/EliteDesk-perfil.webp",
+        "imagens/mini/hp/EliteDesk/EliteDesk-fundo.webp"
+        ]
+    },
+
+    {
+      id: 252, /* [i5-7500t] */
+      categoria: "mini",
+      titulo: "Desktop HP Mini",
+      modelo: "ProDesk",
+      specs1: "i5 7500t 8 Ram 256 SSD",
+      specs2: "6 Usb's, VGA e DisplayPort",
+      preco: "R$ 1.400,00",
+      imagens: [
+        "imagens/mini/hp/ProDesk3050/ProDesk3050-frente.webp",
+        "imagens/mini/hp/ProDesk3050/ProDesk3050-perfil.webp",
+        "imagens/mini/hp/ProDesk3050/ProDesk3050-fundo.webp"
+        ]
+    },
+
+    {
+      id: 253, /* [i5-8500t] */
+      categoria: "mini",
+      titulo: "Desktop HP Mini",
+      modelo: "ProDesk",
+      specs1: "i5 8500t 8 Ram 256 NVMe",
+      specs2: "6 Usb's, VGA e 2 DisplayPort's",
+      preco: "R$ 1.600,00",
+      imagens: [
+        "imagens/mini/hp/ProDesk3060/ProDesk3060-frente.webp",
+        "imagens/mini/hp/ProDesk3060/ProDesk3060-perfil.webp",
+        "imagens/mini/hp/ProDesk3060/ProDesk3060-fundo.webp"
+        ]
+    },
+
+    {
+      id: 254, /* [i5-10500t] */
+      categoria: "mini",
+      titulo: "Desktop HP Mini",
+      modelo: "ProDesk",
+      specs1: "i5 10500t 8 Ram 256 NVMe",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 2.100,00",
+      imagens: [
+        "imagens/mini/hp/ProDesk3080/ProDesk3080-frente.webp",
+        "imagens/mini/hp/ProDesk3080/ProDesk3080-perfil.webp",
+        "imagens/mini/hp/ProDesk3080/ProDesk3080-fundo.webp"
+        ]
+    },
+
+    {
+      id: 255, /* [i5-12500t] */
+      categoria: "mini",
+      titulo: "Desktop HP Mini",
+      modelo: "ProDesk",
+      specs1: "i5 12500t 8 Ram 256 NVMe",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/mini/hp/ProDesk3080/ProDesk3080-frente.webp",
+        "imagens/mini/hp/ProDesk3080/ProDesk3080-perfil.webp",
+        "imagens/mini/hp/ProDesk3080/ProDesk3080-fundo.webp"
+        ]
+    },
+
+    {
+      id: 256, /* [i7-12700t] */
+      categoria: "mini",
+      titulo: "Desktop HP Mini",
+      modelo: "ProDesk",
+      specs1: "i7 12700t 16 Ram 256 NVMe",
+      specs2: "5 Usb's, HDMI e 2 DisplayPort's",
+      preco: "R$ 3.400,00",
+      imagens: [
+        "imagens/mini/hp/ProDesk3100/ProDesk3100-frente.webp",
+        "imagens/mini/hp/ProDesk3100/ProDesk3100-perfil.webp",
+        "imagens/mini/hp/ProDesk3100/ProDesk3100-fundo.webp"
+        ]
+    },
+
+    {
+      id: 257, /* [i5-13500t] */
+      categoria: "mini",
+      titulo: "Desktop HP Mini",
+      modelo: "ProDesk",
+      specs1: "i5 13500t 8 Ram 256 NVMe",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 2.900,00",
+      imagens: [
+        "imagens/mini/hp/ProDesk3080/ProDesk3080-frente.webp",
+        "imagens/mini/hp/ProDesk3080/ProDesk3080-perfil.webp",
+        "imagens/mini/hp/ProDesk3080/ProDesk3080-fundo.webp"
+        ]
+    },
+
+    /* =====================================
+     * Daten (ID'S: 275 ~ 299)
+     */
+
+    {
+      id: 275, /* [i3-8100t] */
+      categoria: "mini",
+      titulo: "Desktop Daten Mini",
+      modelo: "DC3D-U",
+      specs1: "i3 8100u 8 Ram 256 NVMe",
+      specs2: "6 Usb's, VGA e HDMI",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/mini/daten/Daten/Daten-frente.webp",
+        "imagens/mini/daten/Daten/Daten-perfil.webp",
+        "imagens/mini/daten/Daten/Daten-fundo.webp"
+        ]
+    },
+
+    {
+      id: 278, /* [i5-8600t] */
+      categoria: "mini",
+      titulo: "Desktop Daten Mini",
+      modelo: "DC3D-U",
+      specs1: "i5 8600t 8 Ram 256 NVMe",
+      specs2: "6 Usb's, VGA e HDMI",
+      preco: "R$ 1.600,00",
+      imagens: [
+        "imagens/mini/daten/Daten2/Daten2-frente.webp",
+        "imagens/mini/daten/Daten2/Daten2-perfil.webp",
+        "imagens/mini/daten/Daten2/Daten2-fundo.webp"
+        ]
+    },
+
+    {
+      id: 280, /* [i3-9100t] */
+      categoria: "mini",
+      titulo: "Desktop Daten Mini",
+      modelo: "DC3D-U",
+      specs1: "i3 9100t 8 Ram 256 NVMe",
+      specs2: "6 Usb's, VGA e HDMI",
+      preco: "R$ 1.100,00",
+      imagens: [
+        "imagens/mini/daten/Daten2/Daten2-frente.webp",
+        "imagens/mini/daten/Daten2/Daten2-perfil.webp",
+        "imagens/mini/daten/Daten2/Daten2-fundo.webp"
+        ]
+    },
+
+    {
+      id: 279, /* [i5-9600t] */
+      categoria: "mini",
+      titulo: "Desktop Daten Mini",
+      modelo: "DC3D-U",
+      specs1: "i5 9600t 8 Ram 256 NVMe",
+      specs2: "6 Usb's, VGA e HDMI",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/mini/daten/Daten2/Daten2-frente.webp",
+        "imagens/mini/daten/Daten2/Daten2-perfil.webp",
+        "imagens/mini/daten/Daten2/Daten2-fundo.webp"
+        ]
+    },
+
+    {
+      id: 276, /* [i3-10100t] */
+      categoria: "mini",
+      titulo: "Desktop Daten Mini",
+      modelo: "DC3D-U",
+      specs1: "i3 10100t 8 Ram 128 SSD",
+      specs2: "6 Usb's, VGA e HDMI",
+      preco: "R$ 1.600,00",
+      imagens: [
+        "imagens/mini/daten/Daten/Daten-frente.webp",
+        "imagens/mini/daten/Daten/Daten-perfil.webp",
+        "imagens/mini/daten/Daten/Daten-fundo.webp"
+        ]
+    },
+
+    {
+      id: 277, /* [i5-10500t] */
+      categoria: "mini",
+      titulo: "Desktop Daten Mini",
+      modelo: "DC3D-U",
+      specs1: "i5 10500t 8 Ram 256 NVMe",
+      specs2: "6 Usb's, VGA e HDMI",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/mini/daten/Daten/Daten-frente.webp",
+        "imagens/mini/daten/Daten/Daten-perfil.webp",
+        "imagens/mini/daten/Daten/Daten-fundo.webp"
+        ]
+    }
+
+  ],
+
+  /* ==========================================================================
+   * Slim (ID'S: 300 ~ 499)
+   */
+
+    slim: [
+
+    /* =====================================
+     * Dell (ID'S: 300 ~ 349)
+     */
+
+    {
+      id: 300, /* [i3-6100] */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3040",
+      specs1: "i3 6100 8 Ram 128 SSD",
+      specs2: "8 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3040/OptiPlex3040-frente.webp",
+        "imagens/slim/dell/OptiPlex3040/OptiPlex3040-fundo.webp"
+        ]
+    },
+
+    {
+      id: 301, /* [i5-6500] */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3040",
+      specs1: "i5 6500 8 Ram 256 SSD",
+      specs2: "8 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.300,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3040/OptiPlex3040-frente.webp",
+        "imagens/slim/dell/OptiPlex3040/OptiPlex3040-fundo.webp"
+        ]
+    },
+
+    {
+      id: 302, /* [i7-6700] */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3040",
+      specs1: "i7 6700 8 Ram 256 SSD",
+      specs2: "8 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.500,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3040/OptiPlex3040-frente.webp",
+        "imagens/slim/dell/OptiPlex3040/OptiPlex3040-fundo.webp"
+        ]
+    },
+
+    {
+      id: 303, /* [i3-7100] */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3050",
+      specs1: "i3 7100 8 Ram 128 SSD",
+      specs2: "8 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.200,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3050/OptiPlex3050-frente.webp",
+        "imagens/slim/dell/OptiPlex3050/OptiPlex3050-fundo.webp"
+        ]
+    },
+
+    {
+      id: 304, /* i5-7500 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3050",
+      specs1: "i5 7500 8 Ram 256 SSD",
+      specs2: "8 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.600,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3050/OptiPlex3050-frente.webp",
+        "imagens/slim/dell/OptiPlex3050/OptiPlex3050-fundo.webp"
+        ]
+    },
+
+    {
+      id: 305, /* i7-7700 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3050",
+      specs1: "i7 7700 8 Ram 256 SSD",
+      specs2: "8 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3050/OptiPlex3050-frente.webp",
+        "imagens/slim/dell/OptiPlex3050/OptiPlex3050-fundo.webp"
+        ]
+    },
+
+    {
+      id: 306, /* i3-8100 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3060",
+      specs1: "i3 8100 8 Ram 128 SSD",
+      specs2: "8 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.300,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3060/OptiPlex3060-frente.webp",
+        "imagens/slim/dell/OptiPlex3060/OptiPlex3060-fundo.webp"
+        ]
+    },
+
+    {
+      id: 307, /* i5-8500 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3060",
+      specs1: "i5 8500 8 Ram 256 SSD",
+      specs2: "8 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3060/OptiPlex3060-frente.webp",
+        "imagens/slim/dell/OptiPlex3060/OptiPlex3060-fundo.webp"
+        ]
+    },
+
+    {
+      id: 308, /* i7-8700 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3060",
+      specs1: "i7 8700 8 Ram 256 SSD",
+      specs2: "6 Usb's, HDMI e VGA",
+      preco: "R$ 1.900,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex/OptiPlex-frente.webp",
+        "imagens/slim/dell/OptiPlex/OptiPlex-fundo.webp"
+        ]
+    },
+
+    {
+      id: 309, /* i3-9100 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3070",
+      specs1: "i3 9100 8 Ram 256 SSD",
+      specs2: "8 Usb's, HDMI e DisplayPort",
+      preco: "R$ 1.400,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3070/OptiPlex3070-frente.webp",
+        "imagens/slim/dell/OptiPlex3070/OptiPlex3070-fundo.webp"
+        ]
+    },
+
+    {
+      id: 310, /* i5-9500 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3070",
+      specs1: "i5 9500 8 Ram 256 SSD",
+      specs2: "8 Usb's, HDMI e DisplayPort",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3070/OptiPlex3070-frente.webp",
+        "imagens/slim/dell/OptiPlex3070/OptiPlex3070-fundo.webp"
+        ]
+    },
+
+    {
+      id: 311, /* i7-9700 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 7070",
+      specs1: "i7 9700 8 Ram 256 SSD",
+      specs2: "9 Usb's, Serial e 2 DisplayPort's",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex2/OptiPlex2-frente.webp",
+        "imagens/slim/dell/OptiPlex2/OptiPlex2-fundo.webp"
+        ]
+    },
+
+    {
+      id: 312, /* i3-10100 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3080",
+      specs1: "i3 10100 8 Ram 256 NVMe",
+      specs2: "8 Usb's, 2 HDMI's e DisplayPort",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3080/OptiPlex3080-frente.webp",
+        "imagens/slim/dell/OptiPlex3080/OptiPlex3080-fundo.webp"
+        ]
+    },
+
+    {
+      id: 313, /* i5-10500 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3080",
+      specs1: "i5 10500 8 Ram 256 SSD",
+      specs2: "8 Usb's, 2 HDMI's e DisplayPort",
+      preco: "R$ 2.200,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3080/OptiPlex3080-frente.webp",
+        "imagens/slim/dell/OptiPlex3080/OptiPlex3080-fundo.webp"
+        ]
+    },
+
+    {
+      id: 314, /* i7-10700 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 3080",
+      specs1: "i7 10700 8 Ram 256 SSD",
+      specs2: "8 Usb's, 2 HDMI's e DisplayPort",
+      preco: "R$ 2.600,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3080/OptiPlex3080-frente.webp",
+        "imagens/slim/dell/OptiPlex3080/OptiPlex3080-fundo.webp"
+        ]
+    },
+
+    {
+      id: 315, /* i7-10700-xps */
+      categoria: "slim",
+      titulo: "Desktop Dell XPS",
+      modelo: "RTX 3060 12 GB",
+      specs1: "i7 10700 16 Ram 512 NVMe",
+      specs2: "9 Usb's, HDMI e DisplayPort",
+      preco: "R$ 6.000,00",
+      imagens: [
+        "imagens/slim/dell/XPS/XPS-frente.webp",
+        "imagens/slim/dell/XPS/XPS-fundo.webp"
+        ]
+    },
+
+    {
+      id: 317, /* i5-12400 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "Vostro 3710",
+      specs1: "i5 12400 8 Ram 256 NVMe",
+      specs2: "8 Usb's, HDMI e DisplayPort",
+      preco: "R$ 2.600,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3100/OptiPlex3100-frente.webp",
+        "imagens/slim/dell/OptiPlex3100/OptiPlex3100-fundo.webp"
+        ]
+    },
+
+    {
+      id: 319, /* i7-12700 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex 5000",
+      specs1: "i7 12700 8 Ram 256 NVMe",
+      specs2: "9 Usb's e 4 DisplayPort's",
+      preco: "R$ 3.500,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex3/OptiPlex3-frente.webp",
+        "imagens/slim/dell/OptiPlex3/OptiPlex3-fundo.webp"
+        ]
+    },
+
+    {
+      id: 318, /* i5-13500 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex",
+      specs1: "i5 13500 8 Ram 256 NVMe",
+      specs2: "9 Usb's, HDMI e 3 DisplayPort's",
+      preco: "R$ 3.000,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex4/OptiPlex4-frente.webp",
+        "imagens/slim/dell/OptiPlex4/OptiPlex4-fundo.webp"
+        ]
+    },
+
+    {
+      id: 316, /* i5-14500 */
+      categoria: "slim",
+      titulo: "Desktop Dell Slim",
+      modelo: "OptiPlex",
+      specs1: "i5 14500 16 Ram 512 NVMe",
+      specs2: "9 Usb's, HDMI e 3 DisplayPort's",
+      preco: "R$ 4.000,00",
+      imagens: [
+        "imagens/slim/dell/OptiPlex4/OptiPlex4-frente.webp",
+        "imagens/slim/dell/OptiPlex4/OptiPlex4-fundo.webp"
+        ]
+    },
+
+    /* =====================================
+     * Lenovo (ID'S: 350 ~ 399)
+     */
+
+    {
+      id: 367, /* [i5-3470] */ /*******************************************************/
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i5 3470 8 Ram 128 SSD",
+      specs2: "8 Usb's, VGA e DisplayPort",
+      preco: "R$ 550,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre-MSeries/ThinkCentre-MSeries-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre-MSeries/ThinkCentre-MSeries-fundo.webp"
+        ]
+    },
+
+    {
+      id: 363, /* i5-4570 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i5 4570 8 Ram 128 SSD",
+      specs2: "8 Usb's, VGA e DisplayPort",
+      preco: "R$ 650,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre3020/ThinkCentre3020-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre3020/ThinkCentre3020-fundo.webp"
+        ]
+    },
+
+    {
+      id: 368, /* i7-4790 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i7 4790 8 Ram 128 SSD",
+      specs2: "10 Usb's, VGA e 2 DisplayPort's",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre6/ThinkCentre6-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre6/ThinkCentre6-fundo.webp"
+        ]
+    },
+
+    {
+      id: 350, /* i3-6100 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i3 6100 8 Ram 128 SSD",
+      specs2: "6 Usb's, VGA e DisplayPort",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre3040/ThinkCentre3040-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre3040/ThinkCentre3040-fundo.webp"
+        ]
+    },
+
+    {
+      id: 351, /* i5-6500 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i5 6500 8 Ram 256 SSD",
+      specs2: "8 Usb's, VGA e 2 DisplayPort's",
+      preco: "R$ 1.300,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre/ThinkCentre-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre/ThinkCentre-fundo.webp"
+        ]
+    },
+
+    {
+      id: 352, /* i7-6700 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i7 6700 8 Ram 128 SSD",
+      specs2: "VGA, Serial e 2 DisplayPort's",
+      preco: "R$ 1.500,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre2/ThinkCentre2-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre2/ThinkCentre2-fundo.webp"
+        ]
+    },
+
+    {
+      id: 353, /* i3-7100 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i3 7100 8 Ram 128 SSD",
+      specs2: "8 Usb's, VGA e 2 DisplayPort's",
+      preco: "R$ 1.100,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre3050/ThinkCentre3050-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre3050/ThinkCentre3050-fundo.webp"
+        ]
+    },
+
+    {
+      id: 354, /* i5-7400 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "V520S",
+      specs1: "i5 7400 8 Ram 256 SSD",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 1.600,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre3/ThinkCentre3-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre3/ThinkCentre3-fundo.webp"
+        ]
+    },
+
+    {
+      id: 355, /* i7-7700 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i7 7700 8 Ram 128 SSD",
+      specs2: "8 Usb's, VGA e 2 DisplayPort's",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre/ThinkCentre-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre/ThinkCentre-fundo.webp"
+        ]
+    },
+
+    {
+      id: 356, /* i5-8500 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i5 8500 8 Ram 256 SSD",
+      specs2: "8 Usb's, VGA e 2 DisplayPort's",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre4/ThinkCentre4-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre4/ThinkCentre4-fundo.webp"
+        ]
+    },
+
+    {
+      id: 357, /* i7-8700 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i7 8700 8 Ram 256 SSD",
+      specs2: "8 Usb's, VGA e 2 DisplayPort's",
+      preco: "R$ 1.900,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre4/ThinkCentre4-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre4/ThinkCentre4-fundo.webp"
+        ]
+    },
+
+    {
+      id: 361, /* i5-9400 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i5 9400 8 Ram 256 SSD",
+      specs2: "8 Usb's, VGA e 2 DisplayPort's",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre4/ThinkCentre4-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre4/ThinkCentre4-fundo.webp"
+        ]
+    },
+
+    {
+      id: 360, /* i3-10100 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "Lenovo Technologies",
+      specs1: "i3 10100 8 Ram 256 SSD",
+      specs2: "VGA, DVI e HDMI",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre3080/ThinkCentre3080-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre3080/ThinkCentre3080-fundo.webp"
+        ]
+    },
+
+    {
+      id: 362, /* i5-10500 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "Lenovo Technologies",
+      specs1: "i5 10500 8 Ram 256 SSD",
+      specs2: "VGA, DVI e HDMI",
+      preco: "R$ 2.200,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre3080/ThinkCentre3080-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre3080/ThinkCentre3080-fundo.webp"
+        ]
+    },
+
+    {
+      id: 358, /* i3-12100 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i3 12100 8 Ram 256 SSD",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 2.100,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre3100/ThinkCentre3100-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre3100/ThinkCentre3100-fundo.webp"
+        ]
+    },
+
+    {
+      id: 364, /* i5-12400 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "Neo5",
+      specs1: "i5 12400 8 Ram 256 SSD",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 2.600,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre3100/ThinkCentre3100-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre3100/ThinkCentre3100-fundo.webp"
+        ]
+    },
+
+    {
+      id: 359, /* i3-13100 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i3 13100 8 Ram 256 SSD",
+      specs2: "HDMI, VGA e DisplayPort",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre3100/ThinkCentre3100-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre3100/ThinkCentre3100-fundo.webp"
+        ]
+    },
+
+    {
+      id: 365, /* i5-13400 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "Neo5",
+      specs1: "i5 13400 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 3.000,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre3100/ThinkCentre3100-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre3100/ThinkCentre3100-fundo.webp"
+        ]
+    },
+
+    {
+      id: 366, /* i5-14400 */
+      categoria: "slim",
+      titulo: "Desktop Lenovo Slim",
+      modelo: "ThinkCentre",
+      specs1: "i5 14400 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 4.000,00",
+      imagens: [
+        "imagens/slim/lenovo/ThinkCentre5/ThinkCentre5-frente.webp",
+        "imagens/slim/lenovo/ThinkCentre5/ThinkCentre5-fundo.webp"
+        ]
+    },
+
+    /* =====================================
+     * Positivo (ID'S: 400 ~ 449)
+     */
+
+    {
+      id: 401, /* i3-7100 */
+      categoria: "slim",
+      titulo: "Desktop Positivo Slim",
+      modelo: "Positivo Master",
+      specs1: "i3 7100 8 Ram 128 SSD",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 900,00",
+      imagens: [
+        "imagens/slim/positivo/Positivo/Positivo-frente.webp",
+        "imagens/slim/positivo/Positivo/Positivo-fundo.webp"
+        ]
+    },
+
+    {
+      id: 402, /* i3-13100 */
+      categoria: "slim",
+      titulo: "Desktop Positivo Slim",
+      modelo: "Positivo",
+      specs1: "i3 13100 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 2.400,00",
+      imagens: [
+        "imagens/slim/positivo/Positivo2/Positivo2-frente.webp",
+        "imagens/slim/positivo/Positivo2/Positivo2-fundo.webp"
+        ]
+    },
+
+    {
+      id: 400, /* i5-7400 */
+      categoria: "slim",
+      titulo: "Desktop Positivo Slim",
+      modelo: "Positivo Master",
+      specs1: "i5 7400 8 Ram 256 NVMe",
+      specs2: "VGA, HDMI e DisplayPort",
+      preco: "R$ 1.100,00",
+      imagens: [
+        "imagens/slim/positivo/Positivo/Positivo-frente.webp",
+        "imagens/slim/positivo/Positivo/Positivo-fundo.webp"
+        ]
+    },
+
+
+
+    /* =====================================
+     * Effect (ID'S: 450 ~ 474)
+     */
+
+    {
+      id: 451, /* i3-6100 */
+      categoria: "slim",
+      titulo: "Desktop Effect Slim",
+      modelo: "Effect",
+      specs1: "i3 6100 8 Ram 128 SSD",
+      specs2: "8 Usb's, VGA e HDMI",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/slim/effect/Effect/Effect-frente.webp",
+        "imagens/slim/effect/Effect/Effect-fundo.webp"
+        ]
+    },
+
+    {
+      id: 450, /* i5-6500 */
+      categoria: "slim",
+      titulo: "Desktop Effect Slim",
+      modelo: "Effect",
+      specs1: "i5 6500 8 Ram 128 SSD",
+      specs2: "8 Usb's, VGA e HDMI",
+      preco: "R$ 1.200,00",
+      imagens: [
+        "imagens/slim/effect/Effect/Effect-frente.webp",
+        "imagens/slim/effect/Effect/Effect-fundo.webp"
+        ]
+    },
+
+    /* =====================================
+     * HP (ID'S: 475 ~ 499)
+     */
+
+    {
+      id: 475, /* i3-6100 */
+      categoria: "slim",
+      titulo: "Desktop HP Slim",
+      modelo: "ProDesk 400G3SSF",
+      specs1: "i3 6100 8 Ram 128 SSD",
+      specs2: "8 Usb's, VGA e DisplayPort",
+      preco: "R$ 800,00",
+      imagens: [
+        "imagens/slim/hp/ProDesk3040/ProDesk3040-frente.webp",
+        "imagens/slim/hp/ProDesk3040/ProDesk3040-fundo.webp"
+        ]
+    },
+
+    {
+      id: 476, /* i5-6500 */
+      categoria: "slim",
+      titulo: "Desktop HP Slim",
+      modelo: "EliteDesk",
+      specs1: "i5 6500 8 Ram 128 SSD",
+      specs2: "Serial, VGA e 2 DisplayPort's",
+      preco: "R$ 1.100,00",
+      imagens: [
+        "imagens/slim/hp/EliteDesk3040/EliteDesk3040-frente.webp",
+        "imagens/slim/hp/EliteDesk3040/EliteDesk3040-fundo.webp"
+        ]
+    },
+
+    {
+      id: 477, /* i3-7100 */
+      categoria: "slim",
+      titulo: "Desktop HP Slim",
+      modelo: "ProDesk",
+      specs1: "i3 7100 8 Ram 128 SSD",
+      specs2: "8 Usb's, VGA e DisplayPort",
+      preco: "R$ 900,00",
+      imagens: [
+        "imagens/slim/hp/ProDesk3050/ProDesk3050-frente.webp",
+        "imagens/slim/hp/ProDesk3050/ProDesk3050-fundo.webp"
+        ]
+    },
+
+    {
+      id: 478, /* i5-7500 */
+      categoria: "slim",
+      titulo: "Desktop HP Slim",
+      modelo: "ProDesk",
+      specs1: "i5 7500 8 Ram 128 SSD",
+      specs2: "8 Usb's, VGA e DisplayPort",
+      preco: "R$ 1.200,00",
+      imagens: [
+        "imagens/slim/hp/ProDesk3050/ProDesk3050-frente.webp",
+        "imagens/slim/hp/ProDesk3050/ProDesk3050-fundo.webp"
+        ]
+    },
+
+    {
+      id: 479, /* i3-8100 */
+      categoria: "slim",
+      titulo: "Desktop HP Slim",
+      modelo: "ProDesk",
+      specs1: "i3 8100 8 Ram 128 SSD",
+      specs2: "8 Usb's, VGA e DisplayPort",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/slim/hp/ProDesk3050/ProDesk3050-frente.webp",
+        "imagens/slim/hp/ProDesk3050/ProDesk3050-fundo.webp"
+        ]
+    }
+
+  ],
+
+  /* ==========================================================================
+   * Notebook (ID'S: 500 ~ 749)
+   */
+
+  notebook: [
+
+    /* =====================================
+     * Dell (ID'S: 500 ~ 549)
+     */
+
+    {
+      id: 523, /* i5-5200u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Inspiron 5458",
+      specs1: "i5 5200u 12 Ram 128 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/notebook/dell/Inspiron5458/Inspiron5458-frente.webp",
+        "imagens/notebook/dell/Inspiron5458/Inspiron5458-perfil.webp",
+        "imagens/notebook/dell/Inspiron5458/Inspiron5458-cima.webp"
+        ]
+    },
+
+    {
+      id: 500, /* i5-6200u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 3480",
+      specs1: "i5 6200u 8 Ram 256 SSD",
+      specs2: "3 Usb's, VGA e HDMI",
+      preco: "R$ 1.600,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude3480/Latitude3480-frente.webp",
+        "imagens/notebook/dell/Latitude3480/Latitude3480-perfil.webp",
+        "imagens/notebook/dell/Latitude3480/Latitude3480-cima.webp"
+        ]
+    },
+
+    {
+      id: 519, /* i5-6300u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude e7470",
+      specs1: "i5 6300u 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 1.600,00",
+      imagens: [
+        "imagens/notebook/dell/Latitudee7470/Latitudee7470-frente.webp",
+        "imagens/notebook/dell/Latitudee7470/Latitudee7470-perfil.webp",
+        "imagens/notebook/dell/Latitudee7470/Latitudee7470-cima.webp"
+        ]
+    },
+
+    {
+      id: 510, /* i5-7300u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5480",
+      specs1: "i5 7300u 8 Ram 256 SSD",
+      specs2: "3 Usb's, VGA e HDMI",
+      preco: "R$ 1.700,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude5480/Latitude5480-frente.webp",
+        "imagens/notebook/dell/Latitude5480/Latitude5480-perfil.webp",
+        "imagens/notebook/dell/Latitude5480/Latitude5480-cima.webp"
+        ]
+    },
+
+    {
+      id: 501, /* i7-7600u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 7480",
+      specs1: "i7 7600u 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude7480/Latitude7480-frente.webp",
+        "imagens/notebook/dell/Latitude7480/Latitude7480-perfil.webp",
+        "imagens/notebook/dell/Latitude7480/Latitude7480-cima.webp"
+        ]
+    },
+
+    {
+      id: 511, /* i5-8265u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5400",
+      specs1: "i5 8265u 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude5400/Latitude5400-frente.webp",
+        "imagens/notebook/dell/Latitude5400/Latitude5400-perfil.webp",
+        "imagens/notebook/dell/Latitude5400/Latitude5400-cima.webp"
+        ]
+    },
+
+    {
+      id: 520, /* i5-8350u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5490",
+      specs1: "i5 8350u 8 Ram 256 SSD",
+      specs2: "3 Usb's, VGA e HDMI",
+      preco: "R$ 1.800,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude5490/Latitude5490-frente.webp",
+        "imagens/notebook/dell/Latitude5490/Latitude5490-perfil.webp",
+        "imagens/notebook/dell/Latitude5490/Latitude5490-cima.webp"
+        ]
+    },
+
+    {
+      id: 522, /* i7-8565u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Inspiron P75F",
+      specs1: "i7 8565u 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.200,00",
+      imagens: [
+        "imagens/notebook/dell/InspironP75F/InspironP75F-frente.webp",
+        "imagens/notebook/dell/InspironP75F/InspironP75F-perfil.webp",
+        "imagens/notebook/dell/InspironP75F/InspironP75F-cima.webp"
+        ]
+    },
+
+    {
+      id: 502, /* i7-8665u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5400",
+      specs1: "i7 8665u 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude5400/Latitude5400-frente.webp",
+        "imagens/notebook/dell/Latitude5400/Latitude5400-perfil.webp",
+        "imagens/notebook/dell/Latitude5400/Latitude5400-cima.webp"
+        ]
+    },
+
+    {
+      id: 512, /* i5-1031u */ /* Registro Offline (Já tem outra registrada) */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 3410",
+      specs1: "i5 1031u 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude3410/Latitude3410-frente.webp",
+        "imagens/notebook/dell/Latitude3410/Latitude3410-perfil.webp",
+        "imagens/notebook/dell/Latitude3410/Latitude3410-cima.webp"
+        ]
+    },
+
+    {
+      id: 508, /* i5-1021u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 3410",
+      specs1: "i5 1021u 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude3410/Latitude3410-frente.webp",
+        "imagens/notebook/dell/Latitude3410/Latitude3410-perfil.webp",
+        "imagens/notebook/dell/Latitude3410/Latitude3410-cima.webp"
+        ]
+    },
+
+    {
+      id: 521, /* i5-1021u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5410",
+      specs1: "i5 1021u 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude5410/Latitude5410-frente.webp",
+        "imagens/notebook/dell/Latitude5410/Latitude5410-perfil.webp",
+        "imagens/notebook/dell/Latitude5410/Latitude5410-cima.webp"
+        ]
+    },
+
+    {
+      id: 514, /* i7-1051u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 3410",
+      specs1: "i7 1051u 8 Ram 256 SSD",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude3410/Latitude3410-frente.webp",
+        "imagens/notebook/dell/Latitude3410/Latitude3410-perfil.webp",
+        "imagens/notebook/dell/Latitude3410/Latitude3410-cima.webp"
+        ]
+    },
+
+    {
+      id: 513, /* i5-1135g7 */ /* Registro Offline (Já tem outra registrada) */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 3420",
+      specs1: "i5 1135g7 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude3420/Latitude3420-frente.webp",
+        "imagens/notebook/dell/Latitude3420/Latitude3420-perfil.webp",
+        "imagens/notebook/dell/Latitude3420/Latitude3420-cima.webp"
+        ]
+    },
+
+    {
+      id: 515, /* i5-1145g7 */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5420",
+      specs1: "i5 1145g7 8 Ram 256 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 2.300,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude5420/Latitude5420-frente.webp",
+        "imagens/notebook/dell/Latitude5420/Latitude5420-perfil.webp",
+        "imagens/notebook/dell/Latitude5420/Latitude5420-cima.webp"
+        ]
+    },
+
+    {
+      id: 503, /* i7-1165g7 */ /* Registro Offline (Já tem outra registrada) */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 3420",
+      specs1: "i7 1165g7 16 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.800,00",
+      imagens: [
+        "imagens/notebook/dell/i7-1165g7/i7-1165g7-frente.webp",
+        "imagens/notebook/dell/i7-1165g7/i7-1165g7-perfil.webp",
+        "imagens/notebook/dell/i7-1165g7/i7-1165g7-cima.webp"
+        ]
+    },
+
+    {
+      id: 516, /* i7-1185g7 */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5420",
+      specs1: "i7 1185g7 8 Ram 256 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 2.800,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude5420/Latitude5420-frente.webp",
+        "imagens/notebook/dell/Latitude5420/Latitude5420-perfil.webp",
+        "imagens/notebook/dell/Latitude5420/Latitude5420-cima.webp"
+        ]
+    },
+
+    {
+      id: 504, /* i5-1245u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5430",
+      specs1: "i5 1245u 16 Ram 256 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 2.800,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude5430/Latitude5430-frente.webp",
+        "imagens/notebook/dell/Latitude5430/Latitude5430-perfil.webp",
+        "imagens/notebook/dell/Latitude5430/Latitude5430-cima.webp"
+        ]
+    },
+
+    {
+      id: 509, /* i7-1265u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5430",
+      specs1: "i7 1265u 8 Ram 256 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 5.000,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude5430/Latitude5430-frente.webp",
+        "imagens/notebook/dell/Latitude5430/Latitude5430-perfil.webp",
+        "imagens/notebook/dell/Latitude5430/Latitude5430-cima.webp"
+        ]
+    },
+
+    {
+      id: 517, /* i3-1315u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 3450",
+      specs1: "i3 1315u 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude3450/Latitude3450-frente.webp",
+        "imagens/notebook/dell/Latitude3450/Latitude3450-perfil.webp",
+        "imagens/notebook/dell/Latitude3450/Latitude3450-cima.webp"
+        ]
+    },
+
+    {
+      id: 505, /* i5-1345u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5440",
+      specs1: "i5 1345u 16 Ram 256 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 3.200,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude5440/Latitude5440-frente.webp",
+        "imagens/notebook/dell/Latitude5440/Latitude5440-perfil.webp",
+        "imagens/notebook/dell/Latitude5440/Latitude5440-cima.webp"
+        ]
+    },
+
+    {
+      id: 506, /* i7-1355u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 3450",
+      specs1: "i7 1355u 16 Ram 512 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 5.000,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude3450/Latitude3450-frente.webp",
+        "imagens/notebook/dell/Latitude3450/Latitude3450-perfil.webp",
+        "imagens/notebook/dell/Latitude3450/Latitude3450-cima.webp"
+        ]
+    },
+
+    {
+      id: 518, /* ultra-5238u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Pro",
+      specs1: "Ultra 5238u 32 Ram 512 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 6.000,00",
+      imagens: [
+        "imagens/notebook/dell/Pro/Pro-frente.webp",
+        "imagens/notebook/dell/Pro/Pro-perfil.webp",
+        "imagens/notebook/dell/Pro/Pro-cima.webp"
+        ]
+    },
+
+    {
+      id: 507, /* ultra-7165u */
+      categoria: "notebook",
+      titulo: "Notebook Dell",
+      modelo: "Latitude 5450",
+      specs1: "Ultra 7165u 16 Ram 256 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 5.500,00",
+      imagens: [
+        "imagens/notebook/dell/Latitude5450/Latitude5450-frente.webp",
+        "imagens/notebook/dell/Latitude5450/Latitude5450-perfil.webp",
+        "imagens/notebook/dell/Latitude5450/Latitude5450-cima.webp"
+        ]
+    },
+
+    /* =====================================
+     * Lenovo (ID'S: 550 ~ 599)
+     */
+
+    {
+      id: 560, /* Celeron-N4500 */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "IdeaPad 115IJL7",
+      specs1: "Celeron N4500 8 Ram 256 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 1.300,00",
+      imagens: [
+        "imagens/notebook/lenovo/IdeaPad115IJL7/IdeaPad115IJL7-frente.webp",
+        "imagens/notebook/lenovo/IdeaPad115IJL7/IdeaPad115IJL7-perfil.webp",
+        "imagens/notebook/lenovo/IdeaPad115IJL7/IdeaPad115IJL7-cima.webp"
+        ]
+    },
+
+    {
+      id: 561, /* i3-2328m */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "ThinkPad E430",
+      specs1: "i3 2328m 8 Ram 128 NVMe",
+      specs2: "4 Usb's, VGA e HDMI",
+      preco: "R$ 800,00",
+      imagens: [
+        "imagens/notebook/lenovo/ThinkPadE430/ThinkPadE430-frente.webp",
+        "imagens/notebook/lenovo/ThinkPadE430/ThinkPadE430-perfil.webp",
+        "imagens/notebook/lenovo/ThinkPadE430/ThinkPadE430-cima.webp"
+        ]
+    },
+
+    {
+      id: 557, /* i5-3230m */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "ThinkPad E430",
+      specs1: "i5 3230m 8 Ram 256 SSD",
+      specs2: "4 Usb's, VGA e HDMI",
+      preco: "R$ 1.000,00",
+      imagens: [
+        "imagens/notebook/lenovo/ThinkPadE430/ThinkPadE430-frente.webp",
+        "imagens/notebook/lenovo/ThinkPadE430/ThinkPadE430-perfil.webp",
+        "imagens/notebook/lenovo/ThinkPadE430/ThinkPadE430-cima.webp"
+        ]
+    },
+
+    {
+      id: 550, /* i5-4300u */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "ThinkPad T440",
+      specs1: "i5 4300u 8 Ram 256 NVMe",
+      specs2: "2 Usb's e VGA",
+      preco: "R$ 1.100,00",
+      imagens: [
+        "imagens/notebook/lenovo/ThinkPadT440/ThinkPadT440-frente.webp",
+        "imagens/notebook/lenovo/ThinkPadT440/ThinkPadT440-perfil.webp",
+        "imagens/notebook/lenovo/ThinkPadT440/ThinkPadT440-cima.webp"
+        ]
+    },
+
+    {
+      id: 551, /* i5-6300u */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "ThinkPad T470",
+      specs1: "i5 6300u 8 Ram 256 SSD",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 1.200,00",
+      imagens: [
+        "imagens/notebook/lenovo/ThinkPadT470/ThinkPadT470-frente.webp",
+        "imagens/notebook/lenovo/ThinkPadT470/ThinkPadT470-perfil.webp",
+        "imagens/notebook/lenovo/ThinkPadT470/ThinkPadT470-cima.webp"
+        ]
+    },
+
+    {
+      id: 552, /* i5-8350u */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "ThinkPad T480",
+      specs1: "i5 8350u 8 Ram 256 SSD",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 1.600,00",
+      imagens: [
+        "imagens/notebook/lenovo/ThinkPadT480/ThinkPadT480-frente.webp",
+        "imagens/notebook/lenovo/ThinkPadT480/ThinkPadT480-perfil.webp",
+        "imagens/notebook/lenovo/ThinkPadT480/ThinkPadT480-cima.webp"
+        ]
+    },
+
+    {
+      id: 558, /* i5-1021u */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "ThinkPad E14",
+      specs1: "i5 1021u 8 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/notebook/lenovo/ThinkPadE14/ThinkPadE14-frente.webp",
+        "imagens/notebook/lenovo/ThinkPadE14/ThinkPadE14-perfil.webp",
+        "imagens/notebook/lenovo/ThinkPadE14/ThinkPadE14-cima.webp"
+        ]
+    },
+
+    {
+      id: 562, /* i5-1031u */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "ThinkPad L13",
+      specs1: "i5 1031u 8 Ram 256 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 2.000,00",
+      imagens: [
+        "imagens/notebook/lenovo/ThinkPadL13/ThinkPadL13-frente.webp",
+        "imagens/notebook/lenovo/ThinkPadL13/ThinkPadL13-perfil.webp",
+        "imagens/notebook/lenovo/ThinkPadL13/ThinkPadL13-cima.webp"
+        ]
+    },
+
+    {
+      id: 553, /* i5-1135g7 */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "V14 G2 ITL",
+      specs1: "i5 1135g7 8 Ram 256 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/notebook/lenovo/V14G2ITL/V14G2ITL-frente.webp",
+        "imagens/notebook/lenovo/V14G2ITL/V14G2ITL-perfil.webp",
+        "imagens/notebook/lenovo/V14G2ITL/V14G2ITL-cima.webp"
+        ]
+    },
+
+    {
+      id: 559, /* i5-1235u */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "IdeaPad 15IAU7",
+      specs1: "i5 1235u 8 Ram 512 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 2.900,00",
+      imagens: [
+        "imagens/notebook/lenovo/IdeaPad15IAU7/IdeaPad15IAU7-frente.webp",
+        "imagens/notebook/lenovo/IdeaPad15IAU7/IdeaPad15IAU7-perfil.webp",
+        "imagens/notebook/lenovo/IdeaPad15IAU7/IdeaPad15IAU7-cima.webp"
+        ]
+    },
+
+    {
+      id: 554, /* i5-1245u */ /* Registro Offline (Já tem outra registrada) */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "ThinkPad T14",
+      specs1: "i5 1245u 16 Ram 256 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 3.200,00",
+      imagens: [
+        "imagens/notebook/lenovo/ThinkPadT14/ThinkPadT14-frente.webp",
+        "imagens/notebook/lenovo/ThinkPadT14/ThinkPadT14-perfil.webp",
+        "imagens/notebook/lenovo/ThinkPadT14/ThinkPadT14-cima.webp"
+        ]
+    },
+
+    {
+      id: 555, /* i5-13420h */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "IdeaPad 15IRH10",
+      specs1: "i5 13420h 8 Ram 512 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 2.800,00",
+      imagens: [
+        "imagens/notebook/lenovo/IdeaPad15IRH10/IdeaPad15IRH10-frente.webp",
+        "imagens/notebook/lenovo/IdeaPad15IRH10/IdeaPad15IRH10-perfil.webp",
+        "imagens/notebook/lenovo/IdeaPad15IRH10/IdeaPad15IRH10-cima.webp"
+        ]
+    },
+
+    {
+      id: 556, /* i7-1370h */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "ThinkBook 14 G6 IRL",
+      specs1: "i7 1370h 16 Ram 256 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 4.500,00",
+      imagens: [
+        "imagens/notebook/lenovo/ThinkBook14G6IRL/ThinkBook14G6IRL-frente.webp",
+        "imagens/notebook/lenovo/ThinkBook14G6IRL/ThinkBook14G6IRL-perfil.webp",
+        "imagens/notebook/lenovo/ThinkBook14G6IRL/ThinkBook14G6IRL-cima.webp"
+        ]
+    },
+
+    {
+      id: 563, /* Ryzen5 Pro 4650u */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "ThinkPad L14",
+      specs1: "Ryzen5 Pro 4650u 8 Ram 256 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/notebook/lenovo/ThinkPadL14/ThinkPadL14-frente.webp",
+        "imagens/notebook/lenovo/ThinkPadL14/ThinkPadL14-perfil.webp",
+        "imagens/notebook/lenovo/ThinkPadL14/ThinkPadL14-cima.webp"
+        ]
+    },
+
+    {
+      id: 564, /* Ultra 5135u */
+      categoria: "notebook",
+      titulo: "Notebook Lenovo",
+      modelo: "ThinkPad E14",
+      specs1: "Ultra 5135u 16 Ram 256 NVMe",
+      specs2: "3 Usb's e HDMI",
+      preco: "R$ 4.500,00",
+      imagens: [
+        "imagens/notebook/lenovo/ThinkPadE14/ThinkPadE14-frente.webp",
+        "imagens/notebook/lenovo/ThinkPadE14/ThinkPadE14-perfil.webp",
+        "imagens/notebook/lenovo/ThinkPadE14/ThinkPadE14-cima.webp"
+        ]
+    },
+
+    /* =====================================
+     * HP (ID'S: 600 ~ 649)
+     */
+    
+    {
+      id: 600, /* i5-1235u */
+      categoria: "notebook",
+      titulo: "Notebook HP",
+      modelo: "250G9",
+      specs1: "i5 1235u 16 Ram 256 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/notebook/hp/250G9/250G9-frente.webp",
+        "imagens/notebook/hp/250G9/250G9-perfil.webp",
+        "imagens/notebook/hp/250G9/250G9-cima.webp"
+        ]
+    },
+
+    {
+      id: 601, /* i7-6600u */
+      categoria: "notebook",
+      titulo: "Notebook HP",
+      modelo: "EliteBook 840 G3",
+      specs1: "i7 6600u 8 Ram 256 NVMe",
+      specs2: "2 Usb's, VGA e DisplayPort",
+      preco: "R$ 1.700,00",
+      imagens: [
+        "imagens/notebook/hp/EliteBook840G3/EliteBook840G3-frente.webp",
+        "imagens/notebook/hp/EliteBook840G3/EliteBook840G3-perfil.webp",
+        "imagens/notebook/hp/EliteBook840G3/EliteBook840G3-cima.webp"
+        ]
+    },
+
+    /* =====================================
+     * Daten (ID'S: 650 ~ 699)
+     */
+    
+    {
+      id: 650, /* i7-7500u */
+      categoria: "notebook",
+      titulo: "Notebook Daten",
+      modelo: "DCM2B-4",
+      specs1: "i7 7500u 8 Ram 128 SSD",
+      specs2: "4 Usb's, VGA e HDMI",
+      preco: "R$ 1.200,00",
+      imagens: [
+        "imagens/notebook/daten/DCM2B-4/DCM2B-4-frente.webp",
+        "imagens/notebook/daten/DCM2B-4/DCM2B-4-perfil.webp",
+        "imagens/notebook/daten/DCM2B-4/DCM2B-4-cima.webp"
+        ]
+    },
+
+    /* =====================================
+     * Acer (ID'S: 700 ~ 749)
+     */
+
+    {
+      id: 700, /* i5-1335u */
+      categoria: "notebook",
+      titulo: "Notebook Acer",
+      modelo: "TravelMate P2 14",
+      specs1: "i5 1335u 8 Ram 512 NVMe",
+      specs2: "2 Usb's e HDMI",
+      preco: "R$ 2.600,00",
+      imagens: [
+        "imagens/notebook/acer/TravelMateP214/TravelMateP214-frente.webp",
+        "imagens/notebook/acer/TravelMateP214/TravelMateP214-perfil.webp",
+        "imagens/notebook/acer/TravelMateP214/TravelMateP214-cima.webp"
+        ]
+    },
+
+  ],
+
+  /* ==========================================================================
+   * Monitor (ID'S: 800 ~ 849)
+   */
+
+  monitor: [
+
+    /* =====================================
+     * Dell (ID'S: 800 ~ 809)
+     */
+
+    {
+      id: 800, /* 24" */
+      categoria: "monitor",
+      titulo: "Monitor Dell",
+      modelo: "24\"Polegadas, 60Hz, Inclinável",
+      specs1: "3 Usb's, VGA, DVI e DisplayPort",
+      specs2: "Cabos opcionais (+R$ 25,00)",
+      preco: "R$ 550,00",
+      imagens: [
+        "imagens/monitor/dell/dell-24/dell-24-frente.webp",
+        "imagens/monitor/dell/dell-24/dell-24-inclinado.webp",
+        "imagens/monitor/dell/dell-24/dell-24-fundo.webp"
+      ]
+    },
+
+    /* =====================================
+     * Lenovo (ID'S: 810 ~ 819)
+     */
+
+    {
+      id: 810, /* 20" */
+      categoria: "monitor",
+      titulo: "Monitor Lenovo",
+      modelo: "20\"Polegadas, 60Hz",
+      specs1: "VGA e DVI",
+      specs2: "Cabos opcionais (+R$ 25,00)",
+      preco: "R$ 300,00",
+      imagens: [
+        "imagens/monitor/lenovo/lenovo-20/lenovo-20-frente.webp",
+        "imagens/monitor/lenovo/lenovo-20/lenovo-20-fundo.webp"
+      ]
+    },
+
+    /* =====================================
+     * Daten (ID'S: 820 ~ 829)
+     */
+
+    {
+      id: 820, /* 22" */
+      categoria: "monitor",
+      titulo: "Monitor Daten",
+      modelo: "22\"Polegadas, 60Hz",
+      specs1: "VGA, DVI e HDMI",
+      specs2: "Cabos opcionais (+R$ 25,00)",
+      preco: "R$ 300,00",
+      imagens: [
+        "imagens/monitor/daten/daten-22/daten-22-frente.webp",
+        "imagens/monitor/daten/daten-22/daten-22-inclinado.webp",
+        "imagens/monitor/daten/daten-22/daten-22-fundo.webp"
+      ]
+    },
+
+    /* =====================================
+     * Positivo (ID'S: 830 ~ 839)
+     */
+
+    {
+      id: 830, /* 19" */
+      categoria: "monitor",
+      titulo: "Monitor Positivo",
+      modelo: "19\"Polegadas, 60Hz",
+      specs1: "VGA e DVI",
+      specs2: "Cabos Opcionais (+R$ 25,00)",
+      preco: "R$ 200,00",
+      imagens: [
+        "imagens/monitor/positivo/positivo-22/positivo-22-frente.webp",
+        "imagens/monitor/positivo/positivo-22/positivo-22-inclinado.webp",
+        "imagens/monitor/positivo/positivo-22/positivo-22-fundo.webp"
+      ]
+    },
+
+    {
+      id: 831, /* 22" */
+      categoria: "monitor",
+      titulo: "Monitor Positivo",
+      modelo: "22\"Polegadas, 60Hz",
+      specs1: "VGA, DVI e HDMI",
+      specs2: "Cabos Opcionais (+R$ 25,00)",
+      preco: "R$ 300,00",
+      imagens: [
+        "imagens/monitor/positivo/positivo-22/positivo-22-frente.webp",
+        "imagens/monitor/positivo/positivo-22/positivo-22-inclinado.webp",
+        "imagens/monitor/positivo/positivo-22/positivo-22-fundo.webp"
+      ]
+    }
+
+  ],
+
+  /* ==========================================================================
+   * Armazenamento (ID'S: 850 ~ 959)
+   */
+
+  armazenamento: [
+
+    /* ======================================================
+     * HD (ID'S: 850 ~ 869)
+     * 250gb (ID'S: 850 ~ 869)
+     */
+
+    {
+      id: 850, /* Seagate */
+      categoria: "armazenamento",
+      titulo: "Hard Disk",
+      modelo: "Seagate",
+      specs1: "HD Sata 3.5\"",
+      specs2: "250 GB",
+      preco: "R$ X0,00",
+      imagens: [
+        "imagens/armazenamento/hd/250gb/seagate-250.webp"
+      ]
+    },
+
+    {
+      id: 851, /* WD */
+      categoria: "armazenamento",
+      titulo: "Hard Disk",
+      modelo: "WD",
+      specs1: "HD Sata 3.5\"",
+      specs2: "250 GB",
+      preco: "R$ X0,00",
+      imagens: [
+        "imagens/armazenamento/hd/250gb/wd-250.webp"
+      ]
+    },
+
+    /* =====================================
+     * 500gb (ID'S: 870 ~ 879)
+     */
+
+    {
+      id: 870, /* Dell */
+      categoria: "armazenamento",
+      titulo: "Hard Disk",
+      modelo: "Dell",
+      specs1: "HD Sata 3.5\"",
+      specs2: "500 GB",
+      preco: "R$ 50,00",
+      imagens: [
+        "imagens/armazenamento/hd/500gb/dell-500.webp"
+      ]
+    },
+
+    {
+      id: 871, /* Seagate */
+      categoria: "armazenamento",
+      titulo: "Hard Disk",
+      modelo: "Seagate",
+      specs1: "HD Sata 3.5\"",
+      specs2: "500 GB",
+      preco: "R$ 50,00",
+      imagens: [
+        "imagens/armazenamento/hd/500gb/seagate-500.webp"
+      ]
+    },
+
+    {
+      id: 872, /* WD */
+      categoria: "armazenamento",
+      titulo: "Hard Disk",
+      modelo: "WD",
+      specs1: "HD Sata 3.5\"",
+      specs2: "500 GB",
+      preco: "R$ 50,00",
+      imagens: [
+        "imagens/armazenamento/hd/500gb/wd-500.webp"
+      ]
+    },
+
+    {
+      id: 873, /* Toshiba Pequeno */
+      categoria: "armazenamento",
+      titulo: "Hard Disk",
+      modelo: "Toshiba",
+      specs1: "HD Sata 2.5\"",
+      specs2: "500 GB",
+      preco: "R$ 50,00",
+      imagens: [
+        "imagens/armazenamento/hd/500gb/toshiba-500-p.webp"
+      ]
+    },
+
+    {
+      id: 874, /* WD Pequeno */
+      categoria: "armazenamento",
+      titulo: "Hard Disk",
+      modelo: "WD",
+      specs1: "HD Sata 2.5\"",
+      specs2: "500 GB",
+      preco: "R$ 50,00",
+      imagens: [
+        "imagens/armazenamento/hd/500gb/wd-500-p.webp"
+      ]
+    },
+
+    /* =====================================
+     * 1tb (ID'S: 880 ~ 889)
+     */
+
+    {
+      id: 880, /* WD */
+      categoria: "armazenamento",
+      titulo: "Hard Disk",
+      modelo: "WD",
+      specs1: "HD Sata 3.5\"",
+      specs2: "1 TB",
+      preco: "R$ 150,00",
+      imagens: [
+        "imagens/armazenamento/hd/1tb/wd-1tb.webp"
+      ]
+    },
+
+    {
+      id: 881, /* WD */
+      categoria: "armazenamento",
+      titulo: "Hard Disk",
+      modelo: "Seagate",
+      specs1: "HD Sata 2.5\"",
+      specs2: "1 TB",
+      preco: "R$ 150,00",
+      imagens: [
+        "imagens/armazenamento/hd/1tb/seagate-1tb.webp"
+      ]
+    },
+
+    /* =====================================
+     * 4tb (ID'S: 890 ~ 899)
+     */
+
+    {
+      id: 890, /* Dell */
+      categoria: "armazenamento",
+      titulo: "Hard Disk",
+      modelo: "Dell",
+      specs1: "HD Sata 3.5\"",
+      specs2: "4 TB",
+      preco: "R$ XX0,00",
+      imagens: [
+        "imagens/armazenamento/hd/4tb/dell-4tb.webp"
+      ]
+    },
+
+    /* ======================================================
+     * NVMe (ID'S: 900 ~ 919)
+     * 128gb (ID'S: 900 ~ 904)
+     */
+
+    /* IDS RESERVADOS */
+
+    /* =====================================
+     * 256gb (ID'S: 905 ~ 909)
+     */
+
+    {
+      id: 905, /* PCI Express */
+      categoria: "armazenamento",
+      titulo: "NVMe",
+      modelo: "PCI Express",
+      specs1: "22mm x 80mm",
+      specs2: "256 GB",
+      preco: "R$ 429,00",
+      imagens: [
+        "imagens/armazenamento/nvme/256gb/pci-256.webp"
+      ]
+    },
+
+    /* =====================================
+     * 512gb (ID'S: 910 ~ 914)
+     */
+
+    {
+      id: 910, /* Toshiba */
+      categoria: "armazenamento",
+      titulo: "NVMe",
+      modelo: "Toshiba",
+      specs1: "22mm x 80mm",
+      specs2: "512 GB",
+      preco: "R$ 629,00",
+      imagens: [
+        "imagens/armazenamento/nvme/512gb/toshiba-512.webp"
+      ]
+    },
+
+    {
+      id: 911, /* Adata Pequeno */
+      categoria: "armazenamento",
+      titulo: "NVMe",
+      modelo: "Adata",
+      specs1: "22mm x 30mm",
+      specs2: "512 GB",
+      preco: "R$ 629,00",
+      imagens: [
+        "imagens/armazenamento/nvme/512gb/adata-512-p.webp"
+      ]
+    },
+
+    /* =====================================
+     * 1tb (ID'S: 915 ~ 919)
+     */
+
+    {
+      id: 915, /* Kingston */
+      categoria: "armazenamento",
+      titulo: "NVMe",
+      modelo: "Kingston",
+      specs1: "22mm x 80mm",
+      specs2: "1 TB",
+      preco: "R$ 700,00",
+      imagens: [
+        "imagens/armazenamento/nvme/1tb/kingston-1tb.webp"
+      ]
+    },
+
+    /* ======================================================
+     * M2 Sata (ID'S: 920 ~ 939)
+     * 128gb (ID'S: 920 ~ 924)
+     */
+
+    {
+      id: 920, /* M2 */
+      categoria: "armazenamento",
+      titulo: "M.2 Sata",
+      modelo: "SSD Technology Corporation",
+      specs1: "22mm x 80mm",
+      specs2: "128 GB",
+      preco: "R$ 239,00",
+      imagens: [
+        "imagens/armazenamento/m2sata/128gb/m2-128.webp"
+      ]
+    },
+
+    {
+      id: 921, /* Skhynix */
+      categoria: "armazenamento",
+      titulo: "M.2 Sata",
+      modelo: "Skhynix",
+      specs1: "22mm x 30mm",
+      specs2: "128 GB",
+      preco: "R$ 239,00",
+      imagens: [
+        "imagens/armazenamento/m2sata/128gb/skhynix-128-p.webp"
+      ]
+    },
+
+    /* =====================================
+     * 256gb (ID'S: 925 ~ 929)
+     */
+
+    {
+      id: 925, /* Lite-On */
+      categoria: "armazenamento",
+      titulo: "M.2 Sata",
+      modelo: "Lite-On",
+      specs1: "22mm x 80mm",
+      specs2: "256 GB",
+      preco: "R$ 429,00",
+      imagens: [
+        "imagens/armazenamento/m2sata/256gb/liteon-256.webp"
+      ]
+    },
+
+    /* =====================================
+     * 512gb (ID'S: 930 ~ 934)
+     */
+
+    /* IDS RESERVADOS */
+
+    /* =====================================
+     * 1tb (ID'S: 935 ~ 939)
+     */
+
+    /* IDS RESERVADOS */
+
+    /* ======================================================
+     * SSD (ID'S: 940 ~ 959)
+     * 128gb (ID'S: 940 ~ 944)
+     */
+
+    {
+      id: 940, /* KingFast */
+      categoria: "armazenamento",
+      titulo: "Solid State Drive",
+      modelo: "KingFast",
+      specs1: "SSD Sata III 2.5\"",
+      specs2: "128 GB",
+      preco: "R$ 190,00",
+      imagens: [
+        "imagens/armazenamento/ssd/128gb/kingfast-128.webp",
+        "imagens/armazenamento/ssd/128gb/kingfast-cima.webp"
+      ]
+    },
+
+    /* =====================================
+     * 256gb (ID'S: 945 ~ 949)
+     */
+
+    {
+      id: 945, /* KingFast */
+      categoria: "armazenamento",
+      titulo: "Solid State Drive",
+      modelo: "KingFast",
+      specs1: "SSD Sata III 2.5\"",
+      specs2: "240 GB",
+      preco: "R$ 290,00",
+      imagens: [
+        "imagens/armazenamento/ssd/256gb/kingfast-256.webp",
+        "imagens/armazenamento/ssd/128gb/kingfast-cima.webp"
+      ]
+    }
+
+    /* =====================================
+     * 512gb (ID'S: 950 ~ 954)
+     */
+
+    /* IDS RESERVADOS */
+
+    /* =====================================
+     * 1tb (ID'S: 955 ~ 959)
+     */
+
+    /* IDS RESERVADOS */
+
+
+  ],
+
+  /* ==========================================================================
+   * Cabo (ID'S: 960 ~ 969)
+   */
+
+  cabo: [
+
+    /* =====================================
+     * DisplayPort (ID: 960)
+     */
+
+    {
+      id: 960, /* DisplayPort */
+      categoria: "cabo",
+      titulo: "DisplayPort",
+      modelo: "Original",
+      specs1: "150cm",
+      specs2: "",
+      preco: "R$ 30,00",
+      imagens: [
+        "imagens/cabo/displayport/displayport.webp",
+        "imagens/cabo/displayport/displayport-entrada.webp"
+      ]
+    },
+
+    /* =====================================
+     * DVI (ID: 961)
+     */
+
+    {
+      id: 961, /* DVI */
+      categoria: "cabo",
+      titulo: "DVI",
+      modelo: "Original",
+      specs1: "200cm",
+      specs2: "",
+      preco: "R$ 20,00",
+      imagens: [
+        "imagens/cabo/dvi/dvi.webp",
+        "imagens/cabo/dvi/dvi-entrada.webp"
+      ]
+    },
+
+    /* =====================================
+     * Força (ID: 962)
+     */
+
+    {
+      id: 962, /* Força */
+      categoria: "cabo",
+      titulo: "Força",
+      modelo: "Original",
+      specs1: "150cm",
+      specs2: "",
+      preco: "R$ 10,00",
+      imagens: [
+        "imagens/cabo/forca/forca.webp",
+        "imagens/cabo/forca/forca-entrada.webp"
+      ]
+    },
+
+    /* =====================================
+     * HDMI (ID: 963)
+     */
+
+    {
+      id: 963, /* HDMI */
+      categoria: "cabo",
+      titulo: "HDMI",
+      modelo: "Original",
+      specs1: "150cm",
+      specs2: "",
+      preco: "R$ 30,00",
+      imagens: [
+        "imagens/cabo/hdmi/hdmi.webp",
+        "imagens/cabo/hdmi/hdmi-entrada.webp"
+      ]
+    },
+
+    /* =====================================
+     * VGA (ID: 964)
+     */
+
+    {
+      id: 964, /* VGA */
+      categoria: "cabo",
+      titulo: "VGA",
+      modelo: "Original",
+      specs1: "150cm",
+      specs2: "",
+      preco: "R$ 15,00",
+      imagens: [
+        "imagens/cabo/vga/vga.webp",
+        "imagens/cabo/vga/vga-entrada.webp"
+      ]
+    },
+
+    {
+      id: 965, /* Força e Tripolar */
+      categoria: "cabo",
+      titulo: "Força e Tripolar",
+      modelo: "Original",
+      specs1: "180cm",
+      specs2: "",
+      preco: "R$ 25,00",
+      imagens: [
+        "imagens/cabo/forca-e-tripolar/forca-tripolar.webp",
+        "imagens/cabo/forca-e-tripolar/forca-entrada.webp",
+        "imagens/cabo/forca-e-tripolar/tripolar-entrada.webp"
+      ]
+    }
+
+    /* =====================================
+     * Outros (ID'S: 966 ~ 969)
+     */
+
+    /* IDS RESERVADOS */
+
+
+  ],
+
+  /* ==========================================================================
+   * Fonte (ID'S: 970 ~ 979)
+   */
+
+  fonte: [
+
+    /* =====================================
+     * Fonte PC (ID: 970)
+     */
+
+    {
+      id: 970, /* Fonte PC */
+      categoria: "fonte",
+      titulo: "Fonte",
+      modelo: "VX Pro",
+      specs1: "Modelo VX 230SE",
+      specs2: "230 watts",
+      preco: "R$ 70,00",
+      imagens: [
+        "imagens/fonte/fonte-pc/fonte.webp"
+      ]
+    },
+
+    /* =====================================
+     * Lehmox Universal (ID: 971)
+     */
+
+    {
+      id: 971, /* Lehmox Universal */
+      categoria: "fonte",
+      titulo: "Fonte Universal",
+      modelo: "Lehmox",
+      specs1: "LEY-668",
+      specs2: "3.5A 12V",
+      preco: "R$ 35,00",
+      imagens: [
+        "imagens/fonte/fonte-universal/lehmox-inclinada.webp",
+        "imagens/fonte/fonte-universal/lehmox-cima.webp"
+      ]
+    }
+
+    /* =====================================
+     * Outros (ID: 972 ~ 979)
+     */
+
+    /* IDS RESERVADOS */
+
+
+  ],
+
+  /* ==========================================================================
+   * Periféricos (ID'S: 980 ~ 999)
+   */
+
+  periferico: [
+
+    /* ======================================================
+     * Mouse (ID'S: 980 ~ 989)
+     * Mouse Monocron Novo (ID: 980)
+     */
+
+    {
+      id: 980, /* Mouse Monocron Novo */
+      categoria: "periferico",
+      titulo: "Mouse",
+      modelo: "Monocron",
+      specs1: "Cabo USB",
+      specs2: "Paralelo, Novo",
+      preco: "R$ 15,00",
+      imagens: [
+        "imagens/periferico/novo/mouse-novo.webp"
+      ]
+    },
+
+    /* =====================================
+     * Mouse Lenovo Seminovo (ID: 981)
+     */
+
+    {
+      id: 981, /* Mouse Lenovo Seminovo */
+      categoria: "periferico",
+      titulo: "Mouse",
+      modelo: "Lenovo",
+      specs1: "Cabo USB",
+      specs2: "Original, Seminovo",
+      preco: "R$ 25,00",
+      imagens: [
+        "imagens/periferico/usado/mouse-usado.webp"
+      ]
+    },
+
+    /* ======================================================
+     * Teclado (ID'S: 990 ~ 999)
+     * Teclado Bright Novo (ID: 990)
+     */
+
+    {
+      id: 990, /* Teclado Bright Novo */
+      categoria: "periferico",
+      titulo: "Teclado",
+      modelo: "Bright",
+      specs1: "Cabo USB",
+      specs2: "Paralelo, Novo",
+      preco: "R$ 25,00",
+      imagens: [
+        "imagens/periferico/novo/teclado-novo-a.webp"
+      ]
+    },
+
+    /* =====================================
+     * Teclado Monocron Novo (ID: 991)
+     */
+
+    {
+      id: 991, /* Teclado Monocron Novo B */
+      categoria: "periferico",
+      titulo: "Teclado",
+      modelo: "Monocron",
+      specs1: "Cabo USB",
+      specs2: "Paralelo, Novo",
+      preco: "R$ 25,00",
+      imagens: [
+        "imagens/periferico/novo/teclado-novo-b.webp"
+      ]
+    },
+
+    /* =====================================
+     * Teclado FY Novo (ID: 992)
+     */
+
+    {
+      id: 992, /* Teclado FY Novo */
+      categoria: "periferico",
+      titulo: "Teclado",
+      modelo: "Modelo FY",
+      specs1: "Sem fio",
+      specs2: "Paralelo, Novo",
+      preco: "R$ X0,00",
+      imagens: [
+        "imagens/periferico/novo/teclado-novo-c.webp"
+      ]
+    },
+
+    /* =====================================
+     * Teclado Lenovo Seminovo (ID: 993)
+     */
+
+    {
+      id: 993, /* Teclado Lenovo Seminovo */
+      categoria: "periferico",
+      titulo: "Teclado",
+      modelo: "Lenovo",
+      specs1: "Cabo USB",
+      specs2: "Original, Seminovo",
+      preco: "R$ 35,00",
+      imagens: [
+        "imagens/periferico/usado/teclado-usado.webp"
+      ]
+    }
+
+  ],
+
+  /* ==========================================================================
+   * Utilitários (ID'S: 1000 ~ 1099)
+   */
+
+  utilitario: [
+
+    /* =====================================
+     * Cabo USB (ID: 1000)
+     */
+
+    {
+      id: 1000, /* Cabo USB */
+      categoria: "utilitario",
+      titulo: "Cabo P2",
+      modelo: "USB Cable",
+      specs1: "USB 2.0",
+      specs2: "Original, Novo",
+      preco: "R$ 15,00",
+      imagens: [
+        "imagens/equipamento/cabo-usb.webp"
+      ]
+    },
+
+    /* =====================================
+     * Case (ID: 1001)
+     */
+
+    {
+      id: 1001, /* Case */
+      categoria: "utilitario",
+      titulo: "Case",
+      modelo: "Infokit ECASE-300",
+      specs1: "Sata III, USB 3.0",
+      specs2: "Original, Novo",
+      preco: "R$ 50,00",
+      imagens: [
+        "imagens/equipamento/case.webp"
+      ]
+    },
+
+    /* =====================================
+     * Pasta Térmica (ID: 1002)
+     */
+
+    {
+      id: 1002, /* Pasta Térmica */
+      categoria: "utilitario",
+      titulo: "Pasta Térmica",
+      modelo: "D-mix",
+      specs1: "PS-05",
+      specs2: "Original, Novo",
+      preco: "R$ 25,00",
+      imagens: [
+        "imagens/equipamento/pasta-termica.webp"
+      ]
+    },
+
+    {
+      id: 1003, /* Pasta Térmica Grande */
+      categoria: "utilitario",
+      titulo: "Pasta Térmica (G)",
+      modelo: "Thermal Grease",
+      specs1: "GD900",
+      specs2: "Original, Novo",
+      preco: "R$ 60,00",
+      imagens: [
+        "imagens/equipamento/pasta-termica-g-cima.webp",
+        "imagens/equipamento/pasta-termica-g-tamanho.webp"
+      ]
+    },
+
+    {
+      id: 1004, /* Pen Drive Wifi */
+      categoria: "utilitario",
+      titulo: "Pen Drive Wifi",
+      modelo: "Dual Band USB Adapter",
+      specs1: "600 Mbps 2g/5g",
+      specs2: "Original, Novo",
+      preco: "R$ 60,00",
+      imagens: [
+        "imagens/equipamento/pendrive-wifi.webp"
+      ]
+    },
+
+  ],
+
+  /* ==========================================================================
+   * Impressora (ID'S: 1100 ~ 1109)
+   */
+
+  impressora: [
+
+    /* =====================================
+     * Epson Térmica (ID: 1100)
+     */
+
+    {
+      id: 1100, /* Epson Térmica */
+      categoria: "impressora",
+      titulo: "Impressora",
+      modelo: "Epson TM-T20 Térmica",
+      specs1: "Modelo M352AX",
+      specs2: "Serial e Rede",
+      preco: "R$ 450,00",
+      imagens: [
+        "imagens/impressora/epson-termica/epson-frente.webp",
+        "imagens/impressora/epson-termica/epson-direita.webp",
+        "imagens/impressora/epson-termica/epson-fundo.webp",
+        "imagens/impressora/epson-termica/epson-cima.webp"
+      ]
+    }
+
+  ],
+
+  /* ==========================================================================
+   * Equipamentos (ID'S: 1110 ~ 1149)
+   */
+
+  kit: [
+
+    /* =====================================
+     * Kit Dell (ID's: 1110 ~ 1119)
+     */
+
+    {
+      id: 1110, /* Kit Dell */
+      categoria: "kit",
+      titulo: "Kit TSM Dell",
+      modelo: "Monitor Dell 24\"Polegadas",
+      specs1: "Desktop Dell Mini i5 6500t",
+      specs2: "Suporte Dell",
+      preco: "R$ ?.?00,00",
+      imagens: [
+        "imagens/kit-tsm/dell-tsm-i5-6500t/dell-tsm-direita.webp",
+        "imagens/kit-tsm/dell-tsm-i5-6500t/dell-tsm-fundo.webp",
+        "imagens/kit-tsm/dell-tsm-i5-6500t/dell-tsm-esquerda.webp",
+        "imagens/kit-tsm/dell-tsm-i5-6500t/dell-tsm-frente.webp"
+      ]
+    },
+
+    {
+      id: 1111, /* Kit Dell */
+      categoria: "kit",
+      titulo: "Kit TSM Dell",
+      modelo: "Monitor Dell 24 Polegadas",
+      specs1: "Desktop Dell Mini i5\"7500t",
+      specs2: "Suporte Dell",
+      preco: "R$ ?.?00,00",
+      imagens: [
+        "imagens/kit-tsm/dell-tsm-i5-6500t/dell-tsm-direita.webp",
+        "imagens/kit-tsm/dell-tsm-i5-6500t/dell-tsm-fundo.webp",
+        "imagens/kit-tsm/dell-tsm-i5-6500t/dell-tsm-esquerda.webp",
+        "imagens/kit-tsm/dell-tsm-i5-6500t/dell-tsm-frente.webp"
+      ]
+    },
+
+    /* =====================================
+     * Kit Lenovo (ID's: 1120 ~ 1129)
+     */
+
+    {
+      id: 1120, /* Kit Lenovo */
+      categoria: "kit",
+      titulo: "Kit TSM Lenovo",
+      modelo: "Monitor Positivo 19\"Polegadas",
+      specs1: "Desktop Lenovo Mini i5 6500t",
+      specs2: "Suporte Lenovo",
+      preco: "R$ 1.550,00",
+      imagens: [
+        "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-direita.webp",
+        "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-fundo.webp",
+        "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-esquerda.webp",
+        "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-frente.webp",
+        "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-inclinado.webp"
+      ]
+    },
+
+    {
+      id: 1121, /* Kit Lenovo */
+      categoria: "kit",
+      titulo: "Kit TSM Lenovo",
+      modelo: "Monitor Positivo 19\"Polegadas",
+      specs1: "Desktop Lenovo Mini i5 7500t",
+      specs2: "Suporte Lenovo",
+      preco: "R$ 1.650,00",
+      imagens: [
+        "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-direita.webp",
+        "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-fundo.webp",
+        "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-esquerda.webp",
+        "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-frente.webp",
+        "imagens/kit-tsm/lenovo-tsm-i5-6500t/lenovo-tsm-inclinado.webp"
+      ]
+    },
+
+  ],
+
+  workstation: [
+
+    /* =====================================
+     * Workstation (ID's: 1130 ~ 1149)
+     */
+
+    {
+      id: 1130, /* Workstation Dell */
+      categoria: "workstation",
+      titulo: "Workstation Dell",
+      modelo: "Precision 5820",
+      specs1: "Xeon W-2133 8 Ram 512 SSD",
+      specs2: "NVIDIA Quadro P2000",
+      preco: "R$ 4.500,00",
+      imagens: [
+        "imagens/workstation/xeon/workstation-xeon-frente.webp",
+        "imagens/workstation/xeon/workstation-xeon-fundo.webp"
+      ]
+    },
+
+  ],
+
+  nobreak: [
+
+    /* =====================================
+     * No Break (ID's: 1150 ~ 1169)
+     */
+
+    {
+      id: 1150, /* No Break PhD Online */
+      categoria: "nobreak",
+      titulo: "No Break",
+      modelo: "PhD Online",
+      specs1: "EA 3K BAT 96V",
+      specs2: "3 KVA",
+      preco: "R$ 2.500,00",
+      imagens: [
+        "imagens/nobreak/phd-online/phd-online-frente.webp",
+        "imagens/nobreak/phd-online/phd-online-fundo.webp"
+      ]
+    },
+
+  ],
+
+  teste: [
+
+    /* =====================================
+     * Teste (ID's: 2000 ~ 2010)
+     */
+
+    {
+      id: 2001, /* Teste */
+      categoria: "teste",
+      titulo: "Teste",
+      modelo: "Modelo Teste",
+      specs1: "spec1 teste",
+      specs2: "spec2 teste",
+      preco: "Teste",
+      imagens: [
+        "imagens/teste"
+      ]
+    }
+
+  ]
+
+
+};
+
+
+/* ================================ */
+/*          Acha o produto          */
+/* ================================ */
+
+function buscarProduto(id){
+
+  for (const categoria in produtos){
+
+    const produto = produtos[categoria].find(p => p.id === id);
+    if(produto) return produto;
+  }
+
+  return null;
+}
+
+const produtoAtual = buscarProduto(id);
+
+
+/****************************************
+ * Ativa menu baseado na categoria real
+ ****************************************/
+
+document.querySelectorAll(".dropdown-item").forEach(el => {
+  el.classList.remove("active");
+});
+
+if (produtoAtual && produtoAtual.categorias) {
+  const menuId = mapaMenu[produtoAtual.categorias];
+  document.getElementById(menuId)?.classList.add("active");
+}
+
+/* Evitar erros silenciosos */
+if (produtoAtual && produtoAtual.categoria) {
+  const menuId = mapaMenu[produtoAtual.categoria];
+
+  if (menuId) {
+    const el = document.getElementById(menuId);
+    if (el) {
+      el.classList.add("active");
+    } else {
+      console.warn("ID não encontrado:", menuId);
+    }
+  } else {
+    console.warn("Categoria não mapeada:", produtoAtual.categoria);
+  }
+}
+
+
+/* ================================= */
+/*      Produto não encontrado      */
+/* ================================= */
+
+if (!produtoAtual) {
+
+  const carousel = document.getElementById("carousel-imagens");
+
+  if (carousel) {
+    carousel.innerHTML = `
+      <div class="carousel-item active">
+        <img src="imagens/todo-o-site/produto-nao-encontrado.webp" class="img-fluid">
+      </div>
+    `;
+  }
+
+  const info = document.getElementById("produto-info");
+
+  info.innerHTML = `
+    <div class="botao-nao-encontrado text-center p-5">
+      <h1 class="titulo-nao-encontrado">Ops! Ocorreu um erro </h1>
+      <h2 class="texto-nao-encontrado mb-4">❌ Produto não encontrado ❌</h2>
+      <a href="tipo-computador.html">
+        Voltar
+      </a>
+    </div>
+  `;
+
+  throw new Error("Produto não encontrado");
+}
+
+
+
+/* ====================================== */
+/*    Igual a estrutura antiga do HTML    */
+/* ====================================== */
+
+const info = document.getElementById("produto-info");
+
+info.innerHTML = `
+<div class="d-flex flex-column justify-content-center botao-hover-link text-center">
+
+  <div class="item-card">
+    <p class="titulo-item">${produtoAtual.titulo}</p>
+    <p class="texto-item">${produtoAtual.modelo}</p>
+    <p class="texto-item">${produtoAtual.specs1}</p>
+    <p class="texto-item-dois">${produtoAtual.specs2}</p>
+    <p class="texto-preco">
+      ${
+        produtoAtual.antigo && produtoAtual.novo
+          ? `De <span class="preco-antigo">${produtoAtual.antigo}</span>
+             por <span class="preco-novo">${produtoAtual.novo}</span>`
+          : `${produtoAtual.comum || produtoAtual.preco}`
+      }
+    </p>
+  </div>
+
+  <a class="botao-link" href="contato.html">Quero negociar</a>
+
+</div>
+`;
+
+
+
+/* ======================================= */
+/*   Igual ao carousel antigo de imagens   */
+/* ======================================= */
+
+function carregarImagens(imagens) {
+
+  const carousel = document.getElementById("carousel-imagens");
+
+  let html = "";
+
+  imagens.forEach((img, index) => {
+
+    html += `
+      <div class="carousel-item ${index === 0 ? "active" : ""}">
+        <a href="contato.html">
+          <img src="${img}" class="img-fluid">
+          <div class="carousel-caption"></div>
+        </a>
+      </div>
+    `;
+
+  });
+
+  carousel.innerHTML = html;
+
+}
+
+carregarImagens(produtoAtual.imagens);
